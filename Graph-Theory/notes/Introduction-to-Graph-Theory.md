@@ -58,10 +58,7 @@ For digraphs:
 ### 1.4.1 Handshaking Lemma
 
 #### **Theorem 1.1 — Handshaking Lemma**
-For any graph $G = (V, E)$:
-$
-\sum_{v \in V} \deg(v) = 2|E|.
-$
+For any graph $G = (V, E)$: $\sum_{v \in V} \deg(v) = 2|E|$
 
 **Proof.**  
 Each edge contributes exactly 2 to the total degree count. ∎
