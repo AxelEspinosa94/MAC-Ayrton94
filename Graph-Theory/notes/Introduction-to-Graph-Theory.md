@@ -13,9 +13,9 @@ A **graph** $G = (V, E)$ consists of:
 - a set $E$ of **edges**, where each edge is an unordered pair of vertices.
 
 #### **Definition 1.2 — Digraph**
-A **directed graph** or **digraph** \( D = (V, A) \) consists of:
-- a set \( V \) of vertices,  
-- a set \( A \) of **arcs**, where each arc is an ordered pair of vertices.
+A **directed graph** or **digraph** $D = (V, A)$ consists of:
+- a set $V$ of vertices,  
+- a set $A$ of **arcs**, where each arc is an ordered pair of vertices.
 
 #### **Definition 1.3 — Multidigraph**
 A **multidigraph** allows:
@@ -33,10 +33,10 @@ A **pseudodigraph** is a digraph that allows:
 ## 1.2 Incidence and Adjacency
 
 #### **Definition 1.5 — Incidence**
-An edge \( e = uv \) is **incident** to vertices \( u \) and \( v \).
+An edge $e = uv$ is **incident** to vertices $u$ and $v$.
 
 #### **Definition 1.6 — Adjacency**
-Two vertices \( u, v \) are **adjacent** if there exists an edge \( uv \in E \).
+Two vertices $u, v$ are **adjacent** if there exists an edge $uv \in E$.
 
 Two edges are **adjacent** if they share a common endpoint.
 
@@ -45,11 +45,11 @@ Two edges are **adjacent** if they share a common endpoint.
 ## 1.3 Degree of a Vertex
 
 #### **Definition 1.7 — Degree**
-The **degree** of a vertex \( v \), denoted \( \deg(v) \), is the number of edges incident to \( v \).
+The **degree** of a vertex $v$, denoted $\deg(v)$, is the number of edges incident to $v$.
 
 For digraphs:
-- **In-degree**: \( \deg^{-}(v) \) = number of incoming arcs  
-- **Out-degree**: \( \deg^{+}(v) \) = number of outgoing arcs  
+- **In-degree**: $\deg^{-}(v)$ = number of incoming arcs  
+- **Out-degree**: $\deg^{+}(v)$ = number of outgoing arcs  
 
 ---
 
@@ -58,7 +58,7 @@ For digraphs:
 ### 1.4.1 Handshaking Lemma
 
 #### **Theorem 1.1 — Handshaking Lemma**
-For any graph \( G = (V, E) \):
+For any graph $G = (V, E)$:
 \[
 \sum_{v \in V} \deg(v) = 2|E|.
 \]
@@ -82,12 +82,12 @@ A sum of integers is even iff the number of odd summands is even. ∎
 ### 1.4.3 Havel–Hakimi Algorithm
 
 #### **Theorem 1.3 — Havel–Hakimi Characterization**
-A sequence \( d_1 \ge d_2 \ge \dots \ge d_n \) of non-negative integers is **graphical**  
+A sequence $d_1 \ge d_2 \ge \dots \ge d_n$ of non-negative integers is **graphical**  
 (i.e., realizable as the degree sequence of a simple graph)  
 iff the sequence obtained by:
 
-1. Removing the largest degree \( d_1 \),  
-2. Subtracting 1 from the next \( d_1 \) terms,  
+1. Removing the largest degree $d_1$,  
+2. Subtracting 1 from the next $d_1$ terms,  
 3. Resorting the sequence,
 
 is also graphical.
@@ -136,7 +136,7 @@ Two edges are **in series** if they form a path of length 2 with a common intern
 - **Regular graph**: All vertices have the same degree.  
 - **Connected graph**: There exists a path between every pair of vertices.  
 - **Bipartite graph**: Vertex set can be partitioned into two sets with no edges inside each set.  
-- **Complete graph** \( K_n \): Every pair of vertices is adjacent.  
+- **Complete graph** $K_n$: Every pair of vertices is adjacent.  
 - **Tree**: Connected acyclic graph.  
 - **Forest**: Disjoint union of trees.  
 - **Multigraph**: Graph with parallel edges allowed.  
@@ -149,7 +149,7 @@ Two edges are **in series** if they form a path of length 2 with a common intern
 ## 1.7 Isomorphism
 
 #### **Definition 1.8 — Graph Isomorphism**
-Two graphs \( G = (V, E) \) and \( H = (V', E') \) are **isomorphic** if there exists a bijection  
+Two graphs $G = (V, E)$ and $H = (V', E')$ are **isomorphic** if there exists a bijection  
 \[
 f : V \to V'
 \]
@@ -178,8 +178,8 @@ v_0, v_1, \dots, v_k
 \]
 such that each consecutive pair is adjacent.
 
-- **Open walk**: \( v_0 \ne v_k \)  
-- **Closed walk**: \( v_0 = v_k \)
+- **Open walk**: $v_0 \ne v_k$  
+- **Closed walk**: $v_0 = v_k$
 
 ---
 
