@@ -8,9 +8,9 @@
 ### 1.1 Graph, Digraph, Multidigraph, Pseudodigraph
 
 #### **Definition 1.1 — Graph**
-A **graph** \( G = (V, E) \) consists of:
-- a non-empty finite set \( V \) of **vertices**, and  
-- a set \( E \) of **edges**, where each edge is an unordered pair of vertices.
+A **graph** $G = (V, E)$ consists of:
+- a non-empty finite set $V$ of **vertices**, and  
+- a set $E$ of **edges**, where each edge is an unordered pair of vertices.
 
 #### **Definition 1.2 — Digraph**
 A **directed graph** or **digraph** \( D = (V, A) \) consists of:
