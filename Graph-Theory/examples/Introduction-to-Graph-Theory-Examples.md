@@ -20,9 +20,9 @@ $E = \{ab, ac, bd\}$
 
 ```mermaid
 graph undirected
-    a -- b
-    a -- c
-    b -- d
+    a - b
+    a - c
+    b - d
 ```
 
 ---
