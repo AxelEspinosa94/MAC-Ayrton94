@@ -19,10 +19,10 @@ Edges:
 $E = \{ab, ac, bd\}$
 
 ```mermaid
-graph undirected
-    a --> b
-    a --> c
-    b --> d
+graph TD
+    a -- b
+    a -- c
+    b -- d
 ```
 
 ---
