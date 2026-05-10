@@ -19,7 +19,7 @@ Edges:
 $E = \{ab, ac, bd\}$
 
 ```mermaid
-graph undirected
+graph LR
     a -- b
     a -- c
     b -- d
