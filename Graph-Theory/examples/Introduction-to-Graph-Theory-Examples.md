@@ -13,10 +13,10 @@ Este documento contiene **únicamente ejemplos**, organizados por tema, usando n
 
 ### **Example 1 — Simple Graph**
 Vertices:  
-$V = \{a, b, c, d\}$
+$V = {a, b, c, d}$
 
 Edges:  
-$E = \{ab, ac, bd\}$
+$E = {ab, ac, bd}$
 
 ```mermaid
 graph TD
@@ -29,7 +29,7 @@ graph TD
 
 ### **Example 2 — Directed Graph (Digraph)**
 Arcs:  
-$A = \{(u,v), (v,w), (w,u)\}$
+$A = {(u,v), (v,w), (w,u)}$
 
 ```mermaid
 graph TD
@@ -66,9 +66,9 @@ graph TD
 In the graph:
 
 ```mermaid
-graph undirected
-    u -- v
-    v -- w
+graph TD
+    u --> v
+    v --> w
 ```
 
 - Edge $uv$ is incident to $u$ and $v$.  
@@ -80,9 +80,9 @@ graph undirected
 In the graph:
 
 ```mermaid
-graph undirected
-    a -- b
-    b -- c
+graph TD
+    a --> b
+    b --> c
 ```
 
 - $a$ and $b$ are adjacent.  
@@ -135,11 +135,11 @@ graph TD
 Graph:
 
 ```mermaid
-graph undirected
-    a -- b
-    b -- c
-    c -- a
-    c -- d
+graph TD
+    a --> b
+    b --> c
+    c --> a
+    c --> d
 ```
 
 Degrees:
@@ -203,9 +203,9 @@ graph TD
 Path of length 2:
 
 ```mermaid
-graph undirected
-    a -- b
-    b -- c
+graph TD
+    a --> b
+    b --> c
 ```
 
 Edges $ab$ and $bc$ are in series.
@@ -216,7 +216,7 @@ Edges $ab$ and $bc$ are in series.
 
 ### **Example 15 — Null Graph**
 ```mermaid
-graph undirected
+graph TD
     a
     b
     c
@@ -226,13 +226,13 @@ graph undirected
 
 ### **Example 16 — Regular Graph (3-regular)**
 ```mermaid
-graph undirected
-    A -- B
-    B -- C
-    C -- D
-    D -- A
-    A -- C
-    B -- D
+graph TD
+    A --> B
+    B --> C
+    C --> D
+    D --> A
+    A --> C
+    B --> D
 ```
 
 ---
@@ -249,22 +249,22 @@ graph LR
         v2
     end
 
-    u1 -- v1
-    u1 -- v2
-    u2 -- v1
+    u1 --> v1
+    u1 --> v2
+    u2 --> v1
 ```
 
 ---
 
 ### **Example 18 — Complete Graph $K_4$**
 ```mermaid
-graph undirected
-    A -- B
-    A -- C
-    A -- D
-    B -- C
-    B -- D
-    C -- D
+graph LR
+    A --> B
+    A --> C
+    A --> D
+    B --> C
+    B --> D
+    C --> D
 ```
 
 ---
@@ -284,19 +284,19 @@ graph TD
 Original:
 
 ```mermaid
-graph undirected
-    a -- b
-    a -- c
-    b -- c
-    c -- d
+graph TD
+    a --> b
+    a --> c
+    b --> c
+    c --> d
 ```
 
-Subgraph using $V'=\{a,b,c\}$, $E'=\{ab,ac\}$:
+Subgraph using $V'={a,b,c}$, $E'={ab,ac}$:
 
 ```mermaid
-graph undirected
-    a -- b
-    a -- c
+graph TD
+    a --> b
+    a --> c
 ```
 
 ---
@@ -308,19 +308,19 @@ graph undirected
 Graph $G$:
 
 ```mermaid
-graph undirected
-    a -- b
-    b -- c
-    c -- a
+graph TD
+    a --> b
+    b --> c
+    c --> a
 ```
 
 Graph $H$:
 
 ```mermaid
-graph undirected
-    1 -- 2
-    2 -- 3
-    3 -- 1
+graph TD
+    1 --> 2
+    2 --> 3
+    3 --> 1
 ```
 
 Isomorphism:  
@@ -335,10 +335,10 @@ Walk:
 $a, b, c, b, d$
 
 ```mermaid
-graph undirected
-    a -- b
-    b -- c
-    b -- d
+graph TD
+    a --> b
+    b --> c
+    b --> d
 ```
 
 ---
@@ -348,10 +348,10 @@ Path:
 $u, v, w, x$
 
 ```mermaid
-graph undirected
-    u -- v
-    v -- w
-    w -- x
+graph TD
+    u --> v
+    v --> w
+    w --> x
 ```
 
 ---
@@ -361,10 +361,10 @@ Circuit:
 $p, q, r, p$
 
 ```mermaid
-graph undirected
-    p -- q
-    q -- r
-    r -- p
+graph TD
+    p --> q
+    q --> r
+    r --> p
 ```
 
 ---
