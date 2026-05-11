@@ -13,10 +13,10 @@ Este documento contiene **únicamente ejemplos**, organizados por tema, usando n
 
 ### **Example 1 — Simple Graph**
 Vertices:  
-$V = \text{{a, b, c, d}}$
+$V = \\{a, b, c, d\\}$
 
 Edges:  
-$E = \text{{ab, ac, bd}}$
+$E = \\{ab, ac, bd\\}$
 
 ```mermaid
 graph TD
