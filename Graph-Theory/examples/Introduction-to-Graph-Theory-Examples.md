@@ -29,7 +29,7 @@ graph TD
 
 ### **Example 2 — Directed Graph (Digraph)**
 Arcs:  
-$A = {(u,v), (v,w), (w,u)}$
+$A = \\{(u,v), (v,w), (w,u)\\}$
 
 ```mermaid
 graph TD
