@@ -13,7 +13,7 @@ Este documento contiene **únicamente ejemplos**, organizados por tema, usando n
 
 ### **Example 1 — Simple Graph**
 Vertices:  
-$V = {a, b, c, d}$
+$V = \{a, b, c, d\}$
 
 Edges:  
 $E = {ab, ac, bd}$
@@ -96,11 +96,11 @@ graph TD
 Graph:
 
 ```mermaid
-graph undirected
-    a -- b
-    a -- c
-    a -- d
-    b -- c
+graph TD
+    a --> b
+    a --> c
+    a --> d
+    b --> c
 ```
 
 Degrees:
