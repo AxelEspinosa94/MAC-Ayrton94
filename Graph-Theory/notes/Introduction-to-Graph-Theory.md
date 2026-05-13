@@ -172,11 +172,7 @@ Isomorphism preserves:
 ### 1.8.1 Walks
 
 #### **Definition 1.9 — Walk**
-A **walk** is a sequence of vertices  
-$$
-v_0, v_1, \dots, v_k
-$$
-such that each consecutive pair is adjacent.
+A **walk** is a sequence of vertices $v_0, v_1, \dots, v_k$ such that each consecutive pair is adjacent.
 
 - **Open walk**: $v_0 \ne v_k$  
 - **Closed walk**: $v_0 = v_k$
