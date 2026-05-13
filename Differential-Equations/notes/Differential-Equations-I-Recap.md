@@ -78,11 +78,11 @@ $$
 
 For the IVP:
 
-$
+$$
 y' = f(x,y), \quad y(x_0)=y_0
-$
+$$
 
-If $(f)$ and $\\(\partial f/\partial y\\)$ are continuous near $(x_0,y_0)$,  
+If $f$ and $\frac{\partial f}{\partial y}$ are continuous near $(x_0,y_0)$,  
 then a **unique** solution exists.
 
 ---
