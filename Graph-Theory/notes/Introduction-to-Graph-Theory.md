@@ -11,7 +11,7 @@
 A **graph** $G = (V, E)$ consists of:
 - a non-empty finite set $V$ of **vertices**, and  
 - a set $E$ of **edges**, where each edge is an unordered pair of vertices.
-- Example: $\\{ab, ac, bd}\\$
+- Example: $\\{ab, ac, bd\\}$
 
 #### **Definition 1.2 - Pseudograph**
 A **pseudograph** is a non directed graph that allows loops and parallel edges without simplicity restrictions.
@@ -65,7 +65,10 @@ For digraphs:
 ### 1.4.1 Handshaking Lemma
 
 #### **Theorem 1.1 — Handshaking Lemma**
-For any graph $G = (V, E)$: $\sum_{v \in V} \deg(v) = 2|E|$
+For any graph $G = (V, E)$: 
+$$
+\sum_{v \in V} \deg(v) = 2|E|
+$$
 
 **Proof.**  
 Each edge contributes exactly 2 to the total degree count. ∎
@@ -153,7 +156,7 @@ Two edges are **in series** if they form a path of length 2 with a common intern
 ## 1.7 Isomorphism
 
 #### **Definition 1.8 — Graph Isomorphism**
-Two graphs $G = (V, E)$ and $H = (V', E')$ are **isomorphic** if there exists a bijection $\\{f : V \to V' such that: uv \in E \iff f(u)f(v) \in E'\\}$
+Two graphs $G = (V, E)$ and $H = (V', E')$ are **isomorphic** if there exists a bijection $\\{f : V \to V': uv \in E \iff f(u)f(v) \in E'\\}$
 
 Isomorphism preserves:
 - degrees  
@@ -170,9 +173,9 @@ Isomorphism preserves:
 
 #### **Definition 1.9 — Walk**
 A **walk** is a sequence of vertices  
-\[
+$$
 v_0, v_1, \dots, v_k
-\]
+$$
 such that each consecutive pair is adjacent.
 
 - **Open walk**: $v_0 \ne v_k$  
