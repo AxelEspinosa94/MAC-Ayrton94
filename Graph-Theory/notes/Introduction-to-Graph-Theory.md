@@ -11,23 +11,30 @@
 A **graph** $G = (V, E)$ consists of:
 - a non-empty finite set $V$ of **vertices**, and  
 - a set $E$ of **edges**, where each edge is an unordered pair of vertices.
+- Example: $\\{ab, ac, bd}\\$
 
-#### **Definition 1.2 — Digraph**
+#### **Definition 1.2 - Pseudograph**
+A **pseudograph** is a non directed graph that allows loops and parallel edges without simplicity restrictions.
+
+#### **Definition 1.3 — Digraph**
 A **directed graph** or **digraph** $D = (V, A)$ consists of:
 - a set $V$ of vertices,  
 - a set $A$ of **arcs**, where each arc is an ordered pair of vertices.
+- Example: $\\{(a,b), (a,c), (b,d)\\}$
 
-#### **Definition 1.3 — Multidigraph**
+#### **Definition 1.4 — Multidigraph**
 A **multidigraph** allows:
 - multiple arcs between the same ordered pair of vertices,  
-- loops (arcs from a vertex to itself).
+- Example: $\\{(a,b), (a,c), (b,d)\\}$
 
-#### **Definition 1.4 — Pseudodigraph**
+#### **Definition 1.5 — Pseudodigraph**
 A **pseudodigraph** is a digraph that allows:
 - loops,  
 - multiple arcs,  
 - and may include edges that do not follow standard incidence rules.
+- Example: $\\{(a,b), (a,c), (b,d), (a,a)\\}$
 
+Every Pseudodigraph is a Multidigraph, but not every Multidigraph is a Pseudodigraph
 ---
 
 ## 1.2 Incidence and Adjacency
@@ -146,14 +153,7 @@ Two edges are **in series** if they form a path of length 2 with a common intern
 ## 1.7 Isomorphism
 
 #### **Definition 1.8 — Graph Isomorphism**
-Two graphs $G = (V, E)$ and $H = (V', E')$ are **isomorphic** if there exists a bijection  
-\[
-f : V \to V'
-\]
-such that:
-\[
-uv \in E \iff f(u)f(v) \in E'.
-\]
+Two graphs $G = (V, E)$ and $H = (V', E')$ are **isomorphic** if there exists a bijection $\\{f : V \to V' such that: uv \in E \iff f(u)f(v) \in E'\\}$
 
 Isomorphism preserves:
 - degrees  
@@ -213,5 +213,180 @@ flowchart TD
     G -->|Yes| H[Circuit]
     G -->|No| I[Simple Path]
 ```
+
+---
+
+# 📘 **Constructing a Graph Using the Havel–Hakimi Algorithm**
+
+This section explains how to use the **Havel–Hakimi algorithm** not only to verify whether a degree sequence is graphical, but also to **explicitly construct a graph** that has exactly that degree sequence.
+
+---
+
+## 🧠 **1. General Idea of the Algorithm**
+
+Given a degree sequence:
+
+$$
+(d_1, d_2, \dots, d_n)
+$$
+
+the algorithm:
+
+1. Sorts the sequence in non-increasing order.  
+2. Takes the first element $d_1$.  
+3. Removes it.  
+4. Subtracts 1 from the next $d_1$ elements.  
+5. If any value becomes negative → the sequence is **not** graphical.  
+6. Repeat until reaching a sequence of zeros.
+
+---
+
+## 🎯 **2. Interpretation for Constructing a Graph**
+
+Every time the algorithm says:
+
+> “Subtract 1 from the next $d_1$ elements”
+
+this means:
+
+> **Connect the vertex with the highest degree to the next $d_1$ vertices.**
+
+Therefore:
+
+- Each subtraction of 1 corresponds to **an edge you draw**.  
+- By the end of the process, you will have constructed a valid graph.
+
+---
+
+## 🧪 **3. Complete Example**
+
+Let us construct a graph with the degree sequence:
+
+$$
+(3,3,2,2,2,2)
+$$
+
+We denote the vertices as:
+
+$$
+v_1, v_2, v_3, v_4, v_5, v_6
+$$
+
+---
+
+### 🔹 **Step 1**
+
+Sorted sequence:
+
+$$
+(3,3,2,2,2,2)
+$$
+
+Vertex $v_1$ has degree 3 → we connect it to the next 3 vertices:
+
+- $v_1 - v_2$
+- $v_1 - v_3$
+- $v_1 - v_4$
+
+Subtracting:
+
+$$
+(3,2,2,2,2) \to (2,1,1,2,2)
+$$
+
+Reordering:
+
+$$
+(2,2,2,1,1)
+$$
+
+---
+
+### 🔹 **Step 2**
+
+Vertex $v_2$ has degree 2 → we connect it to:
+
+- $v_2 - v_3$  
+- $v_2 - v_4$
+
+Subtracting:
+
+$$
+(2,2,1,1) \to (1,1,1,1)
+$$
+
+---
+
+### 🔹 **Step 3**
+
+Vertex $v_3$ has degree 1 → we connect it to:
+
+- $v_3 - v_4$
+
+Subtracting:
+
+$$
+(1,1,1,1) \to (0,0,1,1)
+$$
+
+Reordering:
+
+$$
+(1,1,0,0)
+$$
+
+---
+
+### 🔹 **Step 4**
+
+Vertex $v_5$ has degree 1 → we connect it to:
+
+- $v_5 - v_6$
+
+Subtracting:
+
+$$
+(1,1,0,0) \to (0,0,0,0)
+$$
+
+---
+
+## 🎉 **4. Final Graph**
+
+Edges obtained:
+
+- $v_1 - v_2$
+- $v_1 - v_3$
+- $v_1 - v_4$
+- $v_2 - v_3$
+- $v_2 - v_4$
+- $v_3 - v_4$
+- $v_5 - v_6$
+
+---
+
+## 🎨 **5. Mermaid Representation**
+
+```mermaid
+graph TD
+    v1 --> v2
+    v1 --> v3
+    v1 --> v4
+
+    v2 --> v3
+    v2 --> v4
+
+    v3 --> v4
+
+    v5 --> v6
+```
+
+---
+
+## 🧩 **6. Conclusion**
+
+The Havel–Hakimi algorithm does more than verify whether a sequence is graphical:  
+👉 **it also tells you exactly how to construct the graph**.  
+Each subtraction of 1 corresponds to an edge, and by following the process step by step, you obtain a valid graph that respects the degree sequence.
 
 ---
