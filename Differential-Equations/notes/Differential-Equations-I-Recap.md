@@ -76,7 +76,7 @@ $$
 
 # **Existence and Uniqueness Theorem (Picard–Lindelöf)**
 
-For the IVP:
+For the IVP (Initial Value Problem):
 
 $$
 y' = f(x,y), \quad y(x_0)=y_0
