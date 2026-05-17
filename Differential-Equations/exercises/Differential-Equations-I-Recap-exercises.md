@@ -11,20 +11,37 @@
 ## **0.1 Classification and Basic Concepts**
 
 1. Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
-   a) $y'' + y' + y = \sin x$  
+   a) $y'' + y' + y = \sin x$
+   Linear, non-autonomous, order 2
    b) $y' = y^2 - 3y + 2$  
+   Non-Linear, autonomous, first order
    c) $x^2 y'' + xy' - y = 0$  
+   Linear, non-autonomous, order 2
    d) $y' + \sqrt{xy} = 0$
+   Non-linear, autonomous, first order
 
 2. Determine whether the following equations are exact, linear, separable, or none:  
-   a) $(2xy + 3)dx + (x^2 + 4y)dy = 0$  
+   a) $(2xy + 3)dx + (x^2 + 4y)dy = 0$
+   It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
+   $$
+   \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
+   $$
    b) $y' = x e^{y}$  
+   Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
    c) $y' + y = x^2$
+   It is a linear DE since by definition it can be written as:
+   $$
+   a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
+   $$
+   where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
 
 3. For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution:  
-   a) $y' = \sqrt{y},\; y(0)=0$  
-   b) $y' = \frac{1}{x-y},\; y(1)=1$  
+   a) $y' = \sqrt{y},\; y(0)=0$ 
+   If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrty{y}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
+   b) $y' = \frac{1}{x-y},\; y(1)=1$
+   Calculating the y-partial derivative of $\frac{1}{x-y}$ we have $\frac{1}{(x-y)^2}$, which is continous to $x$ values near 1, however is not continous in $x=1$, therefore we can't confirm there is an unique solution to it
    c) $y' = x^{1/3} y^{2/3},\; y(0)=0$
+   Calculating the y-partial derivative of $x^{1/3} y^{2/3}$ we have $\frac{2x^{1/3}}{3y^{1/3}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
 
 ---
 
@@ -36,37 +53,264 @@
 
 4. Solve the following separable equations (no need to simplify constants):  
    a) $y' = x^2 y^3$  
-   b) $y' = \frac{x}{1+y^2}$  
+   We rewrite the equation to:
+   $$
+   \frac{dy}{dx}=x^2 y^3
+   $$
+   Then we separate the differentials to match the variables
+   $$
+   \frac{dy}{y^3}=x^2 dx
+   $$
+   Then we integrate the equation
+   $$
+   \int \frac{dy}{y^3}=\int x^2 dx
+   $$
+   which is equivalent
+   $$
+   -\frac{1}{2y^2} = \frac{x^3}{3}
+   $$
+   Then we isolate $y$
+   $$
+   -\frac{3}{2x^3} = y^2 \rightarrow y = if(x), i\in \mathbb{C}
+   $$
+   Therefore we can't find a solution to it, at least not in $\mathbb{R}$
+   
+   b) $y' = \frac{x}{1+y^2}$
+   We rewrite the equation to:
+   $$
+   \frac{dy}{dx}=\frac{x}{1+y^2}
+   $$
+   Then we separate the differentials to match the variables
+   $$
+   (1+y^2)dy=x dx
+   $$
+   Then we integrate the equation
+   $$
+   \int (1+y^2)dy=\int x dx
+   $$
+   which is equivalent
+   $$
+   y + \frac{y^3}{3} = x^2
+   $$
+   Then we isolate $y$
+   $$
+   y(1+\frac{y^2}{3}) = x^2
+   $$
+   which means there is more than one solution
+
    c) $y' = (y-1)(y+2)$
+   We rewrite the equation to:
+   $$
+   \frac{dy}{dx}=\frac{y-1}{y+2}
+   $$
+   Then we separate the differentials to match the variables
+   $$
+   \frac{y+2}{y-1}dy=dx
+   $$
+   Then we integrate the equation
+   $$
+   \int \frac{y+2}{y-1}dy=\int dx
+   $$
+   which is equivalent
+   $$
+   \int \\(1+\frac{3}{y-1}\\)dy=\int dx
+   $$
+
+   $$
+   y + 3ln(y-1) = x
+   $$
+   However we can't isolate y, so the equation may have multiple solutions
 
 5. Solve the IVPs:  
-   a) $y' = xy,\; y(0)=3$  
+   a) $y' = xy,\; y(0)=3$
+   This can be rewritten as
+   $$
+   \frac{dy}{dx} = xy
+   $$
+   Which is equivalent to
+   $$
+   \frac{dy}{y}=x dx
+   $$
+   Let's integrate
+   $$
+   \int \frac{dy}{y}=\int x dx \rightarrow ln(y) = \frac{x^2}{2}
+   $$
+   If an $e^x$ is applied to the equation we have
+   $$
+   y = e^{\frac{x^2}{2}} + C
+   $$
+   $C$ constant. Taking the initial value we have
+   $$
+   y(0) = e^{\frac{0^2}{2}} + C = e^{0} + C = 1 + C = 3 \rightarrow C = 2
+   $$
+
+   Therefore $y = e^{\frac{x^2}{2}} + 2$
+   
    b) $y' = (1+y^2)\cos x,\; y(0)=0$
+   This can be rewritten as
+   $$
+   \frac{dy}{dx} = (1+y^2)\cos x
+   $$
+   Which is equivalent to
+   $$
+   \frac{dy}{(1+y^2)}=\cos x dx
+   $$
+   Let's integrate
+   $$
+   \int \frac{dy}{(1+y^2)}=\int \cos x dx \rightarrow \arctan(y) = \sin x
+   $$
+   If $\tan x$ is applied to the equation we have
+   $$
+   y = \tan(\sin x) + C
+   $$
+   $C$ constant. Taking the initial value we have
+   $$
+   y(0) = \tan(\sin(0)) + C = \tan(0) + C = 0 + C = 0 \rightarrow C = 0
+   $$
+
+   Therefore $y = \tan(\sin x)$
 
 6. Determine all equilibrium solutions and classify their stability:  
    a) $y' = y(3-y)$  
+   An equilibrium solution is a constant solution $y(t)=C$ such that $y'=0$.
+   So we equalize the right side to $0$:
+   $$
+   y(3-y)=0 \rightarrow y=0 \or y=3
+   $$
+   So the equilibrium solutions are $y=0$ and $y=3$.
+   Now, the idea is to check what happens with solutions near each equilibrium, we can use the derivative criteria of $f(y)$ where
+   $$
+   y'=f(y)=y(3-y) \rightarrow f'(y)=3-2y
+   $$
+   If we set $y=0$, $f'(0)=3-0=3>0$. If $f'(y*)>0$, then the equilibrium $y*$ is unstable (near solutions go away).
+   If we set $y=3$, $f'(3)=3-6=-3<0$. If $f'(y*)<0$, then the equilibrium $y*$ is asintotically stable (near solutions get close).
    b) $y' = y^2 - 4$
+   Let's equalize $y^2-4=0$, so the equilibrium solutions are $y=2$ and $y=-2$, so we use the derivative criteria of $f(y)$ where
+   $$
+   y'=f(y)=y^2-4 \rightarrow f'(y)=2y
+   $$
+   If we set $y=-2$, $f'(-2)=2(-2)=-4<0$. If $f'(y*)<0$, then the equilibrium $y*$ is asintotically stable (near solutions get close).
+   If we set $y=2$, $f'(2)=2(2)=4>0$. If $f'(y*)>0$, then the equilibrium $y*$ is unstable (near solutions get away).
 
 ---
 
 ## **1.2 Exact Equations**
 
 7. Determine whether each equation is exact. If exact, solve it:  
-   a) $(3x^2 + 2y)dx + (2x + 4y^3)dy = 0$  
+   a) $(3x^2 + 2y)dx + (2x + 4y^3)dy = 0$
+   $$
+   M(x,y) = 3x^2 + 2y \rightarrow \frac{\partial M}{\partial y} = 2
+   N(x,y) = 2x + 4y^3 \rightarrow \frac{\partial N}{\partial x} = 2
+   $$
+   Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Then we solve the DE, first we inegrate $M$
+   $$
+   \int M(x,y)dx = \int (3x^2+2y)dx=\int 3x^2 dx + \int 2y dx = x^3+2yx + h(y)
+   $$
+   Now we take the derivative of this result on $y$ and equalize to $N$ having
+   $$
+   \frac{d}{dy}\\(x^3+2yx+h(y)\\)=N(x,y)=2x+4y^3 \rightarrow 2x + h'(y)=2x+4y^3 \rightarrow h'(y) = 2x+4y^3-2x=4y^3
+   $$
+
+   If we integrate $h'(y)$ on y we have that $h(y)=y^4$. Therefore the solution to the DE is $x^3+3xy+y^4=C$
+
    b) $(y\cos x - 2x)dx + (\sin x + x^2)dy = 0$
+   $$
+   M(x,y) = y\cos x -2x \rightarrow \frac{\partial M}{\partial y} = \cos x
+   N(x,y) = \sin x + x^2 \rightarrow \frac{\partial N}{\partial x} = \cos x
+   $$
+   Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Then we solve the DE, first we inegrate $M$
+   $$
+   \int M(x,y)dx = \int (y\cos x - 2x)dx=\int y\cos x dx - \int 2x dx = y\sin x - x^2 + h(y)
+   $$
+   Now we take the derivative of this result on $y$ and equalize to $N$ having
+   $$
+   \frac{d}{dy}\\(y\sin x - x^2 + h(y)\\) = N(x,y) = \sin x + x^2 \rightarrow \sin x + h'(y) = \sin x + x^2 \rightarrow h'(y) = x^2
+   $$
+
+   If we integrate $h'(y)$ on y we have that $h(y)=yx^2$. Therefore the solution to the DE is $y\sin x -x^2 + yx^2=C$
 
 8. Find an integrating factor (if it exists) depending only on $x$ or only on $y$:  
-   a) $(2xy - y)dx + (x^2 - x)dy = 0$  
+   a) $(2xy - y)dx + (x^2 - x)dy = 0$
+   $$
+   M(x,y) = 2xy - y \rightarrow \frac{\partial M}{\partial y} = x - 1
+   N(x,y) = x^2 - x \rightarrow \frac{\partial N}{\partial x} = x - 1
+   $$
+   Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Therefore the integrating factor is $\mu = 1$
    b) $(y + x e^{xy})dx + (x + y e^{xy})dy = 0$
+   $$
+   M(x,y) = y + x e^{xy} \rightarrow \frac{\partial M}{\partial y} = 1 + x^2 e^{xy}
+   N(x,y) = x + y e^{xy} \rightarrow \frac{\partial N}{\partial x} = 1 + y^2 e^{xy}
+   $$
+   Since $\frac{\partial M}{\partial y}\neq\frac{\partial N}{\partial x}$, the DE is not exact. 
+   Now we have to prove either there exist an integrating factor dependant on $x$ or dependant on $y$. However
+   - If $\frac{M_y - N_x}{N}=f(x)\rightarrow \mu = \mu(x)$
+   - If $\frac{N_x - M_y}{M}=g(y)\rightarrow \mu = \mu(y)$
+
+   Then we calculate $M_y - N_x = (1 + x^2 e^{xy}) - (1 + y^2 e^{xy}) = (x^2 - y^2)e^{xy}$, and now we test first $\mu(x)$
+   $$
+   \frac{M_y - N_x}{N} = \frac{(x^2 - y^2)e^{xy}}{x + y e^{xy}}
+   $$
+
+   However, it still depends on both, testing on $\mu(y)$ we have a similar situation, so there is no integrating factor that depends only on either $x$ or $y$
 
 ---
 
 ## **1.3 Linear First‑Order Equations**
 
 9. Solve using the integrating factor method:  
-   a) $y' + 3y = e^{-x}$  
-   b) $y' - \frac{2}{x}y = x^3$  
+   a) $y' + 3y = e^{-x}$
+   Since the equation matches the general form $P(x) = 3$ and $Q(x) = e^{-x}$, then the integrating factor has the form:
+   $$
+   \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int 3dx} \rightarrow \mu(x) = e^{3x}
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)y'+3(\mu(x))y = \mu(x)e^{-x}
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)y)' = \mu(x)e^{-x} \rightarrow \\(e^{3x}y\\)' = e^{3x}e^{-x} \rightarrow \\(e^{3x}y\\)' = e^{2x}
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(e^{3x}y\\)' =  \int e^{2x} \rightarrow e^{3x}y = \frac{1}{2}e^{2x} + C \rightarrow y = \frac{e^{-x}}{2} + Ce^{-x}
+   $$
+
+   b) $y' - \frac{2}{x}y = x^3$
+   Since the equation matches the general form $P(x) = \frac{2}{x}$ and $Q(x) = x^3$, then the integrating factor has the form:
+   $$
+   \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int \frac{2}{x}dx} \rightarrow \mu(x) = e^{2ln(x)} = x^2
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)y'+\frac{2}{x}(\mu(x))y = \mu(x)x^3
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)y)' = \mu(x)x^3 \rightarrow \\(x^2 y\\)' = x^2 x^3 \rightarrow \\(e^{3x}y\\)' = x^5
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(x^2 y\\)' =  \int x^5 \rightarrow x^2 y = \frac{1}{6}x^6 + C \rightarrow y = \frac{x^4}{6} + \frac{C}{x^2}
+   $$
+
    c) $y' + y\tan x = \sin x$
+   Since the equation matches the general form $P(x) = \tan x$ and $Q(x) = \sin x$, then the integrating factor has the form:
+   $$
+   \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int \tan x dx} \rightarrow \mu(x) = e^{-\ln(\cos x)} = \sec x
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)y'+\tan x(\mu(x))y = \mu(x)\sin x
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)y)' = \mu(x)\sin x \rightarrow \\(\sec x y\\)' = \sec x \sin x \rightarrow \\(\sec x y\\)' = \tan x
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(\sec x y\\)' = \int \tan x \rightarrow \sec x y = -\ln(\cos x) + C \rightarrow y = -\frac{\ln(\cos x)}{\sec x} + C\cos x
+   $$
 
 10. Solve the IVPs:  
    a) $y' + 4y = 8,\; y(0)=1$  
