@@ -45,6 +45,7 @@ equals the number of **walks of length $k$** from vertex $v_i$ to vertex $v_j$.
 
 ### **Example 1.1**
 Graph:
+
 $$
 E = \\{ab, bc, ca\\}
 $$
@@ -71,12 +72,14 @@ $$
 ## **2. Incidence Matrix**
 
 ### **Definition 2.1 — Incidence Matrix**
+
 Let $G = (V,E)$ with  
+
 $$
 V = \\{v_1,\dots,v_n\\}, \quad E = \\{e_1,\dots,e_m\\}.
 $$
 
-The **incidence matrix** $M = \\[m_{ij}\\]$ is an $n \times m$ matrix defined by:
+The **incidence matrix** $M = \[m_{ij}\]$ is an $n \times m$ matrix defined by:
 
 $$
 m_{ij} =
