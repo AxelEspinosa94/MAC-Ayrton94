@@ -313,8 +313,43 @@
    $$
 
 10. Solve the IVPs:  
-   a) $y' + 4y = 8,\; y(0)=1$  
+   a) $y' + 4y = 8,\; y(0)=1$
+   Since the equation matches the general form $P(x) = 4$ and $Q(x) = 8$, then the integrating factor has the form:
+   $$
+   \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int 4 dx} \rightarrow \mu(x) = e^{4x}
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)y'+4(\mu(x))y = \mu(x)8
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)y)' = 8\mu(x) \rightarrow \\(e^{4x} y\\)' = 8e^{4x} \rightarrow \\(e^{4x} y\\)' = 8e^{4x}
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(e^{4x} y\\)' = \int 8e^{4x} \rightarrow e^{4x} y = 2e^{4x} + C \rightarrow y = 2 + Ce^{4x}
+   $$
+   Since we have $y(0)=1$, then $y(0) = 2 + Ce^{0} = 1 \rightarrow 2 + C = 1 \rightarrow C=-1$. Therefore the solution of the IVP is $y = 2 -e^{4x}$
+
    b) $y' - \frac{1}{x}y = x,\; y(1)=2$
+   Since the equation matches the general form $P(x) = \frac{1}{x}$ and $Q(x) = x$, then the integrating factor has the form:
+   $$
+   \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int \frac{1}{x} dx} \rightarrow \mu(x) = e^{\ln x} = x
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)y'+\frac{1}{x}(\mu(x))y = \mu(x)x
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)y)' = x\mu(x) \rightarrow \\(x y\\)' = x^2 \rightarrow \\(x y\\)' = x^2
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(x y\\)' = \int x^{2} \rightarrow x y = \frac{x^3}{3} + C \rightarrow y = \frac{x^2}{3} + \frac{C}{x}
+   $$
+   Since we have $y(1)=2$, then $y(1) = \frac{1^2}{3} + \frac{C}{1} = 2 \rightarrow \frac{1}{3} + C = 2 \rightarrow C=\frac{5}{3}$. Therefore the solution of the IVP is $y = \frac{x^2}{3} + \frac{5}{3x}$
 
 ---
 
@@ -323,14 +358,139 @@
 ### **Homogeneous**
 
 11. Solve:  
-   a) $y' = \frac{x+y}{x-y}$  
+   a) $y' = \frac{x+y}{x-y}$
+   Let's substitute $y = vx, \quad y' = v + xv'$
+   $$
+   v + xv' = \frac{x(v+1)}{x(1-v)} \rightarrow xv' = \frac{x(v+1)-xv(1-v)}{x(1-v)}= \frac{(v+1)+(v^2 - v)}{1-v}=\frac{v^2+1}{1-v} \rightarrow v' = \frac{1}{x}\frac{v^2 +1}{1-v}
+   $$
+
+   We then make $v' = \frac{dv}{dx}$ and
+   $$
+   \frac{1-v}{v^2 +1}dv =\frac{dx}{x}
+   $$
+
+   So, if we split the equation we have that $\int \frac{dx}{x}=\ln x$, on the other side:
+   $$
+   \int \frac{1-v}{v^2 +1}dv=\int\frac{dv}{v^2 +1}-\int\frac{vdv}{v^2 +1}
+   $$
+   For Calculus we know that $\int\frac{dv}{v^2 +1}= \arctan(v)$ and let $u=v^2 +1$, so $du=2vdv\rightarrow vdv=\frac{du}{2}$, then
+   $$
+   \int \frac{1-v}{v^2 +1}dv = \arctan(v)- \frac{1}{2}\int\frac{du}{u}=\arctan(v)-\frac{1}{2}\ln(u)=\arctan(v)-\frac{1}{2}\ln(v^2 +1)
+   $$
+   So in the end we have the following equation
+   $$
+   \arctan(v)-\frac{1}{2}\ln(v^2 +1) =\ln(x) + C
+   $$
+   Considering $y=vx\rightarrow v\frac{y}{x}$, we substitute the value of $v$
+   $$
+   \arctan(\frac{y}{x})-\frac{1}{2}\ln(\frac{y}{x}^{2} +1) =\ln(x) + C
+   $$
+   By properties of $\ln$
+   $$
+   \ln(\frac{y}{x}^{2} +1)=\ln(\frac{x^2 + y^2}{x^2})=\ln(x^2 + y^2)-\ln(x^2)
+   $$
+   Therefore
+   $$
+   \arctan(\frac{y}{x})-\frac{1}{2}\\(\ln(x^2 + y^2)-\ln(x^2)\\) =  \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)-\frac{1}{2}\ln(x^2) = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\frac{1}{2}2\ln(x) = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\ln(x) =\ln(x) + C
+   $$
+   Finally having
+   $$
+   \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)= C
+   $$
+   Which is a valid form for an implicit solution
+
    b) $y' = \frac{y}{x} + \frac{x}{y}$
+   Let's substitute $y = vx, \quad y' = v + xv'$
+   $$
+   v + xv' = \frac{vx}{x} + \frac{x}{vx} \rightarrow xv' = v+\frac{1}{v}-v=\frac{1}{v}\rightarrow v'=\frac{1}{vx}
+   $$
+
+   We then make $v' = \frac{dv}{dx}$ and
+   $$
+   vdv =\frac{dx}{x}
+   $$
+
+   So, if we split the equation we have that $\int \frac{dx}{x}=\ln x$, on the other side:
+   $$
+   \int vdv=\frac{v^2}{2}
+   $$
+   So in the end we have the following equation
+   $$
+   \frac{v^2}{2}=\ln(x) + C
+   $$
+   Considering $y=vx\rightarrow v\frac{y}{x}$, we substitute the value of $v$
+   $$
+   \frac{1}{2}\\(\frac{y}{x}\\)^2=\ln(x) + C
+   $$
+   where
+   $$
+   C = \\(\frac{y}{x}\\)^2 - \ln(x)
+   $$
+   Which is a valid form for an implicit solution
 
 ### **Bernoulli**
 
 12. Solve:  
-   a) $y' + y = y^3$  
+   a) $y' + y = y^3$
+   For Bernoulli we use the substitution $v=y^{1-n}=y^{1-3}=y^{-2} \rightarrow v' = -\frac{2}{y^3}y'  \rightarrow y' = -\frac{y^3 v'}{2}=\frac{(v^{-1/2})^3 v'}{2}=\frac{v^{-3/2} v'}{2}$ then we have
+   $$
+   \frac{v^{-3/2} v'}{2} + v^{-1/2}=v^{-3/2}
+   $$
+   Then we dvide the equation by $v^{-3/2}$ having
+   $$
+   \frac{v'}{2} + v= 1 \rightarrow v' +2v = 2
+   $$
+   This last equation can be solved using the integrating factor with $P(x)=2$ and $Q(x)=2$. Now we calculate the integrating factor:
+   $$
+   \mu(x) = e^{\int P(x)dx}=e^{\int 2dx}=e^{2x}
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)v'+2(\mu(x))v = 2\mu(x)
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)v)' = 2\mu(x) \rightarrow \\(e^{2x}v\\)' = 2e^{2x}
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(e^{2x}v\\)' = \int 2e^{2x} \rightarrow e^{2x}v = e^{2x} + C \rightarrow v = 1 + Ce^{-2x}
+   $$
+   Then we substitute the value of $v=y^{-2}$ having
+   $$
+   y^{-2} = 1 +Ce^{-2x}\rightarrow y = \\(1 +Ce^{-2x}\\)^{-1/2}
+   $$
+
    b) $y' - 2y = 3y^{-1}$
+   For Bernoulli we use the substitution $v=y^{1-n}=y^{1-(-1)}=y^{2} \rightarrow v' = 2yy'  \rightarrow y' = \frac{v'}{2\sqrt(v)}$ then we have
+   $$
+   \frac{v'}{2\sqrt(v)} - 2\sqrt(v) = \frac{3}{\sqrt(v)}
+   $$
+   Then we multiply the equation by $\sqrt(v)$ having
+   $$
+   v' - 2v = 3 
+   $$
+   This last equation can be solved using the integrating factor with $P(x)=-2$ and $Q(x)=3$. Now we calculate the integrating factor:
+   $$
+   \mu(x) = e^{\int P(x)dx}=e^{\int -2dx}=e^{-2x}
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)v'-2(\mu(x))v = 3\mu(x)
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)v)' = 3\mu(x) \rightarrow \\(e^{-2x}v\\)' = 2e^{-2x}
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(e^{-2x}v\\)' = \int 3e^{-2x} \rightarrow e^{-2x}v = \frac{3}{2}e^{-2x} + C \rightarrow v = \frac{3}{2} + Ce^{2x}
+   $$
+   Then we substitute the value of $v=y^{2}$ having
+   $$
+   y^{2} = \frac{3}{2} +Ce^{2x}\rightarrow y = \\(1 +Ce^{-2x}\\)^{1/2}
+   $$
+
 
 ### **Riccati (special case)**
 
@@ -339,11 +499,47 @@
    y' = y^2 - xy + x^2
    $$
 
+   The Riccati form can be identified as $a(x)=1, b(x)=-x$ and $c(x)=x^2$, and we have the particular solution $y_p = x$, Then we apply the substitution $y = y_p + \frac{1}{v}$, where $y'=y_{p}'-\frac{v'}{v^2}= 1- \frac{v'}{v^2}$. Substituting this result in the original equation we have:
+   $$
+   v' + (2a(x)y_{p}(x)+b(x))v =-a(x)
+   \rightarrow v' +(2(1)x-x)v=-1
+   \rightarrow v' +xv =-1
+   $$
+   Which can be calculated by the integrating factor using $P(x)=x$ and $Q(x)=-1$. Now we calculate the integrating factor:
+   $$
+   \mu(x) = e^{\int P(x)dx}=e^{\int xdx}=e^{\frac{x^2}{2}}
+   $$
+   Then we multiply $\mu(x)$ to the entire equation
+   $$
+   \mu(x)v'+x(\mu(x))v = -\mu(x)
+   $$
+   We recognize the derivative as:
+   $$
+   (\mu(x)v)' = -\mu(x) 
+   \rightarrow \\(e^{\frac{x^2}{2}}v\\)' = -e^{\frac{x^2}{2}}
+   $$
+   Then we integrate on x, having
+   $$
+   \int \\(e^{\frac{x^2}{2}}v\\)' = \int -e^{\frac{x^2}{2}}
+   \rightarrow e^{\frac{x^2}{2}}v = \int -e^{\frac{x^2}{2}} + C 
+   \rightarrow v = E(x) + Ce^{\frac{x^2}{2}}
+   $$
+   where $E(x)=\int -e^{\frac{x^2}{2}}$. Then we substitute the value of $v=\frac{1}{y-y_p}$ having
+   $$
+   y-y_p = \frac{1}{E(x) + Ce^{\frac{x^2}{2}}}
+   \rightarrow y = \frac{1}{E(x) + Ce^{\frac{x^2}{2}}} + y_p
+   $$
+
 ### **Clairaut**
 
 14. Solve the Clairaut equation:  
    $$
    y = xy' + (y')^2
+   $$
+
+   Using Clairaut, we identify $f(y')=(y')^2$, So, the solution will have the form
+   $$
+   y=Cx + C^2
    $$
 
 ---
