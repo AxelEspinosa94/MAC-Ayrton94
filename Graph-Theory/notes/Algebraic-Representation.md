@@ -50,7 +50,7 @@ $$
 E = \\{ab, bc, ca\\}
 $$
 
-Adjacency matrix (ordering $(a,b,c)$):
+Adjacency matrix (ordering $\(a,b,c\)$):
 
 $$
 A =
