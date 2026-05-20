@@ -102,9 +102,7 @@ $$
 
 ## **Algorithm**
 1. Rewrite:  
-   $$
-   \frac{1}{h(y)}dy = g(x)dx
-   $$
+   $\frac{1}{h(y)}dy = g(x)dx$
 2. Integrate both sides.
 3. Solve for $y$ if possible.
 4. Apply initial condition.
@@ -201,9 +199,7 @@ $$
 1. Compute $\mu(x)$.
 2. Multiply entire equation.  
 3. Recognize derivative:  
-   $$
-   (\mu y)' = \mu Q
-   $$
+   $(\mu y)' = \mu Q$
 4. Integrate.  
 5. Solve for $y$.
 
@@ -233,15 +229,117 @@ $$
 # **4. Substitution Methods**
 
 ## **4.1 Homogeneous Equations**
+
+A first‑order differential equation of the form  
 $$
 y' = F\left(\frac{y}{x}\right)
+$$  
+is called **homogeneous** because the right‑hand side depends only on the ratio $y/x$.  
+Such equations can be solved using the substitution:
+
+$$
+y = v x, \qquad y' = v + x v'.
 $$
 
-Substitute:
+---
+
+## ## **Algorithm**
+
+### **1. Verify homogeneity**
+Check that the differential equation can be written as:
+$$
+y' = F\left(\frac{y}{x}\right).
+$$
+
+If the right‑hand side depends only on $y/x$, the equation is homogeneous.
+
+---
+
+### **2. Apply the substitution**
+Let:
+$$
+y = vx,
+$$
+where $v = v(x)$ is a function of $x$.  
+Differentiate using the product rule:
 
 $$
-y = vx, \quad y' = v + xv'
+y' = v + x v'.
 $$
+
+Substitute both expressions into the original differential equation:
+
+$$
+v + x v' = F(v).
+$$
+
+---
+
+### **3. Isolate $v'$**
+Rearrange the equation to solve for $v'$:
+
+$$
+x v' = F(v) - v,
+$$
+
+$$
+v' = \frac{F(v) - v}{x}.
+$$
+
+This is now a **separable differential equation**.
+
+---
+
+### **4. Separate variables and integrate**
+Rewrite:
+
+$$
+\frac{dv}{F(v) - v} = \frac{dx}{x}.
+$$
+
+Integrate both sides:
+
+$$
+\int \frac{dv}{F(v) - v} = \int \frac{dx}{x}.
+$$
+
+The right-hand side integrates to $\ln|x| + C$.  
+The left-hand side depends on the specific form of $F(v)$.
+
+---
+
+### **5. Substitute back $v = y/x$**
+After integrating, replace:
+
+$$
+v = \frac{y}{x}.
+$$
+
+This gives an implicit solution of the form:
+
+$$
+C = G(x, y),
+$$
+
+where $G$ comes from the integration result.
+
+---
+
+### **6. (Optional) Solve explicitly for $y$**
+If possible, isolate $y$ to obtain an explicit solution  
+$$
+y = y(x).
+$$
+
+If not, the implicit form $C = G(x,y)$ is the final solution.
+
+---
+
+# ## **Summary**
+The method transforms a homogeneous differential equation into a separable one using the substitution $y = vx$. After integrating and substituting back, the constant of integration yields the implicit solution.
+
+---
+
 
 ## **4.2 Bernoulli Equation**
 $$
@@ -260,6 +358,148 @@ y' = a(x)y^2 + b(x)y + c(x)
 $$
 
 If one solution is known, reduce to linear.
+
+
+### 📘 **Bernoulli & Riccati Differential Equations — Algorithms (Markdown)**
+
+### # **1. Bernoulli Differential Equation**
+
+A Bernoulli equation has the form:
+
+$$
+y' + P(x)y = Q(x)y^n, \qquad n \neq 0,1.
+$$
+
+It is nonlinear, but it becomes linear after a substitution.
+
+---
+
+### **Algorithm**
+
+#### **1. Identify the Bernoulli form**
+Verify the equation matches:
+
+$$
+y' + P(x)y = Q(x)y^n.
+$$
+
+#### **2. Apply the substitution**
+Let:
+
+$$
+v = y^{1-n}.
+$$
+
+Differentiate:
+
+$$
+v' = (1-n)y^{-n}y'.
+$$
+
+#### **3. Substitute into the original equation**
+Replace $y$ and simplify to obtain a **linear ODE in $v$**:
+
+$$
+v' + (1-n)P(x)v = (1-n)Q(x).
+$$
+
+#### **4. Solve the linear ODE**
+Use the integrating factor:
+
+$$
+\mu(x) = e^{\int (1-n)P(x)\,dx}.
+$$
+
+Solve for $v(x)$.
+
+#### **5. Substitute back**
+$$
+y = v^{\frac{1}{1-n}}.
+$$
+
+This gives the explicit or implicit solution.
+
+---
+
+## # **2. Riccati Differential Equation**
+
+A Riccati equation has the form:
+
+$$
+y' = a(x)y^2 + b(x)y + c(x).
+$$
+
+It is nonlinear and **cannot be linearized directly**.  
+However, if a *particular solution* $y_p(x)$ is known, the equation becomes solvable.
+
+---
+
+### **Algorithm**
+
+#### **1. Identify the Riccati form**
+Check that the ODE matches:
+
+$$
+y' = a(x)y^2 + b(x)y + c(x).
+$$
+
+#### **2. Assume a known particular solution**
+Let $y_p(x)$ satisfy the equation.
+
+#### **3. Apply the substitution**
+Let:
+
+$$
+y = y_p + \frac{1}{v}.
+$$
+
+Differentiate:
+
+$$
+y' = y_p' - \frac{v'}{v^2}.
+$$
+
+#### **4. Substitute into the Riccati equation**
+After simplification, the nonlinear terms cancel and you obtain a **linear ODE in $v$**:
+
+$$
+v' + (2a(x)y_p(x) + b(x))v = -a(x).
+$$
+
+#### **5. Solve the linear ODE**
+Use the integrating factor:
+
+$$
+\mu(x) = e^{\int (2a y_p + b)\,dx}.
+$$
+
+Solve for $v(x)$.
+
+#### **6. Substitute back**
+$$
+y = y_p + \frac{1}{v}.
+$$
+
+This yields the general solution.
+
+---
+
+# ## **3. Relationship Between Bernoulli and Riccati**
+
+| Feature | Bernoulli | Riccati |
+|--------|-----------|---------|
+| General form | $y' + P y = Q y^n$ | $y' = a y^2 + b y + c$ |
+| Nonlinearity | Power $y^n$ | Quadratic $y^2$ |
+| Substitution | $v = y^{1-n}$ | $y = y_p + 1/v$ |
+| Requires particular solution? | ❌ No | ✅ Yes |
+| Reduces to linear ODE? | Always | Only after knowing $y_p$ |
+| Is Bernoulli a special case of Riccati? | **Yes**, when $a(x)=Q(x)$, $b(x)=P(x)$, $c(x)=0$, and $n=2$. | Riccati is the general case |
+
+---
+
+## ## **Conclusion**
+
+Yes, they are related — **Bernoulli is a special, simpler case of Riccati** — but the solution strategies differ enough that having **two separate Markdown sections** in your repo is absolutely worth it.
 
 ## **4.4 Clairaut**
 $$
