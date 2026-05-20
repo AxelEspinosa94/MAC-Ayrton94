@@ -7,10 +7,12 @@
 
 ### **Definition 1.1 — Adjacency Matrix**
 Let $G = (V,E)$ be a graph with vertices  
+
 $$
-V = \{v_1, v_2, \dots, v_n\}.
+V = \\{v_1, v_2, \dots, v_n\\}.
 $$
-The **adjacency matrix** $A = \\[a_{ij}\\]$ is an $n \times n$ matrix defined by:
+
+The **adjacency matrix** $A = \[a_{ij}\]$ is an $n \times n$ matrix defined by:
 
 $$
 a_{ij} =
