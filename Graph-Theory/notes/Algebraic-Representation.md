@@ -23,6 +23,7 @@ a_{ij} =
 $$
 
 For **directed graphs**,  
+
 $$
 a_{ij} = 1 \text{ if there is an arc } v_i \to v_j.
 $$
@@ -35,6 +36,7 @@ For any graph with adjacency matrix $A$:
 $$
 (A^k)_{ij}
 $$
+
 equals the number of **walks of length $k$** from vertex $v_i$ to vertex $v_j$.
 
 **Proof.** Follows from matrix multiplication: each multiplication step counts all possible intermediate vertices. ∎
