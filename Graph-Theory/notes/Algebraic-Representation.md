@@ -50,7 +50,7 @@ $$
 E = \\{ab, bc, ca\\}
 $$
 
-Adjacency matrix (ordering $\(a,b,c\)$):
+Adjacency matrix (ordering (a,b,c)):
 
 $$
 A =
@@ -113,11 +113,12 @@ $$
 
 ### **Example 2.1**
 Graph:
+
 $$
 E = \\{ab, bc, ca\\}
 $$
 
-Incidence matrix (edges ordered $(ab, bc, ca)$):
+Incidence matrix (edges ordered (ab, bc, ca)):
 
 $$
 M =
