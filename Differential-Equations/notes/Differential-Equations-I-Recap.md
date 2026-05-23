@@ -531,7 +531,96 @@ $$
 ## **Cases**
 - Real distinct roots  
 - Repeated roots  
-- Complex roots  
+- Complex roots
+
+A linear homogeneous differential equation of order $n$ with constant coefficients has the form:
+
+$$
+a_n y^{(n)} + a_{n-1} y^{(n-1)} + \cdots + a_1 y' + a_0 y = 0
+$$
+
+To solve it, we associate the **characteristic equation**:
+
+$$
+a_n r^n + a_{n-1} r^{n-1} + \cdots + a_1 r + a_0 = 0
+$$
+
+The structure of the solution depends entirely on the roots of this polynomial.
+
+---
+
+## **1. Distinct Real Roots**
+
+If the characteristic equation has distinct real roots:
+
+$$
+r_1, r_2, \dots, r_k
+$$
+
+then each root produces a solution of the form:
+
+$$
+y_i(x) = e^{r_i x}
+$$
+
+The general solution is:
+
+$$
+y(x) = C_1 e^{r_1 x} + C_2 e^{r_2 x} + \cdots + C_k e^{r_k x}
+$$
+
+---
+
+## **2. Repeated Real Roots**
+
+If a real root $r$ has multiplicity $m$, then the linearly independent solutions are:
+
+$$
+e^{rx},\; x e^{rx},\; x^2 e^{rx},\; \dots,\; x^{m-1} e^{rx}
+$$
+
+Thus, repeated roots introduce polynomial factors.
+
+---
+
+## **3. Complex Roots**
+
+If the characteristic equation has a complex root:
+
+$$
+r = \alpha + i\beta,\quad \beta \neq 0
+$$
+
+its conjugate $\alpha - i\beta$ also appears.  
+These produce the real solutions:
+
+$$
+y_1(x) = e^{\alpha x} \cos(\beta x), \qquad
+y_2(x) = e^{\alpha x} \sin(\beta x)
+$$
+
+If the complex root has multiplicity \(m\), then each solution is multiplied by powers of \(x\):
+
+$$
+x^k e^{\alpha x} \cos(\beta x),\quad
+x^k e^{\alpha x} \sin(\beta x),\quad k = 0,1,\dots,m-1
+$$
+
+---
+
+## **4. Summary of All Possible Solution Forms**
+
+Every solution of a homogeneous linear differential equation with constant coefficients is a **linear combination** of functions of the form:
+
+- **$x^k e^{rx}$** for real roots $r$
+- **$x^k e^{\alpha x} \sin(\beta x)$** for complex roots $\alpha \pm i\beta$
+
+where $k$ runs from $0$ to the multiplicity minus one.
+
+As a special case:
+
+- If $r = 0$, then $e^{0x} = 1$, so constants and polynomials appear.
+
 
 ## **Example**
 $$
@@ -568,6 +657,156 @@ Works for RHS of form:
 3. Plug in and solve coefficients.  
 4. Add solutions.
 
+# **What “Plug In and Solve Coefficients” Really Means**
+
+In the **Method of Undetermined Coefficients**, step 3 means:
+
+> **Take your guessed particular solution $y_p$, compute its derivatives, substitute them into the differential equation, and solve for the unknown constants by matching coefficients.**
+
+En otras palabras:  
+**metes tu “guess” en la ecuación y resuelves un sistema de ecuaciones para los parámetros desconocidos.**
+
+---
+
+# **Full Algorithm (Clarified)**
+
+## **1. Solve the homogeneous equation**
+Find the complementary solution $y_h$ using the characteristic equation.
+
+---
+
+## **2. Guess the form of the particular solution**
+Based on the RHS $g(x)$:
+
+- If $g(x)$ is a polynomial → guess a polynomial  
+- If $g(x)$ is $e^{ax}$ → guess $A e^{ax}$
+- If $g(x)$ is $\sin bx$ or $\cos bx$ → guess $A\cos bx + B\sin bx$
+- If it’s a product → multiply the guesses  
+- If the guess overlaps with $y_h$ → multiply by $x^k$
+
+---
+
+## **3. Plug in and solve coefficients**
+This is the step you asked about.  
+It means:
+
+### **Step 3.1 — Compute derivatives of your guess**
+Example guess:
+$$
+y_p = Ax + B
+$$
+
+Compute:
+$$
+y_p',\; y_p'',\; \dots
+$$
+
+---
+
+### **Step 3.2 — Substitute into the differential equation**
+Insert $y_p$, $y_p'$, $y_p''$, etc. into:
+
+$$
+a_n y^{(n)} + \cdots + a_1 y' + a_0 y = g(x)
+$$
+
+---
+
+### **Step 3.3 — Collect like terms**
+Group terms by powers of $x$, exponentials, or trig functions.
+
+---
+
+### **Step 3.4 — Match coefficients with the RHS**
+This produces a **system of linear equations** for the unknown constants $A, B, C, \dots$.
+
+Solve it.
+
+That’s literally what “plug in and solve coefficients” means.
+
+---
+
+## **4. Add the solutions**
+$$
+y = y_h + y_p
+$$
+
+---
+
+# **Mini‑Example (Super Clear)**
+
+Solve:
+
+$$
+y'' - 3y' + 2y = 4e^{x}
+$$
+
+### **Step 1 — Homogeneous**
+Roots: $(1, 2)$
+
+$$
+y_h = C_1 e^x + C_2 e^{2x}
+$$
+
+### **Step 2 — Guess**
+RHS is $4e^x$.  
+But $e^x$ **is already in** $y_h$.  
+So multiply by $x$:
+
+$$
+y_p = A x e^x
+$$
+
+### **Step 3 — Plug in and solve coefficients**
+
+Compute derivatives:
+
+$$
+y_p = A x e^x
+$$
+
+$$
+y_p' = A e^x + A x e^x
+$$
+
+$$
+y_p'' = 2A e^x + A x e^x
+$$
+
+Substitute into the DE:
+
+$$
+(2A e^x + A x e^x) - 3(A e^x + A x e^x) + 2(A x e^x) = 4e^x
+$$
+
+Simplify:
+
+$$
+(2A - 3A)e^x + (A - 3A + 2A)x e^x = 4e^x
+$$
+
+$$
+(-A)e^x + 0 = 4e^x
+$$
+
+Match coefficients:
+
+$$
+-A = 4 \Rightarrow A = -4
+$$
+
+So:
+
+$$
+y_p = -4x e^x
+$$
+
+### **Step 4 — Final solution**
+
+$$
+y = C_1 e^x + C_2 e^{2x} - 4x e^x
+$$
+
 ---
 
 ## **6.2 Method of the Annihilator**
@@ -575,12 +814,15 @@ Works for RHS of form:
 ### **1. Introduction**
 
 The *Annihilator Method* is a systematic procedure for solving linear nonhomogeneous differential equations of the form  
+
 $$
 L[y] = f(x),
 $$
+
 where $L$ is a linear differential operator with constant coefficients.
 
 The key idea is to apply another differential operator $A$, called an **annihilator**, such that  
+
 $$
 A[f(x)] = 0.
 $$
@@ -592,6 +834,7 @@ Once the right-hand side is annihilated, the equation becomes a **higher‑order
 ## **2. What Is an Annihilator?**
 
 An **annihilator** is a differential operator $A(D)$ such that  
+
 $$
 A(D)\, f(x) = 0.
 $$
@@ -611,38 +854,46 @@ Examples:
 ## **3. General Strategy (Algorithm)**
 
 Given a linear ODE:
+
 $$
 L[y] = f(x),
 $$
+
 where $L$ has constant coefficients.
 
 ### **Step 1 — Identify an annihilator for $f(x)$**  
 Find an operator $A$ such that:
+
 $$
 A[f(x)] = 0.
 $$
 
 ### **Step 2 — Apply the annihilator to both sides**
+
 $$
 A[L[y]] = A[f(x)] = 0.
 $$
 
 This produces a **higher‑order homogeneous equation**:
+
 $$
 (AL)[y] = 0.
 $$
 
 ### **Step 3 — Solve the homogeneous equation**
 Find the general solution of:
+
 $$
 (AL)[y] = 0.
 $$
 
 ### **Step 4 — Extract the complementary and particular parts**
 The solution of the original ODE is:
+
 $$
 y = y_c + y_p,
 $$
+
 where:
 
 - $y_c$ comes from the original homogeneous equation $L[y]=0$,
@@ -656,12 +907,14 @@ Solve for constants.
 ## **4. Example 1 — Basic Case**
 
 Solve:
+
 $$
 y'' - y = e^{x}.
 $$
 
 ### **Step 1 — Identify an annihilator**
 For $(f(x) = e^{x})$, the annihilator is:
+
 $$
 A = D - 1.
 $$
@@ -678,27 +931,32 @@ $$
 $$
 
 Roots:
+
 $$
 r = 1,\quad r = 1,\quad r = -1.
 $$
 
 General solution of annihilated equation:
+
 $$
 y = C_1 e^{x} + C_2 x e^{x} + C_3 e^{-x}.
 $$
 
 ### **Step 4 — Extract the particular solution**
 Original homogeneous equation:
+
 $$
 y'' - y = 0 \quad\Rightarrow\quad y_c = C_1 e^{x} + C_3 e^{-x}.
 $$
 
 The new term $x e^{x}$ is the particular solution:
+
 $$
 y_p = C_2 x e^{x}.
 $$
 
 Thus:
+
 $$
 y = C_1 e^{x} + C_3 e^{-x} + C_2 x e^{x}.
 $$
@@ -708,38 +966,45 @@ $$
 ## **5. Example 2 — Trigonometric Forcing**
 
 Solve:
+
 $$
 y'' + 4y = \cos(2x).
 $$
 
 ### **Step 1 — Annihilator**
+
 $$
 A = D^2 + 4.
 $$
 
 ### **Step 2 — Apply the annihilator**
+
 $$
 (D^2 + 4)(y'' + 4y) = 0.
 $$
 
 ### **Step 3 — Solve homogeneous equation**
 Characteristic equation:
+
 $$
 (D^2 + 4)^2 = 0.
 $$
 
 Roots:
+
 $$
 r = \pm 2i \quad \text{(multiplicity 2)}.
 $$
 
 General solution:
+
 $$
 y = C_1\cos 2x + C_2\sin 2x + C_3 x\cos 2x + C_4 x\sin 2x.
 $$
 
 ### **Step 4 — Extract particular solution**
 Original homogeneous solution:
+
 $$
 y_c = C_1\cos 2x + C_2\sin 2x.
 $$
@@ -754,44 +1019,52 @@ $$
 ## **6. Example 3 — Polynomial Forcing**
 
 Solve:
+
 $$
 y'' - 3y' + 2y = x^2.
 $$
 
 ### **Step 1 — Annihilator**
 Polynomial of degree 2 → annihilator:
+
 $$
 A = D^3.
 $$
 
 ### **Step 2 — Apply annihilator**
+
 $$
 D^3(y'' - 3y' + 2y) = 0.
 $$
 
 ### **Step 3 — Solve homogeneous equation**
 Characteristic equation:
+
 $$
 D^3(D - 1)(D - 2) = 0.
 $$
 
 Roots:
+
 $$
 r = 0,0,0,1,2.
 $$
 
 General solution:
+
 $$
 y = C_1 + C_2 x + C_3 x^2 + C_4 e^{x} + C_5 e^{2x}.
 $$
 
 ### **Step 4 — Extract particular solution**
 Original homogeneous:
+
 $$
 y_c = C_4 e^{x} + C_5 e^{2x}.
 $$
 
 Particular solution:
+
 $$
 y_p = C_1 + C_2 x + C_3 x^2.
 $$
