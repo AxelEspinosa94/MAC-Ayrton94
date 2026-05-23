@@ -207,10 +207,79 @@ $$
 
 This equals the **cyclomatic number** (number of independent cycles).
 
+## Bipartite Graphs
+
+## 1. Definition
+
+A **bipartite graph** is a graph whose vertex set can be partitioned into two disjoint subsets  
+
+$$
+V = X \cup Y,\quad X \cap Y = \varnothing,
+$$
+
+
+such that **every edge connects a vertex in $X$ to a vertex in $Y$**.
+
+Formally, a graph $G = (V, E)$ is bipartite if:
+
+$$
+\forall\, uv \in E,\quad u \in X,\ v \in Y \quad \text{or} \quad u \in Y,\ v \in X.
+$$
+
+No edge is allowed between two vertices in the same subset.
+
+---
+
+## 2. Characterization Theorem
+
+### **Theorem 1 — Odd Cycle Characterization**
+A graph is bipartite **if and only if** it contains **no cycles of odd length**.
+
+This is one of the most important structural results in graph theory.
+
+---
+
+## 3. Example
+
+Consider the graph with vertex partition:
+
+$$
+X = \\{a, c\\}, \qquad Y = \\{b, d\\}
+$$
+
+and edges:
+
+$$
+E = \\{ab, ac, bd, cd\\}.
+$$
+
+This graph is bipartite because every edge connects a vertex in $X$ to a vertex in $Y$.
+
+### Mermaid Representation
+
+```mermaid
+graph TD
+    subgraph X
+        a
+        c
+    end
+
+    subgraph Y
+        b
+        d
+    end
+
+    a --- b
+    a --- d
+    c --- b
+    c --- d
+```
+
 ---
 
 ### **Example 4.1**
-Graph: square with diagonal  
+Graph: square with diagonal
+
 $$
 E = \\{ab, bc, cd, da, ac\\}
 $$
