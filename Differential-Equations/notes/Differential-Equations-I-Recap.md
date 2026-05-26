@@ -1283,16 +1283,19 @@ This is the **characteristic equation** of the Cauchy–Euler problem.
 Depending on the roots:
 
 - **Distinct real roots** $r_1, r_2, \ldots, r_n$
+  
   $$
   y = C_1 x^{r_1} + \cdots + C_n x^{r_n}
   $$
 
 - **Repeated root** $r$ of multiplicity $m$
+  
   $$
   y = x^r \left(C_1 + C_2 \ln x + \cdots + C_m (\ln x)^{m-1}\right)
   $$
 
 - **Complex roots** $r = \alpha \pm i\beta$
+  
   $$
   y = x^\alpha \left(C_1 \cos(\beta \ln x) + C_2 \sin(\beta \ln x)\right)
   $$
