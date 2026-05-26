@@ -1284,9 +1284,9 @@ Depending on the roots:
 
 - **Distinct real roots** $r_1, r_2, \ldots, r_n$
   
-  $$
-  y = C_1 x^{r_1} + \cdots + C_n x^{r_n}
-  $$
+$$
+y = C_1 x^{r_1} + \cdots + C_n x^{r_n}
+$$
 
 - **Repeated root** $r$ of multiplicity $m$
   
