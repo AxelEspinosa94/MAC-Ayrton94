@@ -1290,15 +1290,15 @@ $$
 
 - **Repeated root** $r$ of multiplicity $m$
   
-  $$
-  y = x^r \left(C_1 + C_2 \ln x + \cdots + C_m (\ln x)^{m-1}\right)
-  $$
+$$
+y = x^r \left(C_1 + C_2 \ln x + \cdots + C_m (\ln x)^{m-1}\right)
+$$
 
 - **Complex roots** $r = \alpha \pm i\beta$
   
-  $$
-  y = x^\alpha \left(C_1 \cos(\beta \ln x) + C_2 \sin(\beta \ln x)\right)
-  $$
+$$
+y = x^\alpha \left(C_1 \cos(\beta \ln x) + C_2 \sin(\beta \ln x)\right)
+$$
 
 ### **Step 6 — (If non‑homogeneous) Propose a particular solution**
 Use:
