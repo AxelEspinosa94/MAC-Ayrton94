@@ -1100,11 +1100,103 @@ Avoid it when:
 
 ## **6.3 Variation of Parameters**
 
-General formula:
+Consider the second–order linear ODE in standard form:
 
 $$
-y_p = -y_1 \int \frac{y_2 g}{W}dx + y_2 \int \frac{y_1 g}{W}dx
+y'' + p(x)y' + q(x)y = g(x)
 $$
+
+Let $y_1(x)$ and $y_2(x)$ be two linearly independent solutions of the homogeneous equation:
+
+
+$$
+y'' + p(x)y' + q(x)y = 0
+$$
+
+Then a particular solution is obtained by the following algorithm.
+
+---
+
+### **Algorithm (Universal Version)**
+
+1. **Write the equation in standard form**
+
+Ensure the ODE is written as: 
+
+$$
+   y'' + p(x)y' + q(x)y = g(x)
+$$
+
+2. **Find the fundamental solutions**
+
+Solve the homogeneous equation: 
+
+$$
+   y'' + p(x)y' + q(x)y = 0
+$$
+
+Obtain two independent solutions:
+
+$$
+   y_1(x),\quad y_2(x)
+$$
+
+
+3. **Compute the Wronskian** 
+
+$$
+   W(x) =
+   \begin{vmatrix}
+   y_1 & y_2 \\
+   y_1' & y_2'
+   \end{vmatrix}
+   = y_1 y_2' - y_2 y_1'
+$$
+
+4. **Compute the auxiliary functions**
+
+$$
+   u_1'(x) = -\,\frac{y_2(x)\,g(x)}{W(x)}
+$$ 
+
+$$
+   u_2'(x) = \frac{y_1(x)\,g(x)}{W(x)}
+$$
+
+5. **Integrate**   
+
+$$
+   u_1(x) = \int u_1'(x)\,dx,\qquad
+   u_2(x) = \int u_2'(x)\,dx
+$$
+
+(Constants of integration are omitted because they are absorbed into the homogeneous solution.)
+
+6. **Construct the particular solution**
+
+$$
+y_p(x) = u_1(x)\,y_1(x) + u_2(x)\,y_2(x)
+$$
+
+7. **Write the general solution** 
+
+$$
+y(x) = C_1 y_1(x) + C_2 y_2(x) + y_p(x)
+$$
+
+---
+
+### **Notes**
+
+- This algorithm works for *any* linear ODE with continuous coefficients.
+- If $p(x)=0$, the formulas reduce to the simpler version:
+
+$$
+y_p = -y_1\int \frac{y_2 g}{W}dx + y_2\int \frac{y_1 g}{W}dx
+$$
+
+- Integrals may not always have elementary closed forms; the method is still valid.
+
 
 ---
 
@@ -1119,6 +1211,198 @@ Try:
 $$
 y = x^r
 $$
+
+## **1. Problem Form**
+
+A *Cauchy–Euler* (or *equidimensional*) differential equation of order $n$ has the structure:
+
+$$
+x^n y^{(n)} + a_{n-1} x^{n-1} y^{(n-1)} + \cdots + a_1 x y' + a_0 y = g(x)
+$$
+
+When $g(x)=0$, the equation is **homogeneous**.
+
+---
+
+## **2. Key Idea: Try a Power‑Law Solution**
+
+Because the equation is *equidimensional*, we try:
+
+$$
+y = x^r
+$$
+
+Then:
+
+$$
+y' = r x^{r-1},\quad
+y'' = r(r-1)x^{r-2},\quad
+\ldots,\quad
+y^{(n)} = r(r-1)\cdots(r-n+1)x^{r-n}
+$$
+
+Substituting into the differential equation will factor out $x^r$, leaving an algebraic equation in $r$.
+
+---
+
+## **3. Algorithm (Step‑by‑Step)**
+
+### **Step 1 — Assume a trial solution**
+
+$$
+y = x^r
+$$
+
+### **Step 2 — Compute derivatives**
+Use:
+
+$$
+y^{(k)} = r(r-1)\cdots(r-k+1)x^{r-k}
+$$
+
+### **Step 3 — Substitute into the differential equation**
+Every term becomes:
+
+$$
+x^n y^{(n)} = x^n \cdot r(r-1)\cdots(r-n+1)x^{r-n}
+= r(r-1)\cdots(r-n+1)x^r
+$$
+
+All terms will contain $x^r$. Factor it out.
+
+### **Step 4 — Obtain the *indicial equation***
+The remaining algebraic equation in $r$ is:
+
+$$
+P(r) = 0
+$$
+
+This is the **characteristic equation** of the Cauchy–Euler problem.
+
+### **Step 5 — Solve the characteristic equation**
+Depending on the roots:
+
+- **Distinct real roots** $r_1, r_2, \ldots, r_n$
+  $$
+  y = C_1 x^{r_1} + \cdots + C_n x^{r_n}
+  $$
+
+- **Repeated root** $r$ of multiplicity $m$
+  $$
+  y = x^r \left(C_1 + C_2 \ln x + \cdots + C_m (\ln x)^{m-1}\right)
+  $$
+
+- **Complex roots** $r = \alpha \pm i\beta$
+  $$
+  y = x^\alpha \left(C_1 \cos(\beta \ln x) + C_2 \sin(\beta \ln x)\right)
+  $$
+
+### **Step 6 — (If non‑homogeneous) Propose a particular solution**
+Use:
+- **Method of Undetermined Coefficients** (if $g(x)$ is a power, log, or combination)
+- **Variation of Parameters** (general case)
+
+---
+
+## **4. Summary Table**
+
+| Case | Roots | General Solution |
+|------|-------|------------------|
+| Distinct real | $r_1, r_2, \ldots$ | $\sum C_i x^{r_i}$ |
+| Repeated root | $r$ mult. $m$ | $x^r (C_1 + C_2 \ln x + \cdots)$ |
+| Complex | $\alpha \pm i\beta$ | $x^\alpha(\cos(\beta\ln x), \sin(\beta\ln x))$ |
+
+---
+
+## **5. Example (Homogeneous)**
+
+Solve:
+
+$$
+x^2 y'' - 3x y' + 4y = 0
+$$
+
+### **Step 1 — Try $y = x^r$**
+
+$$
+y' = r x^{r-1},\quad y'' = r(r-1)x^{r-2}
+$$
+
+### **Step 2 — Substitute**
+
+$$
+x^2 r(r-1)x^{r-2} - 3x r x^{r-1} + 4x^r = 0
+$$
+
+Factor $x^r$:
+
+$$
+x^r \left[r(r-1) - 3r + 4\right] = 0
+$$
+
+### **Step 3 — Indicial equation**
+
+$$
+r(r-1) - 3r + 4 = 0
+$$
+
+$$
+r^2 - r - 3r + 4 = 0
+$$
+
+$$
+r^2 - 4r + 4 = 0
+$$
+
+$$
+(r-2)^2 = 0
+$$
+
+Repeated root $r = 2$.
+
+### **Step 4 — General solution**
+
+$$
+y = C_1 x^2 + C_2 x^2 \ln x
+$$
+
+---
+
+## **6. Example (Complex Roots)**
+
+Solve:
+
+$$
+x^2 y'' + xy' + y = 0
+$$
+
+Indicial equation:
+
+$$
+r(r-1) + r + 1 = 0
+$$
+
+$$
+r^2 + 1 = 0
+$$
+
+$$
+r = \pm i
+$$
+
+Solution:
+
+$$
+y = C_1 \cos(\ln x) + C_2 \sin(\ln x)
+$$
+
+---
+
+## **7. Final Notes**
+
+- Cauchy–Euler equations are solved **exactly like constant‑coefficient equations**, but with the substitution $y = x^r$ instead of $y = e^{rx}$.
+- The presence of **$\ln x$** in repeated roots is the analogue of multiplying by **$x$** in constant‑coefficient equations.
+- Complex roots produce oscillations in **$\ln x$**, not in $x$.
 
 ---
 
