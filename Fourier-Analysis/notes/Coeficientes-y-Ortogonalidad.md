@@ -68,7 +68,11 @@ En $[-\pi,\pi]$ se cumple:
 \pi, & n=m\ge 1,
 \end{cases}$
 
-5. $\displaystyle \int_{-\pi}^{\pi} \cos(nx)\sin(mx)\,dx = 0$ para todo $n,m\ge 0$.
+5. 
+
+$$
+\displaystyle \int_{-\pi}^{\pi} \cos(nx)\sin(mx)\,dx = 0$ para todo $n,m\ge 0
+$$
 
 **Demostración (idea):**  
 - Para (1) y (2), se usa que $\cos(nx)$ y $\sin(nx)$ son funciones con simetría y oscilación completa en $[-\pi,\pi]$; la integral de un periodo completo es cero.  
