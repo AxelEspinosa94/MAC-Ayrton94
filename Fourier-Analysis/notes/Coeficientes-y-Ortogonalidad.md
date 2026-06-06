@@ -57,14 +57,17 @@ En $[-\pi,\pi]$ se cumple:
 
 1. $\displaystyle \int_{-\pi}^{\pi} \cos(nx)\,dx = 0$ para todo $n\ge 1$.  
 2. $\displaystyle \int_{-\pi}^{\pi} \sin(nx)\,dx = 0$ para todo $n\ge 1$.  
+
 3. $\displaystyle \int_{-\pi}^{\pi} \cos(nx)\cos(mx)\,dx = \begin{cases}
 0, & n\ne m,\\
 \pi, & n=m\ne 0,
 \end{cases}$
+
 4. $\displaystyle \int_{-\pi}^{\pi} \sin(nx)\sin(mx)\,dx = \begin{cases}
 0, & n\ne m,\\
 \pi, & n=m\ge 1,
 \end{cases}$
+
 5. $\displaystyle \int_{-\pi}^{\pi} \cos(nx)\sin(mx)\,dx = 0$ para todo $n,m\ge 0$.
 
 **Demostración (idea):**  
