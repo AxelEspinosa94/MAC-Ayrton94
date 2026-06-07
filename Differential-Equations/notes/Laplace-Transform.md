@@ -30,7 +30,7 @@ whenever the integral converges.
 Let $f\colon [0,\infty)\to\mathbb{R}$. The **Laplace transform** of $f$ is
 
 $$
-\mathcal{L}\{f(t)\}(s) = F(s) = \int_{0}^{\infty} e^{-st} f(t)\,dt,
+\mathcal{L}\\{f(t)\\}(s) = F(s) = \int_{0}^{\infty} e^{-st} f(t)\,dt,
 $$
 
 for all $s\in\mathbb{R}$ (or $\mathbb{C}$) such that the integral converges.
