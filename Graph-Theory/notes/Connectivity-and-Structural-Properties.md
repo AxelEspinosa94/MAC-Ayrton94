@@ -68,9 +68,9 @@ Follows from maximality of 2-connected subgraphs and the fact that articulation 
 
 ### **3.1 Definitions**
 
-- **Vertex connectivity** $ \kappa(G) $: minimum number of vertices whose removal disconnects $G$.  
-- **Edge connectivity** $ \lambda(G) $: minimum number of edges whose removal disconnects $G$.  
-- **n‑connected graph**: a graph with $ \kappa(G) \ge n $.
+- **Vertex connectivity** $\kappa(G)$: minimum number of vertices whose removal disconnects $G$.  
+- **Edge connectivity** $\lambda(G)$: minimum number of edges whose removal disconnects $G$.  
+- **n‑connected graph**: a graph with $\kappa(G) \ge n$.
 
 ---
 
@@ -78,14 +78,16 @@ Follows from maximality of 2-connected subgraphs and the fact that articulation 
 
 #### **Theorem (Whitney)**  
 For any nontrivial connected graph:
-\[
+
+$$
 \kappa(G) \le \lambda(G) \le \delta(G)
-\]
+$$
+
 where $ \delta(G) $ is the minimum degree.
 
 **Proof.**  
-- Removing all edges incident to a minimum-degree vertex disconnects it → $ \lambda(G) \le \delta(G) $.  
-- Removing a vertex removes all its incident edges → $ \kappa(G) \le \lambda(G) $.  
+- Removing all edges incident to a minimum-degree vertex disconnects it → $\lambda(G) \le \delta(G)$.  
+- Removing a vertex removes all its incident edges → $\kappa(G) \le \lambda(G)$.  
 ∎
 
 ---
@@ -102,9 +104,10 @@ A bipartite graph $G = (X,Y,E)$ has a **perfect matching from $X$ to $Y$** if ev
 
 #### **Theorem (Hall’s Marriage Theorem)**  
 A bipartite graph $G=(X,Y,E)$ has a matching saturating $X$ **iff** for every subset $S \subseteq X$:
-\[
+
+$$
 |N(S)| \ge |S|
-\]
+$$
 
 **Proof.**  
 - **Necessity:** If a matching saturates $X$, each vertex in $S$ is matched to a distinct vertex in $N(S)$.  
@@ -129,9 +132,11 @@ A strictly binary tree with $n$ internal nodes has exactly $n+1$ leaves.
 
 **Proof.**  
 Each internal node contributes 2 children; counting edges gives:
-\[
+
+$$
 2n = (n + 1) + (n - 1)
-\]
+$$
+
 where the right side is leaves + internal nodes minus root.  
 Solving yields leaves = $n+1$.  
 ∎
@@ -211,19 +216,23 @@ Used in compiler theory and control‑flow analysis.
 ## **9. Examples**
 
 ### **Example 1 — Cut Vertex**
+
 ```
 a — b — c — d
       |
       e
 ```
+
 Vertex **b** is a cut vertex.
 
 ---
 
 ### **Example 2 — Bridge**
+
 ```
 a — b — c
 ```
+
 Edge **b–c** is a bridge.
 
 ---
@@ -233,9 +242,10 @@ Let
 $X = \{x_1, x_2, x_3\}$,  
 $Y = \{y_1, y_2, y_3\}$,  
 Edges:  
-\[
+
+$$
 x_1y_1,\; x_2y_1,\; x_2y_2,\; x_3y_2,\; x_3y_3
-\]
+$$
 
 Check subsets:  
 - $S=\{x_1,x_2\}$: $N(S)=\{y_1,y_2\}$, size 2 → OK  
@@ -247,26 +257,30 @@ Perfect matching exists.
 
 ### **Example 4 — Kruskal MST**
 Edges sorted by weight:  
-\[
+
+$$
 (1,2,1), (2,3,2), (1,3,3), (3,4,4)
-\]
+$$
 
 Kruskal picks:  
-\[
+
+$$
 (1,2), (2,3), (3,4)
-\]
+$$
 
 ---
 
 ### **Example 5 — Topological Order**
 Graph:  
-\[
+
+$$
 a \to b,\; a \to c,\; b \to d,\; c \to d
-\]
+$$
 
 One valid order:  
-\[
+
+$$
 a, b, c, d
-\]
+$$
 
 ---
