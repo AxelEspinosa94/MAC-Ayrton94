@@ -1,7 +1,3 @@
-Absolutely, Axel — aquí va **tu teoremario completo en inglés, en formato `.md`**, totalmente autocontenido, con **definiciones, teoremas, lemas, proposiciones, demostraciones y ejemplos**, siguiendo tu estilo académico y modular.
-
-> **Nota:** Ninguno de tus documentos contiene teoría sobre *connectivity, cut edges, articulation points, blocks, Hall, Menger, Kruskal, network dominance*, etc. (solo ejercicios introductorios).  
-> Por lo tanto, este teoremario está **creado desde cero**, sin contradicción con tus fuentes.
 
 ---
 
@@ -15,16 +11,16 @@ Absolutely, Axel — aquí va **tu teoremario completo en inglés, en formato `.
 ### **1.1 Definitions**
 
 #### **Definition — Connected Graph**  
-A graph \(G = (V,E)\) is **connected** if for every pair of vertices \(u,v \in V\), there exists a path joining them.
+A graph $G = (V,E)$ is **connected** if for every pair of vertices $u,v \in V$, there exists a path joining them.
 
 #### **Definition — Component**  
 A **component** of a graph is a maximal connected subgraph.
 
 #### **Definition — Cut Vertex (Articulation Point)**  
-A vertex \(v\) is a **cut vertex** if removing \(v\) (and its incident edges) increases the number of connected components.
+A vertex $v$ is a **cut vertex** if removing $v$ (and its incident edges) increases the number of connected components.
 
 #### **Definition — Cut Edge (Bridge)**  
-An edge \(e\) is a **cut edge** if removing it increases the number of connected components.
+An edge $e$ is a **cut edge** if removing it increases the number of connected components.
 
 #### **Definition — Block**  
 A **block** is a maximal connected subgraph with no cut vertices.
@@ -36,11 +32,11 @@ A **block** is a maximal connected subgraph with no cut vertices.
 ### **2.1 Cut Edges**
 
 #### **Theorem — Characterization of Bridges**  
-An edge \(e = uv\) is a bridge **iff** it does not lie on any cycle of the graph.
+An edge $e = uv$ is a bridge **iff** it does not lie on any cycle of the graph.
 
 **Proof.**  
-- If \(e\) lies on a cycle, removing it leaves an alternate path between \(u\) and \(v\), so connectivity is preserved.  
-- If \(e\) is not on a cycle, it is the *only* path between its endpoints; removing it disconnects them.  
+- If $e$ lies on a cycle, removing it leaves an alternate path between $u$ and $v$, so connectivity is preserved.  
+- If $e$ is not on a cycle, it is the *only* path between its endpoints; removing it disconnects them.  
 ∎
 
 ---
@@ -48,11 +44,11 @@ An edge \(e = uv\) is a bridge **iff** it does not lie on any cycle of the graph
 ### **2.2 Cut Vertices**
 
 #### **Theorem — Characterization of Articulation Points**  
-A vertex \(v\) is a cut vertex **iff** there exist two neighbors \(u,w\) of \(v\) such that every path from \(u\) to \(w\) contains \(v\).
+A vertex $v$ is a cut vertex **iff** there exist two neighbors $u,w$ of $v$ such that every path from $u$ to $w$ contains $v$.
 
 **Proof.**  
-- If all \(u\)-\(w\) paths use \(v\), removing \(v\) disconnects them.  
-- If there exists a path avoiding \(v\), removing \(v\) does not disconnect the graph.  
+- If all $u$-$w$ paths use $v$, removing $v$ disconnects them.  
+- If there exists a path avoiding $v$, removing $v$ does not disconnect the graph.  
 ∎
 
 ---
@@ -72,9 +68,9 @@ Follows from maximality of 2-connected subgraphs and the fact that articulation 
 
 ### **3.1 Definitions**
 
-- **Vertex connectivity** \( \kappa(G) \): minimum number of vertices whose removal disconnects \(G\).  
-- **Edge connectivity** \( \lambda(G) \): minimum number of edges whose removal disconnects \(G\).  
-- **n‑connected graph**: a graph with \( \kappa(G) \ge n \).
+- **Vertex connectivity** $ \kappa(G) $: minimum number of vertices whose removal disconnects $G$.  
+- **Edge connectivity** $ \lambda(G) $: minimum number of edges whose removal disconnects $G$.  
+- **n‑connected graph**: a graph with $ \kappa(G) \ge n $.
 
 ---
 
@@ -85,11 +81,11 @@ For any nontrivial connected graph:
 \[
 \kappa(G) \le \lambda(G) \le \delta(G)
 \]
-where \( \delta(G) \) is the minimum degree.
+where $ \delta(G) $ is the minimum degree.
 
 **Proof.**  
-- Removing all edges incident to a minimum-degree vertex disconnects it → \( \lambda(G) \le \delta(G) \).  
-- Removing a vertex removes all its incident edges → \( \kappa(G) \le \lambda(G) \).  
+- Removing all edges incident to a minimum-degree vertex disconnects it → $ \lambda(G) \le \delta(G) $.  
+- Removing a vertex removes all its incident edges → $ \kappa(G) \le \lambda(G) $.  
 ∎
 
 ---
@@ -98,21 +94,21 @@ where \( \delta(G) \) is the minimum degree.
 
 ### **4.1 Definitions**
 
-A bipartite graph \(G = (X,Y,E)\) has a **perfect matching from \(X\) to \(Y\)** if every vertex in \(X\) is matched to a distinct vertex in \(Y\).
+A bipartite graph $G = (X,Y,E)$ has a **perfect matching from $X$ to $Y$** if every vertex in $X$ is matched to a distinct vertex in $Y$.
 
 ---
 
 ### **4.2 Hall’s Theorem**
 
 #### **Theorem (Hall’s Marriage Theorem)**  
-A bipartite graph \(G=(X,Y,E)\) has a matching saturating \(X\) **iff** for every subset \(S \subseteq X\):
+A bipartite graph $G=(X,Y,E)$ has a matching saturating $X$ **iff** for every subset $S \subseteq X$:
 \[
 |N(S)| \ge |S|
 \]
 
 **Proof.**  
-- **Necessity:** If a matching saturates \(X\), each vertex in \(S\) is matched to a distinct vertex in \(N(S)\).  
-- **Sufficiency:** Constructive proof via augmenting paths or induction on \(|X|\).  
+- **Necessity:** If a matching saturates $X$, each vertex in $S$ is matched to a distinct vertex in $N(S)$.  
+- **Sufficiency:** Constructive proof via augmenting paths or induction on $|X|$.  
 ∎
 
 ---
@@ -129,7 +125,7 @@ A bipartite graph \(G=(X,Y,E)\) has a matching saturating \(X\) **iff** for ever
 ### **5.2 Traversal Theorems**
 
 #### **Theorem — Node Count in Strictly Binary Trees**  
-A strictly binary tree with \(n\) internal nodes has exactly \(n+1\) leaves.
+A strictly binary tree with $n$ internal nodes has exactly $n+1$ leaves.
 
 **Proof.**  
 Each internal node contributes 2 children; counting edges gives:
@@ -137,7 +133,7 @@ Each internal node contributes 2 children; counting edges gives:
 2n = (n + 1) + (n - 1)
 \]
 where the right side is leaves + internal nodes minus root.  
-Solving yields leaves = \(n+1\).  
+Solving yields leaves = $n+1$.  
 ∎
 
 ---
@@ -169,10 +165,10 @@ Kruskal repeatedly selects such edges, never forming cycles.
 ### **6.2 Menger’s Theorem (Contextual Link)**
 
 #### **Theorem (Menger)**  
-For distinct vertices \(u,v\):
-- The **minimum number of vertices** whose removal separates \(u\) and \(v\)  
+For distinct vertices $u,v$:
+- The **minimum number of vertices** whose removal separates $u$ and $v$  
   equals  
-- The **maximum number of internally disjoint \(u\)-\(v\) paths**.
+- The **maximum number of internally disjoint $u$-$v$ paths**.
 
 This theorem underlies connectivity guarantees used in MST correctness proofs and network reliability.
 
@@ -198,7 +194,7 @@ A directed graph has a topological ordering **iff** it has no directed cycles.
 ### **8.1 Communication**
 
 #### **Definition — Communication in Directed Graphs**  
-Vertices \(u\) and \(v\) **communicate** if each is reachable from the other.  
+Vertices $u$ and $v$ **communicate** if each is reachable from the other.  
 This partitions the graph into **strongly connected components (SCCs)**.
 
 ---
@@ -206,7 +202,7 @@ This partitions the graph into **strongly connected components (SCCs)**.
 ### **8.2 Dominance**
 
 #### **Definition — Dominator (in directed graphs)**  
-A vertex \(u\) **dominates** \(v\) if every path from the start vertex \(s\) to \(v\) passes through \(u\).
+A vertex $u$ **dominates** $v$ if every path from the start vertex $s$ to $v$ passes through $u$.
 
 Used in compiler theory and control‑flow analysis.
 
@@ -234,16 +230,16 @@ Edge **b–c** is a bridge.
 
 ### **Example 3 — Hall’s Condition**
 Let  
-\(X = \{x_1, x_2, x_3\}\),  
-\(Y = \{y_1, y_2, y_3\}\),  
+$X = \{x_1, x_2, x_3\}$,  
+$Y = \{y_1, y_2, y_3\}$,  
 Edges:  
 \[
 x_1y_1,\; x_2y_1,\; x_2y_2,\; x_3y_2,\; x_3y_3
 \]
 
 Check subsets:  
-- \(S=\{x_1,x_2\}\): \(N(S)=\{y_1,y_2\}\), size 2 → OK  
-- \(S=\{x_1,x_2,x_3\}\): \(N(S)=\{y_1,y_2,y_3\}\), size 3 → OK  
+- $S=\{x_1,x_2\}$: $N(S)=\{y_1,y_2\}$, size 2 → OK  
+- $S=\{x_1,x_2,x_3\}$: $N(S)=\{y_1,y_2,y_3\}$, size 3 → OK  
 
 Perfect matching exists.
 
