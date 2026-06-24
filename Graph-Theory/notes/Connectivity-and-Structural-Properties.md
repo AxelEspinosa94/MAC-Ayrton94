@@ -2,7 +2,6 @@
 ---
 
 # **Graph Theory – Connectivity and Applications (Theorem Compendium)**  
-### *A complete Markdown theorem guide*
 
 ---
 
@@ -83,7 +82,7 @@ $$
 \kappa(G) \le \lambda(G) \le \delta(G)
 $$
 
-where $ \delta(G) $ is the minimum degree.
+where $\delta(G)$ is the minimum degree.
 
 **Proof.**  
 - Removing all edges incident to a minimum-degree vertex disconnects it → $\lambda(G) \le \delta(G)$.  
