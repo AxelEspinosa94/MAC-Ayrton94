@@ -45,8 +45,8 @@
 
    It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
 
-   \[
-   \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
+\[
+     \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
    \]
 
    b) $y' = x e^{y}$  
