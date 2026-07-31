@@ -8,18 +8,18 @@
 
 # **Table of Contents**
 
-[Introduction](#introduction)
-   - [Classification and Basic Concepts](#classification-and-basic-concepts)
-[First-Order Differential Equations](#firstorder-differential-equations)
-   - [Separable](#separable-equations)
-   - [Exact Equations](#exact-equations)
-   - [Linear](#linear-firstorder-equations)
-   - [substitution](#substitution-methods)
-      - [Homogeneous](#homogeneous)
-      - [Bernoulli](#bernoulli)
-      - [Riccati](#riccati-special-case)
-      - [Clairaut](#clairaut)
-[Higher-Order Linear Differential Equations](#higherorder-linear-differential-equations)
+-  [Introduction](#introduction)
+   -  [Classification and Basic Concepts] (#classification-and-basic-concepts)
+-  [First-Order Differential Equations] (#firstorder-differential-equations)
+   -  [Separable](#separable-equations)
+   -  [Exact Equations](#exact-equations)
+   -  [Linear](#linear-firstorder-equations)
+   -  [substitution](#substitution-methods)
+      -  [Homogeneous](#homogeneous)
+      -  [Bernoulli](#bernoulli)
+      -  [Riccati](#riccati-special-case)
+      -  [Clairaut](#clairaut)
+-  [Higher-Order Linear Differential Equations](#higherorder-linear-differential-equations)
 
 # **Introduction**
 
@@ -27,10 +27,10 @@
 
 Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
 
-1. $y'' + y' + y = \sin x$ -> Linear, non-autonomous, order 2
-2. $y' = y^2 - 3y + 2$ -> Non-Linear, autonomous, first order 
-3. $x^2 y'' + xy' - y = 0$ -> Linear, non-autonomous, order 2
-4. $y' + \sqrt{xy} = 0$ -> Non-linear, autonomous, first order
+1. $y'' + y' + y = \sin x$ → Linear, non-autonomous, order 2
+2. $y' = y^2 - 3y + 2$ → Non-Linear, autonomous, first order 
+3. $x^2 y'' + xy' - y = 0$ → Linear, non-autonomous, order 2
+4. $y' + \sqrt{xy} = 0$ → Non-linear, autonomous, first order
 
 Determine whether the following equations are exact, linear, separable, or none:
 
@@ -48,21 +48,15 @@ $$
 a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
 $$
 
-where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
+   where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
 
 For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution: 
 
-   a) $y' = \sqrt{y},\; y(0)=0$ 
+1. $y' = \sqrt{y},\; y(0)=0$ → If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrty{y}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
 
-   If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrty{y}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
+2. $y' = \frac{1}{x-y},\; y(1)=1$. Calculating the y-partial derivative of $\frac{1}{x-y}$ we have $\frac{1}{(x-y)^2}$, which is continous to $x$ values near 1, however is not continous in $x=1$, therefore we can't confirm there is an unique solution to it
 
-   b) $y' = \frac{1}{x-y},\; y(1)=1$
-
-   Calculating the y-partial derivative of $\frac{1}{x-y}$ we have $\frac{1}{(x-y)^2}$, which is continous to $x$ values near 1, however is not continous in $x=1$, therefore we can't confirm there is an unique solution to it
-   
-   c) $y' = x^{1/3} y^{2/3},\; y(0)=0$
-   
-   Calculating the y-partial derivative of $x^{1/3} y^{2/3}$ we have $\frac{2x^{1/3}}{3y^{1/3}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
+3. $y' = x^{1/3} y^{2/3},\; y(0)=0$. Calculating the y-partial derivative of $x^{1/3} y^{2/3}$ we have $\frac{2x^{1/3}}{3y^{1/3}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
 
 ---
 
@@ -72,41 +66,40 @@ For each IVP, determine whether the Existence and Uniqueness Theorem guarantees 
 
 ## **Separable Equations**
 
-4. Solve the following separable equations (no need to simplify constants):  
-   a) $y' = x^2 y^3$  
+Solve the following separable equations (no need to simplify constants):
 
-   We rewrite the equation to:
-  
-   $$
-   \frac{dy}{dx}=x^2 y^3
-   $$
-   
+1. $y' = x^2 y^3$. We rewrite the equation to:
+
+$$
+\frac{dy}{dx}=x^2 y^3
+$$
+
    Then we separate the differentials to match the variables
   
-   $$
-   \frac{dy}{y^3}=x^2 dx
-   $$
- 
+$$
+\frac{dy}{y^3}=x^2 dx
+$$
+
    Then we integrate the equation
 
-   $$
-   \int \frac{dy}{y^3}=\int x^2 dx
-   $$
+$$
+\int \frac{dy}{y^3}=\int x^2 dx
+$$
 
    which is equivalent
 
-   $$
-   -\frac{1}{2y^2} = \frac{x^3}{3}
-   $$
+$$
+-\frac{1}{2y^2} = \frac{x^3}{3}
+$$
 
-   Then we isolate $y$
+Then we isolate $y$
 
-   $$
-   -\frac{3}{2x^3} = y^2 \rightarrow y = if(x), i\in \mathbb{C}
-   $$
+$$
+-\frac{3}{2x^3} = y^2 \rightarrow y = if(x), i\in \mathbb{C}
+$$
 
-   Therefore we can't find a solution to it, at least not in $\mathbb{R}$
-   
+Therefore we can't find a solution to it, at least not in $\mathbb{R}$
+
    b) $y' = \frac{x}{1+y^2}$
 
    We rewrite the equation to:
