@@ -49,6 +49,7 @@ $$
 \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
 $$
 
+   
    **b)** $y' = x e^{y}$  
    
    Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
