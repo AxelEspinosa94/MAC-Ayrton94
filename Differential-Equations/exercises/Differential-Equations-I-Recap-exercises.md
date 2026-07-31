@@ -9,7 +9,17 @@
 # **Table of Contents**
 
 0. [Introduction](#introduction)
-1. [First‑Order Differential Equations](#first-order-differential-equations)
+   - [Classification and Basic Concepts](#classification-and-basic-concepts)
+1. [First‑Order Differential Equations](#firstorder-differential-equations)
+   - [Separable](#separable-equations)
+   - [Exact Equations](#exact-equations)
+   - [Linear](#linear-firstorder-equations)
+   - [substitution](#substitution-methods)
+      - [Homogeneus](#homogeneous)
+      - [Bernoulli](#bernoulli)
+      - [Riccatti](#riccati-special-case)
+      - [Clairaut](#clairaut)
+2. [Higher-Order Linear Differential Equations](#higherorder-linear-differential-equations)
 
 # **Introduction**
 
@@ -73,7 +83,7 @@
 
 ---
 
-## **1.1 Separable Equations**
+## **Separable Equations**
 
 4. Solve the following separable equations (no need to simplify constants):  
    a) $y' = x^2 y^3$  
@@ -276,24 +286,29 @@
    $$
 
    If we set $y=-2$, $f'(-2)=2(-2)=-4<0$. If $f'(y*)<0$, then the equilibrium $y*$ is asintotically stable (near solutions get close).
-   
+
    If we set $y=2$, $f'(2)=2(2)=4>0$. If $f'(y*)>0$, then the equilibrium $y*$ is unstable (near solutions get away).
 
 ---
 
-## **1.2 Exact Equations**
+## **Exact Equations**
 
 7. Determine whether each equation is exact. If exact, solve it:  
    a) $(3x^2 + 2y)dx + (2x + 4y^3)dy = 0$
+
    $$
    M(x,y) = 3x^2 + 2y \rightarrow \frac{\partial M}{\partial y} = 2
    N(x,y) = 2x + 4y^3 \rightarrow \frac{\partial N}{\partial x} = 2
    $$
+   
    Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Then we solve the DE, first we inegrate $M$
+   
    $$
    \int M(x,y)dx = \int (3x^2+2y)dx=\int 3x^2 dx + \int 2y dx = x^3+2yx + h(y)
    $$
+   
    Now we take the derivative of this result on $y$ and equalize to $N$ having
+   
    $$
    \frac{d}{dy}\\(x^3+2yx+h(y)\\)=N(x,y)=2x+4y^3 \rightarrow 2x + h'(y)=2x+4y^3 \rightarrow h'(y) = 2x+4y^3-2x=4y^3
    $$
@@ -301,15 +316,20 @@
    If we integrate $h'(y)$ on y we have that $h(y)=y^4$. Therefore the solution to the DE is $x^3+3xy+y^4=C$
 
    b) $(y\cos x - 2x)dx + (\sin x + x^2)dy = 0$
+   
    $$
    M(x,y) = y\cos x -2x \rightarrow \frac{\partial M}{\partial y} = \cos x
    N(x,y) = \sin x + x^2 \rightarrow \frac{\partial N}{\partial x} = \cos x
    $$
+   
    Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Then we solve the DE, first we inegrate $M$
+   
    $$
    \int M(x,y)dx = \int (y\cos x - 2x)dx=\int y\cos x dx - \int 2x dx = y\sin x - x^2 + h(y)
    $$
+   
    Now we take the derivative of this result on $y$ and equalize to $N$ having
+   
    $$
    \frac{d}{dy}\\(y\sin x - x^2 + h(y)\\) = N(x,y) = \sin x + x^2 \rightarrow \sin x + h'(y) = \sin x + x^2 \rightarrow h'(y) = x^2
    $$
@@ -318,22 +338,27 @@
 
 8. Find an integrating factor (if it exists) depending only on $x$ or only on $y$:  
    a) $(2xy - y)dx + (x^2 - x)dy = 0$
+   
    $$
    M(x,y) = 2xy - y \rightarrow \frac{\partial M}{\partial y} = x - 1
    N(x,y) = x^2 - x \rightarrow \frac{\partial N}{\partial x} = x - 1
    $$
+   
    Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Therefore the integrating factor is $\mu = 1$
    b) $(y + x e^{xy})dx + (x + y e^{xy})dy = 0$
+   
    $$
    M(x,y) = y + x e^{xy} \rightarrow \frac{\partial M}{\partial y} = 1 + x^2 e^{xy}
    N(x,y) = x + y e^{xy} \rightarrow \frac{\partial N}{\partial x} = 1 + y^2 e^{xy}
    $$
+   
    Since $\frac{\partial M}{\partial y}\neq\frac{\partial N}{\partial x}$, the DE is not exact. 
    Now we have to prove either there exist an integrating factor dependant on $x$ or dependant on $y$. However
    - If $\frac{M_y - N_x}{N}=f(x)\rightarrow \mu = \mu(x)$
    - If $\frac{N_x - M_y}{M}=g(y)\rightarrow \mu = \mu(y)$
 
    Then we calculate $M_y - N_x = (1 + x^2 e^{xy}) - (1 + y^2 e^{xy}) = (x^2 - y^2)e^{xy}$, and now we test first $\mu(x)$
+   
    $$
    \frac{M_y - N_x}{N} = \frac{(x^2 - y^2)e^{xy}}{x + y e^{xy}}
    $$
@@ -342,59 +367,80 @@
 
 ---
 
-## **1.3 Linear First‑Order Equations**
+## **Linear First‑Order Equations**
 
 9. Solve using the integrating factor method:  
    a) $y' + 3y = e^{-x}$
    Since the equation matches the general form $P(x) = 3$ and $Q(x) = e^{-x}$, then the integrating factor has the form:
+   
    $$
    \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int 3dx} \rightarrow \mu(x) = e^{3x}
    $$
+
    Then we multiply $\mu(x)$ to the entire equation
+   
    $$
    \mu(x)y'+3(\mu(x))y = \mu(x)e^{-x}
    $$
+   
    We recognize the derivative as:
+   
    $$
    (\mu(x)y)' = \mu(x)e^{-x} \rightarrow \\(e^{3x}y\\)' = e^{3x}e^{-x} \rightarrow \\(e^{3x}y\\)' = e^{2x}
    $$
+   
    Then we integrate on x, having
+   
    $$
    \int \\(e^{3x}y\\)' =  \int e^{2x} \rightarrow e^{3x}y = \frac{1}{2}e^{2x} + C \rightarrow y = \frac{e^{-x}}{2} + Ce^{-x}
    $$
 
    b) $y' - \frac{2}{x}y = x^3$
    Since the equation matches the general form $P(x) = \frac{2}{x}$ and $Q(x) = x^3$, then the integrating factor has the form:
+   
    $$
    \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int \frac{2}{x}dx} \rightarrow \mu(x) = e^{2ln(x)} = x^2
    $$
+   
    Then we multiply $\mu(x)$ to the entire equation
+   
    $$
    \mu(x)y'+\frac{2}{x}(\mu(x))y = \mu(x)x^3
    $$
+   
    We recognize the derivative as:
+   
    $$
    (\mu(x)y)' = \mu(x)x^3 \rightarrow \\(x^2 y\\)' = x^2 x^3 \rightarrow \\(e^{3x}y\\)' = x^5
    $$
+   
    Then we integrate on x, having
+   
    $$
    \int \\(x^2 y\\)' =  \int x^5 \rightarrow x^2 y = \frac{1}{6}x^6 + C \rightarrow y = \frac{x^4}{6} + \frac{C}{x^2}
    $$
 
    c) $y' + y\tan x = \sin x$
    Since the equation matches the general form $P(x) = \tan x$ and $Q(x) = \sin x$, then the integrating factor has the form:
+   
    $$
    \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int \tan x dx} \rightarrow \mu(x) = e^{-\ln(\cos x)} = \sec x
    $$
+   
    Then we multiply $\mu(x)$ to the entire equation
+   
    $$
    \mu(x)y'+\tan x(\mu(x))y = \mu(x)\sin x
    $$
+   
    We recognize the derivative as:
+   
    $$
    (\mu(x)y)' = \mu(x)\sin x \rightarrow \\(\sec x y\\)' = \sec x \sin x \rightarrow \\(\sec x y\\)' = \tan x
    $$
+   
    Then we integrate on x, having
+   
    $$
    \int \\(\sec x y\\)' = \int \tan x \rightarrow \sec x y = -\ln(\cos x) + C \rightarrow y = -\frac{\ln(\cos x)}{\sec x} + C\cos x
    $$
@@ -402,117 +448,159 @@
 10. Solve the IVPs:  
    a) $y' + 4y = 8,\; y(0)=1$
    Since the equation matches the general form $P(x) = 4$ and $Q(x) = 8$, then the integrating factor has the form:
+   
    $$
    \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int 4 dx} \rightarrow \mu(x) = e^{4x}
    $$
+   
    Then we multiply $\mu(x)$ to the entire equation
+   
    $$
    \mu(x)y'+4(\mu(x))y = \mu(x)8
    $$
+   
    We recognize the derivative as:
+   
    $$
    (\mu(x)y)' = 8\mu(x) \rightarrow \\(e^{4x} y\\)' = 8e^{4x} \rightarrow \\(e^{4x} y\\)' = 8e^{4x}
    $$
+   
    Then we integrate on x, having
+   
    $$
    \int \\(e^{4x} y\\)' = \int 8e^{4x} \rightarrow e^{4x} y = 2e^{4x} + C \rightarrow y = 2 + Ce^{4x}
    $$
+   
    Since we have $y(0)=1$, then $y(0) = 2 + Ce^{0} = 1 \rightarrow 2 + C = 1 \rightarrow C=-1$. Therefore the solution of the IVP is $y = 2 -e^{4x}$
 
    b) $y' - \frac{1}{x}y = x,\; y(1)=2$
    Since the equation matches the general form $P(x) = \frac{1}{x}$ and $Q(x) = x$, then the integrating factor has the form:
+   
    $$
    \mu(x) = e^{\int P(x)dx} \rightarrow \mu(x) = e^{\int \frac{1}{x} dx} \rightarrow \mu(x) = e^{\ln x} = x
    $$
+   
    Then we multiply $\mu(x)$ to the entire equation
+   
    $$
    \mu(x)y'+\frac{1}{x}(\mu(x))y = \mu(x)x
    $$
+   
    We recognize the derivative as:
+   
    $$
    (\mu(x)y)' = x\mu(x) \rightarrow \\(x y\\)' = x^2 \rightarrow \\(x y\\)' = x^2
    $$
+   
    Then we integrate on x, having
+   
    $$
    \int \\(x y\\)' = \int x^{2} \rightarrow x y = \frac{x^3}{3} + C \rightarrow y = \frac{x^2}{3} + \frac{C}{x}
    $$
+   
    Since we have $y(1)=2$, then $y(1) = \frac{1^2}{3} + \frac{C}{1} = 2 \rightarrow \frac{1}{3} + C = 2 \rightarrow C=\frac{5}{3}$. Therefore the solution of the IVP is $y = \frac{x^2}{3} + \frac{5}{3x}$
 
 ---
 
-## **1.4 Substitution Methods**
+## **Substitution Methods**
 
 ### **Homogeneous**
 
 11. Solve:  
    a) $y' = \frac{x+y}{x-y}$
    Let's substitute $y = vx, \quad y' = v + xv'$
+   
    $$
    v + xv' = \frac{x(v+1)}{x(1-v)} \rightarrow xv' = \frac{x(v+1)-xv(1-v)}{x(1-v)}= \frac{(v+1)+(v^2 - v)}{1-v}=\frac{v^2+1}{1-v} \rightarrow v' = \frac{1}{x}\frac{v^2 +1}{1-v}
    $$
 
    We then make $v' = \frac{dv}{dx}$ and
+   
    $$
    \frac{1-v}{v^2 +1}dv =\frac{dx}{x}
    $$
 
    So, if we split the equation we have that $\int \frac{dx}{x}=\ln x$, on the other side:
+   
    $$
    \int \frac{1-v}{v^2 +1}dv=\int\frac{dv}{v^2 +1}-\int\frac{vdv}{v^2 +1}
    $$
+   
    For Calculus we know that $\int\frac{dv}{v^2 +1}= \arctan(v)$ and let $u=v^2 +1$, so $du=2vdv\rightarrow vdv=\frac{du}{2}$, then
+   
    $$
    \int \frac{1-v}{v^2 +1}dv = \arctan(v)- \frac{1}{2}\int\frac{du}{u}=\arctan(v)-\frac{1}{2}\ln(u)=\arctan(v)-\frac{1}{2}\ln(v^2 +1)
    $$
+   
    So in the end we have the following equation
+   
    $$
    \arctan(v)-\frac{1}{2}\ln(v^2 +1) =\ln(x) + C
    $$
+   
    Considering $y=vx\rightarrow v\frac{y}{x}$, we substitute the value of $v$
+   
    $$
    \arctan(\frac{y}{x})-\frac{1}{2}\ln(\frac{y}{x}^{2} +1) =\ln(x) + C
    $$
+
    By properties of $\ln$
+   
    $$
    \ln(\frac{y}{x}^{2} +1)=\ln(\frac{x^2 + y^2}{x^2})=\ln(x^2 + y^2)-\ln(x^2)
    $$
+
    Therefore
+   
    $$
    \arctan(\frac{y}{x})-\frac{1}{2}\\(\ln(x^2 + y^2)-\ln(x^2)\\) =  \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)-\frac{1}{2}\ln(x^2) = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\frac{1}{2}2\ln(x) = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\ln(x) =\ln(x) + C
    $$
+   
    Finally having
+   
    $$
    \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)= C
    $$
+   
    Which is a valid form for an implicit solution
 
    b) $y' = \frac{y}{x} + \frac{x}{y}$
    Let's substitute $y = vx, \quad y' = v + xv'$
+   
    $$
    v + xv' = \frac{vx}{x} + \frac{x}{vx} \rightarrow xv' = v+\frac{1}{v}-v=\frac{1}{v}\rightarrow v'=\frac{1}{vx}
    $$
 
    We then make $v' = \frac{dv}{dx}$ and
+   
    $$
    vdv =\frac{dx}{x}
    $$
 
    So, if we split the equation we have that $\int \frac{dx}{x}=\ln x$, on the other side:
+   
    $$
    \int vdv=\frac{v^2}{2}
    $$
+   
    So in the end we have the following equation
+   
    $$
    \frac{v^2}{2}=\ln(x) + C
    $$
+   
    Considering $y=vx\rightarrow v\frac{y}{x}$, we substitute the value of $v$
+   
    $$
    \frac{1}{2}\\(\frac{y}{x}\\)^2=\ln(x) + C
    $$
+   
    where
+   
    $$
    C = \\(\frac{y}{x}\\)^2 - \ln(x)
    $$
+   
    Which is a valid form for an implicit solution
 
 ### **Bernoulli**
@@ -520,60 +608,85 @@
 12. Solve:  
    a) $y' + y = y^3$
    For Bernoulli we use the substitution $v=y^{1-n}=y^{1-3}=y^{-2} \rightarrow v' = -\frac{2}{y^3}y'  \rightarrow y' = -\frac{y^3 v'}{2}=\frac{(v^{-1/2})^3 v'}{2}=\frac{v^{-3/2} v'}{2}$ then we have
+
    $$
    \frac{v^{-3/2} v'}{2} + v^{-1/2}=v^{-3/2}
    $$
+   
    Then we dvide the equation by $v^{-3/2}$ having
+   
    $$
    \frac{v'}{2} + v= 1 \rightarrow v' +2v = 2
    $$
+   
    This last equation can be solved using the integrating factor with $P(x)=2$ and $Q(x)=2$. Now we calculate the integrating factor:
+   
    $$
    \mu(x) = e^{\int P(x)dx}=e^{\int 2dx}=e^{2x}
    $$
+   
    Then we multiply $\mu(x)$ to the entire equation
+   
    $$
    \mu(x)v'+2(\mu(x))v = 2\mu(x)
    $$
+   
    We recognize the derivative as:
+   
    $$
    (\mu(x)v)' = 2\mu(x) \rightarrow \\(e^{2x}v\\)' = 2e^{2x}
    $$
+   
    Then we integrate on x, having
+   
    $$
    \int \\(e^{2x}v\\)' = \int 2e^{2x} \rightarrow e^{2x}v = e^{2x} + C \rightarrow v = 1 + Ce^{-2x}
    $$
+   
    Then we substitute the value of $v=y^{-2}$ having
+   
    $$
    y^{-2} = 1 +Ce^{-2x}\rightarrow y = \\(1 +Ce^{-2x}\\)^{-1/2}
    $$
 
    b) $y' - 2y = 3y^{-1}$
    For Bernoulli we use the substitution $v=y^{1-n}=y^{1-(-1)}=y^{2} \rightarrow v' = 2yy'  \rightarrow y' = \frac{v'}{2\sqrt(v)}$ then we have
+   
    $$
    \frac{v'}{2\sqrt(v)} - 2\sqrt(v) = \frac{3}{\sqrt(v)}
    $$
+   
    Then we multiply the equation by $\sqrt(v)$ having
    $$
    v' - 2v = 3 
    $$
+   
    This last equation can be solved using the integrating factor with $P(x)=-2$ and $Q(x)=3$. Now we calculate the integrating factor:
+   
    $$
    \mu(x) = e^{\int P(x)dx}=e^{\int -2dx}=e^{-2x}
    $$
+   
    Then we multiply $\mu(x)$ to the entire equation
+   
    $$
    \mu(x)v'-2(\mu(x))v = 3\mu(x)
    $$
+   
    We recognize the derivative as:
+   
    $$
    (\mu(x)v)' = 3\mu(x) \rightarrow \\(e^{-2x}v\\)' = 2e^{-2x}
    $$
+   
    Then we integrate on x, having
+   
    $$
    \int \\(e^{-2x}v\\)' = \int 3e^{-2x} \rightarrow e^{-2x}v = \frac{3}{2}e^{-2x} + C \rightarrow v = \frac{3}{2} + Ce^{2x}
    $$
+   
    Then we substitute the value of $v=y^{2}$ having
+   
    $$
    y^{2} = \frac{3}{2} +Ce^{2x}\rightarrow y = \\(1 +Ce^{-2x}\\)^{1/2}
    $$
@@ -582,36 +695,48 @@
 ### **Riccati (special case)**
 
 13. Solve the Riccati equation given a particular solution $y_p = x$:  
+
    $$
    y' = y^2 - xy + x^2
    $$
 
    The Riccati form can be identified as $a(x)=1, b(x)=-x$ and $c(x)=x^2$, and we have the particular solution $y_p = x$, Then we apply the substitution $y = y_p + \frac{1}{v}$, where $y'=y_{p}'-\frac{v'}{v^2}= 1- \frac{v'}{v^2}$. Substituting this result in the original equation we have:
+
    $$
    v' + (2a(x)y_{p}(x)+b(x))v =-a(x)
    \rightarrow v' +(2(1)x-x)v=-1
    \rightarrow v' +xv =-1
    $$
+
    Which can be calculated by the integrating factor using $P(x)=x$ and $Q(x)=-1$. Now we calculate the integrating factor:
+
    $$
    \mu(x) = e^{\int P(x)dx}=e^{\int xdx}=e^{\frac{x^2}{2}}
    $$
+
    Then we multiply $\mu(x)$ to the entire equation
+
    $$
    \mu(x)v'+x(\mu(x))v = -\mu(x)
    $$
+
    We recognize the derivative as:
+
    $$
    (\mu(x)v)' = -\mu(x) 
    \rightarrow \\(e^{\frac{x^2}{2}}v\\)' = -e^{\frac{x^2}{2}}
    $$
+
    Then we integrate on x, having
+
    $$
    \int \\(e^{\frac{x^2}{2}}v\\)' = \int -e^{\frac{x^2}{2}}
    \rightarrow e^{\frac{x^2}{2}}v = \int -e^{\frac{x^2}{2}} + C 
    \rightarrow v = E(x) + Ce^{\frac{x^2}{2}}
    $$
+
    where $E(x)=\int -e^{\frac{x^2}{2}}$. Then we substitute the value of $v=\frac{1}{y-y_p}$ having
+
    $$
    y-y_p = \frac{1}{E(x) + Ce^{\frac{x^2}{2}}}
    \rightarrow y = \frac{1}{E(x) + Ce^{\frac{x^2}{2}}} + y_p
@@ -620,18 +745,20 @@
 ### **Clairaut**
 
 14. Solve the Clairaut equation:  
+   
    $$
    y = xy' + (y')^2
    $$
 
    Using Clairaut, we identify $f(y')=(y')^2$, So, the solution will have the form
+
    $$
    y=Cx + C^2
    $$
 
 ---
 
-# **2. Higher‑Order Linear Differential Equations**
+# **Higher‑Order Linear Differential Equations**
 
 ---
 
