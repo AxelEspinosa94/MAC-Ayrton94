@@ -8,61 +8,49 @@
 
 # **Table of Contents**
 
-0. [Introduction](#introduction)
+[Introduction](#introduction)
    - [Classification and Basic Concepts](#classification-and-basic-concepts)
-1. [First‑Order Differential Equations](#firstorder-differential-equations)
+[First-Order Differential Equations](#firstorder-differential-equations)
    - [Separable](#separable-equations)
    - [Exact Equations](#exact-equations)
    - [Linear](#linear-firstorder-equations)
    - [substitution](#substitution-methods)
-      - [Homogeneus](#homogeneous)
+      - [Homogeneous](#homogeneous)
       - [Bernoulli](#bernoulli)
-      - [Riccatti](#riccati-special-case)
+      - [Riccati](#riccati-special-case)
       - [Clairaut](#clairaut)
-2. [Higher-Order Linear Differential Equations](#higherorder-linear-differential-equations)
+[Higher-Order Linear Differential Equations](#higherorder-linear-differential-equations)
 
 # **Introduction**
 
 ## **Classification and Basic Concepts**
 
-1. Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
+Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
 
-   a) $y'' + y' + y = \sin x$
-   Linear, non-autonomous, order 2
+1. $y'' + y' + y = \sin x$ -> Linear, non-autonomous, order 2
+2. $y' = y^2 - 3y + 2$ -> Non-Linear, autonomous, first order 
+3. $x^2 y'' + xy' - y = 0$ -> Linear, non-autonomous, order 2
+4. $y' + \sqrt{xy} = 0$ -> Non-linear, autonomous, first order
 
-   b) $y' = y^2 - 3y + 2$  
-   Non-Linear, autonomous, first order
-   
-   c) $x^2 y'' + xy' - y = 0$  
-   Linear, non-autonomous, order 2
-   
-   d) $y' + \sqrt{xy} = 0$
-   Non-linear, autonomous, first order
+Determine whether the following equations are exact, linear, separable, or none:
 
-2. Determine whether the following equations are exact, linear, separable, or none:
-
-   **a)** $(2xy + 3)dx + (x^2 + 4y)dy = 0$. It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
+1. $(2xy + 3)dx + (x^2 + 4y)dy = 0$. It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
 
 $$
 \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
 $$
 
+2. $y' = x e^{y}$. Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
+   
+3. $y' + y = x^2$. It is a linear DE since by definition it can be written as:
 
-   **b)** $y' = x e^{y}$  
-   
-   Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
-   
-   c) $y' + y = x^2$
+$$
+a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
+$$
 
-   It is a linear DE since by definition it can be written as:
-   
-   $$
-   a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
-   $$
-   
-   where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
+where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
 
-3. For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution: 
+For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution: 
 
    a) $y' = \sqrt{y},\; y(0)=0$ 
 
