@@ -551,13 +551,88 @@
 ## **2.1 Homogeneous with Constant Coefficients**
 
 15. Solve:  
-   a) $y'' - 5y' + 6y = 0$  
-   b) $y'' + 4y = 0$  
+   a) $y'' - 5y' + 6y = 0$
+   We take the characteristic equation as
+   $$
+   r^2 -5r +6=0
+   $$
+   where we factorize $r=3$ and $r=2$ as solutions.
+   Therefore, the solution is
+   $$
+   y = C_1 e^{3x} + C_2 e^{2x}
+   $$
+
+   b) $y'' + 4y = 0$
+   We take the characteristic equation as
+   $$
+   r^2 + 4r =0 \rightarrow r(r+4) = 0
+   $$
+   Then we have the roots $r=0$ and $r=-4$
+   $$
+   y = C_1 e^{0x} + C_2 e^{-4x} = C_1 + C_2 e^{-4x}
+   $$
+
    c) $y''' - 3y'' + 3y' - y = 0$
+   We take the characteristic equation as
+   $$
+   r^3 -3r^2 + 3r -1 = 0 \rightarrow (r-1)^3 = 0
+   $$
+   Then we have the roots $r=1$
+   $$
+   y = C_1 e^{x} + C_2 xe^{x} + C_3 x^2 e^{x}
+   $$
+
 
 16. Solve the IVPs:  
-   a) $y'' + y = 0,\; y(0)=2,\; y'(0)=1$  
+   a) $y'' + y = 0,\; y(0)=2,\; y'(0)=1$
+   We take the characteristic equation as
+   $$
+   r^2 + r = 0 \rightarrow r(r+1) = 0
+   $$
+   Then we have the roots $r=-1$ and $r=0$
+   $$
+   y = C_1 e^{-x} + C_2 e^{0x} = C_1 e^{-x} + C_2
+   $$
+   Remembering the IVP $y(0)=2,\; y'(0)=1$
+   $$
+   y(0) = C_1 e^{-0} + C_2 = C_1 + C_2 = 2
+   $$
+   If we calculate the derivative of the solution we have 
+   $$
+   y'(x) = -C_1 e^{-x} \rightarrow y'(0) = -C_1 e^{-0} = 1 \rightarrow -C_1 = 1\rightarrow C_1 = -1
+   $$
+   Substituting the valñue of $C_1$ we have $C_2 = 3$.
+   Therefore the solution to the equation is
+   $$
+   y = -e^{-x} + 3
+   $$
+
    b) $y'' - 4y' + 4y = 0,\; y(0)=0,\; y'(0)=3$
+   We take the characteristic equation as
+   $$
+   r^2 - 4r + 4 = 0 \rightarrow (r-2)^2 = 0
+   $$
+   Then we have the roots $r=2$
+   $$
+   y = C_1 e^{2x} + C_2 xe^{2x}
+   $$
+   Remembering the IVP $y(0)=2$
+   $$
+   y(0) = C_1 e^{2(0)} + C_2 (0)e^{2(0)} = C_1 = 0
+   $$
+   If we substitute the value of $C_1$ in the solution $y$ we have
+   $$
+   y(x) = C_2 xe^{2x}
+   $$
+   If we calculate the derivative of the solution we have 
+   $$
+   y'(x) = C_2\\(e^{2x} + 2xe^{2x}\\) \rightarrow y'(0) = C_2\\(e^{2(0)} + 2(0)e^{2(0)}\\) = 3 \rightarrow C_2 = 3
+   $$
+   Finally we have $C_2 = 3$.
+   Therefore the solution to the equation is
+   $$
+   y = 3xe^{2x}
+   $$
 
 ---
 
@@ -566,29 +641,377 @@
 ### **Undetermined Coefficients**
 
 17. Solve:  
-   a) $y'' + y = \sin x$  
-   b) $y'' - 3y' + 2y = e^{2x}$  
+   a) $y'' + y = \sin x$
+   First we solve the homogeneous part
+   $$
+   y'' + y = 0
+   $$
+   Thus we take the caracteristic equation
+   $$
+   r^2 + 1 = 0
+   $$
+   Where $r = \pm i$ then, the solution takes the form
+   $$
+   y_h=C_1\cos(x)+C_2\sin(x)
+   $$
+   Since the non-homogeneous part is $\sin(x)$ we should find a solution with it, but that solution is already considered in $y_h$, then we take
+   $$
+   y_p = x(A\cos(x)+B\sin(x))
+   $$
+   Then we derivate $y_p$
+   $$
+   y_{p}' = A\cos(x) + B\sin(x)+ x(B\cos(x)-A\sin(x))
+   y_{p}'' = B\cos(x) - A\sin(x) +B\cos(x) - A\sin(x) - x(A\cos(x) + B\sin(x)) = 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x))
+   $$
+   Substituting in the original equation we have
+   $$
+   y''+ y=\sin(x)
+   \rightarrow 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x)) + x(A\cos(x)+B\sin(x))=\sin(x)
+   \rightarrow 2B\cos(x)-2A\sin(x)=1*\sin(x) +0*\cos(x)
+   $$
+   Where we have the following equations system
+   $$
+   -2A = 1 \rightarrow A=-\frac{1}{2}
+   2B = 0 \rightarrow B = 0
+   $$
+   Therefore, the final particular solution is
+   $$
+   y_p = x(A\cos(x) + B\sin(x))= x(-\frac{1}{2}\cos(x))=-\frac{1}{2}x\cos(x)
+   $$
+   Finally the General Solution is 
+   $$
+   y=C_1\cos(x)+C_2\sin(x)-\frac{1}{2}x\cos(x)
+   $$
+
+   b) $y'' - 3y' + 2y = e^{2x}$
+   First we solve the homogeneous part
+   $$
+   y'' - 3y' + 2y = 0
+   $$
+   Thus we take the caracteristic equation
+   $$
+   r^2 - 3r + 2 = 0
+   $$
+   Where $r = 2$ and $r = 1$ then, the solution takes the form
+   $$
+   y_h=C_1e^{2x}+C_2e^{x}
+   $$
+   Since the non-homogeneous part is $e^{2x}$ we should find a solution with it, but that solution is already considered in $y_h$, then we take
+   $$
+   y_p = x(e^{2x})
+   $$
+   Then we derivate $y_p$
+   $$
+   y_{p}' = e^{2x} + 2x e^{2x}
+   y_{p}'' = 2e^{2x} + 2\\[e^{2x} + 2x e^{2x}\\] = 4e^{2x}+ 4xe^{2x}
+   $$
+   Substituting in the original equation we have
+   $$
+   y'' - 3y' + 2y = e^{2x}
+   \rightarrow 4e^{2x} + 4x e^{2x} - 3e^{2x} - 6x e^{2x} + 2x e^{2x} = e^{2x}
+   \rightarrow e^{2x}=e^{2x}
+   $$
+   Meaning the $y_p$ solution is right
+   
+   Finally the General Solution is 
+   $$
+   y=y_h + y_p = C_1e^{2x}+C_2e^{x} + xe^{2x}
+   $$
+
    c) $y'' + 4y = 3x^2$
+   First we solve the homogeneous part
+   $$
+   y'' + 4y = 0
+   $$
+   Thus we take the caracteristic equation
+   $$
+   r^2 + 4 = 0
+   $$
+   Where $r = 0 \pm 2i$ then, the solution takes the form
+   $$
+   y_h=C_1\sin(2x)+C_2\cos(2x)
+   $$
+   Since the RHS is $3x^2$
+   Then a candidate for the solution is 
+   $$
+   y_p=ax^2+bx+c
+   $$
+   We take out the derivatives
+   $$
+   y_{p}' = 2ax +b
+   y_{p}'' = 2a
+   $$
+   We substitute it in the equation
+   $$
+   2a +4(ax^{2}+bx+c)=3x^2
+   \rightarrow 2a +4ax^2 +4bx +4c = 3x^2
+   $$
+   so we have the following system
+   $$
+   4a = 3 \rightarrow a=\frac{3}{4}
+   4b=0 \rightarrow b=0
+   2a + 4c = 0 \rightarrow \frac{3}{2}+4c=0 \rightarrow c=-\frac{3}{8}
+   $$
+   Therefore, the final particular solution is
+   $$
+   y_p = \frac{3}{4}x^2 -\frac{3}{8}
+   $$
+   Finally the General Solution is 
+   $$
+   y=C_1\sin(x)+C_2\cos(x)+\frac{3}{4}x^2 -\frac{3}{8}
+   $$
 
 ### **Annihilator Method**
 
 18. Solve:  
    a) $y'' - y = e^{x} + x$  
+   First we identify the annihilator $A=D^2(D -1)$.
+   Then we apply it in the ODE
+
+   $$
+   A(D)L(D)y = 0 \rightarrow (D-1)D^2 (D^2 - 1)y=0
+   $$
+
+   Having the following characteristic equation:
+
+   $$
+   (D^2 - 1)(D - 1)D^2 = (D -1)(D+1)(D-1)D^2 = 0
+   $$
+
+   The roots we can see in that equation are $r = 1$ with multiplicity 2, $r = -1$ and $r = 0$ with multiplicity 2. So the general solution has the form.
+
+   $$
+   y = (C_1 +C_2 x)e^{x} + C_3 e^{-x} + C_4 + C_5 x
+   $$
+
+   which we can identify the homogeneous solution as
+
+   $$
+   y_c = C_1 e^{x} + C_3 e^{-x}
+   $$
+
+   and the particular solution
+
+   $$
+   y_p = C_2 xe^{x} + C_4 + C_5 x
+   $$
+
    b) $y''' = \sin x$
+   Considering $g(x)=\sin x$, we propose the anihiliator $D^2 + 1$. Then we apply it in the ODE
+
+   $$
+   A(D)L(D)y = 0 \rightarrow (D^2+1)(D^3)y=0
+   $$
+
+   Having the following characteristic equation:
+
+   $$
+   (D^2+1)(D^3) = 0
+   $$
+
+   The root we can see in that equation is $r = 0$ with multiplicity 3, and $r = \pm i$. So the general solution has the form.
+
+   $$
+   y = C_1 + C_2 x + C_3 x^{2} + C_4\cos(x) + C_5\sin(x)
+   $$
+
+   which we can identify the homogeneous solution as
+
+   $$
+   y_c = C_1 + C_2 x + C_3 x^{2}
+   $$
+
+   and the particular solution
+
+   $$
+   y_p = C_4\cos(x) + C_5\sin(x)
+   $$
 
 ### **Variation of Parameters**
 
 19. Solve:  
-   a) $y'' + y = \sec x$  
+   a) $y'' + y = \sec x$
+   We start from the auxiliar equation $m^2+1=0$, where we have the roots $m = \pm i$ so $y_c = C_1 \cos(x) + C_2 \sin(x)$. Here we identify $y_1 = \cos(x)$ and $y_2 = \sin(x)$, then we calculate the Wronkskian matrix
+
+   $$
+   W(\cos(x), \sin(x)) =
+      \left|
+      \begin{matrix}
+      \cos(x) & \sin(x) \\
+      -\sin(x) & \cos(x)
+      \end{matrix}
+      \right|
+      = \cos^{2}(x)+\sin^{2}(x) = 1
+   $$
+
+   and since $f(x) = \sec(x)$, we have
+
+   $$
+   W_1 =
+      \left|
+      \begin{matrix}
+      0 & \sin(x) \\
+      \sec(x) & \cos(x)
+      \end{matrix}
+      \right|
+      = - \tan(x)
+   $$
+
+   and
+
+   $$
+   W_2 =
+      \left|
+      \begin{matrix}
+      \cos(x) & 0 \\
+      -\sin(x) & \sec(x)
+      \end{matrix}
+      \right|
+      = 1
+   $$
+
+   where
+
+   $$
+   u_1' = \frac{W_1}{W} = -\frac{\tan(x)}{1}=-\tan(x) \rightarrow u_1 = \int (-\tan(x))dx = \ln(\cos(x)) + C
+   $$
+
+   and
+
+   $$
+   u_2' = \frac{W_2}{W} = \frac{1}{1} = 1 \rightarrow u_2 = \int dx = x
+   $$
+
+   Then
+
+   $$
+   y_p = u_1 y_1 + u_2 y_2 = \ln(cos(x))\cos(x) + x\sin(x)
+   $$
+
+   And finally
+
+   $$
+   y = C_1\cos(x) + C_2\sin(x) + \ln(cos(x))\cos(x) + x\sin(x)
+   $$
+
    b) $y'' - y = \frac{1}{x}$
+   We start from the auxiliar equation $m^2-1=0$, where we have the roots $m = \pm 1$ so $y_c = C_1 e^{x} + C_2 e^{-x}$. Here we identify $y_1 = e^{x}$ and $y_2 = e^{-x}$, then we calculate the Wronkskian matrix
+
+   $$
+   W(e^{x}, e^{-x}) =
+      \left|
+      \begin{matrix}
+      e^{x} & e^{-x} \\
+      e^{x} & -e^{-x}
+      \end{matrix}
+      \right|
+      = -1 - 1 = -2
+   $$
+
+   and since $f(x) = \frac{1}{x}$, we have
+
+   $$
+   W_1 =
+      \left|
+      \begin{matrix}
+      0 & e^{-x} \\
+      \frac{1}{x} & -e^{-x}
+      \end{matrix}
+      \right|
+      = -\frac{1}{x}e^{-x}
+   $$
+
+   and
+
+   $$
+   W_2 =
+      \left|
+      \begin{matrix}
+      e^{x} & 0 \\
+      e^{x} & \frac{1}{x}
+      \end{matrix}
+      \right|
+      = \frac{1}{x}e^{x}
+   $$
+
+   where
+
+   $$
+   u_1' = \frac{W_1}{W} = \frac{\frac{1}{x}e^{-x}}{2}=\frac{1}{2x}e^{-x} \rightarrow u_1 = \int \frac{1}{2x}e^{-x}dx = F_1(x) + C
+   $$
+
+   since, primitive doesn't exist for this function and
+
+   $$
+   u_2' = \frac{W_2}{W} = \frac{\frac{1}{x}e^{x}}{-2} = -\frac{1}{2x}e^{x}\rightarrow u_2 = -\int \frac{1}{2x}e^{x}dx = F_2(x) + C
+   $$
+
+   Then
+
+   $$
+   y_p = u_1 y_1 + u_2 y_2 = F_1(x) e^{x} + F_2(x) e^{-x}
+   $$
+
+   And finally
+
+   $$
+   y = C_1e^{x} + C_2e^{-x} + F_1(x) e^{x} + F_2(x) e^{-x}
+   $$
 
 ---
 
 ## **2.3 Cauchy–Euler**
 
 20. Solve:  
-   a) $x^2 y'' + xy' - y = 0$  
+   a) $x^2 y'' + xy' - y = 0$
+   To this exercise we try $y=x^{r}$, then we calculate the derivatives
+   
+   $$
+   y' = rx^{r-1}
+   y'' = r(r-1)x^{r-2}
+   $$
+
+   Then we substitute in the DE
+
+   $$
+   x^{2}r(r-1)x^{r-2} + xrx^{r-1} - x^{r} = 0 \rightarrow r(r-1)x^{r} + rx^{r} -x^{r}=0
+   \rightarrow x^{r}\\[r(r-1)+r-1\\] = 0
+   \rightarrow r^2 - r + r -1 = 0
+   \rightarrow r^2 -1 = 0
+   \rightarrow r = \pm 1
+   $$
+
+   Therefore the general solution is $y = C_1 x^{-1} + C_2 x$
+
    b) $x^2 y'' - 3xy' + 5y = x^3$
+   To solve this, we first look at the homogeneous part of the equation such
+
+   $$
+   x^2 y'' - 3xy' + 5y = 0
+   $$
+
+   Let $y = x^{r}, y' = rx^{r-1}, y''= r(r-1)x^{r-2}$, and then substitute in the equation
+
+   $$
+   x^{2}r(r-1)x^{r-2} -3xrx^{r-1} + 5x^{r} = 0
+   \rightarrow r(r-1) - 3r + 5 = 0
+   \rightarrow r^{2} - r - 3r + 5 = 0
+   \rightarrow r^{2} - 4r + 5 = (r - (2+i))(r - (2-i))=0
+   $$
+
+   So we have a solution $y= C_{1}x^{2}\cos(\ln(x)) + C_{2}x^{2}\sin(\ln(-x))$.
+
+   Since RHS is $x^{3}$, we try $y_p = Ax^{3}$, $y' = 3Ax^{2}, y'' = 6Ax$ and substitute in the equation
+
+   $$
+   x^{2}(6Ax)-3x(3Ax^{2})+5(Ax^{3}) = x^{3}
+   \rightarrow 6Ax^{3}-9Ax^{3}+5Ax^{3}=x^{3}
+   \rightarrow 2Ax^{3}=x^{3}
+   \rightarrow (2A)=1
+   \rightarrow A=\frac{1}{2}
+   $$
+
+   Then $y_p = \frac{1}{2}x{3}$ and $y=C_{1}x^{2}\cos(\ln(x)) + C_{2}x^{2}\sin(\ln(-x)) + \frac{1}{2}x{3}$
 
 ---
 
