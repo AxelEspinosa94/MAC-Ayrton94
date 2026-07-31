@@ -41,14 +41,15 @@
 
 2. Determine whether the following equations are exact, linear, separable, or none:
 
-   - $(2xy + 3)dx + (x^2 + 4y)dy = 0$
-     It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
+   **a)** $(2xy + 3)dx + (x^2 + 4y)dy = 0$
 
-$$
-\frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
-$$
+   It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
 
-   - $y' = x e^{y}$  
+   $$
+   \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
+   $$
+
+   **b)** $y' = x e^{y}$  
    
    Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
    
