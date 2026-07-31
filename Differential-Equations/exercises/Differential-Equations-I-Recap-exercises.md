@@ -6,46 +6,70 @@
 
 ---
 
-# **0. Introduction**
+# **Table of Contents**
 
-## **0.1 Classification and Basic Concepts**
+0. [Introduction](#introduction)
+1. [First‑Order Differential Equations](#first-order-differential-equations)
+
+# **Introduction**
+
+## **Classification and Basic Concepts**
 
 1. Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
+
    a) $y'' + y' + y = \sin x$
    Linear, non-autonomous, order 2
+
    b) $y' = y^2 - 3y + 2$  
    Non-Linear, autonomous, first order
+   
    c) $x^2 y'' + xy' - y = 0$  
    Linear, non-autonomous, order 2
+   
    d) $y' + \sqrt{xy} = 0$
    Non-linear, autonomous, first order
 
-2. Determine whether the following equations are exact, linear, separable, or none:  
+2. Determine whether the following equations are exact, linear, separable, or none:
+
    a) $(2xy + 3)dx + (x^2 + 4y)dy = 0$
+
    It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
+
    $$
    \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
    $$
+   
    b) $y' = x e^{y}$  
+   
    Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
+   
    c) $y' + y = x^2$
+
    It is a linear DE since by definition it can be written as:
+   
    $$
    a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
    $$
+   
    where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
 
-3. For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution:  
+3. For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution: 
+
    a) $y' = \sqrt{y},\; y(0)=0$ 
+
    If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrty{y}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
+
    b) $y' = \frac{1}{x-y},\; y(1)=1$
+
    Calculating the y-partial derivative of $\frac{1}{x-y}$ we have $\frac{1}{(x-y)^2}$, which is continous to $x$ values near 1, however is not continous in $x=1$, therefore we can't confirm there is an unique solution to it
+   
    c) $y' = x^{1/3} y^{2/3},\; y(0)=0$
+   
    Calculating the y-partial derivative of $x^{1/3} y^{2/3}$ we have $\frac{2x^{1/3}}{3y^{1/3}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
 
 ---
 
-# **1. First‑Order Differential Equations**
+# **First‑Order Differential Equations**
 
 ---
 
@@ -53,65 +77,95 @@
 
 4. Solve the following separable equations (no need to simplify constants):  
    a) $y' = x^2 y^3$  
+
    We rewrite the equation to:
+  
    $$
    \frac{dy}{dx}=x^2 y^3
    $$
+   
    Then we separate the differentials to match the variables
+  
    $$
    \frac{dy}{y^3}=x^2 dx
    $$
+ 
    Then we integrate the equation
+
    $$
    \int \frac{dy}{y^3}=\int x^2 dx
    $$
+
    which is equivalent
+
    $$
    -\frac{1}{2y^2} = \frac{x^3}{3}
    $$
+
    Then we isolate $y$
+
    $$
    -\frac{3}{2x^3} = y^2 \rightarrow y = if(x), i\in \mathbb{C}
    $$
+
    Therefore we can't find a solution to it, at least not in $\mathbb{R}$
    
    b) $y' = \frac{x}{1+y^2}$
+
    We rewrite the equation to:
+
    $$
    \frac{dy}{dx}=\frac{x}{1+y^2}
    $$
+
    Then we separate the differentials to match the variables
+
    $$
    (1+y^2)dy=x dx
    $$
+
    Then we integrate the equation
+
    $$
    \int (1+y^2)dy=\int x dx
    $$
+
    which is equivalent
+
    $$
    y + \frac{y^3}{3} = x^2
    $$
+
    Then we isolate $y$
+
    $$
    y(1+\frac{y^2}{3}) = x^2
    $$
+
    which means there is more than one solution
 
    c) $y' = (y-1)(y+2)$
+
    We rewrite the equation to:
+
    $$
    \frac{dy}{dx}=\frac{y-1}{y+2}
    $$
+
    Then we separate the differentials to match the variables
+
    $$
    \frac{y+2}{y-1}dy=dx
    $$
+
    Then we integrate the equation
+
    $$
    \int \frac{y+2}{y-1}dy=\int dx
    $$
+
    which is equivalent
+
    $$
    \int \\(1+\frac{3}{y-1}\\)dy=\int dx
    $$
@@ -119,27 +173,38 @@
    $$
    y + 3ln(y-1) = x
    $$
+
    However we can't isolate y, so the equation may have multiple solutions
 
 5. Solve the IVPs:  
    a) $y' = xy,\; y(0)=3$
+
    This can be rewritten as
+
    $$
    \frac{dy}{dx} = xy
    $$
+
    Which is equivalent to
+
    $$
    \frac{dy}{y}=x dx
    $$
+
    Let's integrate
+
    $$
    \int \frac{dy}{y}=\int x dx \rightarrow ln(y) = \frac{x^2}{2}
    $$
+
    If an $e^x$ is applied to the equation we have
+
    $$
    y = e^{\frac{x^2}{2}} + C
    $$
+
    $C$ constant. Taking the initial value we have
+
    $$
    y(0) = e^{\frac{0^2}{2}} + C = e^{0} + C = 1 + C = 3 \rightarrow C = 2
    $$
@@ -147,23 +212,33 @@
    Therefore $y = e^{\frac{x^2}{2}} + 2$
    
    b) $y' = (1+y^2)\cos x,\; y(0)=0$
+
    This can be rewritten as
+
    $$
    \frac{dy}{dx} = (1+y^2)\cos x
    $$
+
    Which is equivalent to
+
    $$
    \frac{dy}{(1+y^2)}=\cos x dx
    $$
+
    Let's integrate
+
    $$
    \int \frac{dy}{(1+y^2)}=\int \cos x dx \rightarrow \arctan(y) = \sin x
    $$
+
    If $\tan x$ is applied to the equation we have
+
    $$
    y = \tan(\sin x) + C
    $$
+
    $C$ constant. Taking the initial value we have
+
    $$
    y(0) = \tan(\sin(0)) + C = \tan(0) + C = 0 + C = 0 \rightarrow C = 0
    $$
@@ -172,24 +247,36 @@
 
 6. Determine all equilibrium solutions and classify their stability:  
    a) $y' = y(3-y)$  
+
    An equilibrium solution is a constant solution $y(t)=C$ such that $y'=0$.
+
    So we equalize the right side to $0$:
+
    $$
    y(3-y)=0 \rightarrow y=0 \or y=3
    $$
+
    So the equilibrium solutions are $y=0$ and $y=3$.
    Now, the idea is to check what happens with solutions near each equilibrium, we can use the derivative criteria of $f(y)$ where
+
    $$
    y'=f(y)=y(3-y) \rightarrow f'(y)=3-2y
    $$
+
    If we set $y=0$, $f'(0)=3-0=3>0$. If $f'(y*)>0$, then the equilibrium $y*$ is unstable (near solutions go away).
+
    If we set $y=3$, $f'(3)=3-6=-3<0$. If $f'(y*)<0$, then the equilibrium $y*$ is asintotically stable (near solutions get close).
+
    b) $y' = y^2 - 4$
+
    Let's equalize $y^2-4=0$, so the equilibrium solutions are $y=2$ and $y=-2$, so we use the derivative criteria of $f(y)$ where
+
    $$
    y'=f(y)=y^2-4 \rightarrow f'(y)=2y
    $$
+
    If we set $y=-2$, $f'(-2)=2(-2)=-4<0$. If $f'(y*)<0$, then the equilibrium $y*$ is asintotically stable (near solutions get close).
+   
    If we set $y=2$, $f'(2)=2(2)=4>0$. If $f'(y*)>0$, then the equilibrium $y*$ is unstable (near solutions get away).
 
 ---
