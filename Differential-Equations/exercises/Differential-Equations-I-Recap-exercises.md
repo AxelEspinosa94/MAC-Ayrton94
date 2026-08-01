@@ -43,9 +43,11 @@ $$
 2. $y' = x e^{y}$. Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
    
 3. $y' + y = x^2$. It is a linear DE since by definition it can be written as:
+   
    $$
    a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
    $$
+   
    where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
 
 For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution: 
