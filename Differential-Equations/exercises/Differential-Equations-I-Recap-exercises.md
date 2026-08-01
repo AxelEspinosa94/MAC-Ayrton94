@@ -27,36 +27,36 @@
 
 Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
 
-1. $y'' + y' + y = \sin x$ → Linear, non-autonomous, order 2
-2. $y' = y^2 - 3y + 2$ → Non-Linear, autonomous, first order 
-3. $x^2 y'' + xy' - y = 0$ → Linear, non-autonomous, order 2
-4. $y' + \sqrt{xy} = 0$ → Non-linear, autonomous, first order
+**a)** $y'' + y' + y = \sin x$ → Linear, non-autonomous, order 2
+**b)** $y' = y^2 - 3y + 2$ → Non-Linear, autonomous, first order 
+**c)** $x^2 y'' + xy' - y = 0$ → Linear, non-autonomous, order 2
+**d)** $y' + \sqrt{xy} = 0$ → Non-linear, autonomous, first order
 
 Determine whether the following equations are exact, linear, separable, or none:
 
-1. $(2xy + 3)dx + (x^2 + 4y)dy = 0$. It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
+**a)** $(2xy + 3)dx + (x^2 + 4y)dy = 0$. It is an exact DE since $M(x,y)=2xy + 3$ and $N(x,y)=x^2 + 4y$ and
 
 $$
 \frac{\partial M}{\partial y} = 2x = \frac{\partial N}{\partial x}
 $$
 
-2. $y' = x e^{y}$. Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
+**b)** $y' = x e^{y}$. Separable since $\frac{dy}{dx}=g(x)h(y)$, where $g(x)=x$ and $h(y)=e^{y}$
    
-3. $y' + y = x^2$. It is a linear DE since by definition it can be written as:
-   
-   $$
-   a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
-   $$
-   
-   where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
+**c)** $y' + y = x^2$. It is a linear DE since by definition it can be written as:
+
+$$
+a_n(x)y^{(n)} + \cdots + a_1(x)y' + a_0(x)y = g(x)
+$$
+
+where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$
 
 For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution: 
 
-1. $y' = \sqrt{y},\; y(0)=0$ → If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrty{y}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
+**a)** $y' = \sqrt{y},\; y(0)=0$ → If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrty{y}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
 
-2. $y' = \frac{1}{x-y},\; y(1)=1$. Calculating the y-partial derivative of $\frac{1}{x-y}$ we have $\frac{1}{(x-y)^2}$, which is continous to $x$ values near 1, however is not continous in $x=1$, therefore we can't confirm there is an unique solution to it
+**b)** $y' = \frac{1}{x-y},\; y(1)=1$. Calculating the y-partial derivative of $\frac{1}{x-y}$ we have $\frac{1}{(x-y)^2}$, which is continous to $x$ values near 1, however is not continous in $x=1$, therefore we can't confirm there is an unique solution to it
 
-3. $y' = x^{1/3} y^{2/3},\; y(0)=0$. Calculating the y-partial derivative of $x^{1/3} y^{2/3}$ we have $\frac{2x^{1/3}}{3y^{1/3}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
+**c)** $y' = x^{1/3} y^{2/3},\; y(0)=0$. Calculating the y-partial derivative of $x^{1/3} y^{2/3}$ we have $\frac{2x^{1/3}}{3y^{1/3}}$ which is continuous to $x$ values near 0, however it is not coninous in $x=0$, therefore we can't confirm there is an unique solution to it
 
 ---
 
