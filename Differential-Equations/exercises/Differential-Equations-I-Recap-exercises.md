@@ -9,8 +9,8 @@
 # **Table of Contents**
 
 -  [Introduction](#introduction)
-   -  [Classification and Basic Concepts] (#classification-and-basic-concepts)
--  [First-Order Differential Equations] (#firstorder-differential-equations)
+   -  [Classification and Basic Concepts](#classification-and-basic-concepts)
+-  [First-Order Differential Equations](#firstorder-differential-equations)
    -  [Separable](#separable-equations)
    -  [Exact Equations](#exact-equations)
    -  [Linear](#linear-firstorder-equations)
