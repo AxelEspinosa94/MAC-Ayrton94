@@ -3,9 +3,9 @@
 
 # 📘 **Statistics I – Unit I Theorem & Definition Compendium**
 
-## ## 1. Introduction to Statistics
+## 1. Introduction to Statistics
 
-### ### 1.1 Importance of Statistics
+### 1.1 Importance of Statistics
 **Definition — Statistics**  
 Statistics is the discipline that deals with the collection, organization, analysis, interpretation, and presentation of data.
 
@@ -17,9 +17,9 @@ As the sample size increases, sample averages converge to the population mean.
 
 ---
 
-## ## 2. Descriptive Statistics
+## 2. Descriptive Statistics
 
-### ### 2.1 Measurement Scales
+### 2.1 Measurement Scales
 
 **Definition — Nominal Scale**  
 A scale that classifies data into categories without any order (e.g., colors, gender).
@@ -38,7 +38,7 @@ Every ratio-scale variable is also an interval-scale variable, but not vice vers
 
 ---
 
-### ### 2.2 Measures of Central Tendency & Position
+### 2.2 Measures of Central Tendency & Position
 
 **Definition — Mean**  
 
@@ -74,7 +74,7 @@ The minimizer of the sum of squared deviations is unique.
 
 ---
 
-### ### 2.3 Measures of Dispersion
+### 2.3 Measures of Dispersion
 
 **Definition — Range**  
 
@@ -118,7 +118,7 @@ $$
 
 ---
 
-### ### 2.4 Measures of Shape: Skewness & Kurtosis
+### 2.4 Measures of Shape: Skewness & Kurtosis
 
 **Definition — Skewness**  
 
@@ -147,7 +147,7 @@ $$
 
 ---
 
-### ### 2.5 Tabular & Graphical Data Presentation
+### 2.5 Tabular & Graphical Data Presentation
 
 **Definition — Frequency Table**  
 A tabular summary showing counts or proportions for each category or class interval.
@@ -173,7 +173,7 @@ $$
 
 ---
 
-### ### 2.6 Software-Based Statistical Computation (CAS, R, Excel)
+### 2.6 Software-Based Statistical Computation (CAS, R, Excel)
 
 **Definition — CAS (Computer Algebra System)**  
 Software capable of symbolic and numeric computation (e.g., Mathematica, Maple).
