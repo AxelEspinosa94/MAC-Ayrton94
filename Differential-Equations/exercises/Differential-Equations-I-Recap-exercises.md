@@ -11,15 +11,29 @@
 -  [Introduction](#introduction)
 -  [Classification and Basic Concepts](#classification-and-basic-concepts)
 -  [First-Order Differential Equations](#firstorder-differential-equations)
--  [Separable](#separable-equations)
--  [Exact Equations](#exact-equations)
--  [Linear](#linear-firstorder-equations)
--  [substitution](#substitution-methods)
--  [Homogeneous](#homogeneous)
--  [Bernoulli](#bernoulli)
--  [Riccati](#riccati-special-case)
--  [Clairaut](#clairaut)
+    -  [Separable](#separable-equations)
+    -  [Exact Equations](#exact-equations)
+    -  [Linear](#linear-firstorder-equations)
+    -  [substitution](#substitution-methods)
+    -  [Homogeneous](#homogeneous)
+    -  [Bernoulli](#bernoulli)
+    -  [Riccati](#riccati-special-case)
+    -  [Clairaut](#clairaut)
 -  [Higher-Order Linear Differential Equations](#higherorder-linear-differential-equations)
+    - [Homogeneous with Constant Coefficients](#homogeneous-with-constant-coefficients)
+    - [Non-Homogeneous Equations](#nonhomogeneous-equations)
+        - [Undetermined Coefficients](#undetermined-coefficients)
+        - [Annihilator Method](#annihilator-method)
+        - [Variation of Parameters](#variation-of-parameters)
+        - [Cauchy-Euler](#cauchyeuler)
+-  [Non-Linear Differential Equations](#nonlinear-differential-equations)
+-  [Systems of Differential Equations](#systems-of-differential-equations)
+    - [Linear Systems](#linear-systems)
+    - [Non-Linear Systems](#nonlinear-systems)
+-  [Series Solutions](#series-solutions)
+    - [Power Series](#power-series)
+    - [Frobenius Method](#frobenius-method)
+-  [Modeling with Differential Equations](#modeling-with-differential-equations)
 
 # **Introduction**
 
@@ -796,13 +810,14 @@ $$
 
 ---
 
-## **2.1 Homogeneous with Constant Coefficients**
+## **Homogeneous with Constant Coefficients**
 
 ---
 
 Solve:  
 
 **a)** $y'' - 5y' + 6y = 0$
+
 We take the characteristic equation as
 
 $$
@@ -817,6 +832,7 @@ y = C_1 e^{3x} + C_2 e^{2x}
 $$
 
 **b)** $y'' + 4y = 0$
+
 We take the characteristic equation as
 
 $$
@@ -830,6 +846,7 @@ y = C_1 e^{0x} + C_2 e^{-4x} = C_1 + C_2 e^{-4x}
 $$
 
 **c)** $y''' - 3y'' + 3y' - y = 0$
+
 We take the characteristic equation as
 
 $$
@@ -848,6 +865,7 @@ $$
 
 Solve the IVPs:  
 **a)** $y'' + y = 0,\; y(0)=2,\; y'(0)=1$
+
 We take the characteristic equation as
 
 $$
@@ -880,6 +898,7 @@ y = -e^{-x} + 3
 $$
 
 **b)** $y'' - 4y' + 4y = 0,\; y(0)=0,\; y'(0)=3$
+
 We take the characteristic equation as
 
 $$
@@ -919,81 +938,113 @@ $$
 
 ---
 
-## **2.2 Nonhomogeneous Equations**
+## **Nonhomogeneous Equations**
 
 ### **Undetermined Coefficients**
 
-17. Solve:  
+Solve:  
+
 **a)** $y'' + y = \sin x$
+
 First we solve the homogeneous part
+
 $$
 y'' + y = 0
 $$
+
 Thus we take the caracteristic equation
+
 $$
 r^2 + 1 = 0
 $$
+
 Where $r = \pm i$ then, the solution takes the form
+
 $$
 y_h=C_1\cos(x)+C_2\sin(x)
 $$
+
 Since the non-homogeneous part is $\sin(x)$ we should find a solution with it, but that solution is already considered in $y_h$, then we take
+
 $$
 y_p = x(A\cos(x)+B\sin(x))
 $$
+
 Then we derivate $y_p$
+
 $$
 y_{p}' = A\cos(x) + B\sin(x)+ x(B\cos(x)-A\sin(x))
 y_{p}'' = B\cos(x) - A\sin(x) +B\cos(x) - A\sin(x) - x(A\cos(x) + B\sin(x)) = 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x))
 $$
+
 Substituting in the original equation we have
+
 $$
 y''+ y=\sin(x)
 \rightarrow 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x)) + x(A\cos(x)+B\sin(x))=\sin(x)
 \rightarrow 2B\cos(x)-2A\sin(x)=1*\sin(x) +0*\cos(x)
 $$
+
 Where we have the following equations system
+
 $$
 -2A = 1 \rightarrow A=-\frac{1}{2}
 2B = 0 \rightarrow B = 0
 $$
+
 Therefore, the final particular solution is
+
 $$
 y_p = x(A\cos(x) + B\sin(x))= x(-\frac{1}{2}\cos(x))=-\frac{1}{2}x\cos(x)
 $$
+
 Finally the General Solution is 
+
 $$
 y=C_1\cos(x)+C_2\sin(x)-\frac{1}{2}x\cos(x)
 $$
 
 **b)** $y'' - 3y' + 2y = e^{2x}$
+
 First we solve the homogeneous part
+
 $$
 y'' - 3y' + 2y = 0
 $$
+
 Thus we take the caracteristic equation
+
 $$
 r^2 - 3r + 2 = 0
 $$
+
 Where $r = 2$ and $r = 1$ then, the solution takes the form
+
 $$
 y_h=C_1e^{2x}+C_2e^{x}
 $$
+
 Since the non-homogeneous part is $e^{2x}$ we should find a solution with it, but that solution is already considered in $y_h$, then we take
+
 $$
 y_p = x(e^{2x})
 $$
+
 Then we derivate $y_p$
+
 $$
 y_{p}' = e^{2x} + 2x e^{2x}
 y_{p}'' = 2e^{2x} + 2\\[e^{2x} + 2x e^{2x}\\] = 4e^{2x}+ 4xe^{2x}
 $$
+
 Substituting in the original equation we have
+
 $$
 y'' - 3y' + 2y = e^{2x}
 \rightarrow 4e^{2x} + 4x e^{2x} - 3e^{2x} - 6x e^{2x} + 2x e^{2x} = e^{2x}
 \rightarrow e^{2x}=e^{2x}
 $$
+
 Meaning the $y_p$ solution is right
 
 Finally the General Solution is 
@@ -1002,52 +1053,74 @@ y=y_h + y_p = C_1e^{2x}+C_2e^{x} + xe^{2x}
 $$
 
 **c)** $y'' + 4y = 3x^2$
+
 First we solve the homogeneous part
+
 $$
 y'' + 4y = 0
 $$
+
 Thus we take the caracteristic equation
+
 $$
 r^2 + 4 = 0
 $$
+
 Where $r = 0 \pm 2i$ then, the solution takes the form
+
 $$
 y_h=C_1\sin(2x)+C_2\cos(2x)
 $$
+
 Since the RHS is $3x^2$
 Then a candidate for the solution is 
+
 $$
 y_p=ax^2+bx+c
 $$
+
 We take out the derivatives
+
 $$
 y_{p}' = 2ax +b
 y_{p}'' = 2a
 $$
+
 We substitute it in the equation
+
 $$
 2a +4(ax^{2}+bx+c)=3x^2
 \rightarrow 2a +4ax^2 +4bx +4c = 3x^2
 $$
+
 so we have the following system
+
 $$
 4a = 3 \rightarrow a=\frac{3}{4}
 4b=0 \rightarrow b=0
 2a + 4c = 0 \rightarrow \frac{3}{2}+4c=0 \rightarrow c=-\frac{3}{8}
 $$
+
 Therefore, the final particular solution is
+
 $$
 y_p = \frac{3}{4}x^2 -\frac{3}{8}
 $$
+
 Finally the General Solution is 
+
 $$
 y=C_1\sin(x)+C_2\cos(x)+\frac{3}{4}x^2 -\frac{3}{8}
 $$
 
+---
+
 ### **Annihilator Method**
 
-18. Solve:  
+Solve:  
+
 **a)** $y'' - y = e^{x} + x$  
+
 First we identify the annihilator $A=D^2(D -1)$.
 Then we apply it in the ODE
 
@@ -1110,10 +1183,14 @@ $$
 y_p = C_4\cos(x) + C_5\sin(x)
 $$
 
+---
+
 ### **Variation of Parameters**
 
-19. Solve:  
+Solve:
+
 **a)** $y'' + y = \sec x$
+
 We start from the auxiliar equation $m^2+1=0$, where we have the roots $m = \pm i$ so $y_c = C_1 \cos(x) + C_2 \sin(x)$. Here we identify $y_1 = \cos(x)$ and $y_2 = \sin(x)$, then we calculate the Wronkskian matrix
 
 $$
@@ -1178,6 +1255,7 @@ y = C_1\cos(x) + C_2\sin(x) + \ln(cos(x))\cos(x) + x\sin(x)
 $$
 
 **b)** $y'' - y = \frac{1}{x}$
+
 We start from the auxiliar equation $m^2-1=0$, where we have the roots $m = \pm 1$ so $y_c = C_1 e^{x} + C_2 e^{-x}$. Here we identify $y_1 = e^{x}$ and $y_2 = e^{-x}$, then we calculate the Wronkskian matrix
 
 $$
@@ -1243,11 +1321,13 @@ $$
 
 ---
 
-## **2.3 Cauchy–Euler**
+## **Cauchy–Euler**
 
-20. Solve:  
+Solve:
+
 **a)** $x^2 y'' + xy' - y = 0$
-To this exercise we try $y=x^{r}$, then we calculate the derivatives
+
+For this exercise we try $y=x^{r}$, then we will calculate the derivatives
 
 $$
 y' = rx^{r-1}
@@ -1267,6 +1347,7 @@ $$
 Therefore the general solution is $y = C_1 x^{-1} + C_2 x$
 
 **b)** $x^2 y'' - 3xy' + 5y = x^3$
+
 To solve this, we first look at the homogeneous part of the equation such
 
 $$
@@ -1298,29 +1379,33 @@ Then $y_p = \frac{1}{2}x{3}$ and $y=C_{1}x^{2}\cos(\ln(x)) + C_{2}x^{2}\sin(\ln(
 
 ---
 
-# **3. Nonlinear Differential Equations**
+# **Nonlinear Differential Equations**
 
-21. Solve the autonomous equations and classify equilibria:  
+Solve the autonomous equations and classify equilibria:  
+
 **a)** $y' = y^2 - y$  
 **b)** $y' = y(4 - y^2)$
 
-22. Solve the nonlinear ODE:  
+Solve the nonlinear ODE:  
+
 **a)** $y'' = y^2$  
 **b)** $y'' + y^3 = 0$
 
-23. Determine whether the following nonlinear ODEs admit closed‑form solutions:  
+Determine whether the following nonlinear ODEs admit closed‑form solutions:
+
 **a)** $y' = e^{y^2}$  
 **b)** $y' = \frac{1}{1+y^4}$
 
 ---
 
-# **4. Systems of Differential Equations**
+# **Systems of Differential Equations**
 
 ---
 
-## **4.1 Linear Systems**
+## **Linear Systems**
 
-24. Solve the system:  
+Solve the system:  
+
 $$
 \mathbf{x}' = 
 \begin{pmatrix}
@@ -1330,7 +1415,8 @@ $$
 \mathbf{x}
 $$
 
-25. Solve the system:  
+Solve the system:  
+
 $$
 \mathbf{x}' = 
 \begin{pmatrix}
@@ -1340,8 +1426,10 @@ $$
 \mathbf{x}
 $$
 
-26. Classify the equilibrium point for each system:  
+Classify the equilibrium point for each system:  
+
 **a)**  
+
 $$
 \begin{pmatrix}
 x' \\ y'
@@ -1355,7 +1443,9 @@ x' \\ y'
 x \\ y
 \end{pmatrix}
 $$  
+
 **b)**  
+
 $$
 \begin{pmatrix}
 x' \\ y'
@@ -1372,73 +1462,91 @@ $$
 
 ---
 
-## **4.2 Nonlinear Systems**
+## **Nonlinear Systems**
 
-27. Linearize the system near the equilibrium and classify:  
+Linearize the system near the equilibrium and classify:  
+
 **a)**  
+
 $$
 x' = x(1-y),\quad y' = y(x-1)
 $$  
+
 **b)**  
+
 $$
 x' = y - x^2,\quad y' = -x - y
 $$
 
 ---
 
-# **5. Series Solutions**
+# **Series Solutions**
 
 ---
 
-## **5.1 Power Series**
+## **Power Series**
 
-28. Find a power series solution about $x=0$:  
+Find a power series solution about $x=0$:  
+
 **a)** $y'' - xy = 0$  
+
 **b)** $y'' + y = 0$
 
-29. Determine the recurrence relation for the ODE:  
+Determine the recurrence relation for the ODE:  
+
 $$
 y'' + x y' + y = 0
 $$
 
 ---
 
-## **5.2 Frobenius Method**
+## **Frobenius Method**
 
-30. Solve using Frobenius near $x=0$:  
+Solve using Frobenius near $x=0$:  
+
 **a)** $x^2 y'' + xy' + y = 0$  
+
 **b)** $x^2 y'' - xy' + y = 0$
 
 ---
 
-# **6. Modeling with Differential Equations**
+# **Modeling with Differential Equations**
 
-31. A tank initially contains 50 L of pure water. Brine with 0.2 kg/L enters at 3 L/min; mixture leaves at 2 L/min.  
+A tank initially contains 50 L of pure water. Brine with 0.2 kg/L enters at 3 L/min; mixture leaves at 2 L/min.  
+
 **a)** Set up the differential equation.  
 **b)** Solve for the amount of salt.
 
-32. A population grows according to the logistic model with carrying capacity 5000 and intrinsic rate 0.3.  
+ A population grows according to the logistic model with carrying capacity 5000 and intrinsic rate 0.3.  
+
 **a)** Write the differential equation.  
 **b)** Solve for $P(t)$.
 
-33. A mass‑spring system satisfies:  
+A mass‑spring system satisfies:  
+
 $$
 m y'' + c y' + ky = 0
 $$  
+
 For $m=1$, $c=4$, $k=5$:  
+
 **a)** Classify the damping.  
 **b)** Solve the ODE.
 
-34. An RLC circuit satisfies:  
+An RLC circuit satisfies:  
+
 $$
 L I' + RI + \frac{1}{C}\int Idt = E(t)
 $$  
+
 Convert to a second‑order ODE and solve for $I(t)$ when $E(t)=E_0\sin(\omega t)$.
 
-35. A chemical reaction satisfies:  
+A chemical reaction satisfies:  
+
 $$
 \frac{dA}{dt} = -kA^2
 $$  
+
 Solve for $A(t)$ and determine the half‑life.
 
 ---
