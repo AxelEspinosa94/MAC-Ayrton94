@@ -72,6 +72,22 @@ $$
 **Corollary — Uniqueness of the Mean**  
 The minimizer of the sum of squared deviations is unique.
 
+**General Method to calculate Q1, Q3 and IQR**
+
+Let $X$ a set of values $x_{1}, x_{2}, ..., x_{n}$, to calculate $Q1$, $Q3$ amd $IQR$ we must:
+
+**1.** Sort the data from min to max
+**2.** Calculate the quartile position. Data must be sliced in half, then we use then the standard median formula
+
+$$
+Q_1 = x_{0.25(n+1)}
+Q_3 = x_{0.75(n+1)}
+$$
+
+if position is not an integer, we interpolate
+
+**3.** Interquartile Range: $IQR=Q_{3}-Q_{1}$
+
 ---
 
 ### 2.3 Measures of Dispersion
@@ -126,11 +142,31 @@ $$
 \gamma_1 = \frac{\frac{1}{n}\sum (x_i - \bar{x})^3}{s^3}
 $$
 
+Interpretation:
+
+    -   Skewness > 0 → large right tail → many weird high values
+    -   Skewness < 0 → large left tail → many weird low values
+    -   Skewness ~ 0 → Simetric distribution (normal)
+
+Skewness tells you whether your data has tendency to produce extreme values or not. 
+
 **Definition — Kurtosis**  
 
 $$
 \gamma_2 = \frac{\frac{1}{n}\sum (x_i - \bar{x})^4}{s^4}
 $$
+
+Interpretation:
+
+Kurtosis measures how heavy are the tails and how concentrated is the mass in the center.
+
+    -   Kurtosis > 3 → Leptokurtic → heavy tails → more probability of extreme values
+    -   Kurtosis < 3 → Platykurtic → light tails → less probability of extreme values
+    -   Kurtosis ~ 3 → Mesokurtic → Normal
+
+The higher the kurtosis is, the more outliers will be and more risk of extreme values.
+
+--- 
 
 **Theorem — Symmetry Implies Zero Skewness**  
 If a distribution is symmetric around its mean, then  
