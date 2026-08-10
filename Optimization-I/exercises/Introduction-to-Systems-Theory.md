@@ -1,12 +1,11 @@
-
 ---
-title: "Optimization – Unit I – Extraordinary Exam Exercise Notebook"
+title: "Optimization – Unit I – Exercise Notebook"
 author: "Axel Espinosa M. Sc."
 ---
 
 # Optimization – Unit I  
-## Exercise Notebook – Extraordinary Level  
-### Introduction to Systems Theory
+
+## Introduction to Systems Theory
 
 ---
 
