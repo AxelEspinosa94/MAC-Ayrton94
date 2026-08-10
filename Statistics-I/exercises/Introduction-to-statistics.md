@@ -59,7 +59,7 @@ A hospital evaluates the effectiveness of a new treatment using data from 120 pa
 
 **c)** Explain why **statistics is essential** in medical decision-making rather than relying on anecdotal evidence.
 
-Quoting the Large Numbers Law, sample means tend to converge to population means, if a case reunites enough elements as other analyzed it is **almost sure** (in terms of what almost sure means) that it will fall in that field.
+> Quoting the Large Numbers Law, sample means tend to converge to population means, if a case reunites enough elements as other analyzed it is **almost sure** (in terms of what almost sure means) that it will fall in that field.
 
 ---
 
@@ -68,11 +68,16 @@ Quoting the Large Numbers Law, sample means tend to converge to population means
 ### Exercise 2.1
 Classify each variable by measurement scale (nominal, ordinal, interval, ratio) and justify:
 
-**a)** Blood type (A, B, AB, O) → Nominal, since they are categories but have no order specified.
-**b)** Customer satisfaction (very dissatisfied, dissatisfied, neutral, satisfied, very satisfied) → Ordinal, since the order goes from very dissatisfied to very satisfied.  
-**c)** Temperature in °C → Interval Scale, I mean, there exists 0 °C but it does reflect a temperature not the absense of it.
-**d)** Number of defects per manufactured item → Ratio Scale, although **c)**, 0 defects mean there were no defects
-**e)** Time of day in 24-hour format (e.g., 13:45) → Interval, there is no zero.
+**a)** Blood type (A, B, AB, O) 
+> Nominal, since they are categories but have no order specified.
+**b)** Customer satisfaction (very dissatisfied, dissatisfied, neutral, satisfied, very satisfied) 
+>Ordinal, since the order goes from very dissatisfied to very satisfied.  
+**c)** Temperature in °C
+> Interval Scale, I mean, there exists 0 °C but it does reflect a temperature not the absense of it.
+**d)** Number of defects per manufactured item 
+> Ratio Scale, although **c)**, 0 defects mean there were no defects
+**e)** Time of day in 24-hour format (e.g., 13:45) 
+> Interval, there is no zero.
 
 ---
 
@@ -98,7 +103,7 @@ You are given the following variables:
 
 **c)** Give an example of a **misuse of statistics** that arises from treating an ordinal variable as ratio.
 
-If we take **X** and consider n values without repetition the mean and median will be close to a single value and the sd will not have a specific meaning.
+> If we take **X** and consider n values without repetition the mean and median will be close to a single value and the sd will not have a specific meaning.
 
 ---
 
@@ -108,7 +113,7 @@ If we take **X** and consider n values without repetition the mean and median wi
 A dataset of exam scores (out of 100) is:
 
 $$
-\{45, 52, 52, 60, 61, 68, 70, 70, 70, 92\}
+\\{45, 52, 52, 60, 61, 68, 70, 70, 70, 92\\}
 $$
 
 **Tasks:**
@@ -123,14 +128,14 @@ $$
 Data $\{45, 52, 52, 60, 61, 68, 70, 70, 70, 92\}$ is already sorted, then we slice it as
 
 $$
-M1 = \{45, 52, 52, 60, 61\}
+M1 = \{45, 52, 52, 60, 61\}   \
 M2 = \{68, 70, 70, 70, 92\}
 $$
 
 where 
 
 $$
-Q_1 = m(M_1) = 52
+Q_1 = m(M_1) = 52 \
 Q_2 = m(M_2) = 70
 $$
 
