@@ -128,15 +128,19 @@ $$
 Data $\{45, 52, 52, 60, 61, 68, 70, 70, 70, 92\}$ is already sorted, then we slice it as
 
 $$
-M1 = \{45, 52, 52, 60, 61\}   \
-M2 = \{68, 70, 70, 70, 92\}
+\begin{aligned}
+M_1 &= \{45, 52, 52, 60, 61\} \\
+M_2 &= \{68, 70, 70, 70, 92\}
+\end{aligned}
 $$
 
 where 
 
 $$
-Q_1 = m(M_1) = 52 \
-Q_2 = m(M_2) = 70
+\begin{aligned}
+Q_1 &= m(M_1) = 52 \\
+Q_2 &= m(M_2) = 70
+\end{aligned}
 $$
 
 and finally $IQR = Q_3 - Q_1 = 70 - 52 = 18$.
@@ -151,13 +155,13 @@ and finally $IQR = Q_3 - Q_1 = 70 - 52 = 18$.
 Consider the following income data (in thousands of dollars):
 
 $$
-\{18, 20, 22, 23, 24, 25, 26, 27, 120\}
+\\{18, 20, 22, 23, 24, 25, 26, 27, 120\\}
 $$
 
 **Tasks:**
 **a)** Compute the **mean** and **median**.
 
-   - $\bar{X}=\frac{18+20+22+23+24+25+26+27+120}{9}=\frac{305}{9} ~ 33.9$
+   - $\bar{X}=\frac{18+20+22+23+24+25+26+27+120}{9}=\frac{305}{9} \approx 33.9$
    - $m(X)=m(\{18, 20, 22, 23, 24, 25, 26, 27, 120\})=24$
 
 **b)** Explain how the **outlier** affects the mean and median.
@@ -186,10 +190,12 @@ $$
 Using the derivative criteria to find local minimums we have:
 
 $$
-\frac{d}{dx}\sum_{i=1}^n (x_i - a)^2 = \sum_{i=1}^n 2(x_i - a) = 0
-\rightarrow \sum_{i=1}^n (x_i - a) = 0
-\rightarrow na = \sum_{i=1}^n x_i
-\rightarroq a = \frac{1}{n}\sum_{i=1}^n x_i = \bar{x}
+\begin{aligned}
+\frac{d}{dx}\sum_{i=1}^n (x_i - a)^2 = \sum_{i=1}^n 2(x_i - a) = 0   \\
+\rightarrow \sum_{i=1}^n (x_i - a) = 0 \\
+\rightarrow na = \sum_{i=1}^n x_i   \\
+\rightarrow a = \frac{1}{n}\sum_{i=1}^n x_i = \bar{x}
+\end{aligned}
 $$
 
 Therefore, $a=\bar{x}$ is the value that minimizes the expression
@@ -210,7 +216,7 @@ Therefore, $a=\bar{x}$ is the value that minimizes the expression
 Using the exam scores from Exercise 3.1:
 
 $$
-\{45, 52, 52, 60, 61, 68, 70, 70, 70, 92\}
+\\{45, 52, 52, 60, 61, 68, 70, 70, 70, 92\\}
 $$
 
 **Tasks:**
@@ -259,7 +265,7 @@ Two classes took the same exam:
 
 **c)** Suggest a situation where a **higher dispersion** might be desirable.
 
-Technically you would want a higher dispersion when you have a lot of data.
+> Technically you would want a higher dispersion when you have a lot of data.
 
 ---
 
@@ -281,8 +287,10 @@ $$
 We use the definition and we add a $0$.
 
 $$
-S(c) = \sum_{i=1}^n (x_i - c)^2 = \sum_{i=1}^n (x_i -\bar{x} +\bar{x} - c)^2
+\begin{align}
+S(c) = \sum_{i=1}^n (x_i - c)^2 = \sum_{i=1}^n (x_i -\bar{x} +\bar{x} - c)^2  \\
 =\sum_{i=1}^n \[(x_i - \bar{x})^2 +2(x_i - \bar{x})(\bar{x} - c) + (\bar{x} - c)^2\]
+\end{align}
 $$
 
 By lineality
@@ -303,7 +311,7 @@ $$
 =\sum_{i=1}^n (x_i - \bar{x})^2 + n(\bar{x} - c)^2
 $$
 
-QED
+> QED
 
 **b)** Use this identity to argue that $S(c)$ is minimized when $c = \bar{x}$.
 
@@ -328,7 +336,7 @@ Consider two distributions of exam scores:
 
 > By the Theorem that establishes that if a distribution is symmetric around its mean, then **skewness** for Distribution A is 0.
 
-Distribution B is right skewed
+> Distribution B is right skewed
 
 **b)** Explain how skewness affects the relationship between **mean** and **median**.
 
@@ -369,7 +377,7 @@ $$
 A small dataset is:
 
 $$
-\{2, 3, 3, 4, 9\}
+\\{2, 3, 3, 4, 9\\}
 $$
 
 **Tasks:**
@@ -418,22 +426,13 @@ A survey records the preferred type of transport of 80 people:
 | Bicycle |    10     |       12.5%        |    75%     |
 | Walking |    12     |        15%         |    90%     |
 | Metro   |     8     |        10%         |  **100%**  |
-| **Total** |    80     |    **!00%**        |            |
+| **Total** |    80     |    **100%**        |            |
 
 
 **b)** Design a **bar chart** (describe axes, bar heights, and labels).
 
-```mermaid
-bar
-    title: Transportation Frequency
-    x-axis: Categories
-    y-axis: Frequency
-    Car: 32
-    Bus: 18
-    Bicycle: 10
-    Walking: 12
-    Metro: 8
-```
+![Transportation Frequency](assets/transportation_frequency.png)
+
 
 **c)** Explain one **misleading design choice** that could distort interpretation of the bar chart.
 
@@ -493,27 +492,17 @@ Using the waiting times from Exercise 6.2, suppose two additional observations a
 **b)** Using Tukey’s rule, determine whether 40 and 45 are **outliers**:
 
 $$
-\text{Lower fence} = Q_1 - 1.5 \cdot \text{IQR}, \quad
+\begin{align}
+\text{Lower fence} = Q_1 - 1.5 \cdot \text{IQR}, \quad   \\
 \text{Upper fence} = Q_3 + 1.5 \cdot \text{IQR}
+\end{align}
 $$
 
 Substituing we have $45 \gt 40 \gt 19.5 + 1.5 = 21$. So, yes, they are outliers
 
 **c)** Describe how these outliers would appear in a **box-and-whisker plot**.
 
-```mermaid
----
-title: Boxplot - Transportation Data
----
-boxplot
-    title: Data Boxplot
-    orientation: horizontal
-    min: 5
-    q1: 9.5
-    median: 13
-    q3: 19.5
-    max: 45
-```
+![Boxplot](assets/boxplot.png)
 
 ---
 
@@ -521,39 +510,14 @@ boxplot
 Daily sales (in units) of a product over 10 days are:
 
 $$
-\{50, 52, 49, 60, 65, 70, 68, 72, 75, 80\}
+\\{50, 52, 49, 60, 65, 70, 68, 72, 75, 80\\}
 $$
 
 **Tasks:**
 
-**a)** Describe how to construct a **line chart** for these data.
+**a)** Construct a **line chart** for these data.
 
-So, assuming data is sorted by day we get the differences by period:
-
-$$
-\[2,	-3,	11,	5,	5,	-2, 4,	3,	5\]
-$$
-
-and we trace the plot
-
-```mermaid
-line
-    title: Line Plot of Data
-    xAxisTitle: Index
-    yAxisTitle: Value
-    data:
-        label: Values
-        points:
-            1: 2
-            2: -3
-            3: 11
-            4: 5
-            5: 5
-            6: -2
-            7: 4
-            8: 3
-            9: 5
-```
+![Lineplot](assets/Line.png)
 
 **b)** Identify any **trend** or pattern.
 
