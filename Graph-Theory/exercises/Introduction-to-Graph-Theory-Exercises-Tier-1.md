@@ -383,10 +383,10 @@ Graphs C and D are not isomorphic because edge $14$ in $E_C$ has no correspondin
 22. Determine whether the following graphs are isomorphic. If yes, provide the isomorphism; if not, justify:
 
 **Graph C:**  
-$\\[E_C = \\{12, 13, 14, 23\\}\\]$
+$\[E_C = \\{12, 13, 14, 23\\}\]$
 
 **Graph D:**  
-#\\[E_D = \\{ab, ac, bd, cd\\}\\]$
+$\[E_D = \\{ab, ac, bd, cd\\}\]$
 
 > They are not isomorphic, because the isomorphism that I can detect is $f(1)=a, f(2)=b, f(3)=c, f(4)=d$, but this breaks in the third edge where $14\in E_C$ but $ad\notin E_D$
 
@@ -423,15 +423,17 @@ $$
 A simple path does not repeat vertices
 
 $$
-a, b
-a, c
-a, d
-a, b, c
-a, c, b
-a, c, d
-a, d, c
-a, b, c, d
+\begin{align}
+a, b    \\
+a, c    \\
+a, d    \\
+a, b, c \\
+a, c, b \\
+a, c, d \\
+a, d, c \\
+a, b, c, d  \\
 a, d, c, b
+\end{align}
 $$
 
 **c)** all circuits.
@@ -460,7 +462,8 @@ Therefore is a circuit
 Therefore is a simple path
 
 25. Construct a directed graph that contains:  
-- a directed walk of length 5,
+
+**a)** a directed walk of length 5,
 
 ```mermaid
 graph TD
@@ -471,7 +474,7 @@ c --> e
 e --> f
 ```
 
-- a directed path of length 4,  
+**b)** a directed path of length 4,  
 
 ```mermaid
 graph TD
@@ -481,7 +484,7 @@ c --> d
 d --> e
 ```
 
-- a directed circuit of length 3.
+**c)** a directed circuit of length 3.
 
 ```mermaid
 graph TD
