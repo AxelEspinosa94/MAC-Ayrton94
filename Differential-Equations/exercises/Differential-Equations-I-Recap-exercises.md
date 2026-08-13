@@ -43,7 +43,7 @@
 
 Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
 
-**a)** $y'' + y' + y = \sin{x}$ → Linear, non-autonomous, order 2
+**a)** $y'' + y' + y = \sin(x)$ → Linear, non-autonomous, order 2
 **b)** $y' = y^2 - 3y + 2$ → Non-Linear, autonomous, first order 
 **c)** $x^2 y'' + xy' - y = 0$ → Linear, non-autonomous, order 2
 **d)** $y' + \sqrt{xy} = 0$ → Non-linear, autonomous, first order
@@ -252,13 +252,13 @@ $$
 Let's integrate
 
 $$
-\int \frac{dy}{(1+y^2)}=\int \cos x dx \Rightarrow \arctan(y) = \sin{x}
+\int \frac{dy}{(1+y^2)}=\int \cos x dx \Rightarrow \arctan(y) = \sin(x)
 $$
 
-If $\tan{x}$ is applied to the equation we have
+If $\tan(x)$ is applied to the equation we have
 
 $$
-y = \tan(\sin{x}) + C
+y = \tan(\sin(x)) + C
 $$
 
 $C$ constant. Taking the initial value we have
@@ -267,7 +267,7 @@ $$
 y(0) = \tan(\sin(0)) + C = \tan(0) + C = 0 + C = 0 \Rightarrow C = 0
 $$
 
-Therefore $y = \tan(\sin{x})$
+Therefore $y = \tan(\sin(x))$
 
 ---
 
@@ -342,28 +342,28 @@ $$
 
 If we integrate $h'(y)$ on y we have that $h(y)=y^4$. Therefore the solution to the DE is $x^3+3xy+y^4=C$
 
-**b)** $(y\cos x - 2x)dx + (\sin{x} + x^2)dy = 0$
+**b)** $(y\cos x - 2x)dx + (\sin(x) + x^2)dy = 0$
 
 $$
 \begin{align}
 M(x,y) = y\cos x -2x \Rightarrow \frac{\partial M}{\partial y} = \cos x \\
-N(x,y) = \sin{x} + x^2 \Rightarrow \frac{\partial N}{\partial x} = \cos x
+N(x,y) = \sin(x) + x^2 \Rightarrow \frac{\partial N}{\partial x} = \cos x
 \end{align}
 $$
 
 Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Then we solve the DE, first we inegrate $M$
 
 $$
-\int M(x,y)dx = \int (y\cos x - 2x)dx=\int y\cos x dx - \int 2x dx = y\sin{x} - x^2 + h(y)
+\int M(x,y)dx = \int (y\cos x - 2x)dx=\int y\cos x dx - \int 2x dx = y\sin(x) - x^2 + h(y)
 $$
 
 Now we take the derivative of this result on $y$ and equalize to $N$ having
 
 $$
-\frac{d}{dy}\(y\sin{x} - x^2 + h(y)\) = N(x,y) = \sin{x} + x^2 \Rightarrow \sin{x} + h'(y) = \sin{x} + x^2 \Rightarrow h'(y) = x^2
+\frac{d}{dy}\(y\sin(x) - x^2 + h(y)\) = N(x,y) = \sin(x) + x^2 \Rightarrow \sin(x) + h'(y) = \sin(x) + x^2 \Rightarrow h'(y) = x^2
 $$
 
-If we integrate $h'(y)$ on y we have that $h(y)=yx^2$. Therefore the solution to the DE is $y\sin{x} -x^2 + yx^2=C$
+If we integrate $h'(y)$ on y we have that $h(y)=yx^2$. Therefore the solution to the DE is $y\sin(x) -x^2 + yx^2=C$
 
 ---
 
@@ -485,31 +485,31 @@ $$
 \Rightarrow y = \frac{x^4}{6} + \frac{C}{x^2}
 $$
 
-**c)** $y' + y\tan{x} = \sin{x}$
+**c)** $y' + y\tan(x) = \sin(x)$
 
-Since the equation matches the general form $P(x) = \tan{x}$ and $Q(x) = \sin{x}$, then the integrating factor has the form:
+Since the equation matches the general form $P(x) = \tan(x)$ and $Q(x) = \sin(x)$, then the integrating factor has the form:
 
 $$
 \begin{align}
 \mu(x) = e^{\int P(x)dx} \\
-\Rightarrow \mu(x) = e^{\int \tan{x} dx} \\
-\Rightarrow \mu(x) = e^{-\ln(\cos x)} = \sec{x}
+\Rightarrow \mu(x) = e^{\int \tan(x) dx} \\
+\Rightarrow \mu(x) = e^{-\ln(\cos x)} = \sec(x)
 \end{align}
 $$
 
 Then we multiply $\mu(x)$ to the entire equation
 
 $$
-\mu(x)y'+\tan{x}(\mu(x))y = \mu(x)\sin{x}
+\mu(x)y'+\tan(x)(\mu(x))y = \mu(x)\sin(x)
 $$
 
 We recognize the derivative as:
 
 $$
 \begin{align}
-(\mu(x)y)' = \mu(x)\sin{x} \\
-\Rightarrow \(\sec{x} y\)' = \sec{x} \sin{x} \\
-\Rightarrow \(\sec{x} y\)' = \tan{x}
+(\mu(x)y)' = \mu(x)\sin(x) \\
+\Rightarrow \(\sec(x) y\)' = \sec(x) \sin(x) \\
+\Rightarrow \(\sec(x) y\)' = \tan(x)
 \end{align}
 $$
 
@@ -517,9 +517,9 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \(\sec{x} y\)' = \int \tan{x} \\
-\Rightarrow \sec{x} y = -\ln(\cos x) + C \\
-\Rightarrow y = -\frac{\ln(\cos x)}{\sec{x}} + C\cos x
+\int \(\sec(x) y\)' = \int \tan(x) \\
+\Rightarrow \sec(x) y = -\ln(\cos x) + C \\
+\Rightarrow y = -\frac{\ln(\cos x)}{\sec(x)} + C\cos x
 \end{align}
 $$
 
@@ -1086,7 +1086,7 @@ $$
 
 Solve:  
 
-**a)** $y'' + y = \sin{x}$
+**a)** $y'' + y = \sin(x)$
 
 First we solve the homogeneous part
 
@@ -1103,21 +1103,21 @@ $$
 Where $r = \pm i$ then, the solution takes the form
 
 $$
-y_h=C_1\cos{x}+C_2\sin{x}
+y_h=C_1\cos(x)+C_2\sin(x)
 $$
 
-Since the non-homogeneous part is $\sin{x}$ we should find a solution with it, but that solution is already considered in $y_h$, then we take
+Since the non-homogeneous part is $\sin(x)$ we should find a solution with it, but that solution is already considered in $y_h$, then we take
 
 $$
-y_p = x(A\cos{x}+B\sin{x})
+y_p = x(A\cos(x)+B\sin(x))
 $$
 
 Then we derivate $y_p$
 
 $$
 \begin{align}
-y_{p}' = A\cos{x} + B\sin{x}+ x(B\cos{x}-A\sin{x})  \\
-y_{p}'' = B\cos{x} - A\sin{x} +B\cos{x} - A\sin{x} - x(A\cos{x} + B\sin{x}) = 2B\cos{x}-2A\sin{x}-x(A\cos{x}+B\sin{x})
+y_{p}' = A\cos(x) + B\sin(x)+ x(B\cos(x)-A\sin(x))  \\
+y_{p}'' = B\cos(x) - A\sin(x) +B\cos(x) - A\sin(x) - x(A\cos(x) + B\sin(x)) = 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x))
 \end{align}
 $$
 
@@ -1125,9 +1125,9 @@ Substituting in the original equation we have
 
 $$
 \begin{align}
-y''+ y=\sin{x}  \\
-\Rightarrow 2B\cos{x}-2A\sin{x}-x(A\cos{x}+B\sin{x}) + x(A\cos{x}+B\sin{x})=\sin{x} \\
-\Rightarrow 2B\cos{x}-2A\sin{x}=1*\sin{x} +0*\cos{x}    \\
+y''+ y=\sin(x)  \\
+\Rightarrow 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x)) + x(A\cos(x)+B\sin(x))=\sin(x) \\
+\Rightarrow 2B\cos(x)-2A\sin(x)=1*\sin(x) +0*\cos(x)    \\
 \end{align}
 $$
 
@@ -1143,13 +1143,13 @@ $$
 Therefore, the final particular solution is
 
 $$
-y_p = x(A\cos{x} + B\sin{x})= x(-\frac{1}{2}\cos{x})=-\frac{1}{2}x\cos{x}
+y_p = x(A\cos(x) + B\sin(x))= x(-\frac{1}{2}\cos(x))=-\frac{1}{2}x\cos(x)
 $$
 
 Finally the General Solution is 
 
 $$
-y=C_1\cos{x}+C_2\sin{x}-\frac{1}{2}x\cos{x}
+y=C_1\cos(x)+C_2\sin(x)-\frac{1}{2}x\cos(x)
 $$
 
 **b)** $y'' - 3y' + 2y = e^{2x}$
@@ -1268,7 +1268,7 @@ $$
 Finally the General Solution is 
 
 $$
-y=C_1\sin{x}+C_2\cos{x}+\frac{3}{4}x^2 -\frac{3}{8}
+y=C_1\sin(x)+C_2\cos(x)+\frac{3}{4}x^2 -\frac{3}{8}
 $$
 
 ---
@@ -1310,9 +1310,9 @@ $$
 y_p = C_2 xe^{x} + C_4 + C_5 x
 $$
 
-**b)** $y''' = \sin{x}$
+**b)** $y''' = \sin(x)$
 
-Considering $g(x)=\sin{x}$, we propose the anihiliator $D^2 + 1$. Then we apply it in the ODE
+Considering $g(x)=\sin(x)$, we propose the anihiliator $D^2 + 1$. Then we apply it in the ODE
 
 $$
 A(D)L(D)y = 0 \Rightarrow (D^2+1)(D^3)y=0
@@ -1327,7 +1327,7 @@ $$
 The root we can see in that equation is $r = 0$ with multiplicity 3, and $r = \pm i$. So the general solution has the form.
 
 $$
-y = C_1 + C_2 x + C_3 x^{2} + C_4\cos{x} + C_5\sin{x}
+y = C_1 + C_2 x + C_3 x^{2} + C_4\cos(x) + C_5\sin(x)
 $$
 
 which we can identify the homogeneous solution as
@@ -1339,7 +1339,7 @@ $$
 and the particular solution
 
 $$
-y_p = C_4\cos{x} + C_5\sin{x}
+y_p = C_4\cos(x) + C_5\sin(x)
 $$
 
 ---
@@ -1348,32 +1348,32 @@ $$
 
 Solve:
 
-**a)** $y'' + y = \sec{x}$
+**a)** $y'' + y = \sec(x)$
 
-We start from the auxiliar equation $m^2+1=0$, where we have the roots $m = \pm i$ so $y_c = C_1 \cos{x} + C_2 \sin{x}$. Here we identify $y_1 = \cos{x}$ and $y_2 = \sin{x}$, then we calculate the Wronkskian matrix
+We start from the auxiliar equation $m^2+1=0$, where we have the roots $m = \pm i$ so $y_c = C_1 \cos(x) + C_2 \sin(x)$. Here we identify $y_1 = \cos(x)$ and $y_2 = \sin(x)$, then we calculate the Wronkskian matrix
 
 $$
-W(\cos{x}, \sin{x}) =
+W(\cos(x), \sin(x)) =
 \left|
 \begin{matrix}
-\cos{x} & \sin{x} \\
--\sin{x} & \cos{x}
+\cos(x) & \sin(x) \\
+-\sin(x) & \cos(x)
 \end{matrix}
 \right|
 = \cos^{2}(x)+\sin^{2}(x) = 1
 $$
 
-and since $f(x) = \sec{x}$, we have
+and since $f(x) = \sec(x)$, we have
 
 $$
 W_1 =
 \left|
 \begin{matrix}
-0 & \sin{x} \\
-\sec{x} & \cos{x}
+0 & \sin(x) \\
+\sec(x) & \cos(x)
 \end{matrix}
 \right|
-= - \tan{x}
+= - \tan(x)
 $$
 
 and
@@ -1382,8 +1382,8 @@ $$
 W_2 =
 \left|
 \begin{matrix}
-\cos{x} & 0 \\
--\sin{x} & \sec{x}
+\cos(x) & 0 \\
+-\sin(x) & \sec(x)
 \end{matrix}
 \right|
 = 1
@@ -1393,9 +1393,9 @@ where
 
 $$
 \begin{align}
-u_1' = \frac{W_1}{W} = -\frac{\tan{x}}{1}=-\tan{x} \\
-\Rightarrow u_1 = \int (-\tan{x})dx \\
-= \ln(\cos{x}) + C
+u_1' = \frac{W_1}{W} = -\frac{\tan(x)}{1}=-\tan(x) \\
+\Rightarrow u_1 = \int (-\tan(x))dx \\
+= \ln(\cos(x)) + C
 \end{align}
 $$
 
@@ -1411,13 +1411,13 @@ $$
 Then
 
 $$
-y_p = u_1 y_1 + u_2 y_2 = \ln(cos(x))\cos{x} + x\sin{x}
+y_p = u_1 y_1 + u_2 y_2 = \ln(cos(x))\cos(x) + x\sin(x)
 $$
 
 And finally
 
 $$
-y = C_1\cos{x} + C_2\sin{x} + \ln(cos(x))\cos{x} + x\sin{x}
+y = C_1\cos(x) + C_2\sin(x) + \ln(cos(x))\cos(x) + x\sin(x)
 $$
 
 **b)** $y'' - y = \frac{1}{x}$
