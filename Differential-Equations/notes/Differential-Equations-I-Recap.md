@@ -8,23 +8,35 @@
 
 # **Table of Contents**
 
-1. [Introduction](#introduction)  
-2. [Classification of Differential Equations](#classification-of-differential-equations)  
-3. [Existence and Uniqueness Theorem](#existence-and-uniqueness-theorem)  
-4. [First‑Order Differential Equations](#first-order-differential-equations)  
-   - Separable  
-   - Exact  
-   - Linear (Integrating Factor)  
-   - Substitution Methods  
-5. [Higher‑Order Linear Differential Equations](#higher-order-linear-differential-equations)  
-   - Constant Coefficients  
-   - Nonhomogeneous Methods  
-   - Cauchy–Euler  
-6. [Nonlinear Differential Equations](#nonlinear-differential-equations)  
-7. [Systems of Differential Equations](#systems-of-differential-equations)  
-8. [Series Solutions](#series-solutions)  
-9. [Modeling with Differential Equations](#modeling-with-differential-equations)  
-10. [Appendices](#appendices)
+-  [Introduction](#introduction)
+-  [Classification and Basic Concepts](#classification-and-basic-concepts)
+-  [Existence and uniqueness Theorem](#existence-and-uniqueness-theorem-picardlindelöf)
+-  [First-Order Differential Equations](#firstorder-differential-equations)
+    -  [Separable](#separable-equations)
+    -  [Exact Equations](#exact-differential-equations)
+    -  [Linear](#linear-firstorder-equations)
+    -  [Substitution Methods](#substitution-methods)
+      -  [Homogeneous](#homogeneous-equations)
+      -  [Bernoulli](#bernoulli-equation)
+      -  [Riccati](#riccati-differential-equation)
+      -  [Relationship between Bernoulli and Riccati](#-relationship-between-bernoulli-and-riccati)
+      -  [Clairaut](#clairaut)
+-  [Higher-Order Linear Differential Equations](#higherorder-linear-differential-equations)
+    - [Homogeneous with Constant Coefficients](#homogeneus-with-constant-coefficients)
+    - [Non-Homogeneous Linear ODEs](#nonhomogeneous-linear-odes)
+        - [Undetermined Coefficients](#method-of-undetermined-coefficients)
+        - [Annihilator Method](#method-of-the-annihilator)
+        - [Variation of Parameters](#variation-of-parameters)
+        - [Cauchy-Euler](#cauchyeuler-equation)
+-  [Non-Linear Differential Equations](#nonlinear-differential-equations)
+-  [Systems of Differential Equations](#systems-of-differential-equations)
+    - [Linear Systems](#linear-systems)
+    - [Non-Linear Systems](#nonlinear-systems)
+-  [Series Solutions](#series-solutions)
+    - [Power Series](#power-series)
+    - [Frobenius Method](#frobenius-method)
+-  [Modeling with Differential Equations](#modeling-with-differential-equations)
+-  [Appendices](#appendices)
 
 ---
 
@@ -82,8 +94,7 @@ $$
 y' = f(x,y), \quad y(x_0)=y_0
 $$
 
-If $f$ and $\frac{\partial f}{\partial y}$ are continuous near $(x_0,y_0)$,  
-then a **unique** solution exists.
+If $f$ and $\frac{\partial f}{\partial y}$ are continuous near $(x_0,y_0)$, then a **unique** solution exists.
 
 ---
 
@@ -91,23 +102,24 @@ then a **unique** solution exists.
 
 ---
 
-# **1. Separable Differential Equations**
+## **Separable Equations**
 
-## **Definition**
+### **Definition**
 A DE is separable if it can be written as:
 
 $$
 \frac{dy}{dx} = g(x)h(y)
 $$
 
-## **Algorithm**
+### **Algorithm**
 1. Rewrite:  
    $\frac{1}{h(y)}dy = g(x)dx$
 2. Integrate both sides.
 3. Solve for $y$ if possible.
 4. Apply initial condition.
 
-## **Example**
+### **Example**
+
 $$
 y' = xy
 $$
@@ -126,9 +138,10 @@ $$
 
 ---
 
-# **2. Exact Differential Equations**
+## **Exact Differential Equations**
 
-## **Definition**
+### **Definition**
+
 A DE of the form:
 
 $$
@@ -141,13 +154,15 @@ $$
 \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x}
 $$
 
-## **Algorithm**
+### **Algorithm**
+
 1. Check exactness.  
 2. Integrate $M$ w.r.t. $x$.  
 3. Differentiate result w.r.t. $y and match with $N$.
 4. Solve for constant.
 
-## **Example**
+### **Example**
+
 $$
 (2xy + 3)dx + (x^2 + 4y)dy = 0
 $$
@@ -182,20 +197,22 @@ $$
 
 ---
 
-# **3. Linear First‑Order Equations**
+## **Linear First‑Order Equations**
 
-General form:
+### **General form:**
 
 $$
 y' + P(x)y = Q(x)
 $$
 
-## **Integrating Factor**
+### **Integrating Factor**
+
 $$
 \mu(x)=e^{\int P(x)dx}
 $$
 
-## **Algorithm**
+### **Algorithm**
+
 1. Compute $\mu(x)$.
 2. Multiply entire equation.  
 3. Recognize derivative:  
@@ -203,7 +220,8 @@ $$
 4. Integrate.  
 5. Solve for $y$.
 
-## **Example**
+### **Example**
+
 $$
 y' + 2y = e^{-x}
 $$
@@ -226,14 +244,16 @@ $$
 
 ---
 
-# **4. Substitution Methods**
+## **Substitution Methods**
 
-## **4.1 Homogeneous Equations**
+### **Homogeneous Equations**
 
 A first‑order differential equation of the form  
+
 $$
 y' = F\left(\frac{y}{x}\right)
 $$  
+
 is called **homogeneous** because the right‑hand side depends only on the ratio $y/x$.  
 Such equations can be solved using the substitution:
 
@@ -243,10 +263,12 @@ $$
 
 ---
 
-## ## **Algorithm**
+#### **Algorithm**
 
-### **1. Verify homogeneity**
+**1. Verify homogeneity**
+
 Check that the differential equation can be written as:
+
 $$
 y' = F\left(\frac{y}{x}\right).
 $$
@@ -255,11 +277,14 @@ If the right‑hand side depends only on $y/x$, the equation is homogeneous.
 
 ---
 
-### **2. Apply the substitution**
+**2. Apply the substitution**
+
 Let:
+
 $$
 y = vx,
 $$
+
 where $v = v(x)$ is a function of $x$.  
 Differentiate using the product rule:
 
@@ -275,7 +300,8 @@ $$
 
 ---
 
-### **3. Isolate $v'$**
+**3. Isolate $v'$**
+
 Rearrange the equation to solve for $v'$:
 
 $$
@@ -290,7 +316,8 @@ This is now a **separable differential equation**.
 
 ---
 
-### **4. Separate variables and integrate**
+**4. Separate variables and integrate**
+
 Rewrite:
 
 $$
@@ -308,7 +335,8 @@ The left-hand side depends on the specific form of $F(v)$.
 
 ---
 
-### **5. Substitute back $v = y/x$**
+**5. Substitute back $v = y/x$**
+
 After integrating, replace:
 
 $$
@@ -325,8 +353,10 @@ where $G$ comes from the integration result.
 
 ---
 
-### **6. (Optional) Solve explicitly for $y$**
+**6. (Optional) Solve explicitly for $y$**
+
 If possible, isolate $y$ to obtain an explicit solution  
+
 $$
 y = y(x).
 $$
@@ -335,13 +365,15 @@ If not, the implicit form $C = G(x,y)$ is the final solution.
 
 ---
 
-# ## **Summary**
+**Summary**
+
 The method transforms a homogeneous differential equation into a separable one using the substitution $y = vx$. After integrating and substituting back, the constant of integration yields the implicit solution.
 
 ---
 
 
-## **4.2 Bernoulli Equation**
+### **Bernoulli Equation**
+
 $$
 y' + P(x)y = Q(x)y^n
 $$
@@ -352,38 +384,16 @@ $$
 v = y^{1-n}
 $$
 
-## **4.3 Riccati (special case)**
-$$
-y' = a(x)y^2 + b(x)y + c(x)
-$$
-
-If one solution is known, reduce to linear.
-
-
-### 📘 **Bernoulli & Riccati Differential Equations — Algorithms (Markdown)**
-
-### # **1. Bernoulli Differential Equation**
-
-A Bernoulli equation has the form:
-
-$$
-y' + P(x)y = Q(x)y^n, \qquad n \neq 0,1.
-$$
-
-It is nonlinear, but it becomes linear after a substitution.
-
----
-
 ### **Algorithm**
 
-#### **1. Identify the Bernoulli form**
+**1. Identify the Bernoulli form**
 Verify the equation matches:
 
 $$
 y' + P(x)y = Q(x)y^n.
 $$
 
-#### **2. Apply the substitution**
+**2. Apply the substitution**
 Let:
 
 $$
@@ -396,14 +406,14 @@ $$
 v' = (1-n)y^{-n}y'.
 $$
 
-#### **3. Substitute into the original equation**
+**3. Substitute into the original equation**
 Replace $y$ and simplify to obtain a **linear ODE in $v$**:
 
 $$
 v' + (1-n)P(x)v = (1-n)Q(x).
 $$
 
-#### **4. Solve the linear ODE**
+**4. Solve the linear ODE**
 Use the integrating factor:
 
 $$
@@ -412,7 +422,7 @@ $$
 
 Solve for $v(x)$.
 
-#### **5. Substitute back**
+**5. Substitute back**
 $$
 y = v^{\frac{1}{1-n}}.
 $$
@@ -421,7 +431,7 @@ This gives the explicit or implicit solution.
 
 ---
 
-## # **2. Riccati Differential Equation**
+### **Riccati Differential Equation**
 
 A Riccati equation has the form:
 
@@ -432,21 +442,19 @@ $$
 It is nonlinear and **cannot be linearized directly**.  
 However, if a *particular solution* $y_p(x)$ is known, the equation becomes solvable.
 
----
+#### **Algorithm**
 
-### **Algorithm**
-
-#### **1. Identify the Riccati form**
+**1. Identify the Riccati form**
 Check that the ODE matches:
 
 $$
 y' = a(x)y^2 + b(x)y + c(x).
 $$
 
-#### **2. Assume a known particular solution**
+**2. Assume a known particular solution**
 Let $y_p(x)$ satisfy the equation.
 
-#### **3. Apply the substitution**
+**3. Apply the substitution**
 Let:
 
 $$
@@ -459,14 +467,14 @@ $$
 y' = y_p' - \frac{v'}{v^2}.
 $$
 
-#### **4. Substitute into the Riccati equation**
+**4. Substitute into the Riccati equation**
 After simplification, the nonlinear terms cancel and you obtain a **linear ODE in $v$**:
 
 $$
 v' + (2a(x)y_p(x) + b(x))v = -a(x).
 $$
 
-#### **5. Solve the linear ODE**
+**5. Solve the linear ODE**
 Use the integrating factor:
 
 $$
@@ -475,7 +483,7 @@ $$
 
 Solve for $v(x)$.
 
-#### **6. Substitute back**
+**6. Substitute back**
 $$
 y = y_p + \frac{1}{v}.
 $$
@@ -484,7 +492,7 @@ This yields the general solution.
 
 ---
 
-# ## **3. Relationship Between Bernoulli and Riccati**
+### **Relationship Between Bernoulli and Riccati**
 
 | Feature | Bernoulli | Riccati |
 |--------|-----------|---------|
@@ -497,11 +505,12 @@ This yields the general solution.
 
 ---
 
-## ## **Conclusion**
+#### **Conclusion**
 
 Yes, they are related — **Bernoulli is a special, simpler case of Riccati** — but the solution strategies differ enough that having **two separate Markdown sections** in your repo is absolutely worth it.
 
-## **4.4 Clairaut**
+## **Clairaut**
+
 $$
 y = xy' + f(y')
 $$
@@ -516,7 +525,7 @@ Singular: envelope.
 
 ---
 
-# **5. Constant Coefficients**
+## **Homogeneus with Constant Coefficients**
 
 $$
 a_n y^{(n)} + \cdots + a_1 y' + a_0 y = 0
@@ -528,7 +537,8 @@ $$
 ar^n + \cdots + a_0 = 0
 $$
 
-## **Cases**
+### **Cases**
+
 - Real distinct roots  
 - Repeated roots  
 - Complex roots
@@ -547,9 +557,7 @@ $$
 
 The structure of the solution depends entirely on the roots of this polynomial.
 
----
-
-## **1. Distinct Real Roots**
+#### **Distinct Real Roots**
 
 If the characteristic equation has distinct real roots:
 
@@ -571,7 +579,7 @@ $$
 
 ---
 
-## **2. Repeated Real Roots**
+#### **Repeated Real Roots**
 
 If a real root $r$ has multiplicity $m$, then the linearly independent solutions are:
 
@@ -583,7 +591,7 @@ Thus, repeated roots introduce polynomial factors.
 
 ---
 
-## **3. Complex Roots**
+#### **Complex Roots**
 
 If the characteristic equation has a complex root:
 
@@ -608,7 +616,7 @@ $$
 
 ---
 
-## **4. Summary of All Possible Solution Forms**
+#### **Summary of All Possible Solution Forms**
 
 Every solution of a homogeneous linear differential equation with constant coefficients is a **linear combination** of functions of the form:
 
@@ -622,7 +630,8 @@ As a special case:
 - If $r = 0$, then $e^{0x} = 1$, so constants and polynomials appear.
 
 
-## **Example**
+#### **Example**
+
 $$
 y'' - 3y' + 2y = 0
 $$
@@ -641,9 +650,10 @@ $$
 
 ---
 
-# **6. Nonhomogeneous Linear ODEs**
+# **Nonhomogeneous Linear ODEs**
 
-## **6.1 Method of Undetermined Coefficients**
+## **Method of Undetermined Coefficients**
+
 Works for RHS of form:
 
 - Polynomials  
@@ -651,13 +661,14 @@ Works for RHS of form:
 - Sines/cosines  
 - Products of these  
 
-## **Algorithm**
+### **Algorithm**
+
 1. Solve homogeneous part.  
 2. Guess particular solution.  
 3. Plug in and solve coefficients.  
 4. Add solutions.
 
-# **What “Plug In and Solve Coefficients” Really Means**
+**What “Plug In and Solve Coefficients” Really Means**
 
 In the **Method of Undetermined Coefficients**, step 3 means:
 
@@ -668,14 +679,12 @@ En otras palabras:
 
 ---
 
-# **Full Algorithm (Clarified)**
+### **Full Algorithm (Clarified)**
 
-## **1. Solve the homogeneous equation**
+**1. Solve the homogeneous equation**
 Find the complementary solution $y_h$ using the characteristic equation.
 
----
-
-## **2. Guess the form of the particular solution**
+**2. Guess the form of the particular solution**
 Based on the RHS $g(x)$:
 
 - If $g(x)$ is a polynomial → guess a polynomial  
@@ -684,14 +693,14 @@ Based on the RHS $g(x)$:
 - If it’s a product → multiply the guesses  
 - If the guess overlaps with $y_h$ → multiply by $x^k$
 
----
-
-## **3. Plug in and solve coefficients**
+**3. Plug in and solve coefficients**
 This is the step you asked about.  
 It means:
 
-### **Step 3.1 — Compute derivatives of your guess**
+**Step 3.1 — Compute derivatives of your guess**
+
 Example guess:
+
 $$
 y_p = Ax + B
 $$
@@ -703,7 +712,8 @@ $$
 
 ---
 
-### **Step 3.2 — Substitute into the differential equation**
+**Step 3.2 — Substitute into the differential equation**
+
 Insert $y_p$, $y_p'$, $y_p''$, etc. into:
 
 $$
@@ -712,12 +722,14 @@ $$
 
 ---
 
-### **Step 3.3 — Collect like terms**
+**Step 3.3 — Collect like terms**
+
 Group terms by powers of $x$, exponentials, or trig functions.
 
 ---
 
-### **Step 3.4 — Match coefficients with the RHS**
+**Step 3.4 — Match coefficients with the RHS**
+
 This produces a **system of linear equations** for the unknown constants $A, B, C, \dots$.
 
 Solve it.
@@ -726,14 +738,15 @@ That’s literally what “plug in and solve coefficients” means.
 
 ---
 
-## **4. Add the solutions**
+**4. Add the solutions**
+
 $$
 y = y_h + y_p
 $$
 
 ---
 
-# **Mini‑Example (Super Clear)**
+### **Mini‑Example**
 
 Solve:
 
@@ -741,14 +754,16 @@ $$
 y'' - 3y' + 2y = 4e^{x}
 $$
 
-### **Step 1 — Homogeneous**
+**Step 1 — Homogeneous**
+
 Roots: $(1, 2)$
 
 $$
 y_h = C_1 e^x + C_2 e^{2x}
 $$
 
-### **Step 2 — Guess**
+**Step 2 — Guess**
+
 RHS is $4e^x$.  
 But $e^x$ **is already in** $y_h$.  
 So multiply by $x$:
@@ -757,7 +772,7 @@ $$
 y_p = A x e^x
 $$
 
-### **Step 3 — Plug in and solve coefficients**
+**Step 3 — Plug in and solve coefficients**
 
 Compute derivatives:
 
@@ -801,7 +816,7 @@ $$
 y_p = -4x e^x
 $$
 
-### **Step 4 — Final solution**
+**Step 4 — Final solution**
 
 $$
 y = C_1 e^x + C_2 e^{2x} - 4x e^x
@@ -809,9 +824,9 @@ $$
 
 ---
 
-## **6.2 Method of the Annihilator**
+## **Method of the Annihilator**
 
-### **1. Introduction**
+### **Introduction**
 
 The *Annihilator Method* is a systematic procedure for solving linear nonhomogeneous differential equations of the form  
 
@@ -831,7 +846,7 @@ Once the right-hand side is annihilated, the equation becomes a **higher‑order
 
 ---
 
-## **2. What Is an Annihilator?**
+### **What Is an Annihilator?**
 
 An **annihilator** is a differential operator $A(D)$ such that  
 
@@ -851,7 +866,7 @@ Examples:
 
 ---
 
-## **3. General Strategy (Algorithm)**
+### **Algorithm**
 
 Given a linear ODE:
 
@@ -861,14 +876,15 @@ $$
 
 where $L$ has constant coefficients.
 
-### **Step 1 — Identify an annihilator for $f(x)$**  
+**Step 1 — Identify an annihilator for $f(x)$**  
+
 Find an operator $A$ such that:
 
 $$
 A[f(x)] = 0.
 $$
 
-### **Step 2 — Apply the annihilator to both sides**
+**Step 2 — Apply the annihilator to both sides**
 
 $$
 A[L[y]] = A[f(x)] = 0.
@@ -880,14 +896,16 @@ $$
 (AL)[y] = 0.
 $$
 
-### **Step 3 — Solve the homogeneous equation**
+**Step 3 — Solve the homogeneous equation**
+
 Find the general solution of:
 
 $$
 (AL)[y] = 0.
 $$
 
-### **Step 4 — Extract the complementary and particular parts**
+**Step 4 — Extract the complementary and particular parts**
+
 The solution of the original ODE is:
 
 $$
@@ -899,12 +917,13 @@ where:
 - $y_c$ comes from the original homogeneous equation $L[y]=0$,
 - $y_p$ is selected from the additional solutions introduced by the annihilator.
 
-### **Step 5 — Use initial conditions (if any)**  
+**Step 5 — Use initial conditions (if any)**  
+
 Solve for constants.
 
 ---
 
-## **4. Example 1 — Basic Case**
+### **Example 1 — Basic Case**
 
 Solve:
 
@@ -912,19 +931,22 @@ $$
 y'' - y = e^{x}.
 $$
 
-### **Step 1 — Identify an annihilator**
+**Step 1 — Identify an annihilator**
+
 For $(f(x) = e^{x})$, the annihilator is:
 
 $$
 A = D - 1.
 $$
 
-### **Step 2 — Apply the annihilator**
+**Step 2 — Apply the annihilator**
+
 $$
 (D - 1)(y'' - y) = 0.
 $$
 
-### **Step 3 — Solve the homogeneous equation**
+**Step 3 — Solve the homogeneous equation**
+
 Characteristic equation:
 $$
 (D - 1)(D^2 - 1) = 0.
@@ -942,7 +964,8 @@ $$
 y = C_1 e^{x} + C_2 x e^{x} + C_3 e^{-x}.
 $$
 
-### **Step 4 — Extract the particular solution**
+**Step 4 — Extract the particular solution**
+
 Original homogeneous equation:
 
 $$
@@ -963,7 +986,7 @@ $$
 
 ---
 
-## **5. Example 2 — Trigonometric Forcing**
+### **Example 2 — Trigonometric Forcing**
 
 Solve:
 
@@ -971,19 +994,19 @@ $$
 y'' + 4y = \cos(2x).
 $$
 
-### **Step 1 — Annihilator**
+**Step 1 — Annihilator**
 
 $$
 A = D^2 + 4.
 $$
 
-### **Step 2 — Apply the annihilator**
+**Step 2 — Apply the annihilator**
 
 $$
 (D^2 + 4)(y'' + 4y) = 0.
 $$
 
-### **Step 3 — Solve homogeneous equation**
+**Step 3 — Solve homogeneous equation**
 Characteristic equation:
 
 $$
@@ -1002,7 +1025,8 @@ $$
 y = C_1\cos 2x + C_2\sin 2x + C_3 x\cos 2x + C_4 x\sin 2x.
 $$
 
-### **Step 4 — Extract particular solution**
+**Step 4 — Extract particular solution**
+
 Original homogeneous solution:
 
 $$
@@ -1016,7 +1040,7 @@ $$
 
 ---
 
-## **6. Example 3 — Polynomial Forcing**
+### **Example 3 — Polynomial Forcing**
 
 Solve:
 
@@ -1024,20 +1048,21 @@ $$
 y'' - 3y' + 2y = x^2.
 $$
 
-### **Step 1 — Annihilator**
+**Step 1 — Annihilator**
 Polynomial of degree 2 → annihilator:
 
 $$
 A = D^3.
 $$
 
-### **Step 2 — Apply annihilator**
+**Step 2 — Apply annihilator**
 
 $$
 D^3(y'' - 3y' + 2y) = 0.
 $$
 
-### **Step 3 — Solve homogeneous equation**
+**Step 3 — Solve homogeneous equation**
+
 Characteristic equation:
 
 $$
@@ -1056,7 +1081,8 @@ $$
 y = C_1 + C_2 x + C_3 x^2 + C_4 e^{x} + C_5 e^{2x}.
 $$
 
-### **Step 4 — Extract particular solution**
+**Step 4 — Extract particular solution**
+
 Original homogeneous:
 
 $$
@@ -1071,7 +1097,7 @@ $$
 
 ---
 
-### **7. Summary Table of Common Annihilators**
+### **Summary Table of Common Annihilators**
 
 | Forcing Term $f(x)$ | Annihilator $A(D)$ |
 |------------------------|-----------------------|
@@ -1083,7 +1109,7 @@ $$
 
 ---
 
-### **8. When to Use the Annihilator Method**
+### **When to Use the Annihilator Method**
 
 Use it when:
 
@@ -1098,7 +1124,7 @@ Avoid it when:
 
 ---
 
-## **6.3 Variation of Parameters**
+## **Variation of Parameters**
 
 Consider the second–order linear ODE in standard form:
 
@@ -1117,9 +1143,9 @@ Then a particular solution is obtained by the following algorithm.
 
 ---
 
-### **Algorithm (Universal Version)**
+### **Algorithm**
 
-1. **Write the equation in standard form**
+**1. Write the equation in standard form**
 
 Ensure the ODE is written as: 
 
@@ -1127,7 +1153,7 @@ $$
    y'' + p(x)y' + q(x)y = g(x)
 $$
 
-2. **Find the fundamental solutions**
+**2. Find the fundamental solutions**
 
 Solve the homogeneous equation: 
 
@@ -1142,7 +1168,7 @@ $$
 $$
 
 
-3. **Compute the Wronskian** 
+**3. Compute the Wronskian** 
 
 $$
    W(x) =
@@ -1153,7 +1179,7 @@ $$
    = y_1 y_2' - y_2 y_1'
 $$
 
-4. **Compute the auxiliary functions**
+**4. Compute the auxiliary functions**
 
 $$
    u_1'(x) = -\,\frac{y_2(x)\,g(x)}{W(x)}
@@ -1163,7 +1189,7 @@ $$
    u_2'(x) = \frac{y_1(x)\,g(x)}{W(x)}
 $$
 
-5. **Integrate**   
+**5. Integrate**   
 
 $$
    u_1(x) = \int u_1'(x)\,dx,\qquad
@@ -1172,13 +1198,13 @@ $$
 
 (Constants of integration are omitted because they are absorbed into the homogeneous solution.)
 
-6. **Construct the particular solution**
+**6. Construct the particular solution**
 
 $$
 y_p(x) = u_1(x)\,y_1(x) + u_2(x)\,y_2(x)
 $$
 
-7. **Write the general solution** 
+**7. Write the general solution** 
 
 $$
 y(x) = C_1 y_1(x) + C_2 y_2(x) + y_p(x)
@@ -1200,7 +1226,7 @@ $$
 
 ---
 
-# **7. Cauchy–Euler Equation**
+## **Cauchy–Euler Equation**
 
 $$
 x^n y^{(n)} + \cdots + a_1 xy' + a_0 y = g(x)
@@ -1212,7 +1238,7 @@ $$
 y = x^r
 $$
 
-## **1. Problem Form**
+### **Problem Form**
 
 A *Cauchy–Euler* (or *equidimensional*) differential equation of order $n$ has the structure:
 
@@ -1224,7 +1250,7 @@ When $g(x)=0$, the equation is **homogeneous**.
 
 ---
 
-## **2. Key Idea: Try a Power‑Law Solution**
+### **Key Idea: Try a Power‑Law Solution**
 
 Because the equation is *equidimensional*, we try:
 
@@ -1245,22 +1271,24 @@ Substituting into the differential equation will factor out $x^r$, leaving an al
 
 ---
 
-## **3. Algorithm (Step‑by‑Step)**
+### **Algorithm**
 
-### **Step 1 — Assume a trial solution**
+**Step 1 — Assume a trial solution**
 
 $$
 y = x^r
 $$
 
-### **Step 2 — Compute derivatives**
+**Step 2 — Compute derivatives**
+
 Use:
 
 $$
 y^{(k)} = r(r-1)\cdots(r-k+1)x^{r-k}
 $$
 
-### **Step 3 — Substitute into the differential equation**
+**Step 3 — Substitute into the differential equation**
+
 Every term becomes:
 
 $$
@@ -1270,7 +1298,8 @@ $$
 
 All terms will contain $x^r$. Factor it out.
 
-### **Step 4 — Obtain the *indicial equation***
+**Step 4 — Obtain the *indicial equation***
+
 The remaining algebraic equation in $r$ is:
 
 $$
@@ -1279,7 +1308,8 @@ $$
 
 This is the **characteristic equation** of the Cauchy–Euler problem.
 
-### **Step 5 — Solve the characteristic equation**
+**Step 5 — Solve the characteristic equation**
+
 Depending on the roots:
 
 - **Distinct real roots** $r_1, r_2, \ldots, r_n$
@@ -1300,14 +1330,15 @@ $$
 y = x^\alpha \left(C_1 \cos(\beta \ln x) + C_2 \sin(\beta \ln x)\right)
 $$
 
-### **Step 6 — (If non‑homogeneous) Propose a particular solution**
+**Step 6 — (If non‑homogeneous) Propose a particular solution**
+
 Use:
 - **Method of Undetermined Coefficients** (if $g(x)$ is a power, log, or combination)
 - **Variation of Parameters** (general case)
 
 ---
 
-## **4. Summary Table**
+### **Summary Table**
 
 | Case | Roots | General Solution |
 |------|-------|------------------|
@@ -1317,7 +1348,7 @@ Use:
 
 ---
 
-## **5. Example (Homogeneous)**
+### **Example (Homogeneous)**
 
 Solve:
 
@@ -1325,13 +1356,13 @@ $$
 x^2 y'' - 3x y' + 4y = 0
 $$
 
-### **Step 1 — Try $y = x^r$**
+**Step 1 — Try $y = x^r$**
 
 $$
 y' = r x^{r-1},\quad y'' = r(r-1)x^{r-2}
 $$
 
-### **Step 2 — Substitute**
+**Step 2 — Substitute**
 
 $$
 x^2 r(r-1)x^{r-2} - 3x r x^{r-1} + 4x^r = 0
@@ -1343,7 +1374,7 @@ $$
 x^r \left[r(r-1) - 3r + 4\right] = 0
 $$
 
-### **Step 3 — Indicial equation**
+**Step 3 — Indicial equation**
 
 $$
 r(r-1) - 3r + 4 = 0
@@ -1363,7 +1394,7 @@ $$
 
 Repeated root $r = 2$.
 
-### **Step 4 — General solution**
+**Step 4 — General solution**
 
 $$
 y = C_1 x^2 + C_2 x^2 \ln x
@@ -1371,7 +1402,7 @@ $$
 
 ---
 
-## **6. Example (Complex Roots)**
+### **Example (Complex Roots)**
 
 Solve:
 
@@ -1401,7 +1432,7 @@ $$
 
 ---
 
-## **7. Final Notes**
+### **Final Notes**
 
 - Cauchy–Euler equations are solved **exactly like constant‑coefficient equations**, but with the substitution $y = x^r$ instead of $y = e^{rx}$.
 - The presence of **$\ln x$** in repeated roots is the analogue of multiplying by **$x$** in constant‑coefficient equations.
