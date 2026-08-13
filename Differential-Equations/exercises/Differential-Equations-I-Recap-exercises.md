@@ -44,8 +44,11 @@
 Classify each differential equation as linear/nonlinear, autonomous/non‑autonomous, and determine its order:  
 
 **a)** $y'' + y' + y = \sin(x)$ → Linear, non-autonomous, order 2
+
 **b)** $y' = y^2 - 3y + 2$ → Non-Linear, autonomous, first order 
+
 **c)** $x^2 y'' + xy' - y = 0$ → Linear, non-autonomous, order 2
+
 **d)** $y' + \sqrt{xy} = 0$ → Non-linear, autonomous, first order
 
 ---
@@ -1893,7 +1896,8 @@ Classify the equilibrium point for each system:
 
 $$
 \begin{pmatrix}
-x' \\ y'
+x' \\ 
+y'
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -1901,7 +1905,8 @@ x' \\ y'
 0 & -3
 \end{pmatrix}
 \begin{pmatrix}
-x \\ y
+x \\ 
+y
 \end{pmatrix}
 $$  
 
@@ -1909,7 +1914,8 @@ $$
 
 $$
 \begin{pmatrix}
-x' \\ y'
+x' \\ 
+y'
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -1917,7 +1923,8 @@ x' \\ y'
 -1 & 1
 \end{pmatrix}
 \begin{pmatrix}
-x \\ y
+x \\ 
+y
 \end{pmatrix}
 $$
 
