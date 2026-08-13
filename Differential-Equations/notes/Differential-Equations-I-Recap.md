@@ -603,15 +603,15 @@ its conjugate $\alpha - i\beta$ also appears.
 These produce the real solutions:
 
 $$
-y_1(x) = e^{\alpha x} \cos{\beta x}, \qquad
-y_2(x) = e^{\alpha x} \sin{\beta x}
+y_1(x) = e^{\alpha x} \cos(\beta x), \qquad
+y_2(x) = e^{\alpha x} \sin(\beta x)
 $$
 
 If the complex root has multiplicity \(m\), then each solution is multiplied by powers of \(x\):
 
 $$
-x^k e^{\alpha x} \cos{\beta x},\quad
-x^k e^{\alpha x} \sin{\beta x},\quad k = 0,1,\dots,m-1
+x^k e^{\alpha x} \cos(\beta x),\quad
+x^k e^{\alpha x} \sin(\beta x),\quad k = 0,1,\dots,m-1
 $$
 
 ---
@@ -621,7 +621,7 @@ $$
 Every solution of a homogeneous linear differential equation with constant coefficients is a **linear combination** of functions of the form:
 
 - **$x^k e^{rx}$** for real roots $r$
-- **$x^k e^{\alpha x} \sin{\beta x}$** for complex roots $\alpha \pm i\beta$
+- **$x^k e^{\alpha x} \sin(\beta x)$** for complex roots $\alpha \pm i\beta$
 
 where $k$ runs from $0$ to the multiplicity minus one.
 
@@ -1120,7 +1120,7 @@ Use it when:
 Avoid it when:
 
 - Coefficients are variable.
-- Forcing term is not annihilable by a finite‑order operator (e.g., $e^{x^2}$, $\ln{x}$.
+- Forcing term is not annihilable by a finite‑order operator (e.g., $e^{x^2}$, $\ln(x)$.
 
 ---
 
@@ -1321,13 +1321,13 @@ $$
 - **Repeated root** $r$ of multiplicity $m$
   
 $$
-y = x^r \left(C_1 + C_2 \ln{x} + \cdots + C_m (\ln{x})^{m-1}\right)
+y = x^r \left(C_1 + C_2 \ln(x) + \cdots + C_m (\ln(x))^{m-1}\right)
 $$
 
 - **Complex roots** $r = \alpha \pm i\beta$
   
 $$
-y = x^\alpha \left(C_1 \cos{\beta \ln{x}} + C_2 \sin{\beta\ln{x}}\right)
+y = x^\alpha \left(C_1 \cos{\beta \ln(x)} + C_2 \sin{\beta\ln(x)}\right)
 $$
 
 **Step 6 — (If non‑homogeneous) Propose a particular solution**
@@ -1343,8 +1343,8 @@ Use:
 | Case | Roots | General Solution |
 |------|-------|------------------|
 | Distinct real | $r_1, r_2, \ldots$ | $\sum C_i x^{r_i}$ |
-| Repeated root | $r$ mult. $m$ | $x^r (C_1 + C_2 \ln{x} + \cdots)$ |
-| Complex | $\alpha \pm i\beta$ | $x^\alpha(\cos{\beta\ln{x}}), \sin{\beta\ln{x}})$ |
+| Repeated root | $r$ mult. $m$ | $x^r (C_1 + C_2 \ln(x) + \cdots)$ |
+| Complex | $\alpha \pm i\beta$ | $x^\alpha(\cos{\beta\ln(x)}), \sin{\beta\ln(x)})$ |
 
 ---
 
@@ -1397,7 +1397,7 @@ Repeated root $r = 2$.
 **Step 4 — General solution**
 
 $$
-y = C_1 x^2 + C_2 x^2 \ln{x}
+y = C_1 x^2 + C_2 x^2 \ln(x)
 $$
 
 ---
@@ -1427,7 +1427,7 @@ $$
 Solution:
 
 $$
-y = C_1 \cos{\ln{x}} + C_2 \sin{\ln{x}}
+y = C_1 \cos{\ln(x)} + C_2 \sin{\ln(x)}
 $$
 
 ---
@@ -1435,8 +1435,8 @@ $$
 ### **Final Notes**
 
 - Cauchy–Euler equations are solved **exactly like constant‑coefficient equations**, but with the substitution $y = x^r$ instead of $y = e^{rx}$.
-- The presence of **$\ln{x}$** in repeated roots is the analogue of multiplying by **$x$** in constant‑coefficient equations.
-- Complex roots produce oscillations in **$\ln{x}$**, not in $x$.
+- The presence of **$\ln(x)$** in repeated roots is the analogue of multiplying by **$x$** in constant‑coefficient equations.
+- Complex roots produce oscillations in **$\ln(x)$**, not in $x$.
 
 ---
 
