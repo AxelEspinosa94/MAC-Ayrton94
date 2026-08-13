@@ -1456,6 +1456,158 @@ $$
 y' = y(1-y)
 $$
 
+## Algorithm for Solving Nonlinear Differential Equations
+
+**Step 1. Identify the type of differential equation**
+
+- Determine whether the equation is:
+  - First-order or higher-order.
+  - Linear or nonlinear.
+  - Separable, exact, homogeneous, Bernoulli, Riccati, or autonomous.
+- Rewrite the equation in a standard form if needed.
+
+---
+
+**Step 2. Check if the equation is separable**
+
+- Try to express it as:
+  
+  dy/dx = f(x)·g(y)
+
+- If separable:
+  - Rearrange to isolate variables:
+    
+    dy / g(y) = f(x) dx
+
+  - Proceed to integrate both sides.
+
+---
+
+**Step 3. Check if the equation is exact**
+
+- Write the equation in differential form:
+
+  M(x, y) dx + N(x, y) dy = 0
+
+- Compute:
+
+  ∂M/∂y  and  ∂N/∂x
+
+- If they are equal, the equation is exact.
+- Integrate:
+  - Integrate M with respect to x.
+  - Integrate N with respect to y.
+  - Combine terms to obtain the implicit solution.
+
+---
+
+**Step 4. Check for integrating factor (if not exact)**
+
+- If the equation is not exact, test if an integrating factor μ(x) or μ(y) exists.
+- Multiply the entire equation by μ(x) or μ(y) to make it exact.
+- Return to **Step 3**.
+
+---
+
+**Step 5. Check if the equation is Bernoulli**
+
+- If the equation has the form:
+
+  y' + P(x)y = Q(x)yⁿ
+
+- Apply substitution:
+
+  v = y^(1-n)
+
+- Convert to a linear ODE in v.
+- Solve using integrating factor.
+
+---
+
+**Step 6. Check if the equation is homogeneous**
+- If the equation can be written as:
+
+  y' = F(y/x)
+
+- Apply substitution:
+
+  y = vx  →  y' = v + x dv/dx
+
+- Solve the resulting separable equation.
+
+---
+
+**Step 7. Check if the equation is autonomous**
+- If the equation has the form:
+
+  y' = f(y)
+
+- Separate variables:
+
+  dy / f(y) = dx
+
+- Integrate both sides.
+
+---
+
+**Step 8. For higher-order equations**
+
+- Try reduction of order:
+  - If the equation does not explicitly contain x, use substitution y' = p.
+  - If the equation is linear, apply standard linear ODE methods.
+  - If the equation is nonlinear, check for:
+    - Symmetries
+    - Substitutions (e.g., y'' = v(y))
+    - Energy-like integrals
+
+---
+
+**Step 9. Integrate**
+
+- Perform the required integrals.
+- Use partial fractions if needed.
+- Apply substitutions carefully.
+- Combine constants of integration.
+
+---
+
+**Step 10. Solve for y(x)**
+
+- If the solution is implicit, attempt to isolate y.
+- If isolation is not possible, leave the solution in implicit form.
+- For nonlinear equations, expect:
+  - Quadratic forms
+  - Rational expressions
+  - Logarithmic combinations
+  - Exponential terms
+
+---
+
+**Step 11. Apply initial conditions (if provided)**
+
+- Substitute x₀ and y₀ into the general solution.
+- Solve for the constant C.
+- Write the final particular solution.
+
+---
+
+**Step 12. Verify the solution**
+
+- Differentiate y(x) and substitute back into the original equation.
+- Confirm that the equation is satisfied.
+- Check domain restrictions (e.g., denominators, logs, square roots).
+
+---
+
+**Step 13. (Optional) Analyze the solution**
+
+- Determine equilibrium points.
+- Study stability.
+- Plot the solution or direction field.
+- Identify asymptotic behavior.
+
+
+
 ---
 
 # **Systems of Differential Equations**
