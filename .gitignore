@@ -5,6 +5,7 @@ __pycache__/
 
 # Custom
 Computer-Graphics/Snowball/snowball
+*-solutions.md
 
 # C extensions
 *.so
