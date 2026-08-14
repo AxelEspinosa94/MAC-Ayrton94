@@ -6,7 +6,7 @@
 
 ---
 
-## ## 2.1 Introduction to Methods for Obtaining Probability Functions
+## 2.1 Introduction to Methods for Obtaining Probability Functions
 
 ### **Definition — Random Variable Transformation Problem**  
 Given a random variable $X$ with known distribution, the goal is to determine the distribution of a new variable $Y = g(X)$.
@@ -28,7 +28,7 @@ Every method for obtaining the distribution of $Y$ relies on one of the followin
 
 ---
 
-## ## 2.2 Method of Distribution Functions (CDF Method)
+## 2.2 Method of Distribution Functions (CDF Method)
 
 ### **Definition — CDF Method**  
 To find the distribution of $Y = g(X)$, compute:
@@ -72,7 +72,7 @@ $$
 
 ---
 
-## ## 2.3 Method of Transformations (Jacobian Method)
+## 2.3 Method of Transformations (Jacobian Method)
 
 ### **Definition — Jacobian Transformation Method**  
 For a transformation $Y = g(X)$ with inverse $X = g^{-1}(Y)$:
@@ -110,7 +110,7 @@ $$
 
 ---
 
-## ## 2.4 Method of Moment Generating Functions (MGF Method)
+## 2.4 Method of Moment Generating Functions (MGF Method)
 
 ### **Definition — Moment Generating Function (MGF)**  
 
@@ -145,7 +145,7 @@ MGFs can be used to derive:
 
 ---
 
-## ## 2.5 Order Statistics
+## 2.5 Order Statistics
 
 ### **Definition — Order Statistics**  
 Given i.i.d. variables $X_1, \dots, X_n$, define:
@@ -193,7 +193,7 @@ $$
 
 ---
 
-## ## 2.6 Distributions of Broad Use: t, Chi-square, F
+## 2.6 Distributions of Broad Use: t, Chi-square, F
 
 ### **Definition — Chi-square Distribution**  
 If $Z_1, \dots, Z_k$ are i.i.d. $N(0,1)$:
@@ -247,7 +247,7 @@ $$
 
 ---
 
-## ## 2.7 Obtaining Distributions Using CAS, R, Excel
+## 2.7 Obtaining Distributions Using CAS, R, Excel
 
 ### **Principle — Software-Assisted Derivation**  
 Symbolic or numeric tools can compute:
