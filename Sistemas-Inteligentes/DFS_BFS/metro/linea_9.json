@@ -1,0 +1,14 @@
+{
+  "Tacubaya": {"Patriotismo": 1},
+  "Patriotismo": {"Tacubaya": 1, "Chilpancingo": 1},
+  "Chilpancingo": {"Patriotismo": 1, "Centro Médico": 1},
+  "Centro Médico": {"Chilpancingo": 1, "Lázaro Cárdenas": 1},
+  "Lázaro Cárdenas": {"Centro Médico": 1, "Chabacano": 1},
+  "Chabacano": {"Lázaro Cárdenas": 1, "Jamaica": 1},
+  "Jamaica": {"Chabacano": 1, "Mixiuhca": 1},
+  "Mixiuhca": {"Jamaica": 1, "Velódromo": 1},
+  "Velódromo": {"Mixiuhca": 1, "Ciudad Deportiva": 1},
+  "Ciudad Deportiva": {"Velódromo": 1, "Puebla": 1},
+  "Puebla": {"Ciudad Deportiva": 1, "Pantitlán": 1},
+  "Pantitlán": {"Puebla": 1}
+}
