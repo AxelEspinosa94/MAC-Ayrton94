@@ -1471,7 +1471,7 @@ $$
 **Step 2. Check if the equation is separable**
 
 - Try to express it as:
-  
+
   dy/dx = f(x)·g(y)
 
 - If separable:
@@ -1614,7 +1614,7 @@ $$
 
 ---
 
-# **Linear Systems**
+## **Linear Systems**
 
 $$
 \mathbf{x}' = A\mathbf{x}
@@ -1622,11 +1622,269 @@ $$
 
 Solution via eigenvalues/eigenvectors.
 
+**Step 1: Write the system in matrix form**
+
+Express the system as:
+  
+$$
+\mathbf{x}' = A\mathbf{x}
+$$
+
+Ensure $A$ is a constant matrix (method applies only to constant-coefficient linear systems).
+
 ---
 
-# **Nonlinear Systems**
+**Step 2: Compute the eigenvalues of $A$**
 
-Linearize using Jacobian.
+Solve the characteristic equation:
+
+$$
+det(A − \lambda I) = 0
+$$
+
+List all eigenvalues $\lambda_{1}, \lambda_{2},...,\lambda_{n}$
+
+Identify whether they are:
+  - real and distinct,
+  - real and repeated,
+  - complex conjugate pairs.
+
+---
+
+**Step 3: Compute eigenvectors (and generalized eigenvectors if needed)**
+
+For each eigenvalue $\lambda_{i}$ solve $(A − \lambda_{i} I)v_{i} = 0$
+
+If an eigenvalue has multiplicity > 1:
+- Check if geometric multiplicity equals algebraic multiplicity.
+- If not, compute generalized eigenvectors by solving:
+
+$$
+\begin{align}
+(A − \lambda I)w = v
+\end{align}
+$$
+---
+
+**Step 4: Build the fundamental set of solutions**
+
+For each **real eigenvalue $\lambda$** with eigenvector $v$:
+
+$$
+x_{i}(t) = e^{\lambda t}v
+$$
+
+For **complex eigenvalues** $\lambda = \alpha ± \beta i$ with eigenvector $v = p + iq$:
+
+Solutions become real-valued:
+
+$$
+\begin{align}
+x_{1}(t) = e^{\alpha t}(p \cos{(\beta t)} − q \sin{(\beta t)})  \\ 
+x_{2}(t) = e^{\alpha t}(p \sin{(\beta t)} + q \cos{(\beta t)})
+\end{align}
+$$
+
+For **generalized eigenvectors**:
+
+If v is eigenvector and w is generalized eigenvector:
+
+$$
+x_{1}(t) = e^{\lambda t}v  
+x_{2}(t) = e^{\lambda t}(t v + w)
+$$
+
+---
+
+**Step 5: Form the general solution**
+
+Combine all fundamental solutions:
+
+$$
+x(t) = C_{1} x_{1}(t) + C_{2} x_{2}(t) + … + C_{n} x_{n}(t)
+$$
+
+Ensure the number of independent solutions equals the dimension of $A$.
+
+---
+
+**Step 6: Apply initial conditions (if provided)**
+
+Substitute t = 0:
+
+$$
+x(0) = C_{1} x_{1}(0) + C_{2} x_{2}(0) + ...
+$$
+
+Solve the resulting linear system for the constants Cᵢ.
+
+---
+
+**Step 7: Verify the solution**
+
+Differentiate $x(t)$ and check that:
+
+$$
+x'(t) = A x(t)
+$$
+
+Confirm linear independence of the solution set.
+
+Optionally compute the fundamental matrix Φ(t).
+
+---
+
+**Step 8: (Optional) Analyze qualitative behavior**
+
+Use eigenvalues to determine:
+
+  - stability ($Re(λ) < 0 \rightarrow stable$),
+  - type of equilibrium (node, saddle, spiral, center),
+  - long-term behavior ($t \rightarrow \inf$).
+
+Plot trajectories or phase portraits if needed.
+
+---
+
+## **Classification of Equilibrium Points in Linear Systems**  
+### For systems of the form  x' = A x
+
+---
+
+#### 1. What is an Equilibrium Point?
+
+An equilibrium point of a dynamical system  
+
+$$
+\mathbf{x}' = A\mathbf{x}
+$$
+
+is any vector $\mathbf{x}^*$ satisfying:
+
+$$
+A\mathbf{x}^* = 0.
+$$
+
+For **invertible** matrices $A$, the only equilibrium is:
+
+$$
+\mathbf{x}^* = \mathbf{0}.
+$$
+
+For **non‑invertible** matrices, there may be infinitely many equilibria (a line, plane, etc.).
+
+---
+
+#### 2. Classification Based on Eigenvalues of A
+
+The nature of the equilibrium point (usually the origin) is determined entirely by the eigenvalues of \(A\).
+
+Below is the full classification.
+
+---
+
+#### 3. Real Eigenvalues
+
+##### **3.1 Stable Node (Sink)**  
+- **Eigenvalues:** real, **negative**, distinct or repeated.  
+- **Behavior:** trajectories move directly toward the equilibrium without oscillations.  
+- **Phase portrait:** all arrows point inward.
+
+$$
+\lambda_1 < 0,\quad \lambda_2 < 0
+$$
+
+---
+
+##### **3.2 Unstable Node (Source)**  
+- **Eigenvalues:** real, **positive**, distinct or repeated.  
+- **Behavior:** trajectories move directly away from the equilibrium.  
+- **Phase portrait:** all arrows point outward.
+
+$$
+\lambda_1 > 0,\quad \lambda_2 > 0
+$$
+
+---
+
+##### **3.3 Saddle Point**  
+- **Eigenvalues:** real, **opposite signs**.  
+- **Behavior:** some trajectories approach the equilibrium, others diverge.  
+- **Phase portrait:** stable and unstable directions.
+
+$$
+\lambda_1 < 0 < \lambda_2
+$$
+
+This is **always unstable**.
+
+---
+
+#### 4. Complex Eigenvalues
+
+Let eigenvalues be:
+
+$$
+\lambda = \alpha \pm i\beta,\quad \beta \neq 0.
+$$
+
+##### **4.1 Stable Spiral (Spiral Sink)**  
+- **Condition:** $\alpha < 0$.  
+- **Behavior:** trajectories spiral inward.  
+- **Phase portrait:** inward spirals.
+
+---
+
+##### **4.2 Unstable Spiral (Spiral Source)**  
+- **Condition:** $\alpha > 0$.  
+- **Behavior:** trajectories spiral outward.  
+- **Phase portrait:** outward spirals.
+
+---
+
+##### **4.3 Center**  
+- **Condition:** $\alpha = 0$.  
+- **Behavior:** closed orbits; trajectories neither approach nor diverge.  
+- **Phase portrait:** perfect circles or ellipses.  
+- **Stability:** **stable but not asymptotically stable**.
+
+---
+
+#### 5. Summary Table
+
+| Eigenvalues of A                     | Classification        | Stability                     |
+|-------------------------------------|------------------------|-------------------------------|
+| Both real, negative                 | Stable node (sink)    | Asymptotically stable         |
+| Both real, positive                 | Unstable node (source)| Unstable                      |
+| Real, opposite signs                | Saddle                | Always unstable               |
+| Complex: α < 0                      | Spiral sink           | Asymptotically stable         |
+| Complex: α > 0                      | Spiral source         | Unstable                      |
+| Complex: α = 0                      | Center                | Stable (not asymptotically)  |
+
+---
+
+#### 6. How to Classify in Practice
+
+1. Compute eigenvalues of $A$.  
+2. Check whether they are real or complex.  
+3. Inspect their signs (real case) or real part (complex case).  
+4. Match with the table above.
+
+---
+
+#### 7. Example
+
+For  
+
+$$
+A = \begin{pmatrix}
+-2 & 0 \\
+0 & -3
+\end{pmatrix},
+$$
+
+eigenvalues are $-2$ and $-3$.  
+Both real and negative → **stable node (sink)**.
 
 ---
 
@@ -1643,6 +1901,110 @@ y = \sum_{n=0}^\infty a_n x^n
 $$
 
 Find recurrence.
+
+## Power Series Method for Solving Differential Equations
+
+**Step 1. Make the series substitution**
+
+Assume the solution can be written as a power series around $x = 0$:
+
+$$
+y(x) = \sum_{n=0}^{\infty} a_n x^n
+$$
+
+Substitute this expression into the differential equation.
+Keep the summation index consistent (usually starting at $n = 0$).
+
+---
+
+**Step 2. Calculate derivatives**
+
+Differentiate term-by-term:
+
+$$
+y'(x) = \sum_{n=1}^{\infty} n a_n x^{n-1}
+$$
+
+$$
+y''(x) = \sum_{n=2}^{\infty} n(n-1) a_n x^{n-2}
+$$
+
+Rewrite each derivative so that powers of $x$ match across all series.
+
+Typically, reindex using substitutions like $k = n-1$ or $k = n-2$.
+
+The goal is to express every series in the form:
+
+$$
+\sum_{k=0}^{\infty} (\text{coefficient})\, x^k
+$$
+
+---
+
+**Step 3. Align powers of \(x\)**
+
+After reindexing, rewrite the differential equation as a single sum:
+
+$$
+\sum_{k=0}^{\infty} C_k x^k = 0
+$$
+
+Because the series equals zero for all \(x\), each coefficient must vanish:
+
+$$
+C_k = 0 \quad \text{for all } k \ge 0
+$$
+
+---
+
+**Step 4. Extract the recurrence relation**
+
+Solve the coefficient equation $C_k = 0$ for $a_{k+m}$ in terms of earlier coefficients.
+
+This produces a recurrence relation of the form:
+
+$$
+a_{k+r} = F(k, a_k, a_{k-1}, \ldots)
+$$
+
+Identify the free constants (usually $a_0$ and $a_1$).
+
+---
+
+**Step 5. Compute initial coefficients**
+
+Use the recurrence relation to compute:
+
+$$
+a_2,\; a_3,\; a_4,\; \ldots
+$$
+
+Separate even and odd terms if the recurrence naturally splits.
+
+---
+
+**Step 6. Build the power series solution**
+
+Assemble the solution:
+
+$$
+y(x) = a_0\left(1 + A_2 x^2 + A_4 x^4 + \cdots\right) + a_1\left(x + B_3 x^3 + B_5 x^5 + \cdots\right)
+$$
+
+If possible, recognize known functions (e.g., sine, cosine, Bessel functions).
+
+---
+
+**Step 7. (Optional) Identify the closed-form solution**
+
+Compare the resulting series with standard Taylor expansions:
+
+  - $\sin{(x)}$, $\cos{(x)}$
+  - $e^x$
+  - Bessel functions
+  - Airy functions
+
+Conclude the closed-form expression when applicable.
 
 ---
 
