@@ -79,7 +79,7 @@ where this equation is first order and $a_i(x)=1$ and $g(x)=x^2$.
 
 For each IVP, determine whether the Existence and Uniqueness Theorem guarantees a unique solution: 
 
-**a)** $y' = \sqrt{y},\; y(0)=0$ → If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrty{y}}$ which is continuous to $x$ values near 0,  therefore there is an unique solution to it
+**a)** $y' = \sqrt{y},\; y(0)=0$ → If we calculate the y-partial derivative of $\sqrt{y}$, we have $\frac{1}{2\sqrt{y}}$ which is continuous to $x$ values near 0,  therefore there is an unique solution to it
 
 **b)** $y' = \frac{1}{x-y},\; y(1)=1$. Calculating the y-partial derivative of $\frac{1}{x-y}$ we have $\frac{1}{(x-y)^2}$, which is continous to $x$ values near 1, therefore there is an unique solution to it
 
@@ -186,7 +186,7 @@ $$
 which is equivalent
 
 $$
-\int \(1+\frac{3}{y-1}\)dy=\int dx
+\int \left(1+\frac{3}{y-1}\right)dy=\int dx
 $$
 
 $$
@@ -337,7 +337,7 @@ Now we take the derivative of this result on $y$ and equalize to $N$ having
 
 $$
 \begin{align}
-\frac{d}{dy}\(x^3+2yx+h(y)\)=N(x,y)=2x+4y^3 \\
+\frac{d}{dy}(x^3+2yx+h(y))=N(x,y)=2x+4y^3 \\
 \Rightarrow 2x + h'(y)=2x+4y^3  \\
 \Rightarrow h'(y) = 2x+4y^3-2x=4y^3
 \end{align}
@@ -363,7 +363,7 @@ $$
 Now we take the derivative of this result on $y$ and equalize to $N$ having
 
 $$
-\frac{d}{dy}\(y\sin(x) - x^2 + h(y)\) = N(x,y) = \sin(x) + x^2 \Rightarrow \sin(x) + h'(y) = \sin(x) + x^2 \Rightarrow h'(y) = x^2
+\frac{d}{dy}(y\sin(x) - x^2 + h(y)) = N(x,y) = \sin(x) + x^2 \Rightarrow \sin(x) + h'(y) = \sin(x) + x^2 \Rightarrow h'(y) = x^2
 $$
 
 If we integrate $h'(y)$ on y we have that $h(y)=yx^2$. Therefore the solution to the DE is $y\sin(x) -x^2 + yx^2=C$
@@ -436,8 +436,8 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)y)' = \mu(x)e^{-x} \\
-\Rightarrow \(e^{3x}y\)' = e^{3x}e^{-x} \\
-\Rightarrow \(e^{3x}y\)' = e^{2x}
+\Rightarrow \left(e^{3x}y\right)' = e^{3x}e^{-x} \\
+\Rightarrow \left(e^{3x}y\right)' = e^{2x}
 \end{align}
 $$
 
@@ -445,7 +445,7 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \(e^{3x}y\)' =  \int e^{2x} \\
+\int \left(e^{3x}y\right)' =  \int e^{2x} \\
 \Rightarrow e^{3x}y = \frac{1}{2}e^{2x} + C \\
 \Rightarrow y = \frac{e^{-x}}{2} + Ce^{-x}
 \end{align}
@@ -474,8 +474,8 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)y)' = \mu(x)x^3 \\
-\Rightarrow \(x^2 y\)' = x^2 x^3 \\
-\Rightarrow \(e^{3x}y\)' = x^5
+\Rightarrow \left(x^2 y\right)' = x^2 x^3 \\
+\Rightarrow \left(e^{3x}y\right)' = x^5
 \end{align}
 $$
 
@@ -483,9 +483,10 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \(x^2 y\)' =  \int x^5 \\
+\int \left(x^2 y\right)' =  \int x^5 \\
 \Rightarrow x^2 y = \frac{1}{6}x^6 + C \\
 \Rightarrow y = \frac{x^4}{6} + \frac{C}{x^2}
+\end{align}
 $$
 
 **c)** $y' + y\tan(x) = \sin(x)$
@@ -511,8 +512,8 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)y)' = \mu(x)\sin(x) \\
-\Rightarrow \(\sec(x) y\)' = \sec(x) \sin(x) \\
-\Rightarrow \(\sec(x) y\)' = \tan(x)
+\Rightarrow \left(\sec(x) y\right)' = \sec(x) \sin(x) \\
+\Rightarrow \left(\sec(x) y\right)' = \tan(x)
 \end{align}
 $$
 
@@ -520,7 +521,7 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \(\sec(x) y\)' = \int \tan(x) \\
+\int \left(\sec(x) y\right)' = \int \tan(x) \\
 \Rightarrow \sec(x) y = -\ln(\cos x) + C \\
 \Rightarrow y = -\frac{\ln(\cos x)}{\sec(x)} + C\cos x
 \end{align}
@@ -555,8 +556,8 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)y)' = 8\mu(x) \\
-\Rightarrow \(e^{4x} y\)' = 8e^{4x} \\
-\Rightarrow \(e^{4x} y\)' = 8e^{4x}
+\Rightarrow \left(e^{4x} y\right)' = 8e^{4x} \\
+\Rightarrow \left(e^{4x} y\right)' = 8e^{4x}
 \end{align}
 $$
 
@@ -564,7 +565,7 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \(e^{4x} y\)' = \int 8e^{4x} \\
+\int \left(e^{4x} y\right)' = \int 8e^{4x} \\
 \Rightarrow e^{4x} y = 2e^{4x} + C \\
 \Rightarrow y = 2 + Ce^{4x}
 \end{align}
@@ -595,8 +596,8 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)y)' = x\mu(x) \\
-\Rightarrow \(x y\)' = x^2 \\
-\Rightarrow \(x y\)' = x^2
+\Rightarrow \left(x y\right)' = x^2 \\
+\Rightarrow \left(x y\right)' = x^2
 \end{align}
 $$
 
@@ -604,7 +605,7 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \\(x y\\)' = \int x^{2} \\
+\int \left(x y\right)' = \int x^{2} \\
 \Rightarrow x y = \frac{x^3}{3} + C \\
 \Rightarrow y = \frac{x^2}{3} + \frac{C}{x}
 \end{align}
@@ -674,7 +675,7 @@ Therefore
 
 $$
 \begin{align}
-\arctan(\frac{y}{x})-\frac{1}{2}\\(\ln(x^2 + y^2)-\ln(x^2)\\) \\
+\arctan(\frac{y}{x})-\frac{1}{2}\left(\ln(x^2 + y^2)-\ln(x^2)\right) \\
 = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)-\frac{1}{2}\ln(x^2) \\
 = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\frac{1}{2}2\ln(x) \\
 = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\ln(x) \\
@@ -723,13 +724,13 @@ $$
 Considering $y=vx\Rightarrow v\frac{y}{x}$, we substitute the value of $v$
 
 $$
-\frac{1}{2}\\(\frac{y}{x}\\)^2=\ln(x) + C
+\frac{1}{2}\left(\frac{y}{x}\right)^2=\ln(x) + C
 $$
 
 where
 
 $$
-C = \\(\frac{y}{x}\\)^2 - \ln(x)
+C = \left(\frac{y}{x}\right)^2 - \ln(x)
 $$
 
 Which is a valid form for an implicit solution
@@ -773,7 +774,7 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)v)' = 2\mu(x) \\
-\Rightarrow \(e^{2x}v\)' = 2e^{2x} 
+\Rightarrow \left(e^{2x}v\right)' = 2e^{2x} 
 \end{align}
 $$
 
@@ -781,7 +782,7 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \\(e^{2x}v\\)' = \int 2e^{2x} \\
+\int \left(e^{2x}v\right)' = \int 2e^{2x} \\
 \Rightarrow e^{2x}v = e^{2x} + C \\
 \Rightarrow v = 1 + Ce^{-2x}
 \end{align}
@@ -792,7 +793,7 @@ Then we substitute the value of $v=y^{-2}$ having
 $$
 \begin{align}
 y^{-2} = 1 +Ce^{-2x}    \\
-\Rightarrow y = \(1 +Ce^{-2x}\)^{-1/2}
+\Rightarrow y = \left(1 +Ce^{-2x}\right)^{-1/2}
 \end{align}
 $$
 
@@ -827,7 +828,7 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)v)' = 3\mu(x) \\
-\Rightarrow \\(e^{-2x}v\\)' = 2e^{-2x}
+\Rightarrow \left(e^{-2x}v\right)' = 2e^{-2x}
 \end{align}
 $$
 
@@ -835,7 +836,7 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \\(e^{-2x}v\\)' = \int 3e^{-2x} \\
+\int \left(e^{-2x}v\right)' = \int 3e^{-2x} \\
 \Rightarrow e^{-2x}v = \frac{3}{2}e^{-2x} + C \\
 \Rightarrow v = \frac{3}{2} + Ce^{2x}
 \end{align}
@@ -846,7 +847,7 @@ Then we substitute the value of $v=y^{2}$ having
 $$
 \begin{align}
 y^{2} = \frac{3}{2} +Ce^{2x}    \\
-\Rightarrow y = \\(1 +Ce^{-2x}\\)^{1/2}
+\Rightarrow y = \left(1 +Ce^{-2x}\right)^{1/2}
 \end{align}
 $$
 
@@ -889,7 +890,7 @@ We recognize the derivative as:
 $$
 \begin{align}
 (\mu(x)v)' = -\mu(x) \\
-\Rightarrow \(e^{\frac{x^2}{2}}v\)' = -e^{\frac{x^2}{2}}
+\Rightarrow \left(e^{\frac{x^2}{2}}v\right)' = -e^{\frac{x^2}{2}}
 \end{align}
 $$
 
@@ -897,7 +898,7 @@ Then we integrate on x, having
 
 $$
 \begin{align}
-\int \\(e^{\frac{x^2}{2}}v\\)' = \int -e^{\frac{x^2}{2}}    \\
+\int \left(e^{\frac{x^2}{2}}v\right)' = \int -e^{\frac{x^2}{2}}    \\
 \Rightarrow e^{\frac{x^2}{2}}v = \int -e^{\frac{x^2}{2}} + C \\
 \Rightarrow v = E(x) + Ce^{\frac{x^2}{2}}
 \end{align}
@@ -1068,8 +1069,8 @@ If we calculate the derivative of the solution we have
 
 $$
 \begin{align}
-y'(x) = C_2\\(e^{2x} + 2xe^{2x}\\) \\
-\Rightarrow y'(0) = C_2\\(e^{2(0)} + 2(0)e^{2(0)}\\) = 3    \\
+y'(x) = C_2\left(e^{2x} + 2xe^{2x}\right) \\
+\Rightarrow y'(0) = C_2\left(e^{2(0)} + 2(0)e^{2(0)}\right) = 3    \\
 \Rightarrow C_2 = 3
 \end{align}
 $$
@@ -1186,7 +1187,7 @@ Then we derivate $y_p$
 $$
 \begin{align}
 y_{p}' = e^{2x} + 2x e^{2x} \\
-y_{p}'' = 2e^{2x} + 2\\[e^{2x} + 2x e^{2x}\\] = 4e^{2x}+ 4xe^{2x}
+y_{p}'' = 2e^{2x} + 2\left[e^{2x} + 2x e^{2x}\right] = 4e^{2x}+ 4xe^{2x}
 \end{align}
 $$
 
@@ -1517,7 +1518,7 @@ $$
 \begin{align}
 x^{2}r(r-1)x^{r-2} + xrx^{r-1} - x^{r} = 0 \\
 \Rightarrow r(r-1)x^{r} + rx^{r} -x^{r}=0   \\
-\Rightarrow x^{r}\\[r(r-1)+r-1\\] = 0   \\
+\Rightarrow x^{r}[r(r-1)+r-1] = 0   \\
 \Rightarrow r^2 - r + r -1 = 0  \\
 \Rightarrow r^2 -1 = 0  \\
 \Rightarrow r = \pm 1
@@ -1599,10 +1600,10 @@ $$
 Solving we have
 
 $$
-1 = A(y-1) + By = Ay - A + B \Rightarrow \left\{\begin{matrix}
+1 = A(y-1) + By = Ay - A + B \Rightarrow \left(\begin{matrix}
 A + B = 0 \\
 -A = 1
-\end{matrix}\right
+\end{matrix}\right)
 $$
 
 $\Rightarrow A=-1$ y $B=1$. Therefore:
@@ -1615,7 +1616,7 @@ Thus, the integral has the following form
 
 $$
 \begin{align}
-\int \(-\frac{1}{y} + \frac{1}{y-1}\)dy = \int dx   \\
+\int \left(-\frac{1}{y} + \frac{1}{y-1}\right)dy = \int dx   \\
 \Rightarrow -\ln{y}+\ln{y-1} = x + C    \\
 \Rightarrow \ln{\frac{y-1}{y}} = x + C
 \end{align}
@@ -1658,11 +1659,11 @@ $$
 Solving we have
 
 $$
-1 = A(2+y)(2-y) + By(2-y) + Cy(2+y) = 4A-Ay^2 + 2By - By^2 + 2Cy + Cy^2 \Rightarrow \left\{\begin{matrix}
+1 = A(2+y)(2-y) + By(2-y) + Cy(2+y) = 4A-Ay^2 + 2By - By^2 + 2Cy + Cy^2 \Rightarrow \left(\begin{matrix}
 -A - B + C = 0 \\
 2B + 2C = 0 \\
 4A = 1
-\end{matrix}\right
+\end{matrix}\right)
 $$
 
 $\Rightarrow A=\frac{1}{4}$, $C=\frac{1}{8}$ y $B=-\frac{1}{8}$. Therefore:
@@ -1675,7 +1676,7 @@ Thus, the integral has the following form
 
 $$
 \begin{align}
-\int \(\frac{1}{4y} - \frac{1}{8(2+y)} + \frac{1}{8(2-y)}\)dy = \int dx   \\
+\int \left(\frac{1}{4y} - \frac{1}{8(2+y)} + \frac{1}{8(2-y)}\right)dy = \int dx   \\
 \Rightarrow \ln{4y}-\ln{8(2+y)}+\ln{8(2-y)} = x + C    \\
 \Rightarrow \ln{32y(2-y)}-\ln{8(2+y)} = x + C    \\
 \Rightarrow \ln{\frac{32y(2-y)}{8(2+y)}} = x + C    \\
@@ -1868,7 +1869,7 @@ Therefore, solution has closed-form
 
 ## **Linear Systems**
 
-Solve the system:  
+**a)** Solve the system:  
 
 $$
 \mathbf{x}' = 
@@ -1879,7 +1880,155 @@ $$
 \mathbf{x}
 $$
 
-Solve the system:  
+Since $A$ is a constant matrix, then we will solve the characteristic equation
+
+$$
+\begin{align}
+\det(A-\lambda I)= 0 \\
+\det\left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix}-\lambda\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)=0    \\
+\Rightarrow \det\left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix}-\begin{pmatrix}
+\lambda & 0   \\
+0 & \lambda
+\end{pmatrix}\right)=0   \\
+\Rightarrow \det
+\begin{pmatrix}
+2-\lambda & 1   \\
+0 & 3-\lambda
+\end{pmatrix}=0 \\
+\Rightarrow \lambda^{2} -5\lambda + 6 = 0   \\
+\therefore \lambda_{1} = 3 \wedge \lambda_{2} = 2
+\end{align}
+$$
+
+Once we have identified the eigenvalues we must compute the eigenvectors.
+
+For $\lambda_{1} = 3$
+
+$$
+\begin{align}
+\left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix} -\lambda_{1}\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix} - 3\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix} - \begin{pmatrix}
+3 & 0   \\
+0 & 3
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \begin{pmatrix}
+-1 & 1  \\
+0 & 0
+\end{pmatrix}\begin{pmatrix}
+v_{1}   \\
+v_{2}
+\end{pmatrix}=\begin{pmatrix}
+0   \\
+0
+\end{pmatrix}   \\
+\Rightarrow \begin{pmatrix}
+-v_{1}+v_{2}    \\
+0
+\end{pmatrix}=\begin{pmatrix}
+0   \\
+0
+\end{pmatrix}   \\
+\Rightarrow v_{1}=v_{2}
+\end{align}
+$$
+
+which means any vector of the form $v=\begin{pmatrix}1  \\ 1\end{pmatrix}$ with $t\neq 0$ is a valid eigenvector.
+
+For $\lambda_{2} = 2$
+
+$$
+\begin{align}
+\left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix} -\lambda_{2}\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix} - 2\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \left(\begin{pmatrix}
+2 & 1   \\
+0 & 3
+\end{pmatrix} - \begin{pmatrix}
+2 & 0   \\
+0 & 2
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \begin{pmatrix}
+0 & 1  \\
+0 & 1
+\end{pmatrix}\begin{pmatrix}
+v_{1}   \\
+v_{2}
+\end{pmatrix}=\begin{pmatrix}
+0   \\
+0
+\end{pmatrix}   \\
+\Rightarrow \begin{pmatrix}
+v_{2}    \\
+v_{2}
+\end{pmatrix}=\begin{pmatrix}
+0   \\
+0
+\end{pmatrix}   \\
+\Rightarrow v_{2}=0
+\end{align}
+$$
+
+which means any vector of the form $v=\begin{pmatrix}1  \\ 0\end{pmatrix}$ is a valid eigenvector.
+
+Now, for each real eigenvalue we will build the fundamental set of solutions, this means
+
+$$
+\begin{align}
+\lambda_{1}= 3\Rightarrow x_{1}(t)=e^{\lambda t}\begin{pmatrix}1  \\ 1\end{pmatrix}=\begin{pmatrix}e^{3t}  \\ e^{3t}\end{pmatrix} \\
+\lambda_{2}= 2\Rightarrow x_{1}(t)=e^{\lambda t}\begin{pmatrix}1  \\ 0\end{pmatrix}=\begin{pmatrix}e^{2t}  \\ 0\end{pmatrix} \\
+\end{align}
+$$
+
+Finally, the general solution is:
+
+$$
+\begin{align}
+x(t) = C_{1}x_{1}(t) + C_{2}x_{2}(t)    \\
+=C_{1}\begin{pmatrix}e^{3t}  \\ e^{3t}\end{pmatrix} + C_{2}\begin{pmatrix}e^{2t}  \\ 0\end{pmatrix} \\
+=\begin{pmatrix}C_{1}e^{3t} + C_{2}e^{2t}  \\ C_{1}e^{3t}\end{pmatrix}
+\end{align}
+$$
+
+---
+
+**b)** Solve the system:  
 
 $$
 \mathbf{x}' = 
@@ -1889,6 +2038,124 @@ $$
 \end{pmatrix}
 \mathbf{x}
 $$
+
+Since $A$ is a constant matrix, then we will solve the characteristic equation
+
+$$
+\begin{align}
+\det(A-\lambda I)= 0 \\
+\det\left(\begin{pmatrix}
+0 & -1   \\
+1 & 0
+\end{pmatrix}-\lambda\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)=0    \\
+\Rightarrow \det\left(\begin{pmatrix}
+0 & -1   \\
+1 & 0
+\end{pmatrix}-\begin{pmatrix}
+\lambda & 0   \\
+0 & \lambda
+\end{pmatrix}\right)=0   \\
+\Rightarrow \det
+\begin{pmatrix}
+-\lambda & -1   \\
+1 & -\lambda
+\end{pmatrix}=0 \\
+\Rightarrow \lambda^{2} + 1 = 0   \\
+\therefore \lambda_{1} = i \wedge \lambda_{2} = -i
+\end{align}
+$$
+
+Once we have identified the eigenvalues we must compute the eigenvectors.
+
+For $\lambda_{1} = i$
+
+$$
+\begin{align}
+\left(\begin{pmatrix}
+0 & -1   \\
+1 & 0
+\end{pmatrix} -\lambda_{1}\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \left(\begin{pmatrix}
+0 & -1   \\
+1 & 0
+\end{pmatrix} - i\begin{pmatrix}
+1 & 0   \\
+0 & 1
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \left(\begin{pmatrix}
+0 & -1   \\
+1 & 0
+\end{pmatrix} - \begin{pmatrix}
+i & 0   \\
+0 & i
+\end{pmatrix}\right)v = 0   \\
+\Rightarrow \begin{pmatrix}
+-i & -1  \\
+1 & -i
+\end{pmatrix}\begin{pmatrix}
+v_{1}   \\
+v_{2}
+\end{pmatrix}=\begin{pmatrix}
+0   \\
+0
+\end{pmatrix}   \\
+\Rightarrow \begin{pmatrix}
+-iv_{1}-v_{2}    \\
+v_{1}-iv_{2}
+\end{pmatrix}=\begin{pmatrix}
+0   \\
+0
+\end{pmatrix}
+\end{align}
+$$
+
+when comparing the equations we have
+
+$$
+\begin{align}
+-iv_{1}-v_{2} = 0\Rightarrow v_{2}=-iv_{1}   \\
+v_{1}=1\Rightarrow v=\begin{pmatrix}1   \\ -i\end{pmatrix}
+\end{align}
+$$
+
+Then, the associated complex solution is
+
+$$
+\begin{align}
+x(t)=e^{\lambda t}\begin{pmatrix}1  \\ -i\end{pmatrix}=\begin{pmatrix}e^{it}  \\ -ie^{it}\end{pmatrix} 
+\end{align}
+$$
+
+Where $e^{it}=\cos{(t)}+i\sin{(t)}$ and the components are:
+
+- First Component: $x_{1}(t)=e^{it}=\cos{(t)}+i\sin{(t)}$
+- Second Component: $x_{2}(t)=-ie^{it}=-i\cos{(t)}+i^{2}\sin{(t)}=\sin{(t)}-i\cos{(t)}$
+
+Splitting the solutions into the real and complex parts we have
+
+$$
+\begin{align}
+\mathbb{R}(x_{t})=\begin{pmatrix}\cos{(t)} \\ \sin{(t)}\end{pmatrix}    \\
+\mathbb{C}(x_{t})=\begin{pmatrix}\sin{(t)} \\ -\cos{(t)}\end{pmatrix}
+\end{align}
+$$
+
+Finally, the general solution is:
+
+$$
+\begin{align}
+x(t) = C_{1}\mathbb{R}(x_(t)) + C_{2}\mathbb{C}(x_(t))    \\
+=C_{1}\begin{pmatrix}\cos{(t)} \\ \sin{(t)}\end{pmatrix} + C_{2}\begin{pmatrix}\sin{(t)} \\ -\cos{(t)}\end{pmatrix} 
+\end{align}
+$$
+
+---
 
 Classify the equilibrium point for each system:  
 
@@ -1908,7 +2175,24 @@ y'
 x \\ 
 y
 \end{pmatrix}
-$$  
+$$
+
+First we calculate the eigenvalues
+
+$$
+\begin{align}
+\det\left(A-\lambda I\right)=0    \\
+\Rightarrow \det\left(\begin{pmatrix}-2 & 0 \\ 0 & -3\end{pmatrix}-\lambda\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}\right) \\
+\Rightarrow \det\left(\begin{pmatrix}-2 & 0 \\ 0 & -3\end{pmatrix}-\begin{pmatrix}\lambda & 0 \\ 0 & \lambda\end{pmatrix}\right) \\
+\Rightarrow \det\left(\begin{pmatrix}-2-\lambda & 0 \\ 0 & -3 - \lambda\end{pmatrix}\right) \\
+\Rightarrow (-2-\lambda)(-3-\lambda)=0  \\
+\Rightarrow \lambda_{1}=-2,\quad \lambda_{2}=-3
+\end{align}
+$$
+
+Since they are real and negative, equilibrium points are a stable node.
+
+---
 
 **b)**  
 
@@ -1928,23 +2212,23 @@ y
 \end{pmatrix}
 $$
 
----
-
-## **Nonlinear Systems**
-
-Linearize the system near the equilibrium and classify:  
-
-**a)**  
+First we calculate the eigenvalues
 
 $$
-x' = x(1-y),\quad y' = y(x-1)
-$$  
-
-**b)**  
-
+\begin{align}
+\det\left(A-\lambda I\right)=0    \\
+\Rightarrow \det\left(\begin{pmatrix}1 & 4 \\ -1 & 1\end{pmatrix}-\lambda\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}\right) \\
+\Rightarrow \det\left(\begin{pmatrix}1 & 4 \\ -1 & 1\end{pmatrix}-\begin{pmatrix}\lambda & 0 \\ 0 & \lambda\end{pmatrix}\right) \\
+\Rightarrow \det\left(\begin{pmatrix}1-\lambda & 4 \\ -1 & 1 - \lambda\end{pmatrix}\right) \\
+\Rightarrow 1-2\lambda+\lambda^{2}+4=0  \\
+\Rightarrow \lambda^{2}-2\lambda+5=0  \\
+\Rightarrow \lambda_{1}=\frac{2+\sqrt{4-20}}{2},\quad \lambda_{2}=\frac{2-\sqrt{4-20}}{2}   \\
+\Rightarrow \lambda_{1}=\frac{2+4i}{2},\quad \lambda_{2}=\frac{2-4i}{2}   \\
+\Rightarrow \lambda_{1}=1+2i,\quad \lambda_{2}=1-2i
+\end{align}
 $$
-x' = y - x^2,\quad y' = -x - y
-$$
+
+They are complex. since $\alpha = 1 > 0$, then we can say the equilibrium points behave as an unstable spiral.
 
 ---
 
@@ -1958,13 +2242,226 @@ Find a power series solution about $x=0$:
 
 **a)** $y'' - xy = 0$  
 
+Let $y=\sum_{n\geq 0} a_{n}x^{n}$, then 
+
+$$
+\begin{align}
+y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n} \\
+=\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n}   \\
+=\sum_{n\geq 1}na_{n}x^{n-1}
+\end{align}
+$$
+
+and
+
+$$
+\begin{align}
+y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}na_{n}x^{n-1}  \\
+=\sum_{n\geq 0}\frac{d}{dx}na_{n}x^{n-1}    \\
+=\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}
+\end{align}
+$$
+
+If we substitute we have
+
+$$
+\begin{align}
+y'' - xy=0  \\
+\Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} -x\left(\sum_{n\geq 0} a_{n}x^{n}\right)=0   \\
+\Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} -\sum_{n\geq 0} a_{n}x^{n+1}=0 
+\end{align}
+$$
+
+Let $k=n-2\Rightarrow n=k+2$, then
+
+$$
+\begin{align}
+\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}=\sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k}
+\end{align}
+$$
+
+On the other hand, let $k=n+1\Rightarrow n=k-1$ in the second series
+
+$$
+\begin{align}
+\sum_{n\geq 0} a_{n}x^{n+1}=\sum_{k\geq 1}a_{k-1}x^{k}
+\end{align}
+$$
+
+Then we have
+
+$$
+\begin{align}
+y'' - xy=0  \\
+\Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} - \sum_{k\geq 1}a_{k-1}x^{k}=0   \\
+\Rightarrow (2)(1)a_{2}x^{0}+\sum_{k\geq 1}(k+2)(k+1)a_{k+2}x^{k} - \sum_{k\geq 1}a_{k-1}x^{k}=0   \\
+\Rightarrow 2a_{2}+\sum_{k\geq 1}(k+2)(k+1)a_{k+2}x^{k} - \sum_{k\geq 1}a_{k-1}x^{k}=0   \\
+\Rightarrow 2a_{2}+\sum_{k\geq 1}\left[(k+2)(k+1)a_{k+2}-a_{k-1}\right]x^{k}=0
+\end{align}
+$$
+
+For $k=0$, we have $a_{2}x^{0}=0$, for $k\geq 1$
+
+$$
+\begin{align}
+(k+2)(k+1)a_{k+2}-a_{k-1}=0 \\
+\Rightarrow a_{k+2}=\frac{a_{k-1}}{(k+2)(k+1)}  \\
+\Rightarrow a_{k+3}=\frac{a_{k}}{(k+3)(k+2)},\quad k\geq 3  \\
+\end{align}
+$$
+
+Now we have to build the solution in a series form, we know $a_{0}, a_{1}$ are constant, $a_{2}=0$. The next ones are calculated with recurrence.
+
+For $k=0$, $a_{3}=\frac{a_{0}}{3*2}=\frac{a_{0}}{6}$.
+
+For $k=1$, $a_{4}=\frac{a_{1}}{4*3}=\frac{a_{1}}{12}$.
+
+For $k=2$, $a_{5}=\frac{a_{2}}{5*4}=\frac{a_{2}}{20}=\frac{0}{20}=0$.
+
+For $k=3$, $a_{6}=\frac{a_{3}}{6*5}=\frac{a_{0}}{6*30}=\frac{a_{0}}{180}$.
+
+Then $y(x)=a_{0}\left(1+\frac{x^{3}}{6}+\frac{x^{6}}{180}+\cdots\right) + a_{1}\left(x+\frac{x^{4}}{12}+\cdots\right)$
+
+
 **b)** $y'' + y = 0$
+
+Let $y=\sum_{n\geq 0} a_{n}x^{n}$, then 
+
+$$
+\begin{align}
+y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n} \\
+=\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n}   \\
+=\sum_{n\geq 1}na_{n}x^{n-1}
+\end{align}
+$$
+
+and
+
+$$
+\begin{align}
+y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}na_{n}x^{n-1}  \\
+=\sum_{n\geq 0}\frac{d}{dx}na_{n}x^{n-1}    \\
+=\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}
+\end{align}
+$$
+
+If we substitute we have
+
+$$
+\begin{align}
+y'' + y=0  \\
+\Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} +\left(\sum_{n\geq 0} a_{n}x^{n}\right)=0 
+\end{align}
+$$
+
+Let $k=n-2\Rightarrow n=k+2$, then
+
+$$
+\begin{align}
+\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}=\sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k}
+\end{align}
+$$
+
+On the other hand, let $k=n$ in the second series
+
+$$
+\begin{align}
+\sum_{n\geq 0} a_{n}x^{n}=\sum_{k\geq 0}a_{k}x^{k}
+\end{align}
+$$
+
+Then we have
+
+$$
+\begin{align}
+y'' + y=0  \\
+\Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} + \sum_{k\geq 0}a_{k}x^{k}=0   \\
+\Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} + \sum_{k\geq 0}a_{k}x^{k}=0   \\
+\Rightarrow \sum_{k\geq 0}\left[(k+2)(k+1)a_{k+2}+a_{k}\right]x^{k}
+\end{align}
+$$
+
+Now we have to build the solution in a series form.$a_{0}$ and $a_{1}$ are constants. For $k\geq 0,\quad (k+2)(k+1)a_{k+2}+a_{k}=0\Rightarrow a_{k+2}=-\frac{a_{k}}{(k+2)(k+1)}$
+
+For $k=0$, $a_{2}=-\frac{a_{0}}{2*1}=-\frac{a_{0}}{2}$.
+
+For $k=1$, $a_{3}=-\frac{a_{1}}{3*2}=-\frac{a_{1}}{6}$.
+
+For $k=2$, $a_{4}=-\frac{a_{2}}{4*3}=-\frac{-\frac{a_{0}}{2}}{12}=\frac{a_{0}}{24}$.
+
+For $k=3$, $a_{5}=-\frac{a_{3}}{5*4}=\frac{a_{1}}{6*20}=\frac{a_{1}}{120}$.
+
+For $k=4$, $a_{6}=-\frac{a_{4}}{6*5}=-\frac{\frac{a_{0}}{24}}{30}=-\frac{a_{0}}{720}$.
+
+Then $y(x)=a_{0}\left(1-\frac{x^{2}}{2}+\frac{x^{4}}{24}-\frac{x^{6}}{720}+\cdots\right) + a_{1}\left(x-\frac{x^{3}}{6}+\frac{x^{5}}{120}-\cdots\right)$. Which is $y(x)=a_{0}\cos{(x)}+a_{1}\sin{(x)}$
+
 
 Determine the recurrence relation for the ODE:  
 
 $$
 y'' + x y' + y = 0
 $$
+
+Let $y=\sum_{n\geq 0} a_{n}x^{n}$, then 
+
+$$
+\begin{align}
+y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n} \\
+=\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n}   \\
+=\sum_{n\geq 1}na_{n}x^{n-1}
+\end{align}
+$$
+
+and
+
+$$
+\begin{align}
+y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}na_{n}x^{n-1}  \\
+=\sum_{n\geq 0}\frac{d}{dx}na_{n}x^{n-1}    \\
+=\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}
+\end{align}
+$$
+
+If we substitute we have
+
+$$
+\begin{align}
+y'' + xy' + y=0  \\
+\Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} + x\sum_{n\geq 1}na_{n}x^{n-1} +\sum_{n\geq 0} a_{n}x^{n}=0 \\
+\Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} + \sum_{n\geq 1}na_{n}x^{n} +\sum_{n\geq 0} a_{n}x^{n}=0
+\end{align}
+$$
+
+Let $k=n-2\Rightarrow n=k+2$, then
+
+$$
+\begin{align}
+\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}=\sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k}
+\end{align}
+$$
+
+And finally let $k=n$ in the second and third series
+
+$$
+\begin{align}
+\sum_{n\geq 1}na_{n}x^{n} +\sum_{n\geq 0} a_{n}x^{n} \\
+=\sum_{k\geq 1}ka_{n}x^{n}\sum_{k\geq 0}a_{k}x^{k}
+\end{align}
+$$
+
+Then we have
+
+$$
+\begin{align}
+y'' + xy' + y=0  \\
+\Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} + \sum_{k\geq 1}ka_{n}x^{n}\sum_{k\geq 0}a_{k}x^{k}=0
+\end{align}
+$$
+
+Now we have to build the solution in a series form. For $k=0$, $(2)(1)a_{2} + a_{k}=0\Rightarrow a_{2}=-\frac{a_{0}}{2}$.
+
+For $k\geq 1,\quad (k+2)(k+1)a_{k+2}+(k+1)a_{k}=0\Rightarrow a_{k+2}=-\frac{a_{k}}{(k+2)}$. Which means $a_{0}$ and $a_{1}$ are constant.
+
 
 ---
 
