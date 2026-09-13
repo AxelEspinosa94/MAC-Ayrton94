@@ -1,0 +1,23 @@
+{
+  "Indios Verdes": {"Deportivo 18 de Marzo": 1},
+  "Deportivo 18 de Marzo": {"Indios Verdes": 1, "Potrero": 1},
+  "Potrero": {"Deportivo 18 de Marzo": 1, "La Raza": 1},
+  "La Raza": {"Potrero": 1, "Tlatelolco": 1},
+  "Tlatelolco": {"La Raza": 1, "Guerrero": 1},
+  "Guerrero": {"Tlatelolco": 1, "Hidalgo": 1},
+  "Hidalgo": {"Guerrero": 1, "Juárez": 1},
+  "Juárez": {"Hidalgo": 1, "Balderas": 1},
+  "Balderas": {"Juárez": 1, "Niños Héroes": 1},
+  "Niños Héroes": {"Balderas": 1, "Hospital General": 1},
+  "Hospital General": {"Niños Héroes": 1, "Centro Médico": 1},
+  "Centro Médico": {"Hospital General": 1, "Etiopía": 1},
+  "Etiopía": {"Centro Médico": 1, "Eugenia": 1},
+  "Eugenia": {"Etiopía": 1, "División del Norte": 1},
+  "División del Norte": {"Eugenia": 1, "Zapata": 1},
+  "Zapata": {"División del Norte": 1, "Coyoacán": 1},
+  "Coyoacán": {"Zapata": 1, "Viveros": 1},
+  "Viveros": {"Coyoacán": 1, "Miguel Ángel de Quevedo": 1},
+  "Miguel Ángel de Quevedo": {"Viveros": 1, "Copilco": 1},
+  "Copilco": {"Miguel Ángel de Quevedo": 1, "Universidad": 1},
+  "Universidad": {"Copilco": 1}
+}

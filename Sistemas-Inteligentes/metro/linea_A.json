@@ -1,0 +1,12 @@
+{
+  "Pantitlán": {"Agrícola Oriental": 1},
+  "Agrícola Oriental": {"Pantitlán": 1, "Canal de San Juan": 1},
+  "Canal de San Juan": {"Agrícola Oriental": 1, "Tepalcates": 1},
+  "Tepalcates": {"Canal de San Juan": 1, "Guelatao": 1},
+  "Guelatao": {"Tepalcates": 1, "Peñón Viejo": 1},
+  "Peñón Viejo": {"Guelatao": 1, "Acatitla": 1},
+  "Acatitla": {"Peñón Viejo": 1, "Santa Marta": 1},
+  "Santa Marta": {"Acatitla": 1, "Los Reyes": 1},
+  "Los Reyes": {"Santa Marta": 1, "La Paz": 1},
+  "La Paz": {"Los Reyes": 1}
+}

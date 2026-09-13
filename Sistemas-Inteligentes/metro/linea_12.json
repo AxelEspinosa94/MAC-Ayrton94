@@ -1,0 +1,22 @@
+{
+  "Mixcoac": {"Insurgentes Sur": 1},
+  "Insurgentes Sur": {"Mixcoac": 1, "Hospital 20 de Noviembre": 1},
+  "Hospital 20 de Noviembre": {"Insurgentes Sur": 1, "Zapata": 1},
+  "Zapata": {"Hospital 20 de Noviembre": 1, "Parque de los Venados": 1},
+  "Parque de los Venados": {"Zapata": 1, "Eje Central": 1},
+  "Eje Central": {"Parque de los Venados": 1, "Ermita": 1},
+  "Ermita": {"Eje Central": 1, "Mexicaltzingo": 1},
+  "Mexicaltzingo": {"Ermita": 1, "Atlalilco": 1},
+  "Atlalilco": {"Mexicaltzingo": 1, "Culhuacán": 1},
+  "Culhuacán": {"Atlalilco": 1, "San Andrés Tomatlán": 1},
+  "San Andrés Tomatlán": {"Culhuacán": 1, "Lomas Estrella": 1},
+  "Lomas Estrella": {"San Andrés Tomatlán": 1, "Calle 11": 1},
+  "Calle 11": {"Lomas Estrella": 1, "Periférico Oriente": 1},
+  "Periférico Oriente": {"Calle 11": 1, "Tezonco": 1},
+  "Tezonco": {"Periférico Oriente": 1, "Olivos": 1},
+  "Olivos": {"Tezonco": 1, "Nopalera": 1},
+  "Nopalera": {"Olivos": 1, "Zapotitlán": 1},
+  "Zapotitlán": {"Nopalera": 1, "Tlaltenco": 1},
+  "Tlaltenco": {"Zapotitlán": 1, "Tláhuac": 1},
+  "Tláhuac": {"Tlaltenco": 1}
+}
