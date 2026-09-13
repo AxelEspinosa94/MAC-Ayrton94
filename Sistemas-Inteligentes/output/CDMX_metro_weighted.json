@@ -1,0 +1,694 @@
+{
+    "Observatorio": {
+        "Tacubaya": 2942
+    },
+    "Tacubaya": {
+        "Observatorio": 2942,
+        "Juanacatlán": 1579,
+        "Constituyentes": 1427,
+        "San Pedro de los Pinos": 1631,
+        "Patriotismo": 1284
+    },
+    "Juanacatlán": {
+        "Tacubaya": 1579,
+        "Chapultepec": 1939
+    },
+    "Chapultepec": {
+        "Juanacatlán": 1939,
+        "Sevilla": 1087
+    },
+    "Sevilla": {
+        "Chapultepec": 1087,
+        "Insurgentes": 947
+    },
+    "Insurgentes": {
+        "Sevilla": 947,
+        "Cuauhtémoc": 983
+    },
+    "Cuauhtémoc": {
+        "Insurgentes": 983,
+        "Balderas": 696
+    },
+    "Balderas": {
+        "Cuauhtémoc": 696,
+        "Salto del Agua": 636,
+        "Juárez": 755,
+        "Niños Héroes": 1247
+    },
+    "Salto del Agua": {
+        "Balderas": 636,
+        "Isabel la Católica": 475,
+        "San Juan de Letrán": 366,
+        "Doctores": 662
+    },
+    "Isabel la Católica": {
+        "Salto del Agua": 475,
+        "Pino Suárez": 457
+    },
+    "Pino Suárez": {
+        "Isabel la Católica": 457,
+        "Merced": 764,
+        "Zócalo": 599,
+        "San Antonio Abad": 1157
+    },
+    "Merced": {
+        "Pino Suárez": 764,
+        "Candelaria": 879
+    },
+    "Candelaria": {
+        "Merced": 879,
+        "San Lázaro": 1167,
+        "Morelos": 1505,
+        "Fray Servando": 1066
+    },
+    "San Lázaro": {
+        "Candelaria": 1167,
+        "Moctezuma": 1240,
+        "Morelos": 1368,
+        "Ricardo Flores Magón": 2084
+    },
+    "Moctezuma": {
+        "San Lázaro": 1240,
+        "Balbuena": 853
+    },
+    "Balbuena": {
+        "Moctezuma": 853,
+        "Boulevard Puerto Aéreo": 798
+    },
+    "Boulevard Puerto Aéreo": {
+        "Balbuena": 798,
+        "Gómez Farías": 685
+    },
+    "Gómez Farías": {
+        "Boulevard Puerto Aéreo": 685,
+        "Zaragoza": 1016
+    },
+    "Zaragoza": {
+        "Gómez Farías": 1016,
+        "Pantitlán": 1146
+    },
+    "Pantitlán": {
+        "Zaragoza": 1146,
+        "Hangares": 2660,
+        "Puebla": 1442,
+        "Agrícola Oriental": 1698
+    },
+    "Mixcoac": {
+        "Insurgentes Sur": 953,
+        "San Antonio": 1460,
+        "Barranca del Muerto": 1695
+    },
+    "Insurgentes Sur": {
+        "Mixcoac": 953,
+        "Hospital 20 de Noviembre": 650
+    },
+    "Hospital 20 de Noviembre": {
+        "Insurgentes Sur": 650,
+        "Zapata": 837
+    },
+    "Zapata": {
+        "Hospital 20 de Noviembre": 837,
+        "Parque de los Venados": 731,
+        "División del Norte": 1039,
+        "Coyoacán": 1268
+    },
+    "Parque de los Venados": {
+        "Zapata": 731,
+        "Eje Central": 1476
+    },
+    "Eje Central": {
+        "Parque de los Venados": 1476,
+        "Ermita": 952
+    },
+    "Ermita": {
+        "Eje Central": 952,
+        "Mexicaltzingo": 1870,
+        "Portales": 1055,
+        "General Anaya": 1942
+    },
+    "Mexicaltzingo": {
+        "Ermita": 1870,
+        "Atlalilco": 2471
+    },
+    "Atlalilco": {
+        "Mexicaltzingo": 2471,
+        "Culhuacán": 1776,
+        "Escuadrón 201": 1844,
+        "Iztapalapa": 792
+    },
+    "Culhuacán": {
+        "Atlalilco": 1776,
+        "San Andrés Tomatlán": 1296
+    },
+    "San Andrés Tomatlán": {
+        "Culhuacán": 1296,
+        "Lomas Estrella": 1271
+    },
+    "Lomas Estrella": {
+        "San Andrés Tomatlán": 1271,
+        "Calle 11": 1237
+    },
+    "Calle 11": {
+        "Lomas Estrella": 1237,
+        "Periférico Oriente": 1364
+    },
+    "Periférico Oriente": {
+        "Calle 11": 1364,
+        "Tezonco": 1763
+    },
+    "Tezonco": {
+        "Periférico Oriente": 1763,
+        "Olivos": 810
+    },
+    "Olivos": {
+        "Tezonco": 810,
+        "Nopalera": 1451
+    },
+    "Nopalera": {
+        "Olivos": 1451,
+        "Zapotitlán": 1529
+    },
+    "Zapotitlán": {
+        "Nopalera": 1529,
+        "Tlaltenco": 1702
+    },
+    "Tlaltenco": {
+        "Zapotitlán": 1702,
+        "Tláhuac": 1738
+    },
+    "Tláhuac": {
+        "Tlaltenco": 1738
+    },
+    "Cuatro Caminos": {
+        "Panteones": 2360
+    },
+    "Panteones": {
+        "Cuatro Caminos": 2360,
+        "Tacuba": 1435
+    },
+    "Tacuba": {
+        "Panteones": 1435,
+        "Cuitláhuac": 1077,
+        "Refinería": 2187,
+        "San Joaquín": 1661
+    },
+    "Cuitláhuac": {
+        "Tacuba": 1077,
+        "Popotla": 794
+    },
+    "Popotla": {
+        "Cuitláhuac": 794,
+        "Colegio Militar": 560
+    },
+    "Colegio Militar": {
+        "Popotla": 560,
+        "Normal": 686
+    },
+    "Normal": {
+        "Colegio Militar": 686,
+        "San Cosme": 743
+    },
+    "San Cosme": {
+        "Normal": 743,
+        "Revolución": 750
+    },
+    "Revolución": {
+        "San Cosme": 750,
+        "Hidalgo": 790
+    },
+    "Hidalgo": {
+        "Revolución": 790,
+        "Bellas Artes": 573,
+        "Guerrero": 895,
+        "Juárez": 503
+    },
+    "Bellas Artes": {
+        "Hidalgo": 573,
+        "Allende": 387,
+        "Garibaldi": 690,
+        "San Juan de Letrán": 537
+    },
+    "Allende": {
+        "Bellas Artes": 387,
+        "Zócalo": 676
+    },
+    "Zócalo": {
+        "Allende": 676,
+        "Pino Suárez": 599
+    },
+    "San Antonio Abad": {
+        "Pino Suárez": 1157,
+        "Chabacano": 903
+    },
+    "Chabacano": {
+        "San Antonio Abad": 903,
+        "Viaducto": 1422,
+        "Obrera": 1347,
+        "La Viga": 1350,
+        "Lázaro Cárdenas": 962,
+        "Jamaica": 1696
+    },
+    "Viaducto": {
+        "Chabacano": 1422,
+        "Xola": 660
+    },
+    "Xola": {
+        "Viaducto": 660,
+        "Villa de Cortés": 1065
+    },
+    "Villa de Cortés": {
+        "Xola": 1065,
+        "Nativitas": 15355
+    },
+    "Nativitas": {
+        "Villa de Cortés": 15355,
+        "Portales": 14401
+    },
+    "Portales": {
+        "Nativitas": 14401,
+        "Ermita": 1055
+    },
+    "General Anaya": {
+        "Ermita": 1942,
+        "Tasqueña": 2344
+    },
+    "Tasqueña": {
+        "General Anaya": 2344
+    },
+    "Indios Verdes": {
+        "Deportivo 18 de Marzo": 1320
+    },
+    "Deportivo 18 de Marzo": {
+        "Indios Verdes": 1320,
+        "Potrero": 1081,
+        "Lindavista": 1075,
+        "La Villa-Basílica": 894
+    },
+    "Potrero": {
+        "Deportivo 18 de Marzo": 1081,
+        "La Raza": 2069
+    },
+    "La Raza": {
+        "Potrero": 2069,
+        "Tlatelolco": 2049,
+        "Autobuses del Norte": 1756,
+        "Misterios": 980
+    },
+    "Tlatelolco": {
+        "La Raza": 2049,
+        "Guerrero": 1489
+    },
+    "Guerrero": {
+        "Tlatelolco": 1489,
+        "Hidalgo": 895,
+        "Buenavista": 772,
+        "Garibaldi": 832
+    },
+    "Juárez": {
+        "Hidalgo": 503,
+        "Balderas": 755
+    },
+    "Niños Héroes": {
+        "Balderas": 1247,
+        "Hospital General": 376
+    },
+    "Hospital General": {
+        "Niños Héroes": 376,
+        "Centro Médico": 768
+    },
+    "Centro Médico": {
+        "Hospital General": 768,
+        "Etiopía": 1194,
+        "Chilpancingo": 1304,
+        "Lázaro Cárdenas": 1108
+    },
+    "Etiopía": {
+        "Centro Médico": 1194,
+        "Eugenia": 1029
+    },
+    "Eugenia": {
+        "Etiopía": 1029,
+        "División del Norte": 828
+    },
+    "División del Norte": {
+        "Eugenia": 828,
+        "Zapata": 1039
+    },
+    "Coyoacán": {
+        "Zapata": 1268,
+        "Viveros": 990
+    },
+    "Viveros": {
+        "Coyoacán": 990,
+        "Miguel Ángel de Quevedo": 1107
+    },
+    "Miguel Ángel de Quevedo": {
+        "Viveros": 1107,
+        "Copilco": 1816
+    },
+    "Copilco": {
+        "Miguel Ángel de Quevedo": 1816,
+        "Universidad": 1723
+    },
+    "Universidad": {
+        "Copilco": 1723
+    },
+    "Martín Carrera": {
+        "Talismán": 1859,
+        "La Villa-Basílica": 1365
+    },
+    "Talismán": {
+        "Martín Carrera": 1859,
+        "Bondojito": 1254
+    },
+    "Bondojito": {
+        "Talismán": 1254,
+        "Consulado": 752
+    },
+    "Consulado": {
+        "Bondojito": 752,
+        "Canal del Norte": 778,
+        "Valle Gómez": 570,
+        "Eduardo Molina": 961
+    },
+    "Canal del Norte": {
+        "Consulado": 778,
+        "Morelos": 1038
+    },
+    "Morelos": {
+        "Canal del Norte": 1038,
+        "Candelaria": 1505,
+        "Tepito": 691,
+        "San Lázaro": 1368
+    },
+    "Fray Servando": {
+        "Candelaria": 1066,
+        "Jamaica": 1328
+    },
+    "Jamaica": {
+        "Fray Servando": 1328,
+        "Santa Anita": 711,
+        "Chabacano": 1696,
+        "Mixiuhca": 924
+    },
+    "Santa Anita": {
+        "Jamaica": 711,
+        "La Viga": 840,
+        "Coyuya": 991
+    },
+    "Politécnico": {
+        "Instituto del Petróleo": 1249
+    },
+    "Instituto del Petróleo": {
+        "Politécnico": 1249,
+        "Autobuses del Norte": 1974,
+        "Vallejo": 894,
+        "Lindavista": 1949
+    },
+    "Autobuses del Norte": {
+        "Instituto del Petróleo": 1974,
+        "La Raza": 1756
+    },
+    "Misterios": {
+        "La Raza": 980,
+        "Valle Gómez": 1258
+    },
+    "Valle Gómez": {
+        "Misterios": 1258,
+        "Consulado": 570
+    },
+    "Eduardo Molina": {
+        "Consulado": 961,
+        "Aragón": 1170
+    },
+    "Aragón": {
+        "Eduardo Molina": 1170,
+        "Oceanía": 2032
+    },
+    "Oceanía": {
+        "Aragón": 2032,
+        "Terminal Aérea": 1268,
+        "Romero Rubio": 1064,
+        "Deportivo Oceanía": 1438
+    },
+    "Terminal Aérea": {
+        "Oceanía": 1268,
+        "Hangares": 2810
+    },
+    "Hangares": {
+        "Terminal Aérea": 2810,
+        "Pantitlán": 2660
+    },
+    "El Rosario": {
+        "Tezozómoc": 1463,
+        "Aquiles Serdán": 1932
+    },
+    "Tezozómoc": {
+        "El Rosario": 1463,
+        "Azcapotzalco": 1242
+    },
+    "Azcapotzalco": {
+        "Tezozómoc": 1242,
+        "Ferrería": 1252
+    },
+    "Ferrería": {
+        "Azcapotzalco": 1252,
+        "Norte 45": 5420
+    },
+    "Norte 45": {
+        "Ferrería": 5420,
+        "Vallejo": 849
+    },
+    "Vallejo": {
+        "Norte 45": 849,
+        "Instituto del Petróleo": 894
+    },
+    "Lindavista": {
+        "Instituto del Petróleo": 1949,
+        "Deportivo 18 de Marzo": 1075
+    },
+    "La Villa-Basílica": {
+        "Deportivo 18 de Marzo": 894,
+        "Martín Carrera": 1365
+    },
+    "Aquiles Serdán": {
+        "El Rosario": 1932,
+        "Camarones": 1548
+    },
+    "Camarones": {
+        "Aquiles Serdán": 1548,
+        "Refinería": 1096
+    },
+    "Refinería": {
+        "Camarones": 1096,
+        "Tacuba": 2187
+    },
+    "San Joaquín": {
+        "Tacuba": 1661,
+        "Polanco": 1432
+    },
+    "Polanco": {
+        "San Joaquín": 1432,
+        "Auditorio": 1084
+    },
+    "Auditorio": {
+        "Polanco": 1084,
+        "Constituyentes": 2211
+    },
+    "Constituyentes": {
+        "Auditorio": 2211,
+        "Tacubaya": 1427
+    },
+    "San Pedro de los Pinos": {
+        "Tacubaya": 1631,
+        "San Antonio": 829
+    },
+    "San Antonio": {
+        "San Pedro de los Pinos": 829,
+        "Mixcoac": 1460
+    },
+    "Barranca del Muerto": {
+        "Mixcoac": 1695
+    },
+    "Garibaldi": {
+        "Bellas Artes": 690,
+        "Guerrero": 832,
+        "Lagunilla": 1227
+    },
+    "San Juan de Letrán": {
+        "Bellas Artes": 537,
+        "Salto del Agua": 366
+    },
+    "Doctores": {
+        "Salto del Agua": 662,
+        "Obrera": 929
+    },
+    "Obrera": {
+        "Doctores": 929,
+        "Chabacano": 1347
+    },
+    "La Viga": {
+        "Chabacano": 1350,
+        "Santa Anita": 840
+    },
+    "Coyuya": {
+        "Santa Anita": 991,
+        "Iztacalco": 1295
+    },
+    "Iztacalco": {
+        "Coyuya": 1295,
+        "Apatlaco": 1064
+    },
+    "Apatlaco": {
+        "Iztacalco": 1064,
+        "Aculco": 610
+    },
+    "Aculco": {
+        "Apatlaco": 610,
+        "Escuadrón 201": 1986
+    },
+    "Escuadrón 201": {
+        "Aculco": 1986,
+        "Atlalilco": 1844
+    },
+    "Iztapalapa": {
+        "Atlalilco": 792,
+        "Cerro de la Estrella": 895
+    },
+    "Cerro de la Estrella": {
+        "Iztapalapa": 895,
+        "UAM I": 1189
+    },
+    "UAM I": {
+        "Cerro de la Estrella": 1189,
+        "Constitución de 1917": 1220
+    },
+    "Constitución de 1917": {
+        "UAM I": 1220
+    },
+    "Patriotismo": {
+        "Tacubaya": 1284,
+        "Chilpancingo": 1091
+    },
+    "Chilpancingo": {
+        "Patriotismo": 1091,
+        "Centro Médico": 1304
+    },
+    "Lázaro Cárdenas": {
+        "Centro Médico": 1108,
+        "Chabacano": 962
+    },
+    "Mixiuhca": {
+        "Jamaica": 924,
+        "Velódromo": 1018
+    },
+    "Velódromo": {
+        "Mixiuhca": 1018,
+        "Ciudad Deportiva": 1732
+    },
+    "Ciudad Deportiva": {
+        "Velódromo": 1732,
+        "Puebla": 945
+    },
+    "Puebla": {
+        "Ciudad Deportiva": 945,
+        "Pantitlán": 1442
+    },
+    "Agrícola Oriental": {
+        "Pantitlán": 1698,
+        "Canal de San Juan": 1237
+    },
+    "Canal de San Juan": {
+        "Agrícola Oriental": 1237,
+        "Tepalcates": 1725
+    },
+    "Tepalcates": {
+        "Canal de San Juan": 1725,
+        "Guelatao": 1990
+    },
+    "Guelatao": {
+        "Tepalcates": 1990,
+        "Peñón Viejo": 2931
+    },
+    "Peñón Viejo": {
+        "Guelatao": 2931,
+        "Acatitla": 2562
+    },
+    "Acatitla": {
+        "Peñón Viejo": 2562,
+        "Santa Marta": 1279
+    },
+    "Santa Marta": {
+        "Acatitla": 1279,
+        "Los Reyes": 1852
+    },
+    "Los Reyes": {
+        "Santa Marta": 1852,
+        "La Paz": 2114
+    },
+    "La Paz": {
+        "Los Reyes": 2114
+    },
+    "Buenavista": {
+        "Guerrero": 772
+    },
+    "Lagunilla": {
+        "Garibaldi": 1227,
+        "Tepito": 740
+    },
+    "Tepito": {
+        "Lagunilla": 740,
+        "Morelos": 691
+    },
+    "Ricardo Flores Magón": {
+        "San Lázaro": 2084,
+        "Romero Rubio": 1020
+    },
+    "Romero Rubio": {
+        "Ricardo Flores Magón": 1020,
+        "Oceanía": 1064
+    },
+    "Deportivo Oceanía": {
+        "Oceanía": 1438,
+        "Bosque de Aragón": 4411
+    },
+    "Bosque de Aragón": {
+        "Deportivo Oceanía": 4411,
+        "Villa de Aragón": 6465
+    },
+    "Villa de Aragón": {
+        "Bosque de Aragón": 6465,
+        "Nezahualcóyotl": 3159
+    },
+    "Nezahualcóyotl": {
+        "Villa de Aragón": 3159,
+        "Impulsora": 3617
+    },
+    "Impulsora": {
+        "Nezahualcóyotl": 3617,
+        "Río de los Remedios": 694
+    },
+    "Río de los Remedios": {
+        "Impulsora": 694,
+        "Múzquiz": 1736
+    },
+    "Múzquiz": {
+        "Río de los Remedios": 1736,
+        "Ecatepec": 1720
+    },
+    "Ecatepec": {
+        "Múzquiz": 1720,
+        "Olímpica": 814
+    },
+    "Olímpica": {
+        "Ecatepec": 814,
+        "Plaza Aragón": 1017
+    },
+    "Plaza Aragón": {
+        "Olímpica": 1017,
+        "Ciudad Azteca": 1103
+    },
+    "Ciudad Azteca": {
+        "Plaza Aragón": 1103
+    }
+}
