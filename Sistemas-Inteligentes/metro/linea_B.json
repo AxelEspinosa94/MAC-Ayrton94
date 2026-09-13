@@ -1,0 +1,23 @@
+{
+  "Buenavista": {"Guerrero": 1},
+  "Guerrero": {"Buenavista": 1, "Garibaldi": 1},
+  "Garibaldi": {"Guerrero": 1, "Lagunilla": 1},
+  "Lagunilla": {"Garibaldi": 1, "Tepito": 1},
+  "Tepito": {"Lagunilla": 1, "Morelos": 1},
+  "Morelos": {"Tepito": 1, "San Lázaro": 1},
+  "San Lázaro": {"Morelos": 1, "Ricardo Flores Magón": 1},
+  "Ricardo Flores Magón": {"San Lázaro": 1, "Romero Rubio": 1},
+  "Romero Rubio": {"Ricardo Flores Magón": 1, "Oceanía": 1},
+  "Oceanía": {"Romero Rubio": 1, "Deportivo Oceanía": 1},
+  "Deportivo Oceanía": {"Oceanía": 1, "Bosque de Aragón": 1},
+  "Bosque de Aragón": {"Deportivo Oceanía": 1, "Villa de Aragón": 1},
+  "Villa de Aragón": {"Bosque de Aragón": 1, "Nezahualcóyotl": 1},
+  "Nezahualcóyotl": {"Villa de Aragón": 1, "Impulsora": 1},
+  "Impulsora": {"Nezahualcóyotl": 1, "Río de los Remedios": 1},
+  "Río de los Remedios": {"Impulsora": 1, "Múzquiz": 1},
+  "Múzquiz": {"Río de los Remedios": 1, "Ecatepec": 1},
+  "Ecatepec": {"Múzquiz": 1, "Olímpica": 1},
+  "Olímpica": {"Ecatepec": 1, "Plaza Aragón": 1},
+  "Plaza Aragón": {"Olímpica": 1, "Ciudad Azteca": 1},
+  "Ciudad Azteca": {"Plaza Aragón": 1}
+}
