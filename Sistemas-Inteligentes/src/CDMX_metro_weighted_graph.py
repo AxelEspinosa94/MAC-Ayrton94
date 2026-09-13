@@ -1,5 +1,3 @@
-import json
-import os
 import googlemaps
 import time
 import math
