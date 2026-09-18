@@ -1,13 +1,16 @@
 {
-  "El Rosario": {"Tezozómoc": 1},
-  "Tezozómoc": {"El Rosario": 1, "Azcapotzalco": 1},
-  "Azcapotzalco": {"Tezozómoc": 1, "Ferrería": 1},
-  "Ferrería": {"Azcapotzalco": 1, "Norte 45": 1},
-  "Norte 45": {"Ferrería": 1, "Vallejo": 1},
-  "Vallejo": {"Norte 45": 1, "Instituto del Petróleo": 1},
-  "Instituto del Petróleo": {"Vallejo": 1, "Lindavista": 1},
-  "Lindavista": {"Instituto del Petróleo": 1, "Deportivo 18 de Marzo": 1},
-  "Deportivo 18 de Marzo": {"Lindavista": 1, "La Villa-Basílica": 1},
-  "La Villa-Basílica": {"Deportivo 18 de Marzo": 1, "Martín Carrera": 1},
-  "Martín Carrera": {"La Villa-Basílica": 1}
+  "color": "#E82428",
+  "network": {
+    "El Rosario": {"Tezozómoc": 1},
+    "Tezozómoc": {"El Rosario": 1, "Azcapotzalco": 1},
+    "Azcapotzalco": {"Tezozómoc": 1, "Ferrería": 1},
+    "Ferrería": {"Azcapotzalco": 1, "Norte 45": 1},
+    "Norte 45": {"Ferrería": 1, "Vallejo": 1},
+    "Vallejo": {"Norte 45": 1, "Instituto del Petróleo": 1},
+    "Instituto del Petróleo": {"Vallejo": 1, "Lindavista": 1},
+    "Lindavista": {"Instituto del Petróleo": 1, "Deportivo 18 de Marzo": 1},
+    "Deportivo 18 de Marzo": {"Lindavista": 1, "La Villa-Basílica": 1},
+    "La Villa-Basílica": {"Deportivo 18 de Marzo": 1, "Martín Carrera": 1},
+    "Martín Carrera": {"La Villa-Basílica": 1}
+  }
 }

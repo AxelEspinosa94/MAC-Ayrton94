@@ -1,12 +1,15 @@
 {
-  "Martín Carrera": {"Talismán": 1},
-  "Talismán": {"Martín Carrera": 1, "Bondojito": 1},
-  "Bondojito": {"Talismán": 1, "Consulado": 1},
-  "Consulado": {"Bondojito": 1, "Canal del Norte": 1},
-  "Canal del Norte": {"Consulado": 1, "Morelos": 1},
-  "Morelos": {"Canal del Norte": 1, "Candelaria": 1},
-  "Candelaria": {"Morelos": 1, "Fray Servando": 1},
-  "Fray Servando": {"Candelaria": 1, "Jamaica": 1},
-  "Jamaica": {"Fray Servando": 1, "Santa Anita": 1},
-  "Santa Anita": {"Jamaica": 1}
+  "color": "#7BC7BA",
+  "network": {
+    "Martín Carrera": {"Talismán": 1},
+    "Talismán": {"Martín Carrera": 1, "Bondojito": 1},
+    "Bondojito": {"Talismán": 1, "Consulado": 1},
+    "Consulado": {"Bondojito": 1, "Canal del Norte": 1},
+    "Canal del Norte": {"Consulado": 1, "Morelos": 1},
+    "Morelos": {"Canal del Norte": 1, "Candelaria": 1},
+    "Candelaria": {"Morelos": 1, "Fray Servando": 1},
+    "Fray Servando": {"Candelaria": 1, "Jamaica": 1},
+    "Jamaica": {"Fray Servando": 1, "Santa Anita": 1},
+    "Santa Anita": {"Jamaica": 1}
+  }
 }
