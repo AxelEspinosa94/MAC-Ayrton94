@@ -225,15 +225,15 @@ $$
 y = e^{\frac{x^2}{2}} + C
 $$
 
-$C$ constant. Taking the initial value we have
+$C$ constant, so we define $V(t)=50+(3-2)t$.. Taking the initial value we have
 
 $$
-\begin{align}
+\begin{align*}
 y(0) = e^{\frac{0^2}{2}} + C    \\
 = e^{0} + C \\
 = 1 + C = 3 
 \Rightarrow C = 2
-\end{align}
+\end{align*}
 $$
 
 Therefore $y = e^{\frac{x^2}{2}} + 2$
@@ -264,7 +264,7 @@ $$
 y = \tan(\sin(x)) + C
 $$
 
-$C$ constant. Taking the initial value we have
+$C$ constant, so we define $V(t)=50+(3-2)t$.. Taking the initial value we have
 
 $$
 y(0) = \tan(\sin(0)) + C = \tan(0) + C = 0 + C = 0 \Rightarrow C = 0
@@ -278,7 +278,7 @@ Determine all equilibrium solutions and classify their stability:
 
 **a)** $y' = y(3-y)$  
 
-An equilibrium solution is a constant solution $y(t)=C$ such that $y'=0$.
+An equilibrium solution is a constant, so we define $V(t)=50+(3-2)t$. solution $y(t)=C$ such that $y'=0$.
 
 So we equalize the right side to $0$:
 
@@ -321,10 +321,10 @@ Determine whether each equation is exact. If exact, solve it:
 **a)** $(3x^2 + 2y)dx + (2x + 4y^3)dy = 0$
 
 $$
-\begin{align}
+\begin{align*}
 M(x,y) = 3x^2 + 2y \Rightarrow \frac{\partial M}{\partial y} = 2    \\
 N(x,y) = 2x + 4y^3 \Rightarrow \frac{\partial N}{\partial x} = 2
-\end{align}
+\end{align*}
 $$
 
 Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Then we solve the DE, first we inegrate $M$
@@ -336,11 +336,11 @@ $$
 Now we take the derivative of this result on $y$ and equalize to $N$ having
 
 $$
-\begin{align}
+\begin{align*}
 \frac{d}{dy}(x^3+2yx+h(y))=N(x,y)=2x+4y^3 \\
 \Rightarrow 2x + h'(y)=2x+4y^3  \\
 \Rightarrow h'(y) = 2x+4y^3-2x=4y^3
-\end{align}
+\end{align*}
 $$
 
 If we integrate $h'(y)$ on y we have that $h(y)=y^4$. Therefore the solution to the DE is $x^3+3xy+y^4=C$
@@ -348,10 +348,10 @@ If we integrate $h'(y)$ on y we have that $h(y)=y^4$. Therefore the solution to 
 **b)** $(y\cos x - 2x)dx + (\sin(x) + x^2)dy = 0$
 
 $$
-\begin{align}
+\begin{align*}
 M(x,y) = y\cos x -2x \Rightarrow \frac{\partial M}{\partial y} = \cos x \\
 N(x,y) = \sin(x) + x^2 \Rightarrow \frac{\partial N}{\partial x} = \cos x
-\end{align}
+\end{align*}
 $$
 
 Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Then we solve the DE, first we inegrate $M$
@@ -375,10 +375,10 @@ Find an integrating factor (if it exists) depending only on $x$ or only on $y$:
 **a)** $(2xy - y)dx + (x^2 - x)dy = 0$
 
 $$
-\begin{align}
+\begin{align*}
 M(x,y) = 2xy - y \Rightarrow \frac{\partial M}{\partial y} = x - 1  \\
 N(x,y) = x^2 - x \Rightarrow \frac{\partial N}{\partial x} = x - 1
-\end{align}
+\end{align*}
 $$
 
 Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is exact. Therefore the integrating factor is $\mu = 1$
@@ -386,10 +386,10 @@ Since $\frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}$, the DE is e
 **b)** $(y + x e^{xy})dx + (x + y e^{xy})dy = 0$
 
 $$
-\begin{align}
+\begin{align*}
 M(x,y) = y + x e^{xy} \Rightarrow \frac{\partial M}{\partial y} = 1 + x^2 e^{xy}    \\
 N(x,y) = x + y e^{xy} \Rightarrow \frac{\partial N}{\partial x} = 1 + y^2 e^{xy}
-\end{align}
+\end{align*}
 $$
 
 Since $\frac{\partial M}{\partial y}\neq\frac{\partial N}{\partial x}$, the DE is not exact. 
@@ -418,11 +418,11 @@ Solve using the integrating factor method:
 Since the equation matches the general form $P(x) = 3$ and $Q(x) = e^{-x}$, then the integrating factor has the form:
 
 $$
-\begin{align}
+\begin{align*}
 \mu(x) = e^{\int P(x)dx} \\
 \Rightarrow \mu(x) = e^{\int 3dx} \\
 \Rightarrow \mu(x) = e^{3x}
-\end{align}
+\end{align*}
 $$
 
 Then we multiply $\mu(x)$ to the entire equation
@@ -434,21 +434,21 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)y)' = \mu(x)e^{-x} \\
 \Rightarrow \left(e^{3x}y\right)' = e^{3x}e^{-x} \\
 \Rightarrow \left(e^{3x}y\right)' = e^{2x}
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(e^{3x}y\right)' =  \int e^{2x} \\
 \Rightarrow e^{3x}y = \frac{1}{2}e^{2x} + C \\
 \Rightarrow y = \frac{e^{-x}}{2} + Ce^{-x}
-\end{align}
+\end{align*}
 $$
 
 **b)** $y' - \frac{2}{x}y = x^3$
@@ -456,11 +456,11 @@ $$
 Since the equation matches the general form $P(x) = \frac{2}{x}$ and $Q(x) = x^3$, then the integrating factor has the form:
 
 $$
-\begin{align}
+\begin{align*}
 \mu(x) = e^{\int P(x)dx} \\
 \Rightarrow \mu(x) = e^{\int \frac{2}{x}dx} \\
 \Rightarrow \mu(x) = e^{2ln(x)} = x^2
-\end{align}
+\end{align*}
 $$
 
 Then we multiply $\mu(x)$ to the entire equation
@@ -472,21 +472,21 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)y)' = \mu(x)x^3 \\
 \Rightarrow \left(x^2 y\right)' = x^2 x^3 \\
 \Rightarrow \left(e^{3x}y\right)' = x^5
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(x^2 y\right)' =  \int x^5 \\
 \Rightarrow x^2 y = \frac{1}{6}x^6 + C \\
 \Rightarrow y = \frac{x^4}{6} + \frac{C}{x^2}
-\end{align}
+\end{align*}
 $$
 
 **c)** $y' + y\tan(x) = \sin(x)$
@@ -494,11 +494,11 @@ $$
 Since the equation matches the general form $P(x) = \tan(x)$ and $Q(x) = \sin(x)$, then the integrating factor has the form:
 
 $$
-\begin{align}
+\begin{align*}
 \mu(x) = e^{\int P(x)dx} \\
 \Rightarrow \mu(x) = e^{\int \tan(x) dx} \\
 \Rightarrow \mu(x) = e^{-\ln(\cos x)} = \sec(x)
-\end{align}
+\end{align*}
 $$
 
 Then we multiply $\mu(x)$ to the entire equation
@@ -510,21 +510,21 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)y)' = \mu(x)\sin(x) \\
 \Rightarrow \left(\sec(x) y\right)' = \sec(x) \sin(x) \\
 \Rightarrow \left(\sec(x) y\right)' = \tan(x)
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(\sec(x) y\right)' = \int \tan(x) \\
 \Rightarrow \sec(x) y = -\ln(\cos x) + C \\
 \Rightarrow y = -\frac{\ln(\cos x)}{\sec(x)} + C\cos x
-\end{align}
+\end{align*}
 $$
 
 ---
@@ -538,11 +538,11 @@ Solve the IVPs:
 Since the equation matches the general form $P(x) = 4$ and $Q(x) = 8$, then the integrating factor has the form:
 
 $$
-\begin{align}
+\begin{align*}
 \mu(x) = e^{\int P(x)dx} \\
 \Rightarrow \mu(x) = e^{\int 4 dx} \\
 \Rightarrow \mu(x) = e^{4x}
-\end{align}
+\end{align*}
 $$
 
 Then we multiply $\mu(x)$ to the entire equation
@@ -554,21 +554,21 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)y)' = 8\mu(x) \\
 \Rightarrow \left(e^{4x} y\right)' = 8e^{4x} \\
 \Rightarrow \left(e^{4x} y\right)' = 8e^{4x}
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(e^{4x} y\right)' = \int 8e^{4x} \\
 \Rightarrow e^{4x} y = 2e^{4x} + C \\
 \Rightarrow y = 2 + Ce^{4x}
-\end{align}
+\end{align*}
 $$
 
 Since we have $y(0)=1$, then $y(0) = 2 + Ce^{0} = 1 \Rightarrow 2 + C = 1 \Rightarrow C=-1$. Therefore the solution of the IVP is $y = 2 -e^{4x}$
@@ -578,11 +578,11 @@ Since we have $y(0)=1$, then $y(0) = 2 + Ce^{0} = 1 \Rightarrow 2 + C = 1 \Right
 Since the equation matches the general form $P(x) = \frac{1}{x}$ and $Q(x) = x$, then the integrating factor has the form:
 
 $$
-\begin{align}
+\begin{align*}
 \mu(x) = e^{\int P(x)dx} \\
 \Rightarrow \mu(x) = e^{\int \frac{1}{x} dx} \\
 \Rightarrow \mu(x) = e^{\ln x} = x
-\end{align}
+\end{align*}
 $$
 
 Then we multiply $\mu(x)$ to the entire equation
@@ -594,21 +594,21 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)y)' = x\mu(x) \\
 \Rightarrow \left(x y\right)' = x^2 \\
 \Rightarrow \left(x y\right)' = x^2
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(x y\right)' = \int x^{2} \\
 \Rightarrow x y = \frac{x^3}{3} + C \\
 \Rightarrow y = \frac{x^2}{3} + \frac{C}{x}
-\end{align}
+\end{align*}
 $$
 
 Since we have $y(1)=2$, then $y(1) = \frac{1^2}{3} + \frac{C}{1} = 2 \Rightarrow \frac{1}{3} + C = 2 \Rightarrow C=\frac{5}{3}$. Therefore the solution of the IVP is $y = \frac{x^2}{3} + \frac{5}{3x}$
@@ -646,11 +646,11 @@ $$
 From Calculus we know that $\int\frac{dv}{v^2 +1}= \arctan(v)$ and let $u=v^2 +1$, so $du=2vdv\Rightarrow vdv=\frac{du}{2}$, then
 
 $$
-\begin{align}
+\begin{align*}
 \int \frac{1-v}{v^2 +1}dv = \arctan(v)- \frac{1}{2}\\
 \int\frac{du}{u}=\arctan(v)-\frac{1}{2}\ln(u) \\
 =\arctan(v)-\frac{1}{2}\ln(v^2 +1)
-\end{align}
+\end{align*}
 $$
 
 So in the end we have the following equation
@@ -674,13 +674,13 @@ $$
 Therefore
 
 $$
-\begin{align}
+\begin{align*}
 \arctan(\frac{y}{x})-\frac{1}{2}\left(\ln(x^2 + y^2)-\ln(x^2)\right) \\
 = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)-\frac{1}{2}\ln(x^2) \\
 = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\frac{1}{2}2\ln(x) \\
 = \arctan(\frac{y}{x})-\frac{1}{2}\ln(x^2 + y^2)+\ln(x) \\
 =\ln(x) + C
-\end{align}
+\end{align*}
 $$
 
 Finally having
@@ -696,11 +696,11 @@ Which is a valid form for an implicit solution
 Let's substitute $y = vx, \quad y' = v + xv'$
 
 $$
-\begin{align}
+\begin{align*}
 v + xv' = \frac{vx}{x} + \frac{x}{vx} \\
 \Rightarrow xv' = v+\frac{1}{v}-v=\frac{1}{v}   \\
 \Rightarrow v'=\frac{1}{vx}
-\end{align}
+\end{align*}
 $$
 
 We then make $v' = \frac{dv}{dx}$ and
@@ -772,29 +772,29 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)v)' = 2\mu(x) \\
 \Rightarrow \left(e^{2x}v\right)' = 2e^{2x} 
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(e^{2x}v\right)' = \int 2e^{2x} \\
 \Rightarrow e^{2x}v = e^{2x} + C \\
 \Rightarrow v = 1 + Ce^{-2x}
-\end{align}
+\end{align*}
 $$
 
 Then we substitute the value of $v=y^{-2}$ having
 
 $$
-\begin{align}
+\begin{align*}
 y^{-2} = 1 +Ce^{-2x}    \\
 \Rightarrow y = \left(1 +Ce^{-2x}\right)^{-1/2}
-\end{align}
+\end{align*}
 $$
 
 **b)** $y' - 2y = 3y^{-1}$
@@ -826,29 +826,29 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)v)' = 3\mu(x) \\
 \Rightarrow \left(e^{-2x}v\right)' = 2e^{-2x}
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(e^{-2x}v\right)' = \int 3e^{-2x} \\
 \Rightarrow e^{-2x}v = \frac{3}{2}e^{-2x} + C \\
 \Rightarrow v = \frac{3}{2} + Ce^{2x}
-\end{align}
+\end{align*}
 $$
 
 Then we substitute the value of $v=y^{2}$ having
 
 $$
-\begin{align}
+\begin{align*}
 y^{2} = \frac{3}{2} +Ce^{2x}    \\
 \Rightarrow y = \left(1 +Ce^{-2x}\right)^{1/2}
-\end{align}
+\end{align*}
 $$
 
 ---
@@ -866,11 +866,11 @@ $$
 The Riccati form can be identified as $a(x)=1, b(x)=-x$ and $c(x)=x^2$, and we have the particular solution $y_p = x$, Then we apply the substitution $y = y_p + \frac{1}{v}$, where $y'=y_{p}'-\frac{v'}{v^2}= 1- \frac{v'}{v^2}$. Substituting this result in the original equation we have:
 
 $$
-\begin{align}
+\begin{align*}
 v' + (2a(x)y_{p}(x)+b(x))v =-a(x)   \\
 \Rightarrow v' +(2(1)x-x)v=-1   \\
 \Rightarrow v' +xv =-1
-\end{align}
+\end{align*}
 $$
 
 Which can be calculated by the integrating factor using $P(x)=x$ and $Q(x)=-1$. Now we calculate the integrating factor:
@@ -888,29 +888,29 @@ $$
 We recognize the derivative as:
 
 $$
-\begin{align}
+\begin{align*}
 (\mu(x)v)' = -\mu(x) \\
 \Rightarrow \left(e^{\frac{x^2}{2}}v\right)' = -e^{\frac{x^2}{2}}
-\end{align}
+\end{align*}
 $$
 
 Then we integrate on x, having
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(e^{\frac{x^2}{2}}v\right)' = \int -e^{\frac{x^2}{2}}    \\
 \Rightarrow e^{\frac{x^2}{2}}v = \int -e^{\frac{x^2}{2}} + C \\
 \Rightarrow v = E(x) + Ce^{\frac{x^2}{2}}
-\end{align}
+\end{align*}
 $$
 
 where $E(x)=\int -e^{\frac{x^2}{2}}$. Then we substitute the value of $v=\frac{1}{y-y_p}$ having
 
 $$
-\begin{align}
+\begin{align*}
 y-y_p = \frac{1}{E(x) + Ce^{\frac{x^2}{2}}} \\
 \Rightarrow y = \frac{1}{E(x) + Ce^{\frac{x^2}{2}}} + y_p
-\end{align}
+\end{align*}
 $$
 
 ---
@@ -963,10 +963,10 @@ $$
 We take the characteristic equation as
 
 $$
-\begin{align}
+\begin{align*}
 r^2 + 4r =0 \\
 \Rightarrow r(r+4) = 0
-\end{align}
+\end{align*}
 $$
 
 Then we have the roots $r=0$ and $r=-4$
@@ -980,10 +980,10 @@ $$
 We take the characteristic equation as
 
 $$
-\begin{align}
+\begin{align*}
 r^3 -3r^2 + 3r -1 = 0 \\
 \Rightarrow (r-1)^3 = 0
-\end{align}
+\end{align*}
 $$
 
 Then we have the roots $r=1$
@@ -1000,10 +1000,10 @@ Solve the IVPs:
 We take the characteristic equation as
 
 $$
-\begin{align}
+\begin{align*}
 r^2 + r = 0 \\
 \Rightarrow r(r+1) = 0
-\end{align}
+\end{align*}
 $$
 
 Then we have the roots $r=-1$ and $r=0$
@@ -1021,12 +1021,12 @@ $$
 If we calculate the derivative of the solution we have 
 
 $$
-\begin{align}
+\begin{align*}
 y'(x) = -C_1 e^{-x} \\
 \Rightarrow y'(0) = -C_1 e^{-0} = 1 \\
 \Rightarrow -C_1 = 1    \\
 \Rightarrow C_1 = -1
-\end{align}
+\end{align*}
 $$
 
 Substituting the valñue of $C_1$ we have $C_2 = 3$.
@@ -1041,10 +1041,10 @@ $$
 We take the characteristic equation as
 
 $$
-\begin{align}
+\begin{align*}
 r^2 - 4r + 4 = 0 \\
 \Rightarrow (r-2)^2 = 0
-\end{align}
+\end{align*}
 $$
 
 Then we have the roots $r=2$
@@ -1068,11 +1068,11 @@ $$
 If we calculate the derivative of the solution we have 
 
 $$
-\begin{align}
+\begin{align*}
 y'(x) = C_2\left(e^{2x} + 2xe^{2x}\right) \\
 \Rightarrow y'(0) = C_2\left(e^{2(0)} + 2(0)e^{2(0)}\right) = 3    \\
 \Rightarrow C_2 = 3
-\end{align}
+\end{align*}
 $$
 
 Finally we have $C_2 = 3$.
@@ -1119,29 +1119,29 @@ $$
 Then we derivate $y_p$
 
 $$
-\begin{align}
+\begin{align*}
 y_{p}' = A\cos(x) + B\sin(x)+ x(B\cos(x)-A\sin(x))  \\
 y_{p}'' = B\cos(x) - A\sin(x) +B\cos(x) - A\sin(x) - x(A\cos(x) + B\sin(x)) = 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x))
-\end{align}
+\end{align*}
 $$
 
 Substituting in the original equation we have
 
 $$
-\begin{align}
+\begin{align*}
 y''+ y=\sin(x)  \\
 \Rightarrow 2B\cos(x)-2A\sin(x)-x(A\cos(x)+B\sin(x)) + x(A\cos(x)+B\sin(x))=\sin(x) \\
 \Rightarrow 2B\cos(x)-2A\sin(x)=1*\sin(x) +0*\cos(x)    \\
-\end{align}
+\end{align*}
 $$
 
 Where we have the following equations system
 
 $$
-\begin{align}
+\begin{align*}
 -2A = 1 \Rightarrow A=-\frac{1}{2}  \\
 2B = 0 \Rightarrow B = 0
-\end{align}
+\end{align*}
 $$
 
 Therefore, the final particular solution is
@@ -1185,20 +1185,20 @@ $$
 Then we derivate $y_p$
 
 $$
-\begin{align}
+\begin{align*}
 y_{p}' = e^{2x} + 2x e^{2x} \\
 y_{p}'' = 2e^{2x} + 2\left[e^{2x} + 2x e^{2x}\right] = 4e^{2x}+ 4xe^{2x}
-\end{align}
+\end{align*}
 $$
 
 Substituting in the original equation we have
 
 $$
-\begin{align}
+\begin{align*}
 y'' - 3y' + 2y = e^{2x} \\
 \Rightarrow 4e^{2x} + 4x e^{2x} - 3e^{2x} - 6x e^{2x} + 2x e^{2x} = e^{2x}  \\
 \Rightarrow e^{2x}=e^{2x}   \\
-\end{align}
+\end{align*}
 $$
 
 Meaning the $y_p$ solution is right
@@ -1238,29 +1238,29 @@ $$
 We take out the derivatives
 
 $$
-\begin{align}
+\begin{align*}
 y_{p}' = 2ax +b \\
 y_{p}'' = 2a
-\end{align}
+\end{align*}
 $$
 
 We substitute it in the equation
 
 $$
-\begin{align}
+\begin{align*}
 2a +4(ax^{2}+bx+c)=3x^2 \\
 \Rightarrow 2a +4ax^2 +4bx +4c = 3x^2
-\end{align}
+\end{align*}
 $$
 
 so we have the following system
 
 $$
-\begin{align}
+\begin{align*}
 4a = 3 \Rightarrow a=\frac{3}{4}    \\
 4b=0 \Rightarrow b=0    \\
 2a + 4c = 0 \Rightarrow \frac{3}{2}+4c=0 \Rightarrow c=-\frac{3}{8}
-\end{align}
+\end{align*}
 $$
 
 Therefore, the final particular solution is
@@ -1396,20 +1396,20 @@ $$
 where
 
 $$
-\begin{align}
+\begin{align*}
 u_1' = \frac{W_1}{W} = -\frac{\tan(x)}{1}=-\tan(x) \\
 \Rightarrow u_1 = \int (-\tan(x))dx \\
 = \ln(\cos(x)) + C
-\end{align}
+\end{align*}
 $$
 
 and
 
 $$
-\begin{align}
+\begin{align*}
 u_2' = \frac{W_2}{W} = \frac{1}{1} = 1 \\
 \Rightarrow u_2 = \int dx = x
-\end{align}
+\end{align*}
 $$
 
 Then
@@ -1468,19 +1468,19 @@ $$
 where
 
 $$
-\begin{align}
+\begin{align*}
 u_1' = \frac{W_1}{W} = \frac{\frac{1}{x}e^{-x}}{2}=\frac{1}{2x}e^{-x} \\
 \Rightarrow u_1 = \int \frac{1}{2x}e^{-x}dx = F_1(x) + C
-\end{align}
+\end{align*}
 $$
 
 since, primitive doesn't exist for this function and
 
 $$
-\begin{align}
+\begin{align*}
 u_2' = \frac{W_2}{W} = \frac{\frac{1}{x}e^{x}}{-2} = -\frac{1}{2x}e^{x} \\
 \Rightarrow u_2 = -\int \frac{1}{2x}e^{x}dx = F_2(x) + C
-\end{align}
+\end{align*}
 $$
 
 Then
@@ -1506,23 +1506,23 @@ Solve:
 For this exercise we try $y=x^{r}$, then we will calculate the derivatives
 
 $$
-\begin{align}
+\begin{align*}
 y' = rx^{r-1}   \\
 y'' = r(r-1)x^{r-2}
-\end{align}
+\end{align*}
 $$
 
 Then we substitute in the DE
 
 $$
-\begin{align}
+\begin{align*}
 x^{2}r(r-1)x^{r-2} + xrx^{r-1} - x^{r} = 0 \\
 \Rightarrow r(r-1)x^{r} + rx^{r} -x^{r}=0   \\
 \Rightarrow x^{r}[r(r-1)+r-1] = 0   \\
 \Rightarrow r^2 - r + r -1 = 0  \\
 \Rightarrow r^2 -1 = 0  \\
 \Rightarrow r = \pm 1
-\end{align}
+\end{align*}
 $$
 
 Therefore the general solution is $y = C_1 x^{-1} + C_2 x$
@@ -1538,12 +1538,12 @@ $$
 Let $y = x^{r}, y' = rx^{r-1}, y''= r(r-1)x^{r-2}$, and then substitute in the equation
 
 $$
-\begin{align}
+\begin{align*}
 x^{2}r(r-1)x^{r-2} -3xrx^{r-1} + 5x^{r} = 0 \\
 \Rightarrow r(r-1) - 3r + 5 = 0 \\
 \Rightarrow r^{2} - r - 3r + 5 = 0 \\
 \Rightarrow r^{2} - 4r + 5 = (r - (2+i))(r - (2-i))=0
-\end{align}
+\end{align*}
 $$
 
 So we have a solution $y= C_{1}x^{2}\cos(\ln(x)) + C_{2}x^{2}\sin(\ln(-x))$.
@@ -1551,13 +1551,13 @@ So we have a solution $y= C_{1}x^{2}\cos(\ln(x)) + C_{2}x^{2}\sin(\ln(-x))$.
 Since RHS is $x^{3}$, we try $y_p = Ax^{3}$, $y' = 3Ax^{2}, y'' = 6Ax$ and substitute in the equation
 
 $$
-\begin{align}
+\begin{align*}
 x^{2}(6Ax)-3x(3Ax^{2})+5(Ax^{3}) = x^{3}    \\
 \Rightarrow 6Ax^{3}-9Ax^{3}+5Ax^{3}=x^{3}   \\
 \Rightarrow 2Ax^{3}=x^{3}   \\
 \Rightarrow (2A)=1  \\
 \Rightarrow A=\frac{1}{2}   
-\end{align}
+\end{align*}
 $$
 
 Then $y_p = \frac{1}{2}x{3}$ and $y=C_{1}x^{2}\cos(\ln(x)) + C_{2}x^{2}\sin(\ln(-x)) + \frac{1}{2}x{3}$
@@ -1579,10 +1579,10 @@ $$
 This equation is separable perse, so we can re-write the equation as:
 
 $$
-\begin{align}
+\begin{align*}
 \frac{dy}{dx} = y(y-1)  \\
 \Rightarrow \frac{dy}{y(y-1)} = dx
-\end{align}
+\end{align*}
 $$
 
 Then, we integrate the equation
@@ -1615,22 +1615,22 @@ $$
 Thus, the integral has the following form
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(-\frac{1}{y} + \frac{1}{y-1}\right)dy = \int dx   \\
 \Rightarrow -\ln{y}+\ln{y-1} = x + C    \\
 \Rightarrow \ln{\frac{y-1}{y}} = x + C
-\end{align}
+\end{align*}
 $$
 
 If we apply exponential function to the equation, we have:
 
 $$
-\begin{align}
+\begin{align*}
 \frac{y-1}{y} = e^{x + C} = Ce^{x}   \\
 1-\frac{1}{y} = Ce^{x}   \\
 \frac{1}{y} = 1 - Ce^{x}   \\
 y = \frac{1}{1-Ce^{x}}
-\end{align}
+\end{align*}
 $$
 
 **b)** $y' = y(4 - y^2)$
@@ -1638,10 +1638,10 @@ $$
 This equation is separable perse, so we can re-write the equation as:
 
 $$
-\begin{align}
+\begin{align*}
 \frac{dy}{dx} = y(4 - y^2)  \\
 \Rightarrow \frac{dy}{y(4 - y^2)} = dx
-\end{align}
+\end{align*}
 $$
 
 Then, we integrate the equation
@@ -1675,32 +1675,32 @@ $$
 Thus, the integral has the following form
 
 $$
-\begin{align}
+\begin{align*}
 \int \left(\frac{1}{4y} - \frac{1}{8(2+y)} + \frac{1}{8(2-y)}\right)dy = \int dx   \\
 \Rightarrow \ln{4y}-\ln{8(2+y)}+\ln{8(2-y)} = x + C    \\
 \Rightarrow \ln{32y(2-y)}-\ln{8(2+y)} = x + C    \\
 \Rightarrow \ln{\frac{32y(2-y)}{8(2+y)}} = x + C    \\
 \Rightarrow \ln{\frac{4y(2-y)}{(2+y)}} = x + C
-\end{align}
+\end{align*}
 $$
 
 If we apply exponential function to the equation, we have:
 
 $$
-\begin{align}
+\begin{align*}
 \frac{4y(2-y)}{(2+y)} = e^{x + C} = Ce^{x}   \\
 \Rightarrow 8y -4y^2 =2Ce^{x}+yCe^{x}   \\
 \Rightarrow 4y^{2}+(Ce^{x}-8)y + 2Ce^{x}
-\end{align}
+\end{align*}
 $$
 
 We have then a cadratic equation, so we apply the general formula to get $y$
 
 $$
-\begin{align}
+\begin{align*}
 y = \frac{-(Ce^{x}-8)\pm \sqrt{(Ce^{x}-8)^2 -4(4)(2Ce^{x})}}{2(4)}    \\
 y = \frac{-(Ce^{x}-8)\pm \sqrt{(Ce^{x}-8)^2 -32Ce^{x}}}{8}
-\end{align}
+\end{align*}
 $$
 
 ---
@@ -1734,31 +1734,31 @@ $$
 Then we integrate
 
 $$
-\begin{align}
+\begin{align*}
 \int vdv = \int y^{2}dy \\
 \Rightarrow \frac{v^{2}}{2} = \frac{y^{3}}{3} +  C  \\
 \Rightarrow v^{2}=\frac{2}{3}y^{3} + C \\
 \Rightarrow v = \sqrt{\frac{2}{3}y^{3} + C}    \\
 \Rightarrow y' = \sqrt{\frac{2}{3}y^{3} + C}
-\end{align}
+\end{align*}
 $$
 
 Which again is separable, so we have
 
 $$
-\begin{align}
+\begin{align*}
 \frac{dy}{dx} = \sqrt{\frac{2}{3}y^{3} + C} \\
 \frac{dy}{\sqrt{\frac{2}{3}y^{3} + C}} = dx
-\end{align}
+\end{align*}
 $$
 
 Then, we integrate the equation
 
 $$
-\begin{align}
+\begin{align*}
 \int \frac{dy}{\sqrt{\frac{2}{3}y^{3} + C}} = \int dx   \\
 \Rightarrow x = G(y) + K
-\end{align}
+\end{align*}
 $$
 
 Where G(y) is a function that represents a primitive more alike to what we are trying to calculate.
@@ -1791,31 +1791,31 @@ $$
 Then we integrate
 
 $$
-\begin{align}
+\begin{align*}
 \int vdv = \int -y^{3}dy \\
 \Rightarrow \frac{v^{2}}{2} = -\frac{y^{4}}{4} +  C  \\
 \Rightarrow v^{2}=\frac{1}{2}y^{4} + C \\
 \Rightarrow v = \sqrt{\frac{1}{2}y^{4} + C}    \\
 \Rightarrow y' = \sqrt{\frac{1}{2}y^{4} + C}
-\end{align}
+\end{align*}
 $$
 
 Which again is separable, so we have
 
 $$
-\begin{align}
+\begin{align*}
 \frac{dy}{dx} = \sqrt{\frac{1}{2}y^{4} + C} \\
 \frac{dy}{\sqrt{\frac{1}{2}y^{4} + C}} = dx
-\end{align}
+\end{align*}
 $$
 
 Then, we integrate the equation
 
 $$
-\begin{align}
+\begin{align*}
 \int \frac{dy}{\sqrt{\frac{1}{2}y^{4} + C}} = \int dx   \\
 \Rightarrow x = G(y) + K
-\end{align}
+\end{align*}
 $$
 
 Where G(y) is a function that represents a primitive more alike to what we are trying to calculate.
@@ -1829,10 +1829,10 @@ Determine whether the following nonlinear ODEs admit closed‑form solutions:
 This equation is separable so we can re-write it as 
 
 $$
-\begin{align}
+\begin{align*}
 \frac{dy}{dx} = e^{y^2} \\
 \Rightarrow \frac{dy}{e^{y^2}} = dx
-\end{align}
+\end{align*}
 $$
 
 However if we integrate the equation we are going to get something without a primitive. Therefore, the solution is not closed-form
@@ -1842,21 +1842,21 @@ However if we integrate the equation we are going to get something without a pri
 This equation is separable so we can re-write it as 
 
 $$
-\begin{align}
+\begin{align*}
 \frac{dy}{dx} = \frac{1}{1+y^4} \\
 \Rightarrow (1+y^4)dy = dx  \\
 \Rightarrow  dy +y^{4}dy = dx
-\end{align}
+\end{align*}
 $$
 
 If we integrate the equation we have
 
 $$
-\begin{align}
+\begin{align*}
 \int (dy +y^{4}dy) = \int dx    \\
 \Rightarrow  \int dy + \int y^{4}dy = \int dx    \\
 \Rightarrow  x = y +\frac{y^{5}}{5} + C   \\
-\end{align}
+\end{align*}
 $$
 
 Therefore, solution has closed-form
@@ -1880,10 +1880,10 @@ $$
 \mathbf{x}
 $$
 
-Since $A$ is a constant matrix, then we will solve the characteristic equation
+Since $A$ is a constant, so we define $V(t)=50+(3-2)t$. matrix, then we will solve the characteristic equation
 
 $$
-\begin{align}
+\begin{align*}
 \det(A-\lambda I)= 0 \\
 \det\left(\begin{pmatrix}
 2 & 1   \\
@@ -1906,7 +1906,7 @@ $$
 \end{pmatrix}=0 \\
 \Rightarrow \lambda^{2} -5\lambda + 6 = 0   \\
 \therefore \lambda_{1} = 3 \wedge \lambda_{2} = 2
-\end{align}
+\end{align*}
 $$
 
 Once we have identified the eigenvalues we must compute the eigenvectors.
@@ -1914,7 +1914,7 @@ Once we have identified the eigenvalues we must compute the eigenvectors.
 For $\lambda_{1} = 3$
 
 $$
-\begin{align}
+\begin{align*}
 \left(\begin{pmatrix}
 2 & 1   \\
 0 & 3
@@ -1954,7 +1954,7 @@ v_{2}
 0
 \end{pmatrix}   \\
 \Rightarrow v_{1}=v_{2}
-\end{align}
+\end{align*}
 $$
 
 which means any vector of the form $v=\begin{pmatrix}1  \\ 1\end{pmatrix}$ with $t\neq 0$ is a valid eigenvector.
@@ -1962,7 +1962,7 @@ which means any vector of the form $v=\begin{pmatrix}1  \\ 1\end{pmatrix}$ with 
 For $\lambda_{2} = 2$
 
 $$
-\begin{align}
+\begin{align*}
 \left(\begin{pmatrix}
 2 & 1   \\
 0 & 3
@@ -2002,7 +2002,7 @@ v_{2}
 0
 \end{pmatrix}   \\
 \Rightarrow v_{2}=0
-\end{align}
+\end{align*}
 $$
 
 which means any vector of the form $v=\begin{pmatrix}1  \\ 0\end{pmatrix}$ is a valid eigenvector.
@@ -2010,20 +2010,20 @@ which means any vector of the form $v=\begin{pmatrix}1  \\ 0\end{pmatrix}$ is a 
 Now, for each real eigenvalue we will build the fundamental set of solutions, this means
 
 $$
-\begin{align}
+\begin{align*}
 \lambda_{1}= 3\Rightarrow x_{1}(t)=e^{\lambda t}\begin{pmatrix}1  \\ 1\end{pmatrix}=\begin{pmatrix}e^{3t}  \\ e^{3t}\end{pmatrix} \\
 \lambda_{2}= 2\Rightarrow x_{1}(t)=e^{\lambda t}\begin{pmatrix}1  \\ 0\end{pmatrix}=\begin{pmatrix}e^{2t}  \\ 0\end{pmatrix} \\
-\end{align}
+\end{align*}
 $$
 
 Finally, the general solution is:
 
 $$
-\begin{align}
+\begin{align*}
 x(t) = C_{1}x_{1}(t) + C_{2}x_{2}(t)    \\
 =C_{1}\begin{pmatrix}e^{3t}  \\ e^{3t}\end{pmatrix} + C_{2}\begin{pmatrix}e^{2t}  \\ 0\end{pmatrix} \\
 =\begin{pmatrix}C_{1}e^{3t} + C_{2}e^{2t}  \\ C_{1}e^{3t}\end{pmatrix}
-\end{align}
+\end{align*}
 $$
 
 ---
@@ -2039,10 +2039,10 @@ $$
 \mathbf{x}
 $$
 
-Since $A$ is a constant matrix, then we will solve the characteristic equation
+Since $A$ is a constant, so we define $V(t)=50+(3-2)t$. matrix, then we will solve the characteristic equation
 
 $$
-\begin{align}
+\begin{align*}
 \det(A-\lambda I)= 0 \\
 \det\left(\begin{pmatrix}
 0 & -1   \\
@@ -2065,7 +2065,7 @@ $$
 \end{pmatrix}=0 \\
 \Rightarrow \lambda^{2} + 1 = 0   \\
 \therefore \lambda_{1} = i \wedge \lambda_{2} = -i
-\end{align}
+\end{align*}
 $$
 
 Once we have identified the eigenvalues we must compute the eigenvectors.
@@ -2073,7 +2073,7 @@ Once we have identified the eigenvalues we must compute the eigenvectors.
 For $\lambda_{1} = i$
 
 $$
-\begin{align}
+\begin{align*}
 \left(\begin{pmatrix}
 0 & -1   \\
 1 & 0
@@ -2112,24 +2112,24 @@ v_{1}-iv_{2}
 0   \\
 0
 \end{pmatrix}
-\end{align}
+\end{align*}
 $$
 
 when comparing the equations we have
 
 $$
-\begin{align}
+\begin{align*}
 -iv_{1}-v_{2} = 0\Rightarrow v_{2}=-iv_{1}   \\
 v_{1}=1\Rightarrow v=\begin{pmatrix}1   \\ -i\end{pmatrix}
-\end{align}
+\end{align*}
 $$
 
 Then, the associated complex solution is
 
 $$
-\begin{align}
+\begin{align*}
 x(t)=e^{\lambda t}\begin{pmatrix}1  \\ -i\end{pmatrix}=\begin{pmatrix}e^{it}  \\ -ie^{it}\end{pmatrix} 
-\end{align}
+\end{align*}
 $$
 
 Where $e^{it}=\cos{(t)}+i\sin{(t)}$ and the components are:
@@ -2140,19 +2140,19 @@ Where $e^{it}=\cos{(t)}+i\sin{(t)}$ and the components are:
 Splitting the solutions into the real and complex parts we have
 
 $$
-\begin{align}
+\begin{align*}
 \mathbb{R}(x_{t})=\begin{pmatrix}\cos{(t)} \\ \sin{(t)}\end{pmatrix}    \\
 \mathbb{C}(x_{t})=\begin{pmatrix}\sin{(t)} \\ -\cos{(t)}\end{pmatrix}
-\end{align}
+\end{align*}
 $$
 
 Finally, the general solution is:
 
 $$
-\begin{align}
+\begin{align*}
 x(t) = C_{1}\mathbb{R}(x_(t)) + C_{2}\mathbb{C}(x_(t))    \\
 =C_{1}\begin{pmatrix}\cos{(t)} \\ \sin{(t)}\end{pmatrix} + C_{2}\begin{pmatrix}\sin{(t)} \\ -\cos{(t)}\end{pmatrix} 
-\end{align}
+\end{align*}
 $$
 
 ---
@@ -2180,14 +2180,14 @@ $$
 First we calculate the eigenvalues
 
 $$
-\begin{align}
+\begin{align*}
 \det\left(A-\lambda I\right)=0    \\
 \Rightarrow \det\left(\begin{pmatrix}-2 & 0 \\ 0 & -3\end{pmatrix}-\lambda\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}\right) \\
 \Rightarrow \det\left(\begin{pmatrix}-2 & 0 \\ 0 & -3\end{pmatrix}-\begin{pmatrix}\lambda & 0 \\ 0 & \lambda\end{pmatrix}\right) \\
 \Rightarrow \det\left(\begin{pmatrix}-2-\lambda & 0 \\ 0 & -3 - \lambda\end{pmatrix}\right) \\
 \Rightarrow (-2-\lambda)(-3-\lambda)=0  \\
 \Rightarrow \lambda_{1}=-2,\quad \lambda_{2}=-3
-\end{align}
+\end{align*}
 $$
 
 Since they are real and negative, equilibrium points are a stable node.
@@ -2215,7 +2215,7 @@ $$
 First we calculate the eigenvalues
 
 $$
-\begin{align}
+\begin{align*}
 \det\left(A-\lambda I\right)=0    \\
 \Rightarrow \det\left(\begin{pmatrix}1 & 4 \\ -1 & 1\end{pmatrix}-\lambda\begin{pmatrix}1 & 0 \\ 0 & 1\end{pmatrix}\right) \\
 \Rightarrow \det\left(\begin{pmatrix}1 & 4 \\ -1 & 1\end{pmatrix}-\begin{pmatrix}\lambda & 0 \\ 0 & \lambda\end{pmatrix}\right) \\
@@ -2225,7 +2225,7 @@ $$
 \Rightarrow \lambda_{1}=\frac{2+\sqrt{4-20}}{2},\quad \lambda_{2}=\frac{2-\sqrt{4-20}}{2}   \\
 \Rightarrow \lambda_{1}=\frac{2+4i}{2},\quad \lambda_{2}=\frac{2-4i}{2}   \\
 \Rightarrow \lambda_{1}=1+2i,\quad \lambda_{2}=1-2i
-\end{align}
+\end{align*}
 $$
 
 They are complex. since $\alpha = 1 > 0$, then we can say the equilibrium points behave as an unstable spiral.
@@ -2245,72 +2245,72 @@ Find a power series solution about $x=0$:
 Let $y=\sum_{n\geq 0} a_{n}x^{n}$, then 
 
 $$
-\begin{align}
+\begin{align*}
 y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n} \\
 =\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n}   \\
 =\sum_{n\geq 1}na_{n}x^{n-1}
-\end{align}
+\end{align*}
 $$
 
 and
 
 $$
-\begin{align}
+\begin{align*}
 y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}na_{n}x^{n-1}  \\
 =\sum_{n\geq 0}\frac{d}{dx}na_{n}x^{n-1}    \\
 =\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}
-\end{align}
+\end{align*}
 $$
 
 If we substitute we have
 
 $$
-\begin{align}
+\begin{align*}
 y'' - xy=0  \\
 \Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} -x\left(\sum_{n\geq 0} a_{n}x^{n}\right)=0   \\
 \Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} -\sum_{n\geq 0} a_{n}x^{n+1}=0 
-\end{align}
+\end{align*}
 $$
 
 Let $k=n-2\Rightarrow n=k+2$, then
 
 $$
-\begin{align}
+\begin{align*}
 \sum_{n\geq 2}n(n-1)a_{n}x^{n-2}=\sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k}
-\end{align}
+\end{align*}
 $$
 
 On the other hand, let $k=n+1\Rightarrow n=k-1$ in the second series
 
 $$
-\begin{align}
+\begin{align*}
 \sum_{n\geq 0} a_{n}x^{n+1}=\sum_{k\geq 1}a_{k-1}x^{k}
-\end{align}
+\end{align*}
 $$
 
 Then we have
 
 $$
-\begin{align}
+\begin{align*}
 y'' - xy=0  \\
 \Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} - \sum_{k\geq 1}a_{k-1}x^{k}=0   \\
 \Rightarrow (2)(1)a_{2}x^{0}+\sum_{k\geq 1}(k+2)(k+1)a_{k+2}x^{k} - \sum_{k\geq 1}a_{k-1}x^{k}=0   \\
 \Rightarrow 2a_{2}+\sum_{k\geq 1}(k+2)(k+1)a_{k+2}x^{k} - \sum_{k\geq 1}a_{k-1}x^{k}=0   \\
 \Rightarrow 2a_{2}+\sum_{k\geq 1}\left[(k+2)(k+1)a_{k+2}-a_{k-1}\right]x^{k}=0
-\end{align}
+\end{align*}
 $$
 
 For $k=0$, we have $a_{2}x^{0}=0$, for $k\geq 1$
 
 $$
-\begin{align}
+\begin{align*}
 (k+2)(k+1)a_{k+2}-a_{k-1}=0 \\
 \Rightarrow a_{k+2}=\frac{a_{k-1}}{(k+2)(k+1)}  \\
 \Rightarrow a_{k+3}=\frac{a_{k}}{(k+3)(k+2)},\quad k\geq 3  \\
-\end{align}
+\end{align*}
 $$
 
-Now we have to build the solution in a series form, we know $a_{0}, a_{1}$ are constant, $a_{2}=0$. The next ones are calculated with recurrence.
+Now we have to build the solution in a series form, we know $a_{0}, a_{1}$ are constant, so we define $V(t)=50+(3-2)t$., $a_{2}=0$. The next ones are calculated with recurrence.
 
 For $k=0$, $a_{3}=\frac{a_{0}}{3*2}=\frac{a_{0}}{6}$.
 
@@ -2328,57 +2328,57 @@ Then $y(x)=a_{0}\left(1+\frac{x^{3}}{6}+\frac{x^{6}}{180}+\cdots\right) + a_{1}\
 Let $y=\sum_{n\geq 0} a_{n}x^{n}$, then 
 
 $$
-\begin{align}
+\begin{align*}
 y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n} \\
 =\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n}   \\
 =\sum_{n\geq 1}na_{n}x^{n-1}
-\end{align}
+\end{align*}
 $$
 
 and
 
 $$
-\begin{align}
+\begin{align*}
 y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}na_{n}x^{n-1}  \\
 =\sum_{n\geq 0}\frac{d}{dx}na_{n}x^{n-1}    \\
 =\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}
-\end{align}
+\end{align*}
 $$
 
 If we substitute we have
 
 $$
-\begin{align}
+\begin{align*}
 y'' + y=0  \\
 \Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} +\left(\sum_{n\geq 0} a_{n}x^{n}\right)=0 
-\end{align}
+\end{align*}
 $$
 
 Let $k=n-2\Rightarrow n=k+2$, then
 
 $$
-\begin{align}
+\begin{align*}
 \sum_{n\geq 2}n(n-1)a_{n}x^{n-2}=\sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k}
-\end{align}
+\end{align*}
 $$
 
 On the other hand, let $k=n$ in the second series
 
 $$
-\begin{align}
+\begin{align*}
 \sum_{n\geq 0} a_{n}x^{n}=\sum_{k\geq 0}a_{k}x^{k}
-\end{align}
+\end{align*}
 $$
 
 Then we have
 
 $$
-\begin{align}
+\begin{align*}
 y'' + y=0  \\
 \Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} + \sum_{k\geq 0}a_{k}x^{k}=0   \\
 \Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} + \sum_{k\geq 0}a_{k}x^{k}=0   \\
 \Rightarrow \sum_{k\geq 0}\left[(k+2)(k+1)a_{k+2}+a_{k}\right]x^{k}
-\end{align}
+\end{align*}
 $$
 
 Now we have to build the solution in a series form.$a_{0}$ and $a_{1}$ are constants. For $k\geq 0,\quad (k+2)(k+1)a_{k+2}+a_{k}=0\Rightarrow a_{k+2}=-\frac{a_{k}}{(k+2)(k+1)}$
@@ -2405,62 +2405,62 @@ $$
 Let $y=\sum_{n\geq 0} a_{n}x^{n}$, then 
 
 $$
-\begin{align}
+\begin{align*}
 y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n} \\
 =\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n}   \\
 =\sum_{n\geq 1}na_{n}x^{n-1}
-\end{align}
+\end{align*}
 $$
 
 and
 
 $$
-\begin{align}
+\begin{align*}
 y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}na_{n}x^{n-1}  \\
 =\sum_{n\geq 0}\frac{d}{dx}na_{n}x^{n-1}    \\
 =\sum_{n\geq 2}n(n-1)a_{n}x^{n-2}
-\end{align}
+\end{align*}
 $$
 
 If we substitute we have
 
 $$
-\begin{align}
+\begin{align*}
 y'' + xy' + y=0  \\
 \Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} + x\sum_{n\geq 1}na_{n}x^{n-1} +\sum_{n\geq 0} a_{n}x^{n}=0 \\
 \Rightarrow \sum_{n\geq 2}n(n-1)a_{n}x^{n-2} + \sum_{n\geq 1}na_{n}x^{n} +\sum_{n\geq 0} a_{n}x^{n}=0
-\end{align}
+\end{align*}
 $$
 
 Let $k=n-2\Rightarrow n=k+2$, then
 
 $$
-\begin{align}
+\begin{align*}
 \sum_{n\geq 2}n(n-1)a_{n}x^{n-2}=\sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k}
-\end{align}
+\end{align*}
 $$
 
 And finally let $k=n$ in the second and third series
 
 $$
-\begin{align}
+\begin{align*}
 \sum_{n\geq 1}na_{n}x^{n} +\sum_{n\geq 0} a_{n}x^{n} \\
 =\sum_{k\geq 1}ka_{n}x^{n}\sum_{k\geq 0}a_{k}x^{k}
-\end{align}
+\end{align*}
 $$
 
 Then we have
 
 $$
-\begin{align}
+\begin{align*}
 y'' + xy' + y=0  \\
 \Rightarrow \sum_{k\geq 0}(k+2)(k+1)a_{k+2}x^{k} + \sum_{k\geq 1}ka_{n}x^{n}\sum_{k\geq 0}a_{k}x^{k}=0
-\end{align}
+\end{align*}
 $$
 
 Now we have to build the solution in a series form. For $k=0$, $(2)(1)a_{2} + a_{k}=0\Rightarrow a_{2}=-\frac{a_{0}}{2}$.
 
-For $k\geq 1,\quad (k+2)(k+1)a_{k+2}+(k+1)a_{k}=0\Rightarrow a_{k+2}=-\frac{a_{k}}{(k+2)}$. Which means $a_{0}$ and $a_{1}$ are constant.
+For $k\geq 1,\quad (k+2)(k+1)a_{k+2}+(k+1)a_{k}=0\Rightarrow a_{k+2}=-\frac{a_{k}}{(k+2)}$. Which means $a_{0}$ and $a_{1}$ are constant, so we define $V(t)=50+(3-2)t$..
 
 
 ---
@@ -2471,7 +2471,155 @@ Solve using Frobenius near $x=0$:
 
 **a)** $x^2 y'' + xy' + y = 0$  
 
+Frobenius Method is a special case of Power Series, instead we perform the substitution
+
+$$
+y = \sum_{n\geq 0} a_n x^{n+r}
+$$
+
+then 
+
+$$
+\begin{align*}
+y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n+r} \\
+=\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n+r}   \\
+=\sum_{n\geq 0}(n+r)a_{n}x^{n+r-1}
+\end{align*}
+$$
+
+and
+
+$$
+\begin{align*}
+y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}(n+r)a_{n}x^{n+r-1}  \\
+=\sum_{n\geq 0}\frac{d}{dx}(n+r)a_{n}x^{n+r-1}    \\
+=\sum_{n\geq 0}(n+r)(n+r-1)a_{n}x^{n+r-2}
+\end{align*}
+$$
+
+If we substitute we have
+
+$$
+\begin{align*}
+x^2 y'' + xy' + y = 0  \\
+\Rightarrow x^{2}\sum_{n\geq 2}(n+r)(n+r-1)a_{n}x^{n+r-2} +x\sum_{n\geq 0} (n+r)a_{n}x^{n+r-1} + \sum_{n\geq 0} a_n x^{n+r}=0   \\
+\Rightarrow \sum_{n\geq 0}(n+r)(n+r-1)a_{n}x^{n+r} +\sum_{n\geq 0} (n+r)a_{n}x^{n+r} + \sum_{n\geq 0} a_n x^{n+r}=0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left((n+r)(n+r-1)+(n+r)+1\right) =0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left(n^{2}+nr-n+nr+r^{2}-r +n+r+1\right) =0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left(n^{2}+2nr+r^{2}+1\right) =0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left((n+r)^{2}+1\right) =0   
+\end{align*}
+$$
+
+For the series to be identically 0
+
+$$
+\left[(n+r)^{2}+1\right]a_{n}=0,\quad \forall n\geq 0
+$$
+
+For $n=0$ and considering a non-trivial solution $a_{0}\neq 0$
+
+$$
+\begin{align*}
+(r^{2}+1)a_{0}=0    \\
+\Rightarrow r^{2}+1=0   \\
+\Rightarrow r=\pm i
+\end{align*}
+$$
+
+For $n\geq 1$
+
+$$
+\left[(n+r)^{2}+1\right]a_{n}=0
+$$
+
+which makes $(n+r)=\pm i$. For a fixed $r=\pm i$, $(n+r)^{2}+1\neq 0$ when $n\geq 1$, so $a_{n}=0,\quad \forall n\geq 1$.
+
+The only non-zero coefficient is $a_{0}$ which means
+
+$$
+y(x)=a_{0}x^{r}=C_{1}x^{i}+C_{2}x^{-i}
+$$
+
+if we use $x^{i}=e^{i\ln{(x)}}$
+
+$$
+y=A\cos{(\ln{(x)})}+B\sin{(\ln{(x)})}
+$$
+
+
 **b)** $x^2 y'' - xy' + y = 0$
+
+Frobenius Method is a special case of Power Series, instead we perform the substitution
+
+$$
+y = \sum_{n\geq 0} a_n x^{n+r}
+$$
+
+then 
+
+$$
+\begin{align*}
+y'=\frac{d}{dx}y=\frac{d}{dx}\sum_{n\geq 0} a_{n}x^{n+r} \\
+=\sum_{n\geq 0}\frac{d}{dx}a_{n}x^{n+r}   \\
+=\sum_{n\geq 0}(n+r)a_{n}x^{n+r-1}
+\end{align*}
+$$
+
+and
+
+$$
+\begin{align*}
+y''=\frac{d}{dx}y'=\frac{d}{dx}\sum_{n\geq 0}(n+r)a_{n}x^{n+r-1}  \\
+=\sum_{n\geq 0}\frac{d}{dx}(n+r)a_{n}x^{n+r-1}    \\
+=\sum_{n\geq 0}(n+r)(n+r-1)a_{n}x^{n+r-2}
+\end{align*}
+$$
+
+If we substitute we have
+
+$$
+\begin{align*}
+x^2 y'' - xy' + y = 0  \\
+\Rightarrow x^{2}\sum_{n\geq 2}(n+r)(n+r-1)a_{n}x^{n+r-2} -x\sum_{n\geq 0} (n+r)a_{n}x^{n+r-1} + \sum_{n\geq 0} a_n x^{n+r}=0   \\
+\Rightarrow \sum_{n\geq 0}(n+r)(n+r-1)a_{n}x^{n+r} -\sum_{n\geq 0} (n+r)a_{n}x^{n+r} + \sum_{n\geq 0} a_n x^{n+r}=0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left((n+r)(n+r-1)-(n+r)+1\right) =0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left((n+r)(n+r)-(n+r)-(n+r)+1\right) =0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left((n+r)^{2}-2(n+r)+1\right) =0   \\
+\Rightarrow \sum_{n\geq 0}a_{n}x^{n+r}\left(n+r-1\right)^{2} =0
+\end{align*}
+$$
+
+For the series to be identically 0
+
+$$
+\left(n+r-1\right)^{2}a_{n}=0,\quad \forall n\geq 0
+$$
+
+For $n=0$ and considering a non-trivial solution $a_{0}\neq 0$
+
+$$
+\begin{align*}
+(r-1)^{2}a_{0}=0    \\
+\Rightarrow r-1=0   \\
+\Rightarrow r=1
+\end{align*}
+$$
+
+For $n\geq 1$
+
+$$
+\left(n+r-1\right)^{2}a_{n}=0
+$$
+
+For a fixed $r=1$, $n\neq 0$, so $a_{n}=0,\quad \forall n\geq 1$.
+
+The only non-zero coefficient is $a_{0}$ which means
+
+$$
+y(x)=a_{0}x^{r}=C_{1}x
+$$
+
 
 ---
 
@@ -2479,13 +2627,155 @@ Solve using Frobenius near $x=0$:
 
 A tank initially contains 50 L of pure water. Brine with 0.2 kg/L enters at 3 L/min; mixture leaves at 2 L/min.  
 
-**a)** Set up the differential equation.  
+**a)** Set up the differential equation.
+
+First Volume is not constant, so we define $V(t)=50+(3-2)t$.
+
+Let $y(t)=$ salt (kg).
+
+$$
+y' = \text{rate in} - \text{rate out} =0.2(3)-\frac{y(t)}{V(t)}
+$$
+
+$$
+y' = 0.2(3) -\frac{y}{50+t}(2)
+$$
+
+$$
+y' +\frac{2y}{50+t}=\frac{3}{5}
+$$
+
 **b)** Solve for the amount of salt.
 
- A population grows according to the logistic model with carrying capacity 5000 and intrinsic rate 0.3.  
+We use the integrating factor $\mu(x)=e^{\int \frac{2dx}{50+t}}=e^{\ln{(50+t)^{2}}}=(50+t)^{2}$. Then we multiply the integrant factor to the equation.
 
-**a)** Write the differential equation.  
+$$
+(50+t)^{2}y' +(50+t)^{2}\frac{2y}{50+t}=(50+t)^{2}\frac{1}{5}
+$$
+
+Then we recognize the derivative $(\mu y)'=((50+t)^{2} y)' =(50+t)^{2}\frac{1}{5}$. Then, let's integrate the equation.
+
+$$
+(50+t)^{2}y=\int \frac{3}{5}(50+t)^{2}dt=\frac{1}{5}\int (50+t)^{2} dt
+$$
+
+Let $u=50+t,\quad du=dt$
+
+$$
+(50+t)^{2}y=\frac{1}{5}\int u^{2}du=\frac{1}{5}\left(\frac{u^{3}}{3}\right)=\frac{1}{5}(50+t)^{3} + C
+$$
+
+$$
+y = \frac{1}{5}(50+t) + \frac{C}{(50+t)^{2}}
+$$
+
+If we suppose the initial condition $y(0)=0$, then
+
+$$
+y(0)=\frac{1}{5}(50+0) + \frac{C}{(50+0)^{2}}= 10 +\frac{C}{2500}=0
+$$
+
+Then we have $C=-25000$ and finally
+
+$$
+y = \frac{1}{5}(50+t) - \frac{25000}{(50+t)^{2}}
+$$
+
+---
+
+A population grows according to the logistic model with carrying capacity 5000 and intrinsic rate 0.3.  
+
+**a)** Write the differential equation.
+
+For a population $y(t)$ the standard logistic equation with carrying capacity $K$ and intrinsic rate $r$ is:
+
+$$
+\frac{dy}{dt}=ry\left(1-\frac{y}{K}\right)
+$$
+
+So, the ED can be written as 
+
+$$
+\frac{dy}{dt}=0.3y\left(1-\frac{y}{5000}\right)
+$$
+
 **b)** Solve for $P(t)$.
+
+$$
+\frac{dy}{dt}=\left(0.3y-\frac{0.3y^{2}}{5000}\right)=\frac{1500y-0.3y^{2}}{5000}
+$$
+
+$$
+\frac{dy}{1500y-0.3y^{2}}=\frac{dt}{5000}
+$$
+
+$$
+\frac{dy}{0.3y(5000-y)}=\frac{dt}{5000}
+$$
+
+Then we integrate both sides
+
+$$
+\int\frac{dy}{0.3y(5000-y)}=\int\frac{dt}{5000}
+$$
+
+The result of the second integral is $\frac{t}{5000}+C$ since is a constant integration, however, the first integral will be solved by partial fractions.
+
+$$
+\begin{align*}
+\frac{1}{0.3}\int\frac{dy}{y(5000-y)}   \\
+\Rightarrow \frac{1}{y(5000-y)}=\frac{A}{y}+\frac{B}{5000-y}    \\
+\Rightarrow A(5000-y)+By=1  \\
+\Rightarrow 5000A - Ay + By = 1\\
+\Rightarrow 5000A + (B-A)y =1   \\
+\Rightarrow 5000A=1\rightarrow A=\frac{1}{5000} \\
+\Rightarrow (B-A)y = 0\rightarrow B-A=0\rightarrow B=A  \\
+\therefore A=B=\frac{1}{5000}
+\Rightarrow
+\end{align*}
+$$
+
+Then
+
+$$
+\frac{1}{0.3}\int\frac{dy}{y(5000-y)}=\frac{1}{0.3}\int\frac{1}{5000}\left(\frac{1}{y}+\frac{1}{5000-y}dy\right)=\frac{1}{1500}\left(\int\frac{dy}{y}+\int\frac{dy}{5000-y}\right)
+$$
+
+If we perform the substitution $u=5000-y,\quad du=-dy$
+
+$$
+\frac{1}{1500}\left(\ln{(y)}-\ln{(u)}\right)=\frac{1}{1500}\left(\ln{\left(\frac{y}{u}\right)}\right)=\frac{1}{1500}\left(\ln{\left(\frac{y}{5000-y}\right)}\right)
+$$
+
+In the original equation we have
+
+$$
+\frac{1}{1500}\left(\ln{\left(\frac{y}{5000-y}\right)}\right)=\frac{t}{5000}+C
+$$
+
+which is equivalent to
+
+$$
+\ln{\left(\frac{5000}{5000-y}-1\right)}=\frac{3t}{10}+C
+$$
+
+Applying exponential
+
+$$
+\frac{5000}{5000-y}-1=e^{0.3t+C}
+$$
+
+And finally by algebra we have
+
+$$
+\begin{align*}
+y=5000-\frac{5000}{1+e^{0.3t+C}}=5000\left(1-\frac{1}{1+e^{0.3t+C}}\right)
+\end{align*}
+$$
+
+
+
+---
 
 A mass‑spring system satisfies:  
 
@@ -2496,7 +2786,59 @@ $$
 For $m=1$, $c=4$, $k=5$:  
 
 **a)** Classify the damping.  
+
+For a mass-srping system, damping is classified by $c^{2}$ vs $4mk$. With the following rules
+
+- Overdamped: $c^{2}>4mk$
+- Critically Damped: $c^{2}=4mk$
+- Underdamped: $c^{2}<4mk$
+
+Since $c^{2}=4^{2}=16$ and $4mk=4(1)(5)=20$, we set the damping as underdamped
+
+Subsituing the values we have
+
+$$
+y''+4y'+5y=0
+$$
+
+It is a Higher-Order Homogeneus Linear Differential Equation with constant coefs.
+
 **b)** Solve the ODE.
+
+We take the characteristic equation
+
+$$
+a_n r^n + a_{n-1} r^{n-1} + \cdots + a_1 r + a_0 = 0
+$$
+
+In this case
+
+$$
+r^{2}+4r+5=0
+$$
+
+Using the general formula we have that the roots for $r$ are
+
+$$
+r=\frac{-4\pm\sqrt{4^{2}-4(1)(5)}}{2(1)}
+$$
+
+which means the roots are complex and equal to $r=\frac{-4\pm\sqrt{16-20}}{2}=\frac{-4\pm\sqrt{-4}}{2}=-2\pm i$
+
+By definition this leads to the real solutions
+
+$$
+y_1(x) = e^{-2x} \cos{(x)}, \qquad
+y_2(x) = e^{-2x} \sin{(x)}
+$$
+
+with the general solution being
+
+$$
+y(x) = e^{-2x}(C_{1}\cos{(x)}+C_{2}\sin{(x)})
+$$
+
+---
 
 An RLC circuit satisfies:  
 
@@ -2504,7 +2846,144 @@ $$
 L I' + RI + \frac{1}{C}\int Idt = E(t)
 $$  
 
-Convert to a second‑order ODE and solve for $I(t)$ when $E(t)=E_0\sin(\omega t)$.
+Convert to a second‑order ODE and solve for $I(t)$ when $E(t)=E_0\sin{(\omega t)}$.
+
+To accomplish this we must derivate the expression respect to t, this means
+
+$$
+LI''+RI'+\frac{I}{C}=E'(t)
+$$
+
+We can remove the integral by calculus fundamental theorem. Also, we know that $E(t)=E_{0}\sin{(\omega t)}$ which means $E'(t)=E_{0}\omega\cos{(\omega t)}$, thus
+
+$$
+LI''+RI'+\frac{I}{C}=E_{0}\omega\cos{(\omega t)}
+$$
+
+Therefore we have a non homogeneous higher order DE.
+
+First we must solve the homogeneous part.
+
+$$
+LI''+RI'+\frac{I}{C}=0
+$$
+
+If we use the characteristic equation we have
+
+$$
+Lr^{2}+Rr+\frac{1}{C}=r^{2}+\frac{R}{L}r+\frac{1}{CL}=0
+$$
+
+By general formula, the roots are in the form
+
+$$
+r=\frac{-\frac{R}{L}\pm\sqrt{\left(\frac{R}{L}\right)^{2}-\frac{4}{CL}}}{2L}
+$$
+
+As we don't know the magnitude of the values $R$, $C$ or $L$ we can't know whether the result of this equation has real or complex roots, however depending on the discriminant, one of the following cases can happen.
+
+- ${\left(\frac{R}{L}\right)^{2}-\frac{4}{CL}}>0$ means real distinct roots, for the RLC this means the model is overdamped.
+- ${\left(\frac{R}{L}\right)^{2}-\frac{4}{CL}}=0$ means double real roots, for the RLC this means the model is critically damped.
+- ${\left(\frac{R}{L}\right)^{2}-\frac{4}{CL}}<0$ means complex roots, for the RLC this means the model is underdamped.
+
+In a typical RLC, we would be looking for the underdamped case (oscilatory), that is the reason why there are a lot of solutions based in sines and cosines. However it is not granted matematically, it does depend in the concrete values of $R,\quad L$ and $C$.
+
+Let's suppose that the result was underdamped which means we would have roots in the form $\alpha\pm\beta i$. So the complementary solution $I_h$ would be
+
+$$
+I_h=e^{\alpha x}(C_{1}\cos{(\beta x)}+C_{2}\sin{(\beta x)})
+$$
+
+Now to get the particular solution, we have the RHS is $E'(t)=E_{0}\omega\cos{(\omega t)}$. The guess would be $I_p = A\cos{(\omega t)}+B\sin{(\omega t)}$.
+
+First derivative would be
+
+$$
+I_{p}'=B\omega\cos{(\omega t)}-A\omega\sin{(\omega t)}
+$$
+
+Second derivative would be
+
+$$
+I_{p}''=-B\omega\sin{(\omega t)}-A\omega\cos{(\omega t)}
+$$
+
+We substitute in the DE
+
+$$
+L(-B\omega\sin{(\omega t)}-A\omega\cos{(\omega t)})+R(B\omega\cos{(\omega t)}-A\omega\sin{(\omega t)})+\frac{A\cos{(\omega t)}+B\sin{(\omega t)}}{C}=E_{0}\omega\cos{(\omega t)}
+$$
+
+Here we can see the system of linear equations:
+
+$$
+\begin{align*}
+RB\omega-LA\omega^{2} + \frac{A}{C}= E_{0}\omega    \\
+-RA\omega-LB\omega^{2} + \frac{B}{C}=0
+\end{align*}
+$$
+
+regrouping we have
+
+$$
+\begin{align*}
+RB\omega+A\left(-L\omega^{2} + \frac{1}{C}\right)= E_{0}\omega    \\
+-RA\omega+B\left(-L\omega^{2} + \frac{1}{C}\right)=0
+\end{align*}
+$$
+
+Let $K=\left(-L\omega^{2} + \frac{1}{C}\right)$, then the system becomes
+
+$$
+\begin{align*}
+RB\omega+AK= E_{0}\omega    \\
+-RA\omega+BK=0
+\end{align*}
+$$
+
+We are going to solve this system by substitution solving
+
+$$
+B=\frac{RA\omega}{K}
+$$
+
+Then we substitute in the first equation
+
+$$
+R\frac{RA\omega}{K}+AK=E_{0}
+$$
+
+which can be written as
+
+$$
+A\left(\frac{R^{2}}{K}+K\right)=E_{0}
+$$
+
+having
+
+$$
+A = \frac{E_{0}}{\left(\frac{R^{2}}{K}+K\right)}
+$$
+
+and
+
+$$
+B=R\omega\frac{E_{0}}{\left(R^{2}+K^{2}\right)}
+$$
+
+Then the particular solution is
+
+$$
+I_p = \frac{E_{0}}{\left(\frac{R^{2}}{K}+K\right)}\cos{(\omega t)}+R\omega\frac{E_{0}}{\left(R^{2}+K^{2}\right)}\sin{(\omega t)}
+$$
+
+Finally the solution is
+
+$$
+I = I_h + I_p=e^{\alpha x}(C_{1}\cos{(\beta x)}+C_{2}\sin{(\beta x)})+\frac{E_{0}}{\left(\frac{R^{2}}{K}+K\right)}\cos{(\omega t)}+R\omega\frac{E_{0}}{\left(R^{2}+K^{2}\right)}\sin{(\omega t)}
+$$
+
+---
 
 A chemical reaction satisfies:  
 
@@ -2513,5 +2992,43 @@ $$
 $$  
 
 Solve for $A(t)$ and determine the half‑life.
+
+Since it is separable we have
+
+$$
+-\frac{dA}{kA^{2}}=dt
+$$
+
+Then we integrate the equation, 
+
+$$
+\begin{align*}
+-\int\frac{dA}{kA^{2}}=\int dt  \\
+\Rightarrow \frac{1}{kA}=t+C    \\
+\Rightarrow \frac{1}{t+C}=kA    \\
+\therefore A=\frac{1}{kt+C*}
+\end{align*}
+$$
+
+If we suppose an IV $A(0)=A_{0}$, $C*=\frac{1}{A_{0}}$, then the general solution would be
+
+$$
+A=\frac{1}{kt+\frac{1}{A_{0}}}=\frac{A_{0}}{1+kA_{0}t}
+$$
+
+To measure the half life we must find the $t_{1/2}$ that satisfies $A(t_{1/2})=\frac{A_{0}}{2}$.
+
+Using the general solution we have
+
+$$
+\begin{align*}
+A(t_{1/2})=\frac{A_{0}}{1+kA_{0}t_{1/2}}=\frac{A_{0}}{2}    \\
+\Rightarrow 1+kA_{0}t_{1/2}=2   \\
+\Rightarrow kA_{0}t_{1/2}=1 \\
+\therefore t_{1/2}=\frac{1}{kA_{0}} 
+\end{align*}
+$$
+
+
 
 ---
