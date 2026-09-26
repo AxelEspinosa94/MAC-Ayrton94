@@ -2011,10 +2011,10 @@ Conclude the closed-form expression when applicable.
 # **Frobenius Method**
 
 $$
-y = x^r \sum_{n=0}^\infty a_n x^n
+y = \sum_{n\geq 0} a_n x^{n+r}
 $$
 
-Indicial equation.
+And apply the same algorithm as Power Series
 
 ---
 
