@@ -9,10 +9,10 @@
 Let $G = (V,E)$ be a graph with vertices  
 
 $$
-V = \\{v_1, v_2, \dots, v_n\\}.
+V = \{v_1, v_2, \dots, v_n\}.
 $$
 
-The **adjacency matrix** $A = \[a_{ij}\]$ is an $n \times n$ matrix defined by:
+The **adjacency matrix** $A = [a_{ij}]$ is an $n \times n$ matrix defined by:
 
 $$
 a_{ij} =
@@ -47,7 +47,7 @@ equals the number of **walks of length $k$** from vertex $v_i$ to vertex $v_j$.
 Graph:
 
 $$
-E = \\{ab, bc, ca\\}
+E = \{ab, bc, ca\}
 $$
 
 Adjacency matrix (ordering (a,b,c)):
@@ -76,10 +76,10 @@ $$
 Let $G = (V,E)$ with  
 
 $$
-V = \\{v_1,\dots,v_n\\}, \quad E = \\{e_1,\dots,e_m\\}.
+V = \{v_1,\dots,v_n\}, \quad E = \{e_1,\dots,e_m\}.
 $$
 
-The **incidence matrix** $M = \[m_{ij}\]$ is an $n \times m$ matrix defined by:
+The **incidence matrix** $M = [m_{ij}]$ is an $n \times m$ matrix defined by:
 
 $$
 m_{ij} =
@@ -115,7 +115,7 @@ $$
 Graph:
 
 $$
-E = \\{ab, bc, ca\\}
+E = \{ab, bc, ca\}
 $$
 
 Incidence matrix (edges ordered (ab, bc, ca)):
@@ -244,13 +244,13 @@ This is one of the most important structural results in graph theory.
 Consider the graph with vertex partition:
 
 $$
-X = \\{a, c\\}, \qquad Y = \\{b, d\\}
+X = \{a, c\}, \quad Y = \{b, d\}
 $$
 
 and edges:
 
 $$
-E = \\{ab, ac, bd, cd\\}.
+E = \{ab, ac, bd, cd\}.
 $$
 
 This graph is bipartite because every edge connects a vertex in $X$ to a vertex in $Y$.
@@ -281,7 +281,7 @@ graph TD
 Graph: square with diagonal
 
 $$
-E = \\{ab, bc, cd, da, ac\\}
+E = \{ab, bc, cd, da, ac\}
 $$
 
 Fundamental cycles:
