@@ -6,9 +6,11 @@
 ## **1. Adjacency Matrix**
 
 ### **1.1 Basic Computation**
+
 1. Compute the adjacency matrix of the following graph:  
+   
    $$
-   V = \\{1,2,3,4\\},\quad E = \\{12, 23, 34, 14, 13\\}.
+   V = \{1,2,3,4\},\quad E = \{12, 23, 34, 14, 13\}.
    $$
 
     $$
@@ -63,7 +65,7 @@
    \end{pmatrix}.
    $$
 
-   Compute $A^2$ and interpret each entry.
+    Compute $A^2$ and interpret each entry.
 
     Using matrix multiplication
 
@@ -75,7 +77,8 @@
     1 & 1 & 2
     \end{pmatrix}.
     $$
-    
+
+    The number of walks from each $a_{ii}$ entry are of length 2
 
 5. For the graph in Exercise 1, compute the number of walks of length 3 from vertex 1 to vertex 4.
 
@@ -129,7 +132,7 @@ since it is a simple graph it has no loops or parallel edges, then each entry ca
    \end{pmatrix}
    $$
 
-Let $V=\\{a,b,c,d\\}$ we can notice $E = \\{ab, ac, bd, cd\\}$, if we pllot it 
+Let $V=\{a,b,c,d\}$ we can notice $E = \{ab, ac, bd, cd\}$, if we pllot it 
 
 ```mermaid
 graph TD
@@ -175,7 +178,7 @@ Hence the graph is $k$-regular.
 ### **2.1 Basic Construction**
 9. Construct the incidence matrix of the graph:
    $$
-   E = \\{ab, bc, cd, da, ac\\}.
+   E = \{ab, bc, cd, da, ac\}.
    $$
 
     $$
@@ -190,7 +193,7 @@ Hence the graph is $k$-regular.
 
 10. For the directed graph  
     $$
-    A = \\{(1,2),(2,3),(3,4),(4,2)\\},
+    A = \{(1,2),(2,3),(3,4),(4,2)\},
     $$
     construct the signed incidence matrix.
 
@@ -220,10 +223,10 @@ M =
 $$
 
 $$
-\deg(a)=3
-\deg(b)=2
-\deg(c)=3
-\deg(d)=2
+\deg(a)=3,\quad
+\deg(b)=2,\quad
+\deg(c)=3,\quad
+\deg(d)=2,\quad
 $$
 
 12. Prove that for any simple graph with incidence matrix $M$:
@@ -319,13 +322,13 @@ By 15 this is true
 ### **4.1 Fundamental Circuits**
 17. For the graph  
     $$
-    E = \\{ab, bc, cd, da, ac\\},
+    E = \{ab, bc, cd, da, ac\},
     $$
     find a spanning tree and list all fundamental circuits.
 
-$E = \\{ab, bc, cd, da, ac\\}$.
+$E = \{ab, bc, cd, da, ac\}$.
 
-One spanning tree: $T = \\{ab, bc, cd\\}$.  
+One spanning tree: $T = \{ab, bc, cd\}$.  
 Non-tree edges: $da, ac$.
 
 - Adding $da$: cycle $C_1 = a-b-c-d-a$.  
@@ -334,11 +337,11 @@ Non-tree edges: $da, ac$.
 
 18. Construct the circuit matrix for the circuits found in Exercise 17.
 
-Order edges: $e_1=ab, e_2=bc, e_3=cd, e_4=da, e_5=ac$.  
+Order edges: $e_1=ab,\quad e_2=bc,\quad e_3=cd,\quad e_4=da,\quad e_5=ac$.  
 Circuits:
 
-- $C_1: ab, bc, cd, da$ → row: $(1,1,1,1,0)$
-- $C_2: ab, bc, ac$ → row: $(1,1,0,0,1)$
+- $C_1: ab,\quad bc,\quad cd,\quad da$ → row: $(1,1,1,1,0)$
+- $C_2: ab,\quad bc,\quad ac$ → row: $(1,1,0,0,1)$
 
 $$
 B =
@@ -375,10 +378,10 @@ So $\text{rank}(B) = 2 = m-n+1$.
 ### **5.1 Basic Computation**
 21. Construct the path matrix for the graph:
     $$
-    E = \\{12, 23, 34, 45, 15\\}.
+    E = \{12, 23, 34, 45, 15\}.
     $$
 
-$E = \\{12, 23, 34, 45, 15\\}$ (a 5-cycle).
+$E = \{12, 23, 34, 45, 15\}$ (a 5-cycle).
 
 There is a simple path between every pair of distinct vertices.  
 Thus path matrix $P$ (ordering 1–5):
