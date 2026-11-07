@@ -4,6 +4,18 @@
 
 ---
 
+## 0.1 Overview
+
+### Definition 0.1 (Basic Definition)
+
+If $f(t)$ defined when $t\geq 0$, then the improper integral $\int_{0}^{\infty}K(s,t)f(t)dt$ is defined as a limit:
+
+$$
+\int_{0}^{\infty}K(s,t)f(t)dt=lim\displaystyle \lim_{ b\to \infty}\int_{0}^{b}K(s,t)f(t)dt
+$$
+
+If the limit exists, it is said that the integral exists or that it converge, if it does not exist, the integral does not exist or it diverge. In general, this integral only exists for certain values of $s$. The substitution $K(s,t)=e^{-st}$ gives us a very important integral transform.
+
 ## 1.1 Integral transforms
 
 ### Definition 1.1 (Integral transform)
@@ -101,7 +113,72 @@ Below, $s>0$ unless otherwise stated.
    $$
 
    **Proof sketch.**  
-   Integrate by parts or use complex exponentials $e^{ibt}$. ∎
+   Let $u=\sin{(bt)},\quad dv=e^{-st}dt$, then $du=b\cos{(bt)}dt,\quad v=-\frac{1}{s}e^{-st}$. Then
+
+   $$
+   \int_{0}^{\infty}e^{-st}\sin{(bt)}dt=\left[-\frac{1}{s}e^{-st}\sin{(bt)}\right]_{0}^{\infty}+\frac{b}{s}\int_{0}^{\infty}e^{-st}\cos{(bt)}dt
+   $$
+
+   The first term gets anulated since $\sin{(t)}\rightarrow 0$, when $t\rightarrow 0$ and $e^{-st}\rightarrow 0$ when $t\rightarrow\infty$, so
+
+   $$
+   \mathcal{L}\{\sin{(bt)}\}(s)=\frac{b}{s}\int_{0}^{\infty}e^{-st}\cos{(bt)}dt
+   $$
+
+   Let's call
+
+   $$
+   I_{s}=\int_{0}^{\infty}e^{-st}\sin{(bt)}dt,\quad I_{c}=\int_{0}^{\infty}e^{-st}\cos{(bt)}dt
+   $$
+
+   then:
+
+   $$
+   \begin{align}
+   I_{s}=\frac{b}{s}I_{c}
+   \end{align}
+   $$
+
+   On the other hand, let's integrate by parts $I_{c}$, this means, let $u=\cos{(bt)},\quad dv=e^{-st}dt$, so $du=-b\sin{(bt)},\quad v=-\frac{1}{s}e^{-st}$. Then
+
+   $$
+   I_{c}=\left[-\frac{1}{s}e^{-st}\right]_{0}^{\infty}-\frac{b}{s}\int_{0}^{\infty}e^{-st}\sin{(bt)}dt
+   $$
+
+   When $t\rightarrow\infty,\quad e^{-st}\cos{(bt)}\rightarrow 0$, and when $t\rightarrow 0,\quad e^{-st}\cos{(bt)}\rightarrow -\frac{1}{s}\cdot 1=\frac{1}{s}$. So
+
+   $$
+   I_{c}=\frac{1}{s}-\frac{b}{s}I_{s}
+   $$
+
+   However, by $(1)$ we already know the value of $I_{s}$, so if we substitute the value we have
+
+   $$
+   \begin{align*}
+   I_{c}=\frac{1}{s}-\frac{b}{s}\left(\frac{b}{s}I_{c}\right)  \\
+   \Rightarrow I_{c}=\frac{1}{s}-\left(\frac{b}{s}\right)^{2}I_{c}   \\
+   \Rightarrow I_{c}\left(1+\left(\frac{b}{s}\right)^{2}\right)=\frac{1}{s}   \\
+   \Rightarrow I_{c}\left(\frac{s^{2}+b^{2}}{s^{2}}\right)=\frac{1}{s}   \\
+   \therefore I_{c}=\frac{s}{s^{2}+b^{2}}
+   \end{align*}
+   $$
+
+   If we substitute the value of $I_{c}$ in $(1)$ we have
+
+   $$
+   \begin{align*}
+   I_{s}=\frac{b}{s}I_{c}  \\
+   \Rightarrow I_{s}=\frac{b}{s}\frac{s}{s^{2}+b^{2}} \\
+   \therefore I_{s}=\frac{b}{s^{2}+b^{2}}
+   \end{align*}
+   $$
+   ∎
+
+5. **Bonus:**
+
+   $$
+   \mathcal{L}\{t^{n}e^{\alpha t}\}(s) = \frac{n!}{(s - \alpha)^{n+1}}
+
 
 ### Example 1.6
 
@@ -362,6 +439,12 @@ $$
 
 ∎
 
+In a general way
+
+$$
+\mathcal{L}\{f(t)\delta(t-a)\}=f(a)e^{-as}
+$$
+
 ---
 
 ## 1.7 Inverse Laplace transform – definition and basic properties
@@ -411,7 +494,7 @@ $$
 
 ### Theorem 1.20 (Convolution theorem)
 
-If $F(s) = \mathcal{L}\\{f(t)\\}(s)$ and $G(s) = \mathcal{L}\\{g(t)\\}(s)$, then
+If $F(s) = \mathcal{L}\{f(t)\}(s)$ and $G(s) = \mathcal{L}\{g(t)\}(s)$, then
 
 $$
 \mathcal{L}\{(f*g)(t)\}(s) = F(s)G(s).
