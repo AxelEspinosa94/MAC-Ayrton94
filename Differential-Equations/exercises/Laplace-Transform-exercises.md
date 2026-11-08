@@ -859,18 +859,106 @@ $$
 ### **Exercise 8.3 — ODE with step input**
 Solve:
 
-\[
+$$
 y'' + y = u(t-3),\quad y(0)=0,\quad y'(0)=0.
-\]
+$$
+
+Let's apply the Laplace transform to the DE
+
+$$
+\mathcal{L}\{y''\}+\mathcal{L}\{y\}=\mathcal{L}\{u(t-3)\}
+$$
+
+By shifting and step
+
+$$
+\begin{align*}
+\Rightarrow s^{2}Y-sy(0)-y'(0)+Y=\frac{e^{-3s}}{s}   \\
+\Rightarrow (s^{2}+1)Y=\frac{e^{-3s}}{s}   \\
+\Rightarrow Y =\frac{e^{-3s}}{s(s^{2}+1)}
+\end{align*}
+$$
+
+For what it seems $y$ has the form $g(t)=u(t-a)f(t-a)$. Thus
+
+$$
+\begin{align*}
+Y =\frac{e^{-3s}}{s(s^{2}+1)}    \\
+\text{where}    \\
+F(s)=\frac{1}{s(s^{2}+1)}
+\end{align*}
+$$
+
+Let's use partial fractions, so
+
+$$
+\begin{align*}
+\frac{1}{s(s^{2}+1)}=\frac{A}{s}+\frac{Bs+C}{s^{2}+1}   \\
+\Rightarrow 1=A(s^{2}+1)+s(Bs+C)    \\
+\Rightarrow 1=As^{2}+A+Bs^{2}+Cs    \\
+\text{where}    \\
+A+B=0,\quad B=-A    \\
+C=0 \\
+A=1,\quad B=-1  \\
+\therefore \frac{1}{s(s^{2}+1)}=\frac{1}{s}-\frac{s}{s^{2}+1}
+\end{align*}
+$$
+
+Therefore
+
+$$
+y=\mathcal{L}^{-1}\{Y\}=\mathcal{L}^{-1}\left\{\frac{e^{-3s}}{s(s^{2}+1)}\right\}=u(t-3)\left[1-\cos{(t-3)}\right]
+$$
 
 ---
 
 ### **Exercise 8.4 — ODE with impulse**
 Solve:
 
-\[
+$$
 y'' - y = \delta(t-1),\quad y(0)=0,\quad y'(0)=0.
-\]
+$$
+
+Applying Laplace, we have
+
+$$
+\begin{align*}
+\mathcal{L}\{y''\}-\mathcal{L}\{y\}=\mathcal{L}\{\delta(t-1)\}  \\
+\text{by shifting}  \\
+s^{2}Y-sy(0)-y'(0)-Y=e^{-s}   \\
+\Rightarrow s^{2}Y-Y=e^{-s}   \\
+\Rightarrow (s^{2}-1)Y=e^{-s}   \\
+\Rightarrow Y=\frac{e^{-s}}{s^{2}-1}    \\
+\Rightarrow Y=\frac{e^{-s}}{(s-1)(s+1)}
+\end{align*}
+$$
+
+It is noticed that $y$ is a shifted function, so $Y=e^{-s}F(s)=e^{-s}\frac{1}{(s-1)(s+1)}$.
+
+Let's use partial fractions
+
+$$
+\begin{align*}
+\frac{1}{(s-1)(s+1)}=\frac{A}{s-1}+\frac{B}{s+1}    \\
+\Rightarrow 1=A(s+1)+B(s-1) \\
+\Rightarrow 1=As+A+Bs-B \\
+A+B=0,\text{and}\quad A-B=1    \\
+2A=1\rightarrow A=\frac{1}{2}\text{and}\quad B=-\frac{1}{2} \\
+\frac{1}{(s-1)(s+1)}=\frac{1}{2}\frac{1}{s-1}-\frac{1}{2}\frac{1}{s+1}
+\end{align*}
+$$
+
+Applying the inverse transform to this result we have
+
+$$
+\mathcal{L}^{-1}\left\{\frac{1}{2}\frac{1}{s-1}-\frac{1}{2}\frac{1}{s+1}\right\}=\frac{e^{t}}{2}-\frac{e^{-t}}{2}=\sinh{t}
+$$
+
+Considering shiftinh
+
+$$
+y=u(t-1)\sinh{(t-1)}
+$$
 
 ---
 
@@ -879,45 +967,124 @@ y'' - y = \delta(t-1),\quad y(0)=0,\quad y'(0)=0.
 ### **Exercise 9.1**
 Find the inverse Laplace transform:
 
-\[
+$$
 F(s)=\frac{e^{-3s}(2s+5)}{s^2+4}.
-\]
+$$
+
+Let's notice that $F(s)$ has the form of a shifted function, this means $F(s)=e^{-3s}G(s)$, where 
+
+$$
+\begin{align*}
+G(s)=\frac{2s+5}{s^{2}+4}   \\
+=2\frac{s}{s^{2}+4}+\frac{5}{2}\frac{2}{s^{2}+4}    \\
+=2\mathcal{L}\{\cos{(2t)}\}+\frac{5}{2}\mathcal{L}\{\sin{2t}\}
+\end{align*}
+$$
+
+Therefore
+
+$$
+\mathcal{L}^{-1}\{F(s)\}=\mathcal{L}^{-1}\{e^{-3s}G(s)\}=u(t-3)\left(2\cos{(2(t-3))}+\frac{5}{2}\sin{(2(t-3))}\right)
+$$
 
 ---
 
 ### **Exercise 9.2**
 Solve the IVP:
 
-\[
+$$
 y'' - 2y' + y = t e^{t},\quad y(0)=1,\quad y'(0)=0.
-\]
+$$
+
+Let's apply the transform to get
+
+$$
+\begin{align*}
+\mathcal{L}\{y''\}-2\mathcal{L}\{y'\}+\mathcal{L}\{y\}=\mathcal{L}\{te^{t}\}    \\
+\text{by shifting}  \\
+(s^{2}Y-sy(0)-y'(0))-2(sY-y(0))+Y=\frac{1}{(s-1)^{2}}   \\
+\Rightarrow (s^{2}-2s+1)Y-s+2=\frac{1}{(s-1)^{2}}  \\
+\Rightarrow (s-1)^{2}Y=\frac{1}{(s-1)^{2}}+s-2    \\
+\Rightarrow Y=\frac{1}{(s-1)^{4}}+\frac{s-2}{(s-1)^{2}}   \\
+\Rightarrow Y=\frac{1}{6}\frac{6}{(s-1)^{4}}+\frac{1}{s-1}-\frac{1}{(s-1)^{2}}   \\
+\text{by shifting}   \\
+\Rightarrow Y=\frac{1}{6}\mathcal{L}\left\{e^{t}t^{3}\right\}+\mathcal{L}\left\{e^{t}\right\}-\mathcal{L}\left\{e^{t}t\right\}
+\end{align*}
+$$
+
+Therefore
+
+$$
+y(t)=\frac{1}{6}e^{t}t^{3}+e^{t}-te^{t}=e^{t}(\frac{1}{6}t^{3}+1-t)
+$$
+
 
 ---
 
 ### **Exercise 9.3**
 Compute:
 
-\[
+$$
 \mathcal{L}\{u(t-2)\cos(3(t-2))\}.
-\]
+$$
+
+Since is a shifted function
+
+$$
+\begin{align*}
+\mathcal{L}\{u(t-2)\cos(3(t-2))\}=e^{-2s}\mathcal{L}\{\cos{(3t)}\}(s)   \\
+=e^{-2s}\frac{s}{s^{2}+9}
+\end{align*}
+$$
 
 ---
 
 ### **Exercise 9.4**
 Find:
 
-\[
+$$
 \mathcal{L}^{-1}\left\{\frac{s+1}{(s+1)^2+9}\right\}.
-\]
+$$
+
+By shifting we identify
+
+$$
+\begin{align*}
+\mathcal{L}\{e^{t}f(t)\}=F(s-(-1))=\frac{s-(-1)}{(s-(-1))^2+9}  \\
+\text{so}   \\
+F(s)=\frac{s}{s^{2}+9}  \\
+\Rightarrow \mathcal{L}^{-1}\{F(s)\}=\cos{(3t)} \\
+\therefore \mathcal{L}^{-1}\left\{\frac{s+1}{(s+1)^2+9}\right\}=e^{t}\cos{(3t)}
+\end{align*}
+$$
 
 ---
 
 ### **Exercise 9.5**
 Solve:
 
-\[
+$$
 y'' + 9y = \delta(t-\pi),\quad y(0)=0,\quad y'(0)=0.
-\]
+$$
+
+Let's apply Laplace
+
+$$
+\begin{align*}
+\mathcal{L}\{y''\}+9\mathcal{L}\{y\}=\mathcal{L}\{\delta(t-\pi)\}   \\
+(s^{2}Y)+9Y=e^{-\pi s}  \\
+\Rightarrow Y=e^{-\pi s}\frac{1}{s^{2}+9}   \\
+\text{by shifting}  \\
+F(s)=\frac{1}{s^{2}+9}=\frac{1}{3}\frac{3}{s^{2}+9} \\
+\Rightarrow F(s)=\frac{1}{3}\mathcal{L}\{\sin{(3t)}\}
+\end{align*}
+$$
+
+Therefore
+
+$$
+y(t)=\frac{1}{3}u(t-\pi)\sin{3(t-\pi)}
+$$
 
 ---
 
@@ -926,27 +1093,111 @@ y'' + 9y = \delta(t-\pi),\quad y(0)=0,\quad y'(0)=0.
 ### **Exercise 10.1**
 Show that:
 
-\[
+$$
 \mathcal{L}^{-1}\left\{\frac{1}{s(s^2+4)}\right\}
-= \frac{1}{4}(1-\cos 2t) + \frac{1}{2}t\sin 2t.
-\]
+= \frac{1}{4}(1-\cos 2t).
+$$
+
+First we use partial fractions
+
+$$
+\begin{align*}
+\frac{1}{s(s^{2}+4)}=\frac{A}{s}+\frac{Bs+C}{s^{2}+4}   \\
+\Rightarrow 1=A(s^{2}+4)+s(Bs+C)    \\
+\Rightarrow 1=As^{2}+4A+Bs^{2}+Cs   \\
+C=0,\quad 4A=1\rightarrow A=\frac{1}{4},\quad B=-\frac{1}{4}    \\
+\Rightarrow \frac{1}{s(s^{2}+4)}=\frac{1}{4s}-\frac{1}{4}\frac{s}{s^{2}+4}=\frac{1}{4}\left(\frac{1}{s}-\frac{s}{s^{2}+4}\right)
+\end{align*}
+$$
+
+Applying Laplace inverse to the expression obtained by partial fractions
+
+$$
+\frac{1}{4}\mathcal{L}^{-1}\left\{\frac{1}{s}-\frac{s}{s^{2}+4}\right\} =\frac{1}{4}\left[\mathcal{L}^{-1}\left\{\frac{1}{s}\right\}-\mathcal{L}^{-1}\left\{\frac{s}{s^{2}+4}\right\}\right]=\frac{1}{4}\left[1-\cos{(2t)}\right]
+$$
 
 ---
 
 ### **Exercise 10.2**
 Compute:
 
-\[
+$$
 \mathcal{L}^{-1}\left\{\frac{e^{-2s}}{s^2(s+1)}\right\}.
-\]
+$$
+
+Since it is a shifted function, then
+
+$$
+\begin{align*}
+\mathcal{L}\{g(t)\}(s)=e^{-2s}F(s)=e^{-2s}\frac{1}{s^{2}(s+1)}  \\
+\text{by partial fractions} \\
+\frac{1}{s^{2}(s+1)}=\frac{A}{s}+\frac{B}{s^{2}}+\frac{C}{s+1}   \\
+\Rightarrow 1=As(s+1) + B(s+1)+Cs^{2}   \\
+\Rightarrow 1=As^{2}+As+Bs+B+Cs^{2}   \\
+B=1,\quad A=-1,\quad C=1    \\
+\therefore \frac{1}{s^{2}(s+1)}=-\frac{1}{s}+\frac{1}{s^{2}}+\frac{1}{s+1}
+\end{align*}
+$$
+
+Applying inverse to the expression obtained we have
+
+$$
+f(t)=t-1+e^{-t}
+$$
+
+Therefore
+
+$$
+\mathcal{L}^{-1}\left\{\frac{e^{-2s}}{s^2(s+1)}\right\}=u(t-2)f(t-2)=u(t-2)((t-2)-1+e^{-(t-2)})
+$$
 
 ---
 
 ### **Exercise 10.3**
 Solve:
 
-\[
+$$
 y'' + 2y' + 5y = u(t-1)e^{-(t-1)},\quad y(0)=0,\quad y'(0)=0.
-\]
+$$
+
+Let's apply Laplace
+
+$$
+\begin{align*}
+\mathcal{L}\{y''\}+2\mathcal{L}\{y'\}+5\mathcal{L}\{y\}=\mathcal{L}\{u(t-1)e^{-(t-1)}\} \\
+\text{by shifting}
+(s^{2}Y)+2(sY)+5Y=e^{-s}\mathcal{L}\{e^{-t}\}(s)    \\
+\Rightarrow (s^{2}+2s+5)Y=e^{-s}\frac{1}{s+1}   \\
+\Rightarrow Y=e^{-s}\frac{1}{(s+1)((s^{2}+2s+5))}   \\
+\text{by partial fractions} \\
+\frac{1}{(s+1)((s^{2}+2s+5))}=\frac{A}{s+1}+\frac{Bs+C}{s^{2}+2s+5}    \\
+\Rightarrow 1=A(s^{2}+2s+5)+(Bs+C)(s+1) \\
+\Rightarrow 1=As^{2}+2As+5A+Bs^{2}+Bs+Cs+C \\
+A+B=0,\quad 2A+B+C=0,\quad 5A+C=1\rightarrow C=1-5A \\
+\rightarrow B=3A-1, \rightarrow 4A=1\rightarrow A=\frac{1}{4}   \\
+B=-\frac{1}{4},\quad C=-\frac{1}{4} \\
+\therefore Y=e^{-s}\frac{1}{(s+1)((s^{2}+2s+5))}=e^{-s}\left[\frac{1}{4}\frac{1}{s+1}-\frac{1}{4}\frac{s+1}{s^{2}+2s+5}\right]  \\
+=e^{-s}\left[\frac{1}{4}\frac{1}{s+1}-\frac{1}{4}\frac{s+2-2+1}{(s+2)^{2}+1}\right]  \\
+=e^{-s}\frac{1}{4}\left[\frac{1}{s+1}-\frac{s+2}{(s+2)^{2}+1}+\frac{1}{(s+2)^{2}+1}\right]
+\end{align*}
+$$
+
+Applying inverse we have
+
+$$
+y(t)=\frac{1}{4}u(t-1)f(t-1)
+$$
+
+where
+
+$$
+f(t)=e^{-t}-e^{2t}(\cos{(t)}+\sin{(t)})
+$$
+
+Finally
+
+$$
+y(t)=\frac{1}{4}u(t-1)e^{-(t-1)}-e^{2(t-1)}(\cos{(t-1)}+\sin{(t-1)})
+$$
 
 ---
